@@ -33,10 +33,38 @@ type InsightsResponse = {
   seo_keywords?: string[];
 };
 
+type GitHubContributor = {
+  login: string;
+  contributions: number;
+  avatar_url?: string;
+  html_url?: string;
+};
+
+type GitHubStargazer = {
+  login: string;
+  starred_at?: string;
+  avatar_url?: string;
+  company?: string;
+  company_org?: string;
+  company_public_members?: number;
+};
+
+type StarsTimelinePoint = { date: string; count: number };
+
+type GitHubResponse = {
+  repo: { name: string; description?: string; stars: number; forks: number; openIssues: number; watchers: number };
+  contributors: GitHubContributor[];
+  stargazers: GitHubStargazer[];
+  stars_timeline: StarsTimelinePoint[];
+  companies_summary: { company_org: string; stargazer_count: number; public_members?: number }[];
+};
+
 export default function Home() {
   const [stats, setStats] = useState<StatsResponse | null>(null);
   const [insights, setInsights] = useState<InsightsResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<"discord" | "github">("discord");
+  const [gh, setGh] = useState<GitHubResponse | null>(null);
 
   useEffect(() => {
     async function load() {
@@ -101,11 +129,45 @@ export default function Home() {
   return (
     <div style={{ padding: 24, maxWidth: 1100, margin: "0 auto", color: "#e5e7eb" }}>
       <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24 }}>
-        <h1 style={{ fontSize: 24, fontWeight: 700 }}>Discord Analytics</h1>
-        <nav style={{ display: "flex", gap: 16 }}>
-          <Link href="/topics" style={{ color: "#93c5fd" }}>Most Discussed Topics</Link>
-          <a href="/api/stats" style={{ color: "#94a3b8" }}>Stats JSON</a>
-          <a href="/api/insights" style={{ color: "#94a3b8" }}>Insights JSON</a>
+        <h1 style={{ fontSize: 24, fontWeight: 700, color: "#3b82f6" }}>{activeTab === "github" ? "GitHub Analytics" : "Discord Analytics"}</h1>
+        <nav style={{ display: "flex", gap: 8 }}>
+          <button
+            onClick={() => setActiveTab("discord")}
+            style={{
+              background: activeTab === "discord" ? "#2563eb" : "#0b1220",
+              border: "1px solid #1f2937",
+              color: "#e5e7eb",
+              padding: "6px 10px",
+              borderRadius: 6,
+            }}
+          >
+            Discord
+          </button>
+          <button
+            onClick={async () => {
+              setActiveTab("github");
+              if (!gh) {
+                try {
+                  const res = await fetch("/api/github", { cache: "no-store" });
+                  if (res.ok) {
+                    const data: GitHubResponse = await res.json();
+                    setGh(data);
+                  }
+                } catch {
+                  // ignore
+                }
+              }
+            }}
+            style={{
+              background: activeTab === "github" ? "#2563eb" : "#0b1220",
+              border: "1px solid #1f2937",
+              color: "#e5e7eb",
+              padding: "6px 10px",
+              borderRadius: 6,
+            }}
+          >
+            GitHub
+          </button>
         </nav>
       </header>
 
@@ -113,6 +175,7 @@ export default function Home() {
         <div style={{ background: "#7f1d1d", padding: 12, borderRadius: 8, marginBottom: 16 }}>{error}</div>
       )}
 
+      {activeTab === "discord" && (
       <section style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, marginBottom: 24 }}>
         <div style={{ background: "#0b1220", border: "1px solid #1f2937", borderRadius: 12, padding: 16 }}>
           <h2 style={{ fontSize: 18, fontWeight: 600, marginBottom: 12 }}>Top Topics</h2>
@@ -164,12 +227,16 @@ export default function Home() {
           )}
         </div>
       </section>
+      )}
 
+      {activeTab === "discord" && (
       <section style={{ background: "#0b1220", border: "1px solid #1f2937", borderRadius: 12, padding: 16, marginBottom: 24 }}>
         <h2 style={{ fontSize: 18, fontWeight: 600, marginBottom: 12 }}>Contributions by Weekday</h2>
         {!stats ? <div style={{ color: "#94a3b8" }}>Loading…</div> : weekdayBars}
       </section>
+      )}
 
+      {activeTab === "discord" && (
       <section style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
         <div style={{ background: "#0b1220", border: "1px solid #1f2937", borderRadius: 12, padding: 16 }}>
           <h2 style={{ fontSize: 18, fontWeight: 600, marginBottom: 12 }}>SEO Recommendations</h2>
@@ -229,6 +296,129 @@ export default function Home() {
           )}
         </div>
       </section>
+      )}
+
+      {activeTab === "github" && (
+      <section style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+        <div style={{ background: "#0b1220", border: "1px solid #1f2937", borderRadius: 12, padding: 16 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 600, marginBottom: 12 }}>Repository</h2>
+          {!gh ? (
+            <div style={{ color: "#94a3b8" }}>Loading…</div>
+          ) : (
+            <div style={{ display: "grid", gap: 8 }}>
+              <div style={{ fontWeight: 600 }}>{gh.repo.name}</div>
+              {gh.repo.description ? <div style={{ color: "#94a3b8" }}>{gh.repo.description}</div> : null}
+              <div style={{ display: "flex", gap: 12, color: "#cbd5e1" }}>
+                <span>Stars: {gh.repo.stars}</span>
+                <span>Forks: {gh.repo.forks}</span>
+                <span>Issues: {gh.repo.openIssues}</span>
+                <span>Watchers: {gh.repo.watchers}</span>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div style={{ background: "#0b1220", border: "1px solid #1f2937", borderRadius: 12, padding: 16 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 600, marginBottom: 12 }}>Top Contributors</h2>
+          {!gh ? (
+            <div style={{ color: "#94a3b8" }}>Loading…</div>
+          ) : gh.contributors?.length ? (
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 8 }}>
+              {gh.contributors.slice(0, 10).map((c) => (
+                <li key={c.login} style={{ display: "flex", alignItems: "center", gap: 12, background: "#0f172a", padding: 10, borderRadius: 8 }}>
+                  {c.avatar_url ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={c.avatar_url} alt="avatar" width={32} height={32} style={{ borderRadius: 999 }} />
+                  ) : (
+                    <div style={{ width: 32, height: 32, borderRadius: 999, background: "#1f2937" }} />
+                  )}
+                  <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
+                    <div>
+                      <div style={{ fontWeight: 600 }}>{c.login}</div>
+                      {c.html_url ? <div style={{ color: "#94a3b8", fontSize: 12 }}>{c.html_url}</div> : null}
+                    </div>
+                    <div style={{ color: "#93c5fd" }}>{c.contributions}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div style={{ color: "#94a3b8" }}>No contributors.</div>
+          )}
+        </div>
+
+        <div style={{ background: "#0b1220", border: "1px solid #1f2937", borderRadius: 12, padding: 16 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 600, marginBottom: 12 }}>Recent Stargazers</h2>
+          {!gh ? (
+            <div style={{ color: "#94a3b8" }}>Loading…</div>
+          ) : gh.stargazers?.length ? (
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 8, maxHeight: 360, overflowY: "auto" }}>
+              {gh.stargazers.map((s) => (
+                <li key={s.login} style={{ display: "flex", alignItems: "center", gap: 12, background: "#0f172a", padding: 10, borderRadius: 8 }}>
+                  {s.avatar_url ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={s.avatar_url} alt="avatar" width={28} height={28} style={{ borderRadius: 999 }} />
+                  ) : (
+                    <div style={{ width: 28, height: 28, borderRadius: 999, background: "#1f2937" }} />
+                  )}
+                  <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
+                    <div>
+                      <div style={{ fontWeight: 600 }}>{s.login}</div>
+                      <div style={{ color: "#94a3b8", fontSize: 12 }}>
+                        {s.company ? s.company : "No company listed"}
+                        {s.company_org ? ` • @${s.company_org}` : ""}
+                        {typeof s.company_public_members === "number" ? ` • public members: ${s.company_public_members}` : ""}
+                      </div>
+                    </div>
+                    <div style={{ color: "#cbd5e1", fontSize: 12 }}>{s.starred_at ? new Date(s.starred_at).toLocaleDateString() : ""}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div style={{ color: "#94a3b8" }}>No stargazers.</div>
+          )}
+        </div>
+
+        <div style={{ background: "#0b1220", border: "1px solid #1f2937", borderRadius: 12, padding: 16 }}>
+          <h2 style={{ fontSize: 18, fontWeight: 600, marginBottom: 12 }}>Stars Over Time (Last 24 Days)</h2>
+          {!gh ? (
+            <div style={{ color: "#94a3b8" }}>Loading…</div>
+          ) : gh.stars_timeline?.length ? (
+            (() => {
+              // Build a continuous last-24-days series starting from today (UTC) and fill zeros
+              const byDate = new Map<string, number>(gh.stars_timeline.map((p) => [p.date, p.count] as const));
+              const today = new Date();
+              today.setUTCHours(0, 0, 0, 0);
+              const series: { date: string; count: number }[] = [];
+              for (let offset = 23; offset >= 0; offset -= 1) {
+                const d = new Date(today);
+                d.setUTCDate(d.getUTCDate() - (23 - offset));
+                const key = d.toISOString().slice(0, 10);
+                const count = byDate.get(key) || 0;
+                series.push({ date: key, count });
+              }
+              const max = Math.max(1, ...series.map((p) => p.count));
+              return (
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(8, 1fr)", gap: 8 }}>
+                  {series.map((p) => (
+                    <div key={p.date} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+                      <div style={{ fontSize: 10, color: "#cbd5e1" }}>{p.count}</div>
+                      <div style={{ height: 100, width: "100%", background: "#1f2937", borderRadius: 8, display: "flex", alignItems: "flex-end", padding: 4 }}>
+                        <div style={{ width: "100%", height: `${(p.count / max) * 100}%`, background: "linear-gradient(180deg, #60a5fa, #3b82f6)", borderRadius: 6 }} title={`${p.date}: ${p.count}`} />
+                      </div>
+                      <div style={{ fontSize: 10, color: "#cbd5e1", textAlign: "center" }}>{new Date(p.date).toLocaleDateString()}</div>
+                    </div>
+                  ))}
+                </div>
+              );
+            })()
+          ) : (
+            <div style={{ color: "#94a3b8" }}>No stars data.</div>
+          )}
+        </div>
+      </section>
+      )}
     </div>
   );
 }

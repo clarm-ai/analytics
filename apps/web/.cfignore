@@ -1,0 +1,7 @@
+node_modules
+.next
+.next-on-pages/**
+**/.DS_Store
+**/.env*
+**/.git/**
+**/.cache/**
