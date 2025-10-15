@@ -7,7 +7,8 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "pages:build": "next-on-pages"
+    "pages:build": "next-on-pages",
+    "gen:topics": "node ./scripts/generate_topic_and_examples_index.mjs"
   },
   "dependencies": {
     "dotenv": "^17.2.3",

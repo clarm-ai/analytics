@@ -1,0 +1,930 @@
+{
+  "Better Auth Integration": [
+    {
+      "message_id": "1427552010533863527",
+      "author_id": "507969622876618754",
+      "author_display_name": "The Untraceable",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/507969622876618754/f08ec21d092e2ac29ebe61b5fe550d4d.png?size=80",
+      "timestamp": "2025-10-14T07:02:01.945000+00:00",
+      "text": "I dont see why youre building another layer of auth for nextjs to express; cors suffices",
+      "attachments": []
+    },
+    {
+      "message_id": "1427539405509361767",
+      "author_id": "929292635682795520",
+      "author_display_name": "Ritik",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/929292635682795520/4109a861344c7c8e00a6c7d5b3bf7e5e.png?size=80",
+      "timestamp": "2025-10-14T06:11:56.673000+00:00",
+      "text": "I have setup Neon + Auth + Drizzle but now I'm struggling with RLS.",
+      "attachments": []
+    },
+    {
+      "message_id": "1427539139124789268",
+      "author_id": "929292635682795520",
+      "author_display_name": "Ritik",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/929292635682795520/4109a861344c7c8e00a6c7d5b3bf7e5e.png?size=80",
+      "timestamp": "2025-10-14T06:10:53.162000+00:00",
+      "text": "has anyone managed to setup Neon + Better Auth + Drizzle + RLS ?? Neon Authorize docs don't have an \"official\" guide for how we can use better-auth 🙁\n\nI just started using better-auth, so i'm new to this library! i would really appreciate advice on how to implement this/a barebones template if there is one. thank you!",
+      "attachments": []
+    },
+    {
+      "message_id": "1427416274543186022",
+      "author_id": "817077489758765066",
+      "author_display_name": "Aaron Delasy",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/817077489758765066/bf992a27aa20859effd1986275bf1f70.png?size=80",
+      "timestamp": "2025-10-13T22:02:39.963000+00:00",
+      "text": "hey everyone I'm working on a boilerplate repository for my company and I have a question: so I have an Express.js backend that already has login, signup, email verification, and password reset configured, working and covered with tests.\n\nI wanted to use Better Auth on the Next.js side in a kinda just auth-client way, where I will be not running Better Auth's migrations. So what I need from Better Auth is just this implementation of sessions (though Next.js has no database connection, only Express.js has).\n\nThe communication between Express.js and Next.js is done via access/refresh tokens, but the endpoints are not standard OAuth2 endpoints - they are custom coded.\n\nI checked on bearer and jwt plugins and it doesn't seem to be doing what I need, and I need to use Better Auth to communicate with my Express.js from Next.js app.\n\nWhat is the best way to integrate Better Auth inside my Next.js app?",
+      "attachments": []
+    },
+    {
+      "message_id": "1427380271937880217",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T19:39:36.273000+00:00",
+      "text": "try to avoid using trpc unless you need to run server side code alongside a given better-auth request",
+      "attachments": []
+    },
+    {
+      "message_id": "1427358826918838439",
+      "author_id": "507969622876618754",
+      "author_display_name": "The Untraceable",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/507969622876618754/f08ec21d092e2ac29ebe61b5fe550d4d.png?size=80",
+      "timestamp": "2025-10-13T18:14:23.382000+00:00",
+      "text": "Tbh authClient gets it done with full type safety, not sure if tRpc is needed but I dont use trpc so idk",
+      "attachments": []
+    },
+    {
+      "message_id": "1427342761723564325",
+      "author_id": "1296394951596310597",
+      "author_display_name": "Deprecated Dev",
+      "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+      "timestamp": "2025-10-13T17:10:33.141000+00:00",
+      "text": "Hey guys. I have a question related to SIWE integration in Better Auth. I was wondering in which thread should I post my question.",
+      "attachments": []
+    },
+    {
+      "message_id": "1427337771802038416",
+      "author_id": "306084875247550464",
+      "author_display_name": "dun",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/306084875247550464/c2c23fa6a2fb23553161f6240e0e4eb6.png?size=80",
+      "timestamp": "2025-10-13T16:50:43.451000+00:00",
+      "text": "if i use nextjs and trpc, is it better to use auth.Client / create my own api with trpc to call betterauth api?",
+      "attachments": []
+    },
+    {
+      "message_id": "1427330727678185493",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T16:22:44.001000+00:00",
+      "text": "Ah I see, one benefit in your case is also that you don't necessarily have to use the adapter since the plugin is specific to your codebase, you could use custom libs or apis to aggrigate the data you need",
+      "attachments": []
+    },
+    {
+      "message_id": "1427330334835609693",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T16:21:10.340000+00:00",
+      "text": "Oh, mostly regarding the adapter that's hard?",
+      "attachments": []
+    }
+  ],
+  "OAuth Issues": [
+    {
+      "message_id": "1427416274543186022",
+      "author_id": "817077489758765066",
+      "author_display_name": "Aaron Delasy",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/817077489758765066/bf992a27aa20859effd1986275bf1f70.png?size=80",
+      "timestamp": "2025-10-13T22:02:39.963000+00:00",
+      "text": "hey everyone I'm working on a boilerplate repository for my company and I have a question: so I have an Express.js backend that already has login, signup, email verification, and password reset configured, working and covered with tests.\n\nI wanted to use Better Auth on the Next.js side in a kinda just auth-client way, where I will be not running Better Auth's migrations. So what I need from Better Auth is just this implementation of sessions (though Next.js has no database connection, only Express.js has).\n\nThe communication between Express.js and Next.js is done via access/refresh tokens, but the endpoints are not standard OAuth2 endpoints - they are custom coded.\n\nI checked on bearer and jwt plugins and it doesn't seem to be doing what I need, and I need to use Better Auth to communicate with my Express.js from Next.js app.\n\nWhat is the best way to integrate Better Auth inside my Next.js app?",
+      "attachments": []
+    },
+    {
+      "message_id": "1427327153745428573",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:08:31.909000+00:00",
+      "text": "Funny thing is I am now at a point where I am gonna have to retire most of the admin plugin functionality cause the scope has gotten way too big and I can't easily aggregate my multiple collections' data into it efficiently",
+      "attachments": []
+    },
+    {
+      "message_id": "1427325045629260038",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T16:00:09.295000+00:00",
+      "text": "https://github.com/better-auth/better-auth/pull/5278 here for you to track :)",
+      "attachments": []
+    },
+    {
+      "message_id": "1427311748918284442",
+      "author_id": "696056768152993822",
+      "author_display_name": "Gio",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/696056768152993822/b27a74d476b0f6dba5ce9171d261a62c.png?size=80",
+      "timestamp": "2025-10-13T15:07:19.112000+00:00",
+      "text": "hello everyone!\nToday a user reported an error trying to login with GitHub, after a bit of digging we figured it was just a blip from GH itself, however we didn't get any context from bettar-auth as `getUserInfo` simply returns null in case of error when retrieving a user profile fails: https://github.com/better-auth/better-auth/blob/b896e83631f5b633585b993cf9e531f33dc91402/packages/core/src/social-providers/github.ts#L116, which then renders the default error page with `unable_to_get_user_info`.  should any error there be returned as well to get logged in https://github.com/better-auth/better-auth/blob/b896e83631f5b633585b993cf9e531f33dc91402/packages/better-auth/src/api/routes/callback.ts#L116 and possibly passed down to the error page?",
+      "attachments": [
+        "https://cdn.discordapp.com/attachments/1288403910284935182/1427311748985127092/image.png?ex=68ef0fe7&is=68edbe67&hm=df021e4b2b85bb05a1127f9c879f9a6e2db8b88fddfcb0bacd4f5040aeccdea5&"
+      ]
+    },
+    {
+      "message_id": "1427194862184304700",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T07:22:51.143000+00:00",
+      "text": "```ts\nimport type { BetterAuthPlugin } from \"better-auth\";\n\nexport const seedPlugin = () => {\n    return {\n        id: \"seed\",\n        init: async (ctx) => {\n            const { internalAdapter, adapter } = ctx;\n\n            const iterations = 100;\n            for (let index = 0; index < iterations; index++) {\n        const randomId = crypto.randomUUID();\n        const user = await internalAdapter.createUser({\n          email: `${randomId}@gmail.com`,\n          name: `user-${randomId}`,\n        });\n        const account = await internalAdapter.createAccount({\n          accountId:crypto.randomUUID(),\n          providerId: \"credential\",\n          userId: user.id,\n          password: await ctx.password.hash(\"MY_SUPER_STRONG_PASSWORD\"),\n        });\n      }\n        },\n    } satisfies BetterAuthPlugin;\n};\n```",
+      "attachments": []
+    },
+    {
+      "message_id": "1426959880266186916",
+      "author_id": "429851452236890123",
+      "author_display_name": "Anurag",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/429851452236890123/fe9966c30aa7de8d9da77f681064336d.png?size=80",
+      "timestamp": "2025-10-12T15:49:07.088000+00:00",
+      "text": "Hey guys, i am working on my project  , i was trying azure external id ciam with better auth. currently its working with generic oauth. but it is good idea to do this? will it create a problem for in future?\nI am using nextjs.",
+      "attachments": []
+    },
+    {
+      "message_id": "1426906730251681823",
+      "author_id": "1202084480110563422",
+      "author_display_name": "SZAIB DEV",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/1202084480110563422/79b1bf15958e05b7b8e515c128241d9d.png?size=80",
+      "timestamp": "2025-10-12T12:17:55.137000+00:00",
+      "text": "import { betterAuth } from \"better-auth\";\nimport { mongodbAdapter } from \"better-auth/adapters/mongodb\";\nimport { MongoClient } from \"mongodb\";\n\nconst client = new MongoClient(\"mongodb://localhost:27017/twitter\")\nconst db:any = client.db() as any;\n\n\n\nexport const auth = betterAuth({\n  database: mongodbAdapter(db),\n  \n  socialProviders: {\n    google: {\n      clientId: process.env.AUTH_GOOGLE_ID as string,\n      clientSecret: process.env.AUTH_GOOGLE_SECRET as string,\n    },\n    github: {\n      clientId: process.env.AUTH_GITHUB_ID as string,\n      clientSecret: process.env.AUTH_GITHUB_SECRET as string,\n    },\n  },\n});",
+      "attachments": []
+    },
+    {
+      "message_id": "1426658738689015950",
+      "author_id": "679056930521743382",
+      "author_display_name": "Lucas",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/679056930521743382/32c1d52ecd62a02ad03d0ee73b00df4c.png?size=80",
+      "timestamp": "2025-10-11T19:52:29.341000+00:00",
+      "text": "<@464969494989766667> what if I just use steam as another extenral provider, on the current version? would that be bad? or not possible? \n\nit says it supports OpenID, which is what steam auth uses.",
+      "attachments": [
+        "https://cdn.discordapp.com/attachments/1288403910284935182/1426658738760188095/CleanShot_2025-10-11_at_16.51.472x.jpg?ex=68ef52bd&is=68ee013d&hm=d72b8164412ab1681685c162914fdb93146f277513bbc89cca098ad45443acbf&"
+      ]
+    },
+    {
+      "message_id": "1426646243173470312",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-11T19:02:50.178000+00:00",
+      "text": "Not super plug and play yet, I have a PR open which adds steam auth but it's not apporved/merged yet.\nhttps://github.com/better-auth/better-auth/pull/4877/",
+      "attachments": []
+    },
+    {
+      "message_id": "1426543278261538857",
+      "author_id": "502780637242195975",
+      "author_display_name": "Leo1305",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/502780637242195975/4b4951eeb01f154d348b7fffac5dc1a2.png?size=80",
+      "timestamp": "2025-10-11T12:13:41.430000+00:00",
+      "text": "Hello! 👋🏻 Does Better Auth support the OAuth 2.0 Device Authorization Grant (RFC 8628)?",
+      "attachments": []
+    }
+  ],
+  "Database and ORM Concerns": [
+    {
+      "message_id": "1427539405509361767",
+      "author_id": "929292635682795520",
+      "author_display_name": "Ritik",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/929292635682795520/4109a861344c7c8e00a6c7d5b3bf7e5e.png?size=80",
+      "timestamp": "2025-10-14T06:11:56.673000+00:00",
+      "text": "I have setup Neon + Auth + Drizzle but now I'm struggling with RLS.",
+      "attachments": []
+    },
+    {
+      "message_id": "1427539139124789268",
+      "author_id": "929292635682795520",
+      "author_display_name": "Ritik",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/929292635682795520/4109a861344c7c8e00a6c7d5b3bf7e5e.png?size=80",
+      "timestamp": "2025-10-14T06:10:53.162000+00:00",
+      "text": "has anyone managed to setup Neon + Better Auth + Drizzle + RLS ?? Neon Authorize docs don't have an \"official\" guide for how we can use better-auth 🙁\n\nI just started using better-auth, so i'm new to this library! i would really appreciate advice on how to implement this/a barebones template if there is one. thank you!",
+      "attachments": []
+    },
+    {
+      "message_id": "1427416274543186022",
+      "author_id": "817077489758765066",
+      "author_display_name": "Aaron Delasy",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/817077489758765066/bf992a27aa20859effd1986275bf1f70.png?size=80",
+      "timestamp": "2025-10-13T22:02:39.963000+00:00",
+      "text": "hey everyone I'm working on a boilerplate repository for my company and I have a question: so I have an Express.js backend that already has login, signup, email verification, and password reset configured, working and covered with tests.\n\nI wanted to use Better Auth on the Next.js side in a kinda just auth-client way, where I will be not running Better Auth's migrations. So what I need from Better Auth is just this implementation of sessions (though Next.js has no database connection, only Express.js has).\n\nThe communication between Express.js and Next.js is done via access/refresh tokens, but the endpoints are not standard OAuth2 endpoints - they are custom coded.\n\nI checked on bearer and jwt plugins and it doesn't seem to be doing what I need, and I need to use Better Auth to communicate with my Express.js from Next.js app.\n\nWhat is the best way to integrate Better Auth inside my Next.js app?",
+      "attachments": []
+    },
+    {
+      "message_id": "1427331576118771764",
+      "author_id": "574078149592350722",
+      "author_display_name": "Vishal Anton",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/574078149592350722/29c54bb31d2457f35b6fb432e29f8e43.png?size=80",
+      "timestamp": "2025-10-13T16:26:06.285000+00:00",
+      "text": "TypeORM or MikroORM FTW",
+      "attachments": []
+    },
+    {
+      "message_id": "1427331068897529907",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:24:05.354000+00:00",
+      "text": "The game data is all stored in influxdb so I can do on the fly aggregating for different timeframes etc",
+      "attachments": []
+    },
+    {
+      "message_id": "1427330714273189959",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:22:40.805000+00:00",
+      "text": "Oh no even more ORMs<:hnn:345303252323270656>",
+      "attachments": []
+    },
+    {
+      "message_id": "1427330611525189742",
+      "author_id": "405746136792694794",
+      "author_display_name": "FalconiZzare",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/405746136792694794/0a578d4c3e33cf9ffd0c580bf1329efe.png?size=80",
+      "timestamp": "2025-10-13T16:22:16.308000+00:00",
+      "text": "<@464969494989766667>  sequlize ORM can be a nice addition",
+      "attachments": []
+    },
+    {
+      "message_id": "1427329879325671454",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:19:21.738000+00:00",
+      "text": "Like they only support it for like certain SQL databases by using LIKE",
+      "attachments": []
+    },
+    {
+      "message_id": "1427329805833076877",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:19:04.216000+00:00",
+      "text": "I was looking into drizzle and apparently there is also only half-support for it",
+      "attachments": []
+    },
+    {
+      "message_id": "1427329797255725269",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T16:19:02.171000+00:00",
+      "text": "Some ORMs don't directly support it out of the box",
+      "attachments": []
+    }
+  ],
+  "User Roles and Permissions": [
+    {
+      "message_id": "1427327153745428573",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:08:31.909000+00:00",
+      "text": "Funny thing is I am now at a point where I am gonna have to retire most of the admin plugin functionality cause the scope has gotten way too big and I can't easily aggregate my multiple collections' data into it efficiently",
+      "attachments": []
+    },
+    {
+      "message_id": "1427326618245795971",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:06:24.236000+00:00",
+      "text": "Honestly before BA I think I tried almost any other option cause I wanted something with account linking built in. Everything I tried was either way too big and complicated for my relatively simple setup or couldn't properly link accounts. Or the documentation sucked to the point where I wasn't able to get it set up. Also the admin plugin was a pretty big plus since I didn't have to make all the crud for that myself",
+      "attachments": []
+    },
+    {
+      "message_id": "1427324967393034453",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T15:59:50.642000+00:00",
+      "text": "Quick question, is there any undocumented way to make the Admin plugin users search ignore upper/lower case? There is nothing in the documentation about this and ngl I am getting kinda tired of having to check the username in various combinations of upper and lowercase",
+      "attachments": []
+    },
+    {
+      "message_id": "1426947876269068450",
+      "author_id": "654390669472694284",
+      "author_display_name": "Danny",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/654390669472694284/5921f2b4113852434b846393908d9748.png?size=80",
+      "timestamp": "2025-10-12T15:01:25.112000+00:00",
+      "text": "( i edited the user role if the second one manually btw so ignore that, it does the same with it set to member)",
+      "attachments": []
+    },
+    {
+      "message_id": "1426452538869284894",
+      "author_id": "228736366836449282",
+      "author_display_name": "showduhtung",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/228736366836449282/8c1588d5490948e7cc2f2c4c2d14c12a.png?size=80",
+      "timestamp": "2025-10-11T06:13:07.473000+00:00",
+      "text": "Hey guys, I'm a little confused at access control, and why I would use the given `userHasPermission`, or any other variants.\nhttps://www.better-auth.com/docs/plugins/admin#access-control-usage\n```\nconst data = await auth.api.userHasPermission({\n    body: {\n        userId: \"user-id\",\n        role: \"admin\", // server-only\n        permission: { \"project\": [\"create\", \"update\"] } /* Must use this, or permissions */,\n        permissions,\n    },\n});\n```\nEarlier in the docs, we already define `permissions`. Since that logic already lives in my own codebase, and assuming I already have my `user` object (with `id` and `role`),  why do I need to use this `userHasPermission` function when I can just write a function \n```\nconst permissions = {\n  admin: { projects: [\"create\", \"update\"] }\n};\n\nconst checkAdminPermissions = (role, resource) => permissions[role][resource]'\n\nfunction createProject(user) {\n  const canCreateProject = checkAdminPermissions(user.role, \"projects\");\n  if (!canCreateProject) return { error: true, message: \"Unauthorized\")\n  ....\n}\n```\nJust confused at what's the benefit to defining the permission logic locally, passing it upstream to better-auth, just to perform the check back downstream? If I have to perform the check downstream anyways, can't I just skip sending the business logic upstream to better-auth? Is there some blackboxed protection on my resources if I pass the permission logic upstream?",
+      "attachments": []
+    },
+    {
+      "message_id": "1425438883235102720",
+      "author_id": "857223120846192640",
+      "author_display_name": "Marky",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/857223120846192640/a3703400d80f4a505a136b3b937560d5.png?size=80",
+      "timestamp": "2025-10-08T11:05:13.137000+00:00",
+      "text": "So will i need to use the admin plugin?",
+      "attachments": []
+    },
+    {
+      "message_id": "1425437964938514456",
+      "author_id": "405746136792694794",
+      "author_display_name": "FalconiZzare",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/405746136792694794/0a578d4c3e33cf9ffd0c580bf1329efe.png?size=80",
+      "timestamp": "2025-10-08T11:01:34.198000+00:00",
+      "text": "Yes. The only requirements is there needs to be an owner or super admin who governs over all the branches.",
+      "attachments": []
+    },
+    {
+      "message_id": "1425370400119980128",
+      "author_id": "537692720307896330",
+      "author_display_name": "Sourov Debnath",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/537692720307896330/5fb7753082cbd6bd130d231e084e3465.png?size=80",
+      "timestamp": "2025-10-08T06:33:05.490000+00:00",
+      "text": "i had already role column in my db and it was array of string.\n\nso when i tried to use admin plugin i got error here\n\nconst plugins_admin_access_index = require('../plugins/admin/access/index.cjs');\n```\nconst hasPermission = (input) => {\n  if (input.userId && input.options?.adminUserIds?.includes(input.userId)) {\n    return true;\n  }\n  if (!input.permissions && !input.permission) {\n    return false;\n  }\n  const roles = (input.role || input.options?.defaultRole || \"user\").split(\",\");\n  const acRoles = input.options?.roles || plugins_admin_access_index.defaultRoles;\n  for (const role of roles) {\n    const _role = acRoles[role];\n    const result = _role?.authorize(input.permission ?? input.permissions);\n    if (result?.success) {\n      return true;\n    }\n  }\n  return false;\n};\n\nexports.hasPermission = hasPermission;\n```\n\nHow can i change default role column. Can anyone help me please?",
+      "attachments": []
+    },
+    {
+      "message_id": "1424739564316004494",
+      "author_id": "537692720307896330",
+      "author_display_name": "Sourov Debnath",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/537692720307896330/5fb7753082cbd6bd130d231e084e3465.png?size=80",
+      "timestamp": "2025-10-06T12:46:22.514000+00:00",
+      "text": "```\n\nexport const auth: ReturnType<typeof betterAuth> = betterAuth({\n  hooks: {\n    after: createAuthMiddleware(async (ctx) => {\n      if (ctx.path.startsWith('/sign-in')) {\n        const session = ctx.context.newSession;\n        if (session) {\n          const { user } = session;\n          const service = await getUserService();\n          const roles = await UserController.findUserRoles(user?.id, service);\n          return {\n            ...ctx,\n            roles,\n            user,\n          };\n        }\n\n        return ctx;\n      }\n    }),\n  },\n  database: pool,\n  user: {\n    fields: {\n      createdAt: 'created_at',\n      updatedAt: 'updated_at',\n    },\n  },\n  trustedOrigins: [\n    'http://localhost:3001',\n    'http://localhost:3008',\n    'http://192.168.1.80:3000',\n    'http://192.168.1.80:3100',\n    'http://localhost:3000',\n    'http://localhost:3002',\n    ],\n  emailAndPassword: {\n    enabled: true,\n  },\n  logger: console,\n  plugins: [\n    admin(),\n    username(),\n    openAPI(),\n    expo(),\n    customSession(async ({ user, session }) => {\n      const service = await getUserService();\n      const roles = await UserController.findUserRoles(session.userId, service);\n       return {\n        roles,\n        user: {\n          ...user,\n        },\n        session,\n      };\n    }),\n    bearer(),\n  ],\n});\n\n```\n\nAnd now when i try to access auth.api and i dont have setUserPassword. what should i do sir?",
+      "attachments": []
+    },
+    {
+      "message_id": "1424738842895974502",
+      "author_id": "537692720307896330",
+      "author_display_name": "Sourov Debnath",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/537692720307896330/5fb7753082cbd6bd130d231e084e3465.png?size=80",
+      "timestamp": "2025-10-06T12:43:30.514000+00:00",
+      "text": "Yes, sir im using admin plugin.  But in my auth instance i don't have that method named as setUserPassword. what to do. i found that is present in client instance.",
+      "attachments": []
+    }
+  ],
+  "Email Verification": [
+    {
+      "message_id": "1427416274543186022",
+      "author_id": "817077489758765066",
+      "author_display_name": "Aaron Delasy",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/817077489758765066/bf992a27aa20859effd1986275bf1f70.png?size=80",
+      "timestamp": "2025-10-13T22:02:39.963000+00:00",
+      "text": "hey everyone I'm working on a boilerplate repository for my company and I have a question: so I have an Express.js backend that already has login, signup, email verification, and password reset configured, working and covered with tests.\n\nI wanted to use Better Auth on the Next.js side in a kinda just auth-client way, where I will be not running Better Auth's migrations. So what I need from Better Auth is just this implementation of sessions (though Next.js has no database connection, only Express.js has).\n\nThe communication between Express.js and Next.js is done via access/refresh tokens, but the endpoints are not standard OAuth2 endpoints - they are custom coded.\n\nI checked on bearer and jwt plugins and it doesn't seem to be doing what I need, and I need to use Better Auth to communicate with my Express.js from Next.js app.\n\nWhat is the best way to integrate Better Auth inside my Next.js app?",
+      "attachments": []
+    },
+    {
+      "message_id": "1427380271937880217",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T19:39:36.273000+00:00",
+      "text": "try to avoid using trpc unless you need to run server side code alongside a given better-auth request",
+      "attachments": []
+    },
+    {
+      "message_id": "1427330727678185493",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T16:22:44.001000+00:00",
+      "text": "Ah I see, one benefit in your case is also that you don't necessarily have to use the adapter since the plugin is specific to your codebase, you could use custom libs or apis to aggrigate the data you need",
+      "attachments": []
+    },
+    {
+      "message_id": "1427195677032583178",
+      "author_id": "453875658926325761",
+      "author_display_name": "Chamito-Kun.component.ts",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/453875658926325761/b3d8d455648cd5be5b02957526aa3146.png?size=80",
+      "timestamp": "2025-10-13T07:26:05.418000+00:00",
+      "text": "I know, I just let the code flow to see what happens, but I prefer to stick as close to the core as possible so as not to have more surprises when updating later.",
+      "attachments": []
+    },
+    {
+      "message_id": "1427194862184304700",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T07:22:51.143000+00:00",
+      "text": "```ts\nimport type { BetterAuthPlugin } from \"better-auth\";\n\nexport const seedPlugin = () => {\n    return {\n        id: \"seed\",\n        init: async (ctx) => {\n            const { internalAdapter, adapter } = ctx;\n\n            const iterations = 100;\n            for (let index = 0; index < iterations; index++) {\n        const randomId = crypto.randomUUID();\n        const user = await internalAdapter.createUser({\n          email: `${randomId}@gmail.com`,\n          name: `user-${randomId}`,\n        });\n        const account = await internalAdapter.createAccount({\n          accountId:crypto.randomUUID(),\n          providerId: \"credential\",\n          userId: user.id,\n          password: await ctx.password.hash(\"MY_SUPER_STRONG_PASSWORD\"),\n        });\n      }\n        },\n    } satisfies BetterAuthPlugin;\n};\n```",
+      "attachments": []
+    },
+    {
+      "message_id": "1427060197154619465",
+      "author_id": "507969622876618754",
+      "author_display_name": "The Untraceable",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/507969622876618754/f08ec21d092e2ac29ebe61b5fe550d4d.png?size=80",
+      "timestamp": "2025-10-12T22:27:44.498000+00:00",
+      "text": "In this discord we can see everyones username and pfp (not email because this is more so a social platform)",
+      "attachments": []
+    },
+    {
+      "message_id": "1427060080746172518",
+      "author_id": "507969622876618754",
+      "author_display_name": "The Untraceable",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/507969622876618754/f08ec21d092e2ac29ebe61b5fe550d4d.png?size=80",
+      "timestamp": "2025-10-12T22:27:16.744000+00:00",
+      "text": "On MS Teams you can see everyone part of your teams, their pfp and email",
+      "attachments": []
+    },
+    {
+      "message_id": "1426946864975974649",
+      "author_id": "654390669472694284",
+      "author_display_name": "Danny",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/654390669472694284/5921f2b4113852434b846393908d9748.png?size=80",
+      "timestamp": "2025-10-12T14:57:24.001000+00:00",
+      "text": "Hey guys, i've just been working on my project and found out i can call get full organization from any account (even normal users) and get a list of all users in the entire org and their emails and pfps. is this normal behaviour? don't think that should be public",
+      "attachments": []
+    },
+    {
+      "message_id": "1426907085601243188",
+      "author_id": "419276429482786838",
+      "author_display_name": "Hozay",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/419276429482786838/5b64ade9a86862b8938e3b9eed651ff9.png?size=80",
+      "timestamp": "2025-10-12T12:19:19.859000+00:00",
+      "text": "~~well this is diff code from before, what error is it throwing?~~",
+      "attachments": []
+    },
+    {
+      "message_id": "1426906378101854378",
+      "author_id": "419276429482786838",
+      "author_display_name": "Hozay",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/419276429482786838/5b64ade9a86862b8938e3b9eed651ff9.png?size=80",
+      "timestamp": "2025-10-12T12:16:31.178000+00:00",
+      "text": "Could you show the code? I believe if you remove the `async` in lines 27 and 33 then you're good to go, but maybe the code will help too",
+      "attachments": []
+    }
+  ],
+  "Session Management": [
+    {
+      "message_id": "1427416274543186022",
+      "author_id": "817077489758765066",
+      "author_display_name": "Aaron Delasy",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/817077489758765066/bf992a27aa20859effd1986275bf1f70.png?size=80",
+      "timestamp": "2025-10-13T22:02:39.963000+00:00",
+      "text": "hey everyone I'm working on a boilerplate repository for my company and I have a question: so I have an Express.js backend that already has login, signup, email verification, and password reset configured, working and covered with tests.\n\nI wanted to use Better Auth on the Next.js side in a kinda just auth-client way, where I will be not running Better Auth's migrations. So what I need from Better Auth is just this implementation of sessions (though Next.js has no database connection, only Express.js has).\n\nThe communication between Express.js and Next.js is done via access/refresh tokens, but the endpoints are not standard OAuth2 endpoints - they are custom coded.\n\nI checked on bearer and jwt plugins and it doesn't seem to be doing what I need, and I need to use Better Auth to communicate with my Express.js from Next.js app.\n\nWhat is the best way to integrate Better Auth inside my Next.js app?",
+      "attachments": []
+    },
+    {
+      "message_id": "1427326292679987213",
+      "author_id": "405746136792694794",
+      "author_display_name": "FalconiZzare",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/405746136792694794/0a578d4c3e33cf9ffd0c580bf1329efe.png?size=80",
+      "timestamp": "2025-10-13T16:05:06.615000+00:00",
+      "text": "I found better auth when I was clueless how to migrate from DBLess to Session based DB on NextAuth and I couldn't find any docs regarding that :3",
+      "attachments": []
+    },
+    {
+      "message_id": "1427265816193404928",
+      "author_id": "114255078424182784",
+      "author_display_name": "Matt",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/114255078424182784/66f49ef8e031d7523959a20559e379c8.png?size=80",
+      "timestamp": "2025-10-13T12:04:47.897000+00:00",
+      "text": "~~Just a quick question before I start diving in...did 1.3.26/27 break API key based sessions for anyone else even with the documented option to re-enable it?~~\n\nIt was a temporary bug in my running process but also incorrect documentation. Just pushed a PR",
+      "attachments": []
+    },
+    {
+      "message_id": "1426947274977575023",
+      "author_id": "445554667104108554",
+      "author_display_name": "Ankur",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/445554667104108554/64b7ec6e01812d21741a3078f24b59ec.png?size=80",
+      "timestamp": "2025-10-12T14:59:01.753000+00:00",
+      "text": "Hi Folks, new to better-auth, I went through the documentation and first of all great job at abstracting the authentication with all the industry level best practices. When I integrate with better-auth with a backend service (say nestjs / express) it automatically sets up all the required api endpoints in the server. I am wondering if there is any documentation regarding the same. From where I am coming, I want to test out some protected endpoints from postman / bruno, and to get the session I will require to call the endpoints setup by better-auth.\n\nCan anyone help me on this? And maybe its better if we can have a section for this in the documentation if we do not have already.",
+      "attachments": []
+    },
+    {
+      "message_id": "1426676847881748561",
+      "author_id": "385225761898102786",
+      "author_display_name": "jack",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/385225761898102786/b878907f596495b35d1bb7bf92a67e44.png?size=80",
+      "timestamp": "2025-10-11T21:04:26.909000+00:00",
+      "text": "but this will only work with cross domain cookies right?\n\nanyway, I get the concept, the question was more me wondering if anyone had an example monorepo of doing such a thing",
+      "attachments": []
+    },
+    {
+      "message_id": "1426474672576270467",
+      "author_id": "405746136792694794",
+      "author_display_name": "FalconiZzare",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/405746136792694794/0a578d4c3e33cf9ffd0c580bf1329efe.png?size=80",
+      "timestamp": "2025-10-11T07:41:04.560000+00:00",
+      "text": "For a centralized auth service, you can either use JWT or Bearer token plugin or the OIDC plugin as an auth provider.\n\nSession based centralized auth service won't be possible unless all the apps are on same domain.",
+      "attachments": []
+    },
+    {
+      "message_id": "1426228495486292130",
+      "author_id": "405746136792694794",
+      "author_display_name": "FalconiZzare",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/405746136792694794/0a578d4c3e33cf9ffd0c580bf1329efe.png?size=80",
+      "timestamp": "2025-10-10T15:22:51.368000+00:00",
+      "text": "Then u need to enable crossSubDomain cookies from auth.ts and if you are using a custom cookie prefix then u need to pass on that excact same name on nextjs middleware",
+      "attachments": []
+    },
+    {
+      "message_id": "1426192538124943500",
+      "author_id": "405746136792694794",
+      "author_display_name": "FalconiZzare",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/405746136792694794/0a578d4c3e33cf9ffd0c580bf1329efe.png?size=80",
+      "timestamp": "2025-10-10T12:59:58.465000+00:00",
+      "text": "could be related to cookie prefix or crossSubDomain setups",
+      "attachments": []
+    },
+    {
+      "message_id": "1426147922185289860",
+      "author_id": "252353176550899713",
+      "author_display_name": "Rafiul",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/252353176550899713/e430b53e460a71e36d92f3860f5dfe13.png?size=80",
+      "timestamp": "2025-10-10T10:02:41.196000+00:00",
+      "text": "How do I fix this bug.. Cookies are always null on nextjs middleware, but on client component I'm seeing the cookies. Using expressjs for the auth backend. Only happens in production",
+      "attachments": []
+    },
+    {
+      "message_id": "1426088179773083720",
+      "author_id": "769057273150308394",
+      "author_display_name": "mrzoro",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/769057273150308394/f4f4b47e856fb74f0e7771197e98f15b.png?size=80",
+      "timestamp": "2025-10-10T06:05:17.495000+00:00",
+      "text": "Hey, is there a guide to using jwts with better-auth? I've read the docuemntation about bearer plugin and have it enabled and setup. https://www.better-auth.com/docs/plugins/bearer\n\nIt says that After a successful sign-in, you'll receive a session token in the response headers. Store this token securely (e.g., in localStorage):\n```ts\nconst { data } = await authClient.signIn.email({\n    email: \"user@example.com\",\n    password: \"securepassword\"\n}, {\n  onSuccess: (ctx)=>{\n    const authToken = ctx.response.headers.get(\"set-auth-token\") // get the token from the response headers\n    // Store the token securely (e.g., in localStorage)\n    localStorage.setItem(\"bearer_token\", authToken);\n  }\n});\n```\n\nThis works as said for `authClient.signIn.email` and I can see the authToken if i console log it inside the `onSuccess` callback. But this doesnot work for `authClient.signIn.social`.\n\nI am using this\n\n```ts\nasync function socialSignIn(provider: \"google\" | \"apple\") {\n    await authClient.signIn.social(\n      {\n        provider: provider,\n      },\n      {\n        onSuccess: (ctx) => {\n          console.log(\n            \"authtoken in ctx of socialSignIn:\",\n            ctx.response.headers.get(\"set-auth-token\"),\n          );\n          navigate(\"/\");\n        },\n        //...\n      },\n    );\n  }\n\n//...\n```\n\nThe statement \n```ts\nconsole.log(\n            \"authtoken in ctx of socialSignIn:\",\n            ctx.response.headers.get(\"set-auth-token\"),\n          );\n```\n\nruns instantly when `socialSignIn(\"google\")` is called after clicking the signin button and I see the log statement. but this doesn't run after i \"choose an account\" -> \"continue\" and come back to main dashboard. when am i supposed to get the bearer token in social signin?",
+      "attachments": []
+    }
+  ],
+  "CORS Issues": [
+    {
+      "message_id": "1427552010533863527",
+      "author_id": "507969622876618754",
+      "author_display_name": "The Untraceable",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/507969622876618754/f08ec21d092e2ac29ebe61b5fe550d4d.png?size=80",
+      "timestamp": "2025-10-14T07:02:01.945000+00:00",
+      "text": "I dont see why youre building another layer of auth for nextjs to express; cors suffices",
+      "attachments": []
+    },
+    {
+      "message_id": "1426088179773083720",
+      "author_id": "769057273150308394",
+      "author_display_name": "mrzoro",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/769057273150308394/f4f4b47e856fb74f0e7771197e98f15b.png?size=80",
+      "timestamp": "2025-10-10T06:05:17.495000+00:00",
+      "text": "Hey, is there a guide to using jwts with better-auth? I've read the docuemntation about bearer plugin and have it enabled and setup. https://www.better-auth.com/docs/plugins/bearer\n\nIt says that After a successful sign-in, you'll receive a session token in the response headers. Store this token securely (e.g., in localStorage):\n```ts\nconst { data } = await authClient.signIn.email({\n    email: \"user@example.com\",\n    password: \"securepassword\"\n}, {\n  onSuccess: (ctx)=>{\n    const authToken = ctx.response.headers.get(\"set-auth-token\") // get the token from the response headers\n    // Store the token securely (e.g., in localStorage)\n    localStorage.setItem(\"bearer_token\", authToken);\n  }\n});\n```\n\nThis works as said for `authClient.signIn.email` and I can see the authToken if i console log it inside the `onSuccess` callback. But this doesnot work for `authClient.signIn.social`.\n\nI am using this\n\n```ts\nasync function socialSignIn(provider: \"google\" | \"apple\") {\n    await authClient.signIn.social(\n      {\n        provider: provider,\n      },\n      {\n        onSuccess: (ctx) => {\n          console.log(\n            \"authtoken in ctx of socialSignIn:\",\n            ctx.response.headers.get(\"set-auth-token\"),\n          );\n          navigate(\"/\");\n        },\n        //...\n      },\n    );\n  }\n\n//...\n```\n\nThe statement \n```ts\nconsole.log(\n            \"authtoken in ctx of socialSignIn:\",\n            ctx.response.headers.get(\"set-auth-token\"),\n          );\n```\n\nruns instantly when `socialSignIn(\"google\")` is called after clicking the signin button and I see the log statement. but this doesn't run after i \"choose an account\" -> \"continue\" and come back to main dashboard. when am i supposed to get the bearer token in social signin?",
+      "attachments": []
+    },
+    {
+      "message_id": "1424842233294749747",
+      "author_id": "282643119625732099",
+      "author_display_name": "QuinnFX",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/282643119625732099/14841a5f585ba69a03a85c24f4a0687f.png?size=80",
+      "timestamp": "2025-10-06T19:34:20.706000+00:00",
+      "text": "Im using just a react basic query to call a server action in nextjs. Inside the server action I have the session validate:\n```\n    const session = await auth.api.getSession({\n        headers: await headers(),\n    });\n\n    // Return unauthorized if no session\n    if (!session?.user?.id) throw new Error(\"Unauthorized\");\n\n```",
+      "attachments": []
+    },
+    {
+      "message_id": "1424743178854203435",
+      "author_id": "537692720307896330",
+      "author_display_name": "Sourov Debnath",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/537692720307896330/5fb7753082cbd6bd130d231e084e3465.png?size=80",
+      "timestamp": "2025-10-06T13:00:44.287000+00:00",
+      "text": "auth.api.setPassword({\n  'body':{newPassword:'test'},\n  'headers':{}\n})\n\n\nBut it doesn't take any userid input",
+      "attachments": []
+    },
+    {
+      "message_id": "1424742302991126629",
+      "author_id": "537692720307896330",
+      "author_display_name": "Sourov Debnath",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/537692720307896330/5fb7753082cbd6bd130d231e084e3465.png?size=80",
+      "timestamp": "2025-10-06T12:57:15.465000+00:00",
+      "text": "```\n\nsrc/auth.ts:104:10 - error TS2551: Property 'setUserPassword' does not exist on type 'InferAPI<{ readonly ok: { <AsResponse extends boolean = false, ReturnHeaders extends boolean = false>(inputCtx_0?: ({ body?: undefined; } & { method?: \"GET\" | undefined; } & { query?: Record<string, any> | undefined; } & { params?: Record<string, any> | undefined; } & { ...; } & { ...; } & { ...; } & { ...; }) | und...'. Did you mean 'setPassword'?\n\n104 auth.api.setUserPassword()\n             ~~~~~~~~~~~~~~~\n\n  node_modules/better-auth/dist/shared/better-auth.ZRC0NBl3.d.cts:11829:18\n    11829         readonly setPassword: {\n                           ~~~~~~~~~~~\n    'setPassword' is declared here.\n\n[6:57:01 PM] Found 1 error. Watching for file changes.\n```",
+      "attachments": []
+    },
+    {
+      "message_id": "1424739564316004494",
+      "author_id": "537692720307896330",
+      "author_display_name": "Sourov Debnath",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/537692720307896330/5fb7753082cbd6bd130d231e084e3465.png?size=80",
+      "timestamp": "2025-10-06T12:46:22.514000+00:00",
+      "text": "```\n\nexport const auth: ReturnType<typeof betterAuth> = betterAuth({\n  hooks: {\n    after: createAuthMiddleware(async (ctx) => {\n      if (ctx.path.startsWith('/sign-in')) {\n        const session = ctx.context.newSession;\n        if (session) {\n          const { user } = session;\n          const service = await getUserService();\n          const roles = await UserController.findUserRoles(user?.id, service);\n          return {\n            ...ctx,\n            roles,\n            user,\n          };\n        }\n\n        return ctx;\n      }\n    }),\n  },\n  database: pool,\n  user: {\n    fields: {\n      createdAt: 'created_at',\n      updatedAt: 'updated_at',\n    },\n  },\n  trustedOrigins: [\n    'http://localhost:3001',\n    'http://localhost:3008',\n    'http://192.168.1.80:3000',\n    'http://192.168.1.80:3100',\n    'http://localhost:3000',\n    'http://localhost:3002',\n    ],\n  emailAndPassword: {\n    enabled: true,\n  },\n  logger: console,\n  plugins: [\n    admin(),\n    username(),\n    openAPI(),\n    expo(),\n    customSession(async ({ user, session }) => {\n      const service = await getUserService();\n      const roles = await UserController.findUserRoles(session.userId, service);\n       return {\n        roles,\n        user: {\n          ...user,\n        },\n        session,\n      };\n    }),\n    bearer(),\n  ],\n});\n\n```\n\nAnd now when i try to access auth.api and i dont have setUserPassword. what should i do sir?",
+      "attachments": []
+    },
+    {
+      "message_id": "1424737314868822116",
+      "author_id": "537692720307896330",
+      "author_display_name": "Sourov Debnath",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/537692720307896330/5fb7753082cbd6bd130d231e084e3465.png?size=80",
+      "timestamp": "2025-10-06T12:37:26.204000+00:00",
+      "text": "How can I be an admin? like the current user object already have admin in his role? and with that i want to update others. it has been told to use like that\n```\nconst data = await auth.api.setUserPassword({\n    body: {\n        newPassword: 'new-password', // required\n        userId: 'user-id', // required\n    },\n    // This endpoint requires session cookies.\n    headers: await headers(),\n});\n```\n\nBut in my auth.api instance i dont have this method",
+      "attachments": []
+    },
+    {
+      "message_id": "1424357607359119532",
+      "author_id": "232198216299315201",
+      "author_display_name": "Semaelse",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/232198216299315201/f9dcdde872ce6cffbe19a676b7ce4d9f.png?size=80",
+      "timestamp": "2025-10-05T11:28:36.879000+00:00",
+      "text": "Is there any particular reason why getSession does not have a returnHeaders option?",
+      "attachments": []
+    },
+    {
+      "message_id": "1423959662725693440",
+      "author_id": "405746136792694794",
+      "author_display_name": "FalconiZzare",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/405746136792694794/0a578d4c3e33cf9ffd0c580bf1329efe.png?size=80",
+      "timestamp": "2025-10-04T09:07:19.485000+00:00",
+      "text": "do process.env instead of origin. see what happens",
+      "attachments": []
+    },
+    {
+      "message_id": "1421860798996680734",
+      "author_id": "194648173820510208",
+      "author_display_name": "Immanuel",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/194648173820510208/0e6e5079a9b68e361c0e8ad2a7246ded.png?size=80",
+      "timestamp": "2025-09-28T14:07:11.377000+00:00",
+      "text": "Hey,  I originally asked this question on <#1296058482289676320> but I'm not sure if that's the right place so I'll just ask it here too. I’m having a little bit of a hard time implementing the OIDC plugin and I’m not sure if it’s a problem on my side. I’ve set up better Auth on my node API with the oidc and email and password plugins. So the idea is that my web app will redirect to the login page hosted on the API and once user has successfully logged in, they will be redirected back to the web app with the Auth code and be able to request for the Auth token. I’ve set up the login page and the redirect from web app to login page works, but after the user logs in (using the auth client), the login page just refreshes with the server_error query parameter. I’ve set the logger to “debug” but don’t see anything in the server logs. Any tips on how else I can debug this?",
+      "attachments": []
+    }
+  ],
+  "Stripe Plugin": [
+    {
+      "message_id": "1422174368720752712",
+      "author_id": "821438537756049498",
+      "author_display_name": "BABYBOI",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/821438537756049498/3cf790c2d874263da70bf4785fef8c5c.png?size=80",
+      "timestamp": "2025-09-29T10:53:12.225000+00:00",
+      "text": "I fixed my issue but does anyone if I can implement stripe connect with the stripe plugin?",
+      "attachments": []
+    },
+    {
+      "message_id": "1422126249307934761",
+      "author_id": "821438537756049498",
+      "author_display_name": "BABYBOI",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/821438537756049498/3cf790c2d874263da70bf4785fef8c5c.png?size=80",
+      "timestamp": "2025-09-29T07:41:59.663000+00:00",
+      "text": "Can someone please help me with stripe plugin it wont update the users subscription in my neon db after they switch to a different plan its very frustrating and ive restarted multiple times",
+      "attachments": []
+    },
+    {
+      "message_id": "1422083625981186150",
+      "author_id": "717524502245933087",
+      "author_display_name": "sumanth",
+      "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+      "timestamp": "2025-09-29T04:52:37.470000+00:00",
+      "text": "Are there any UI components / start projects besides better-auth-ui ? I am looking for teams management and admin user management, billing etc",
+      "attachments": []
+    },
+    {
+      "message_id": "1421914821535858750",
+      "author_id": "574078149592350722",
+      "author_display_name": "Vishal Anton",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/574078149592350722/29c54bb31d2457f35b6fb432e29f8e43.png?size=80",
+      "timestamp": "2025-09-28T17:41:51.354000+00:00",
+      "text": "And as everyone suggests the stripe plugin from BA does most of the heavy lifting already so I thought why not utilise it",
+      "attachments": []
+    },
+    {
+      "message_id": "1421914443784126475",
+      "author_id": "574078149592350722",
+      "author_display_name": "Vishal Anton",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/574078149592350722/29c54bb31d2457f35b6fb432e29f8e43.png?size=80",
+      "timestamp": "2025-09-28T17:40:21.291000+00:00",
+      "text": "Ah that's the catch, the anonymous purchase can be a short term goal, Users can create account as well... So if I track their anonymous payments that would be a plus",
+      "attachments": []
+    },
+    {
+      "message_id": "1421913917801762916",
+      "author_id": "507969622876618754",
+      "author_display_name": "The Untraceable",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/507969622876618754/f08ec21d092e2ac29ebe61b5fe550d4d.png?size=80",
+      "timestamp": "2025-09-28T17:38:15.887000+00:00",
+      "text": "If you mean users just being able to use stripe without login, you dont need to do anything in better auth, just use the stripe checkout link?",
+      "attachments": []
+    },
+    {
+      "message_id": "1421871874219966576",
+      "author_id": "574078149592350722",
+      "author_display_name": "Vishal Anton",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/574078149592350722/29c54bb31d2457f35b6fb432e29f8e43.png?size=80",
+      "timestamp": "2025-09-28T14:51:11.916000+00:00",
+      "text": "Hey guys a quick one. I wanna build a marketplace with supports payment without being authenticated I mean anonymous users can buy a product just with their card details? It is possible in BA? Maybe we can get Email/phone from the user…",
+      "attachments": []
+    },
+    {
+      "message_id": "1421783090895917157",
+      "author_id": "821438537756049498",
+      "author_display_name": "BABYBOI",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/821438537756049498/3cf790c2d874263da70bf4785fef8c5c.png?size=80",
+      "timestamp": "2025-09-28T08:58:24.322000+00:00",
+      "text": "Hello I have a problem with the stripe plugin where when i switch from basic plan to pro plan it updates in stripe but not in my neon db can anyone help?",
+      "attachments": []
+    },
+    {
+      "message_id": "1421690034599497790",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-09-28T02:48:37.972000+00:00",
+      "text": "hello there... i added stripeCustomerId",
+      "attachments": []
+    },
+    {
+      "message_id": "1421653843871137872",
+      "author_id": "1167415269375873044",
+      "author_display_name": "M Zeeshan",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/1167415269375873044/c02a362c476b6cdfd2d13cd653292c55.png?size=80",
+      "timestamp": "2025-09-28T00:24:49.430000+00:00",
+      "text": "hello there... i added stripeCustomerId in additional fields, i can confirm that stripeCustomerId is in db but auth.api.getSession return user with stripeCustomerId undefined.\n```ts\nadditionalFields: {\n      stripeCustomerId: {\n        type: 'string',\n        fieldName: 'stripe_customer_id',\n        input: false,\n        required: false,\n        unique: true,\n      },\n    },\n```\n```ts\n  const sessionRes = await auth.api.getSession({\n    headers: req.headers,\n  });\n\n  console.log(sessionRes?.user.stripeCustomerId); // undefined\n  console.log((await db.query.user.findFirst())?.stripeCustomerId); // defined\n```",
+      "attachments": []
+    }
+  ],
+  "Documentation Gaps": [
+    {
+      "message_id": "1427539139124789268",
+      "author_id": "929292635682795520",
+      "author_display_name": "Ritik",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/929292635682795520/4109a861344c7c8e00a6c7d5b3bf7e5e.png?size=80",
+      "timestamp": "2025-10-14T06:10:53.162000+00:00",
+      "text": "has anyone managed to setup Neon + Better Auth + Drizzle + RLS ?? Neon Authorize docs don't have an \"official\" guide for how we can use better-auth 🙁\n\nI just started using better-auth, so i'm new to this library! i would really appreciate advice on how to implement this/a barebones template if there is one. thank you!",
+      "attachments": []
+    },
+    {
+      "message_id": "1427326618245795971",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:06:24.236000+00:00",
+      "text": "Honestly before BA I think I tried almost any other option cause I wanted something with account linking built in. Everything I tried was either way too big and complicated for my relatively simple setup or couldn't properly link accounts. Or the documentation sucked to the point where I wasn't able to get it set up. Also the admin plugin was a pretty big plus since I didn't have to make all the crud for that myself",
+      "attachments": []
+    },
+    {
+      "message_id": "1427326292679987213",
+      "author_id": "405746136792694794",
+      "author_display_name": "FalconiZzare",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/405746136792694794/0a578d4c3e33cf9ffd0c580bf1329efe.png?size=80",
+      "timestamp": "2025-10-13T16:05:06.615000+00:00",
+      "text": "I found better auth when I was clueless how to migrate from DBLess to Session based DB on NextAuth and I couldn't find any docs regarding that :3",
+      "attachments": []
+    },
+    {
+      "message_id": "1427324967393034453",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T15:59:50.642000+00:00",
+      "text": "Quick question, is there any undocumented way to make the Admin plugin users search ignore upper/lower case? There is nothing in the documentation about this and ngl I am getting kinda tired of having to check the username in various combinations of upper and lowercase",
+      "attachments": []
+    },
+    {
+      "message_id": "1427265816193404928",
+      "author_id": "114255078424182784",
+      "author_display_name": "Matt",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/114255078424182784/66f49ef8e031d7523959a20559e379c8.png?size=80",
+      "timestamp": "2025-10-13T12:04:47.897000+00:00",
+      "text": "~~Just a quick question before I start diving in...did 1.3.26/27 break API key based sessions for anyone else even with the documented option to re-enable it?~~\n\nIt was a temporary bug in my running process but also incorrect documentation. Just pushed a PR",
+      "attachments": []
+    },
+    {
+      "message_id": "1427199194212335626",
+      "author_id": "453875658926325761",
+      "author_display_name": "Chamito-Kun.component.ts",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/453875658926325761/b3d8d455648cd5be5b02957526aa3146.png?size=80",
+      "timestamp": "2025-10-13T07:40:03.979000+00:00",
+      "text": "A more minimalist proposal would be to leave a good recipe in the guides section that gives an example of the most complicated part of managing relationships and thus the typing from the context can be reused among other internal functionalities.",
+      "attachments": [
+        "https://cdn.discordapp.com/attachments/1288403910284935182/1427199193826726009/image.png?ex=68ef4fd3&is=68edfe53&hm=41a460cea6d036ed208a3bec8ca84a850db460248630c55c9c1fd1316de6eeac&"
+      ]
+    },
+    {
+      "message_id": "1427195063829663875",
+      "author_id": "453875658926325761",
+      "author_display_name": "Chamito-Kun.component.ts",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/453875658926325761/b3d8d455648cd5be5b02957526aa3146.png?size=80",
+      "timestamp": "2025-10-13T07:23:39.219000+00:00",
+      "text": "Besides, I feel like I'm missing out on a lot of how internal relationships between tables and additional fields work that I might need.",
+      "attachments": [
+        "https://cdn.discordapp.com/attachments/1288403910284935182/1427195063850504273/image.png?ex=68ef4bfb&is=68edfa7b&hm=80637c0ec2b810d1570acff131c6e70825e63665328ca6e32132882af99f3c71&"
+      ]
+    },
+    {
+      "message_id": "1427193644971982890",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T07:18:00.937000+00:00",
+      "text": "It might actually be easier overall to use the internal adapter, let me see if I can make an example for u",
+      "attachments": []
+    },
+    {
+      "message_id": "1427193469440364626",
+      "author_id": "453875658926325761",
+      "author_display_name": "Chamito-Kun.component.ts",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/453875658926325761/b3d8d455648cd5be5b02957526aa3146.png?size=80",
+      "timestamp": "2025-10-13T07:17:19.087000+00:00",
+      "text": "I wanted to use the full package, user and organization generation, just as it was before you removed the documentation. Haha.",
+      "attachments": []
+    },
+    {
+      "message_id": "1427143666031661166",
+      "author_id": "445554667104108554",
+      "author_display_name": "Ankur",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/445554667104108554/64b7ec6e01812d21741a3078f24b59ec.png?size=80",
+      "timestamp": "2025-10-13T03:59:25.029000+00:00",
+      "text": "So I have to run a sample project with this to get the docs in OpenAPI specs? Will it not be a good idea to add it in the reference section somewhere in better-auth docs?",
+      "attachments": []
+    }
+  ],
+  "Multi-Tenancy": [
+    {
+      "message_id": "1427331235683893260",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:24:45.119000+00:00",
+      "text": "https://sequelize.org/",
+      "attachments": []
+    },
+    {
+      "message_id": "1427330989058822366",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:23:46.319000+00:00",
+      "text": "The only thing they share is account and profile data in mongo",
+      "attachments": []
+    },
+    {
+      "message_id": "1427330260931969045",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:20:52.720000+00:00",
+      "text": "I already have one headache to deal with. I'm using BA for a stats tracking and leaderboards system for an FPS game and I have users who want to aggregate their stats across multiple game accounts",
+      "attachments": []
+    },
+    {
+      "message_id": "1427329591474913391",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:18:13.109000+00:00",
+      "text": "I forgot I have to update the findMany function for every db adapter and I have to figure out how to ignore case for all of them💀",
+      "attachments": []
+    },
+    {
+      "message_id": "1427326618245795971",
+      "author_id": "187613017733726210",
+      "author_display_name": "D3vision",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/187613017733726210/a_88fb0c0a1ad170e8d32c92a41e698043.gif?size=80",
+      "timestamp": "2025-10-13T16:06:24.236000+00:00",
+      "text": "Honestly before BA I think I tried almost any other option cause I wanted something with account linking built in. Everything I tried was either way too big and complicated for my relatively simple setup or couldn't properly link accounts. Or the documentation sucked to the point where I wasn't able to get it set up. Also the admin plugin was a pretty big plus since I didn't have to make all the crud for that myself",
+      "attachments": []
+    },
+    {
+      "message_id": "1427197421657653330",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T07:33:01.369000+00:00",
+      "text": "It's not a bad idea, I'll bring it up to the team",
+      "attachments": []
+    },
+    {
+      "message_id": "1427195755600547932",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T07:26:24.150000+00:00",
+      "text": "Because we don't pass `forceAllowId` it means that the `id` which is generated from BA kit's side is out-dated compared to the actual `id` values in your DB, so any subsequent tables to be generated (such as account) would be generating with incorrect foreign key relations",
+      "attachments": []
+    },
+    {
+      "message_id": "1427194862184304700",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T07:22:51.143000+00:00",
+      "text": "```ts\nimport type { BetterAuthPlugin } from \"better-auth\";\n\nexport const seedPlugin = () => {\n    return {\n        id: \"seed\",\n        init: async (ctx) => {\n            const { internalAdapter, adapter } = ctx;\n\n            const iterations = 100;\n            for (let index = 0; index < iterations; index++) {\n        const randomId = crypto.randomUUID();\n        const user = await internalAdapter.createUser({\n          email: `${randomId}@gmail.com`,\n          name: `user-${randomId}`,\n        });\n        const account = await internalAdapter.createAccount({\n          accountId:crypto.randomUUID(),\n          providerId: \"credential\",\n          userId: user.id,\n          password: await ctx.password.hash(\"MY_SUPER_STRONG_PASSWORD\"),\n        });\n      }\n        },\n    } satisfies BetterAuthPlugin;\n};\n```",
+      "attachments": []
+    },
+    {
+      "message_id": "1427193469440364626",
+      "author_id": "453875658926325761",
+      "author_display_name": "Chamito-Kun.component.ts",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/453875658926325761/b3d8d455648cd5be5b02957526aa3146.png?size=80",
+      "timestamp": "2025-10-13T07:17:19.087000+00:00",
+      "text": "I wanted to use the full package, user and organization generation, just as it was before you removed the documentation. Haha.",
+      "attachments": []
+    },
+    {
+      "message_id": "1427193151789072476",
+      "author_id": "464969494989766667",
+      "author_display_name": "Ping",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/464969494989766667/43474e67b4c28a138ba5ee76146cc9c9.png?size=80",
+      "timestamp": "2025-10-13T07:16:03.353000+00:00",
+      "text": "You might have to implement a work around. All you want is random user and accounts right?",
+      "attachments": []
+    }
+  ]
+}

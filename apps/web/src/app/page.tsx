@@ -65,6 +65,9 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"discord" | "github">("discord");
   const [gh, setGh] = useState<GitHubResponse | null>(null);
+  const [topicExamples, setTopicExamples] = useState<Record<string, { text: string; author?: string; when?: string }[]>>({});
+  const [topicIndex, setTopicIndex] = useState<Record<string, string[]>>({});
+  const [questionExamples, setQuestionExamples] = useState<Record<string, { text: string; author?: string; when?: string }[]>>({});
 
   // Console banner to confirm successful deploy when the page loads
   useEffect(() => {
@@ -137,6 +140,17 @@ export default function Home() {
             setInsights({ topics: [], seo_recommendations: [], unanswered_questions: [], action_plans: [], seo_keywords: [] });
           }
         }
+
+        // Load precomputed topic index with example_ids if present
+        const idxRes = await fetch(`${prefix}/data/topic_index.json`, { cache: "no-store" }).catch(() => null);
+        if (idxRes && idxRes.ok) {
+          const idx = await idxRes.json();
+          const map: Record<string, string[]> = {};
+          for (const t of idx.topics || []) {
+            if (t.topic && Array.isArray(t.example_ids)) map[t.topic] = t.example_ids as string[];
+          }
+          setTopicIndex(map);
+        }
       } catch (e: unknown) {
         const msg = e instanceof Error ? e.message : "Failed to load";
         setError(msg);
@@ -153,6 +167,7 @@ export default function Home() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: 12 }}>
         {entries.map(([day, value]) => (
           <div key={day} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
+            <div style={{ fontSize: 12, color: "#cbd5e1" }}>{value}</div>
             <div
               style={{
                 height: 120,
@@ -254,17 +269,68 @@ export default function Home() {
           {!insights ? (
             <div style={{ color: "#94a3b8" }}>Loading…</div>
           ) : insights.topics?.length ? (
+            <div style={{ maxHeight: 420, overflowY: "auto" }}>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 8 }}>
               {insights.topics.slice(0, 10).map((t) => (
                 <li
                   key={t.topic}
-                  style={{ display: "flex", justifyContent: "space-between", gap: 12, background: "#0f172a", padding: 10, borderRadius: 8 }}
+                  style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 12, background: "#0f172a", padding: 10, borderRadius: 8 }}
                 >
-                  <span>{t.topic}</span>
-                  <span style={{ color: "#94a3b8" }}>{t.count}</span>
+                  <div>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12 }}>
+                      <span>{t.topic}</span>
+                      <button
+                        style={{ background: "#111827", border: "1px solid #1f2937", color: "#cbd5e1", padding: "4px 8px", borderRadius: 6 }}
+                        onClick={async () => {
+                          try {
+                            // Toggle close if already open
+                            if (topicExamples[t.topic]) {
+                              setTopicExamples((prev) => {
+                                const next = { ...prev } as Record<string, { text: string; author?: string; when?: string }[]>;
+                                delete next[t.topic];
+                                return next;
+                              });
+                              return;
+                            }
+                            const prefix = (typeof window !== "undefined" && (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/")) ? "/analytics" : "";
+                            const ids = topicIndex[t.topic];
+                            let res: Response | null = null;
+                            if (ids && ids.length) {
+                              res = await fetch(`${prefix}/api/examples?ids=${encodeURIComponent(ids.join(','))}`, { cache: 'no-store' });
+                            }
+                            if (!res || !res.ok) {
+                              // Try strict topic selection first
+                              res = await fetch(`${prefix}/api/examples?topic=${encodeURIComponent(t.topic)}&limit=10`, { cache: "no-store" });
+                            }
+                            if (!res.ok) {
+                              res = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(t.topic)}&limit=10`, { cache: "no-store" });
+                            }
+                            if (res.ok) {
+                              const data = await res.json();
+                              const mapped = (data.items || []).map((m: any) => ({ text: m.text as string, author: m.author_display_name || m.author_id, when: m.timestamp }));
+                              setTopicExamples((prev) => ({ ...prev, [t.topic]: mapped }));
+                            }
+                          } catch {}
+                        }}
+                      >
+                        Examples
+                      </button>
+                    </div>
+                    {topicExamples[t.topic] ? (
+                      <ul style={{ marginTop: 8, paddingLeft: 16, display: "grid", gap: 6, maxHeight: 200, overflowY: "auto" }}>
+                        {topicExamples[t.topic].map((ex, i) => (
+                          <li key={i} style={{ color: "#94a3b8", fontSize: 13 }}>
+                            <span style={{ color: "#e5e7eb" }}>{ex.author || "user"}</span>: {ex.text}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </div>
+                  <span style={{ color: "#94a3b8", textAlign: "right" }}>{t.count}</span>
                 </li>
               ))}
             </ul>
+            </div>
           ) : (
             <div style={{ color: "#94a3b8" }}>No topics found.</div>
           )}
@@ -306,6 +372,7 @@ export default function Home() {
       {activeTab === "discord" && (
       <section style={{ background: "#0b1220", border: "1px solid #1f2937", borderRadius: 12, padding: 16, marginBottom: 24 }}>
         <h2 style={{ fontSize: 18, fontWeight: 600, marginBottom: 12 }}>Contributions by Weekday</h2>
+        <div style={{ color: "#94a3b8", fontSize: 12, marginBottom: 8 }}>Contribution = one Discord message posted in the server.</div>
         {!stats ? <div style={{ color: "#94a3b8" }}>Loading…</div> : weekdayBars}
       </section>
       )}
@@ -345,11 +412,55 @@ export default function Home() {
           {!insights ? (
             <div style={{ color: "#94a3b8" }}>Loading…</div>
           ) : insights.unanswered_questions?.length ? (
-            <ul style={{ margin: 0, paddingLeft: 18 }}>
-              {insights.unanswered_questions.slice(0, 3).map((q, i) => (
-                <li key={i} style={{ marginBottom: 8 }}>{q}</li>
-              ))}
-            </ul>
+            <div style={{ maxHeight: 420, overflowY: "auto" }}>
+              <ul style={{ margin: 0, paddingLeft: 0, listStyle: "none", display: "grid", gap: 8 }}>
+                {insights.unanswered_questions.slice(0, 10).map((q, i) => (
+                  <li key={i} style={{ background: "#0f172a", padding: 10, borderRadius: 8 }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 12, alignItems: "start" }}>
+                      <div style={{ whiteSpace: "pre-wrap" }}>{q}</div>
+                      <button
+                        style={{ background: "#111827", border: "1px solid #1f2937", color: "#cbd5e1", padding: "4px 8px", borderRadius: 6 }}
+                        onClick={async () => {
+                          try {
+                            // Toggle close if already open
+                            if (questionExamples[q]) {
+                              setQuestionExamples((prev) => {
+                                const next = { ...prev } as Record<string, { text: string; author?: string; when?: string }[]>;
+                                delete next[q];
+                                return next;
+                              });
+                              return;
+                            }
+                            const prefix = (typeof window !== "undefined" && (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/")) ? "/analytics" : "";
+                            let res: Response | null = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(q)}&limit=10`, { cache: "no-store" }).catch(() => null);
+                            if (!res || !res.ok) {
+                              // As a fallback, try topic selection using the full question text
+                              res = await fetch(`${prefix}/api/examples?topic=${encodeURIComponent(q)}&limit=10`, { cache: "no-store" }).catch(() => null);
+                            }
+                            if (res && res.ok) {
+                              const data = await res.json();
+                              const mapped = (data.items || []).map((m: any) => ({ text: m.text as string, author: m.author_display_name || m.author_id, when: m.timestamp }));
+                              setQuestionExamples((prev) => ({ ...prev, [q]: mapped }));
+                            }
+                          } catch {}
+                        }}
+                      >
+                        View Question
+                      </button>
+                    </div>
+                    {questionExamples[q] ? (
+                      <ul style={{ marginTop: 8, paddingLeft: 16, display: "grid", gap: 6, maxHeight: 200, overflowY: "auto" }}>
+                        {questionExamples[q].map((ex, j) => (
+                          <li key={j} style={{ color: "#94a3b8", fontSize: 13 }}>
+                            <span style={{ color: "#e5e7eb" }}>{ex.author || "user"}</span>: {ex.text}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            </div>
           ) : (
             <div style={{ color: "#94a3b8" }}>No unanswered questions detected.</div>
           )}
