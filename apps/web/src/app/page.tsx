@@ -106,8 +106,13 @@ export default function Home() {
         const res = await fetch(`${prefix}/api/github/interesting`, { cache: "no-store" }).catch(() => null);
         if (res && res.ok) {
           const data = await res.json();
-          setInteresting(Array.isArray(data.items) ? data.items : []);
-        } else {
+          const items = Array.isArray(data.items) ? data.items : [];
+          if (items.length) {
+            setInteresting(items);
+            return;
+          }
+        }
+        {
           const snap = await fetch(`${prefix}/data/interesting_stargazers.json`, { cache: "no-store" }).catch(() => null);
           if (snap && snap.ok) {
             const items = await snap.json();
@@ -696,8 +701,13 @@ export default function Home() {
                   const res = await fetch(`${prefix}/api/github/interesting`, { cache: "no-store" }).catch(() => null);
                   if (res && res.ok) {
                     const data = await res.json();
-                    setInteresting(Array.isArray(data.items) ? data.items : []);
-                  } else {
+                    const items = Array.isArray(data.items) ? data.items : [];
+                    if (items.length) {
+                      setInteresting(items);
+                      return;
+                    }
+                  }
+                  {
                     const snap = await fetch(`${prefix}/data/interesting_stargazers.json`, { cache: "no-store" }).catch(() => null);
                     if (snap && snap.ok) {
                       const items = await snap.json();
