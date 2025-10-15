@@ -340,9 +340,19 @@ export default function Home() {
                             if (!res.ok) {
                               res = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(t.topic)}&limit=10`, { cache: "no-store" });
                             }
-                            if (res.ok) {
+                            if (res && res.ok) {
                               const data = await res.json();
-                              const mapped = (data.items || []).map((m: any) => ({ text: m.text as string, author: m.author_display_name || m.author_id, when: m.timestamp }));
+                              let items = Array.isArray(data.items) ? data.items : [];
+                              if (!items.length) {
+                                // Frontend static fallback for production edge quirks
+                                const idxRes = await fetch(`${prefix}/data/examples_index.json`, { cache: 'no-store' }).catch(() => null);
+                                if (idxRes && idxRes.ok) {
+                                  const idx = await idxRes.json();
+                                  const arr = Array.isArray(idx[t.topic]) ? idx[t.topic] : [];
+                                  if (arr.length) items = arr.slice(0, 10);
+                                }
+                              }
+                              const mapped = (items || []).map((m: any) => ({ text: m.text as string, author: m.author_display_name || m.author_id, when: m.timestamp }));
                               setTopicExamples((prev) => ({ ...prev, [t.topic]: mapped }));
                             }
                           } catch {}
@@ -474,7 +484,32 @@ export default function Home() {
                             }
                             if (res && res.ok) {
                               const data = await res.json();
-                              const mapped = (data.items || []).map((m: any) => ({ text: m.text as string, author: m.author_display_name || m.author_id, when: m.timestamp }));
+                              let items = Array.isArray(data.items) ? data.items : [];
+                              if (!items.length) {
+                                // Fallback to static examples index: pick messages with highest token overlap
+                                const idxRes = await fetch(`${prefix}/data/examples_index.json`, { cache: 'no-store' }).catch(() => null);
+                                if (idxRes && idxRes.ok) {
+                                  const idx = await idxRes.json();
+                                  const allItems: any[] = [];
+                                  for (const arr of Object.values(idx as Record<string, any[]>)) {
+                                    for (const m of (arr as any[])) allItems.push(m);
+                                  }
+                                  const qTokens = Array.from(new Set(q.toLowerCase().split(/[^a-z0-9]+/g).filter((w) => w && w.length >= 4)));
+                                  items = allItems
+                                    .map((m: any) => {
+                                      const text = String(m.text || '').toLowerCase();
+                                      let score = 0;
+                                      if (text.includes(q.toLowerCase())) score += 5;
+                                      for (const tok of qTokens) if (text.includes(tok)) score += 1;
+                                      return { m, score };
+                                    })
+                                    .filter((r: any) => r.score > 0)
+                                    .sort((a: any, b: any) => b.score - a.score)
+                                    .slice(0, 10)
+                                    .map((r: any) => r.m);
+                                }
+                              }
+                              const mapped = (items || []).map((m: any) => ({ text: m.text as string, author: m.author_display_name || m.author_id, when: m.timestamp }));
                               setQuestionExamples((prev) => ({ ...prev, [q]: mapped }));
                             }
                           } catch {}
