@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
 import OpenAI from "openai";
-import * as dotenv from "dotenv";
+
+export const runtime = "edge";
 
 type DiscordMessage = {
   message_id?: string;
@@ -22,80 +21,35 @@ type InsightsPayload = {
   action_plans: string[];
   seo_keywords: string[];
 };
-
-function getNewestDiscordFile(): { jsonPath: string; base: string; mtimeMs: number } | null {
-  const projectRoot = path.resolve(process.cwd(), "../../");
-  const dataDir = path.join(projectRoot, "data");
-  const files = fs.readdirSync(dataDir).filter((f) => f.endsWith(".json") && f.startsWith("discord-"));
-  if (files.length === 0) return null;
-  const fileWithMtime = files
-    .map((f) => ({ f, mtime: fs.statSync(path.join(dataDir, f)).mtimeMs }))
-    .sort((a, b) => b.mtime - a.mtime)[0];
-  const jsonPath = path.join(dataDir, fileWithMtime.f);
-  return { jsonPath, base: path.parse(fileWithMtime.f).name, mtimeMs: fileWithMtime.mtime };
-}
-
-function ensureEnvLoaded(): void {
-  // Attempt to load the project root .env explicitly once per module load
+async function readDiscordMessages(limitChars = 120000): Promise<string> {
+  const url = process.env.DISCORD_JSON_URL ||
+    "https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-1288403910284935182.json";
   try {
-    const projectRoot = path.resolve(process.cwd(), "../../");
-    const envPath = path.join(projectRoot, ".env");
-    if (fs.existsSync(envPath)) {
-      dotenv.config({ path: envPath });
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) return "";
+    const parsed = (await res.json()) as DiscordMessage[];
+    const lines: string[] = [];
+    for (const m of parsed) {
+      const who = (m.author_display_name || m.author || m.author_id || "user").replace(/\s+/g, " ");
+      const text = (m.text || "").replace(/\s+/g, " ").trim();
+      if (!text) continue;
+      lines.push(`${who}: ${text}`);
+      if (lines.join("\n").length > limitChars) break;
     }
+    return lines.join("\n");
   } catch {
-    // ignore
+    return "";
   }
-}
-
-function readDiscordMessages(limitChars = 120000): string {
-  const newest = getNewestDiscordFile();
-  if (!newest) return "";
-  const jsonPath = newest.jsonPath;
-  const raw = fs.readFileSync(jsonPath, "utf-8");
-  const parsed = JSON.parse(raw) as DiscordMessage[];
-  // Concatenate messages as a compact transcript (author: text)
-  const lines: string[] = [];
-  for (const m of parsed) {
-    const who = (m.author_display_name || m.author || m.author_id || "user").replace(/\s+/g, " ");
-    const text = (m.text || "").replace(/\s+/g, " ").trim();
-    if (!text) continue;
-    lines.push(`${who}: ${text}`);
-    if (lines.join("\n").length > limitChars) break;
-  }
-  return lines.join("\n");
 }
 
 export async function GET(_req: NextRequest) {
   try {
-    ensureEnvLoaded();
-    const newest = getNewestDiscordFile();
-    if (!newest) {
-      return NextResponse.json({ error: "No Discord messages found" }, { status: 404 });
-    }
-
-    // Cache in data/insights-<basename>.json; invalidate if source mtime changes.
-    const projectRoot = path.resolve(process.cwd(), "../../");
-    const cachePath = path.join(projectRoot, "data", `insights-${newest.base}.json`);
-    const url = new URL(_req.url);
-    const forceRefresh = url.searchParams.get("refresh") === "1";
-    if (!forceRefresh && fs.existsSync(cachePath)) {
-      try {
-        const cachedRaw = fs.readFileSync(cachePath, "utf-8");
-        const cachedObj = JSON.parse(cachedRaw) as { sourceMtimeMs: number; result: InsightsPayload };
-        if (cachedObj && typeof cachedObj.sourceMtimeMs === "number" && cachedObj.sourceMtimeMs === newest.mtimeMs) {
-          return NextResponse.json(cachedObj.result, { status: 200, headers: { "x-insights-cache": "hit" } });
-        }
-      } catch {
-        // ignore invalid cache
-      }
-    }
     const apiKey = process.env.OPENAI_API_KEY;
     if (!apiKey) {
       return NextResponse.json({ error: "OPENAI_API_KEY missing in environment" }, { status: 400 });
     }
     const client = new OpenAI({ apiKey });
-    const transcript = readDiscordMessages();
+    const transcript = await readDiscordMessages();
     if (!transcript) {
       return NextResponse.json({ error: "No Discord messages found" }, { status: 404 });
     }
@@ -166,17 +120,7 @@ export async function GET(_req: NextRequest) {
     }
 
     const parsed = coerceInsights(content);
-    // Write cache
-    try {
-      fs.writeFileSync(
-        cachePath,
-        JSON.stringify({ sourceFile: path.basename(newest.jsonPath), sourceMtimeMs: newest.mtimeMs, result: parsed }, null, 2),
-        "utf-8"
-      );
-    } catch {
-      // ignore cache write errors
-    }
-    return NextResponse.json(parsed, { status: 200, headers: { "x-insights-cache": "miss" } });
+    return NextResponse.json(parsed, { status: 200 });
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : "Failed to get insights";
     return NextResponse.json({ error: message }, { status: 500 });

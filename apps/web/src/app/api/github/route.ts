@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
+
+export const runtime = "edge";
 
 // Minimal fetch wrapper to GitHub REST API
 async function gh<T>(endpoint: string, token: string, accept?: string): Promise<T> {
@@ -40,34 +40,6 @@ export async function GET(_req: NextRequest) {
     const owner = "better-auth";
     const repo = "better-auth";
     const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || process.env.GITHUB_PERSONAL_ACCESS_TOKEN || "";
-
-    // Cache file under project data
-    const projectRoot = path.resolve(process.cwd(), "../../");
-    const cachePath = path.join(projectRoot, "data", `github-${owner}-${repo}.json`);
-    const url = new URL(_req.url);
-    const forceRefresh = url.searchParams.get("refresh") === "1";
-
-    // If not refreshing, prefer cache
-    if (!forceRefresh && fs.existsSync(cachePath)) {
-      try {
-        const cachedRaw = fs.readFileSync(cachePath, "utf-8");
-        const cached = JSON.parse(cachedRaw);
-        return NextResponse.json(cached, { status: 200, headers: { "x-github-cache": "hit" } });
-      } catch {
-        // ignore invalid cache
-      }
-    }
-
-    // If no token and we have cache, serve cached as stale
-    if (!token && fs.existsSync(cachePath)) {
-      try {
-        const cachedRaw = fs.readFileSync(cachePath, "utf-8");
-        const cached = JSON.parse(cachedRaw);
-        return NextResponse.json(cached, { status: 200, headers: { "x-github-cache": "stale" } });
-      } catch {
-        // fall through to 400
-      }
-    }
     if (!token) {
       return NextResponse.json({ error: "GITHUB_TOKEN missing in environment" }, { status: 400 });
     }
@@ -176,26 +148,8 @@ export async function GET(_req: NextRequest) {
       companies_summary,
     };
 
-    try {
-      fs.writeFileSync(cachePath, JSON.stringify(body, null, 2), "utf-8");
-    } catch {
-      // ignore cache write errors
-    }
-
-    return NextResponse.json(body, { status: 200, headers: { "x-github-cache": "miss" } });
+    return NextResponse.json(body, { status: 200 });
   } catch (err: unknown) {
-    // On failure, try to serve cached data if present
-    try {
-      const projectRoot = path.resolve(process.cwd(), "../../");
-      const cachePath = path.join(projectRoot, "data", `github-better-auth-better-auth.json`);
-      if (fs.existsSync(cachePath)) {
-        const cachedRaw = fs.readFileSync(cachePath, "utf-8");
-        const cached = JSON.parse(cachedRaw);
-        return NextResponse.json(cached, { status: 200, headers: { "x-github-cache": "stale" } });
-      }
-    } catch {
-      // ignore and fall through
-    }
     const message = err instanceof Error ? err.message : "Failed to fetch GitHub data";
     return NextResponse.json({ error: message }, { status: 500 });
   }

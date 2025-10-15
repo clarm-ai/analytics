@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
+
+export const runtime = "edge";
 
 type DiscordMessage = {
   message_id?: string;
@@ -58,21 +58,37 @@ function toLocalWeekdayName(date: Date): keyof WeekdayStats {
   }
 }
 
-function readDiscordMessages(): DiscordMessage[] {
-  // Prefer project-level data path: ../../../../data/discord-*.json
-  const projectRoot = path.resolve(process.cwd(), "../../");
-  const dataDir = path.join(projectRoot, "data");
-  const files = fs.readdirSync(dataDir).filter((f) => f.endsWith(".json") && f.startsWith("discord-"));
-  if (files.length === 0) return [];
-  // Pick the newest by mtime
-  const fileWithMtime = files
-    .map((f) => ({ f, mtime: fs.statSync(path.join(dataDir, f)).mtimeMs }))
-    .sort((a, b) => b.mtime - a.mtime)[0];
-  const jsonPath = path.join(dataDir, fileWithMtime.f);
-  const raw = fs.readFileSync(jsonPath, "utf-8");
-  const parsed = JSON.parse(raw);
-  if (!Array.isArray(parsed)) return [];
-  return parsed as DiscordMessage[];
+async function readDiscordMessages(req: NextRequest): Promise<DiscordMessage[]> {
+  try {
+    const directUrl = process.env.DISCORD_JSON_URL;
+    if (directUrl) {
+      const res = await fetch(directUrl, { cache: "no-store" });
+      if (!res.ok) return [];
+      const parsed = await res.json();
+      if (!Array.isArray(parsed)) return [];
+      return parsed as DiscordMessage[];
+    }
+
+    // Fallback to repository-provided static JSON served from public under /analytics/data/...
+    const origin = new URL(req.url).origin;
+    const basePath = "/analytics";
+    const localUrl = `${origin}${basePath}/data/discord-1288403910284935182.json`;
+    const res = await fetch(localUrl, { cache: "no-store" });
+    if (res.ok) {
+      const parsed = await res.json();
+      if (Array.isArray(parsed)) return parsed as DiscordMessage[];
+    }
+
+    // Final fallback: raw file from the repository
+    const rawUrl = "https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-1288403910284935182.json";
+    const rawRes = await fetch(rawUrl, { cache: "no-store" });
+    if (!rawRes.ok) return [];
+    const rawParsed = await rawRes.json();
+    if (!Array.isArray(rawParsed)) return [];
+    return rawParsed as DiscordMessage[];
+  } catch {
+    return [];
+  }
 }
 
 function computeContributors(msgs: DiscordMessage[]): Contributor[] {
@@ -123,9 +139,9 @@ function computeWeekdays(msgs: DiscordMessage[]): WeekdayStats {
   return stats;
 }
 
-export async function GET(_req: NextRequest) {
+export async function GET(req: NextRequest) {
   try {
-    const msgs = readDiscordMessages();
+    const msgs = await readDiscordMessages(req);
     const contributors = computeContributors(msgs);
     const weekdays = computeWeekdays(msgs);
     const body: StatsResponse = {

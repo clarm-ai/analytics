@@ -66,21 +66,76 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<"discord" | "github">("discord");
   const [gh, setGh] = useState<GitHubResponse | null>(null);
 
+  // Console banner to confirm successful deploy when the page loads
+  useEffect(() => {
+    try {
+      const styleBadge = "background:#16a34a;color:#fff;padding:2px 6px;border-radius:4px";
+      // eslint-disable-next-line no-console
+      console.log("%cGrowMyOSS Analytics%c deploy successful", styleBadge, "");
+      // eslint-disable-next-line no-console
+      console.log("Build info:", {
+        time: new Date().toISOString(),
+        href: typeof window !== "undefined" ? window.location.href : "",
+        basePath: "/analytics",
+      });
+    } catch {
+      // ignore
+    }
+  }, []);
+
   useEffect(() => {
     async function load() {
       try {
+        // Build absolute paths with detected basePath to avoid root-relative 404s on Pages.
+        const prefix = (typeof window !== "undefined" &&
+          (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/"))
+          ? "/analytics"
+          : "";
+        // Try dynamic API first; if it fails, fall back to static JSON in /public.
         const [sRes, iRes] = await Promise.all([
-          fetch("/api/stats", { cache: "no-store" }),
-          fetch("/api/insights", { cache: "no-store" }),
+          fetch(`${prefix}/api/stats`, { cache: "no-store" }).catch(() => null),
+          fetch(`${prefix}/api/insights`, { cache: "no-store" }).catch(() => null),
         ]);
-        if (!sRes.ok) throw new Error("Failed to load stats");
-        const s: StatsResponse = await sRes.json();
-        setStats(s);
-        if (iRes.ok) {
+
+        let usedStaticStats = false;
+        if (sRes && sRes.ok) {
+          const s: StatsResponse = await sRes.json();
+          const totalWeekday = Object.values(s.weekdays || {}).reduce((a, b) => a + (b || 0), 0);
+          if ((s.contributors?.length ?? 0) === 0 || totalWeekday === 0 || (s.sampleSize ?? 0) === 0) {
+            // Fall back to static if API returned empty data
+            const staticStats = await fetch(`${prefix}/stats.json`, { cache: "no-store" }).catch(() => null);
+            if (staticStats && staticStats.ok) {
+              const ss: StatsResponse = await staticStats.json();
+              setStats(ss);
+              usedStaticStats = true;
+            } else {
+              setStats(s);
+            }
+          } else {
+            setStats(s);
+          }
+        } else {
+          const staticStats = await fetch(`${prefix}/stats.json`, { cache: "no-store" }).catch(() => null);
+          if (staticStats && staticStats.ok) {
+            const s: StatsResponse = await staticStats.json();
+            setStats(s);
+            usedStaticStats = true;
+          } else {
+            throw new Error("Failed to load stats");
+          }
+        }
+
+        if (iRes && iRes.ok) {
           const i: InsightsResponse = await iRes.json();
           setInsights(i);
         } else {
-          setInsights({ topics: [], seo_recommendations: [], unanswered_questions: [], action_plans: [], seo_keywords: [] });
+          const staticInsights = await fetch(`${prefix}/insights.json`, { cache: "no-store" }).catch(() => null);
+          if (staticInsights && staticInsights.ok) {
+            const i: InsightsResponse = await staticInsights.json();
+            setInsights(i);
+          } else {
+            setInsights({ topics: [], seo_recommendations: [], unanswered_questions: [], action_plans: [], seo_keywords: [] });
+          }
         }
       } catch (e: unknown) {
         const msg = e instanceof Error ? e.message : "Failed to load";
@@ -148,10 +203,27 @@ export default function Home() {
               setActiveTab("github");
               if (!gh) {
                 try {
-                  const res = await fetch("/api/github", { cache: "no-store" });
-                  if (res.ok) {
+                  const prefix = (typeof window !== "undefined" &&
+                    (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/"))
+                    ? "/analytics"
+                    : "";
+                  const res = await fetch(`${prefix}/api/github`, { cache: "no-store" }).catch(() => null);
+                  if (res && res.ok) {
                     const data: GitHubResponse = await res.json();
                     setGh(data);
+                  } else {
+                    // Prefer the repository-provided snapshot under /public/data first
+                    const snap = await fetch(`${prefix}/data/github-better-auth-better-auth.json`, { cache: "no-store" }).catch(() => null);
+                    if (snap && snap.ok) {
+                      const data: GitHubResponse = await snap.json();
+                      setGh(data);
+                    } else {
+                      const fallback = await fetch(`${prefix}/github.json`, { cache: "no-store" }).catch(() => null);
+                      if (fallback && fallback.ok) {
+                        const data: GitHubResponse = await fallback.json();
+                        setGh(data);
+                      }
+                    }
                   }
                 } catch {
                   // ignore
@@ -203,25 +275,27 @@ export default function Home() {
           {!stats ? (
             <div style={{ color: "#94a3b8" }}>Loading…</div>
           ) : stats.contributors.length ? (
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 8 }}>
-              {stats.contributors.slice(0, 10).map((c) => (
-                <li key={c.authorId} style={{ display: "flex", alignItems: "center", gap: 12, background: "#0f172a", padding: 10, borderRadius: 8 }}>
-                  {c.avatarUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={c.avatarUrl} alt="avatar" width={32} height={32} style={{ borderRadius: 999 }} />
-                  ) : (
-                    <div style={{ width: 32, height: 32, borderRadius: 999, background: "#1f2937" }} />
-                  )}
-                  <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
-                    <div>
-                      <div style={{ fontWeight: 600 }}>{c.displayName}</div>
-                      <div style={{ color: "#94a3b8", fontSize: 12 }}>{c.authorId}</div>
+            <div style={{ maxHeight: 300, overflowY: "auto" }}>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 8 }}>
+                {stats.contributors.map((c) => (
+                  <li key={c.authorId} style={{ display: "flex", alignItems: "center", gap: 12, background: "#0f172a", padding: 10, borderRadius: 8 }}>
+                    {c.avatarUrl ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={c.avatarUrl} alt="avatar" width={32} height={32} style={{ borderRadius: 999 }} />
+                    ) : (
+                      <div style={{ width: 32, height: 32, borderRadius: 999, background: "#1f2937" }} />
+                    )}
+                    <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
+                      <div>
+                        <div style={{ fontWeight: 600 }}>{c.displayName}</div>
+                        <div style={{ color: "#94a3b8", fontSize: 12 }}>{c.authorId}</div>
+                      </div>
+                      <div style={{ color: "#93c5fd" }}>{c.count}</div>
                     </div>
-                    <div style={{ color: "#93c5fd" }}>{c.count}</div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ) : (
             <div style={{ color: "#94a3b8" }}>No contributors.</div>
           )}
@@ -323,25 +397,32 @@ export default function Home() {
           {!gh ? (
             <div style={{ color: "#94a3b8" }}>Loading…</div>
           ) : gh.contributors?.length ? (
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 8 }}>
-              {gh.contributors.slice(0, 10).map((c) => (
-                <li key={c.login} style={{ display: "flex", alignItems: "center", gap: 12, background: "#0f172a", padding: 10, borderRadius: 8 }}>
-                  {c.avatar_url ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={c.avatar_url} alt="avatar" width={32} height={32} style={{ borderRadius: 999 }} />
-                  ) : (
-                    <div style={{ width: 32, height: 32, borderRadius: 999, background: "#1f2937" }} />
-                  )}
-                  <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
-                    <div>
-                      <div style={{ fontWeight: 600 }}>{c.login}</div>
-                      {c.html_url ? <div style={{ color: "#94a3b8", fontSize: 12 }}>{c.html_url}</div> : null}
-                    </div>
-                    <div style={{ color: "#93c5fd" }}>{c.contributions}</div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <div style={{ maxHeight: 300, overflowY: "auto" }}>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 8 }}>
+                {gh.contributors.map((c) => {
+                  const profile = c.html_url || `https://github.com/${c.login}`;
+                  return (
+                    <li key={c.login} style={{ display: "flex", alignItems: "center", gap: 12, background: "#0f172a", padding: 10, borderRadius: 8 }}>
+                      <a href={profile} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex" }}>
+                        {c.avatar_url ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={c.avatar_url} alt="avatar" width={32} height={32} style={{ borderRadius: 999 }} />
+                        ) : (
+                          <div style={{ width: 32, height: 32, borderRadius: 999, background: "#1f2937" }} />
+                        )}
+                      </a>
+                      <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
+                        <div>
+                          <a href={profile} target="_blank" rel="noopener noreferrer" style={{ color: "#e5e7eb", textDecoration: "none", fontWeight: 600 }}>{c.login}</a>
+                          {profile ? <div style={{ color: "#94a3b8", fontSize: 12 }}>{profile}</div> : null}
+                        </div>
+                        <div style={{ color: "#93c5fd" }}>{c.contributions}</div>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           ) : (
             <div style={{ color: "#94a3b8" }}>No contributors.</div>
           )}
@@ -353,27 +434,32 @@ export default function Home() {
             <div style={{ color: "#94a3b8" }}>Loading…</div>
           ) : gh.stargazers?.length ? (
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 8, maxHeight: 360, overflowY: "auto" }}>
-              {gh.stargazers.map((s) => (
-                <li key={s.login} style={{ display: "flex", alignItems: "center", gap: 12, background: "#0f172a", padding: 10, borderRadius: 8 }}>
-                  {s.avatar_url ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={s.avatar_url} alt="avatar" width={28} height={28} style={{ borderRadius: 999 }} />
-                  ) : (
-                    <div style={{ width: 28, height: 28, borderRadius: 999, background: "#1f2937" }} />
-                  )}
-                  <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
-                    <div>
-                      <div style={{ fontWeight: 600 }}>{s.login}</div>
-                      <div style={{ color: "#94a3b8", fontSize: 12 }}>
-                        {s.company ? s.company : "No company listed"}
-                        {s.company_org ? ` • @${s.company_org}` : ""}
-                        {typeof s.company_public_members === "number" ? ` • public members: ${s.company_public_members}` : ""}
+              {gh.stargazers.map((s) => {
+                const profile = `https://github.com/${s.login}`;
+                return (
+                  <li key={s.login} style={{ display: "flex", alignItems: "center", gap: 12, background: "#0f172a", padding: 10, borderRadius: 8 }}>
+                    <a href={profile} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex" }}>
+                      {s.avatar_url ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={s.avatar_url} alt="avatar" width={28} height={28} style={{ borderRadius: 999 }} />
+                      ) : (
+                        <div style={{ width: 28, height: 28, borderRadius: 999, background: "#1f2937" }} />
+                      )}
+                    </a>
+                    <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
+                      <div>
+                        <a href={profile} target="_blank" rel="noopener noreferrer" style={{ color: "#e5e7eb", textDecoration: "none", fontWeight: 600 }}>{s.login}</a>
+                        <div style={{ color: "#94a3b8", fontSize: 12 }}>
+                          {s.company ? s.company : "No company listed"}
+                          {s.company_org ? ` • @${s.company_org}` : ""}
+                          {typeof s.company_public_members === "number" ? ` • public members: ${s.company_public_members}` : ""}
+                        </div>
                       </div>
+                      <div style={{ color: "#cbd5e1", fontSize: 12 }}>{s.starred_at ? new Date(s.starred_at).toLocaleDateString() : ""}</div>
                     </div>
-                    <div style={{ color: "#cbd5e1", fontSize: 12 }}>{s.starred_at ? new Date(s.starred_at).toLocaleDateString() : ""}</div>
-                  </div>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           ) : (
             <div style={{ color: "#94a3b8" }}>No stargazers.</div>
