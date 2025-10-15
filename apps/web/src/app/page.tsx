@@ -59,6 +59,17 @@ type GitHubResponse = {
   companies_summary: { company_org: string; stargazer_count: number; public_members?: number }[];
 };
 
+type InterestingItem = {
+  login: string;
+  score: number;
+  reason: string;
+  avatar_url?: string;
+  company?: string;
+  company_org?: string;
+  company_public_members?: number;
+  html_url?: string;
+};
+
 export default function Home() {
   const [stats, setStats] = useState<StatsResponse | null>(null);
   const [insights, setInsights] = useState<InsightsResponse | null>(null);
@@ -68,6 +79,7 @@ export default function Home() {
   const [topicExamples, setTopicExamples] = useState<Record<string, { text: string; author?: string; when?: string }[]>>({});
   const [topicIndex, setTopicIndex] = useState<Record<string, string[]>>({});
   const [questionExamples, setQuestionExamples] = useState<Record<string, { text: string; author?: string; when?: string }[]>>({});
+  const [interesting, setInteresting] = useState<InterestingItem[] | null>(null);
 
   // Console banner to confirm successful deploy when the page loads
   useEffect(() => {
@@ -85,6 +97,29 @@ export default function Home() {
       // ignore
     }
   }, []);
+
+  // Auto-load Interesting Stargazers when GitHub tab opens
+  useEffect(() => {
+    async function loadInteresting() {
+      try {
+        const prefix = (typeof window !== "undefined" && (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/")) ? "/analytics" : "";
+        const res = await fetch(`${prefix}/api/github/interesting`, { cache: "no-store" }).catch(() => null);
+        if (res && res.ok) {
+          const data = await res.json();
+          setInteresting(Array.isArray(data.items) ? data.items : []);
+        } else {
+          const snap = await fetch(`${prefix}/data/interesting_stargazers.json`, { cache: "no-store" }).catch(() => null);
+          if (snap && snap.ok) {
+            const items = await snap.json();
+            setInteresting(Array.isArray(items) ? items : []);
+          }
+        }
+      } catch {}
+    }
+    if (activeTab === "github" && interesting === null) {
+      loadInteresting();
+    }
+  }, [activeTab, interesting]);
 
   useEffect(() => {
     async function load() {
@@ -613,6 +648,74 @@ export default function Home() {
           ) : (
             <div style={{ color: "#94a3b8" }}>No stars data.</div>
           )}
+        </div>
+
+        <div style={{ background: "#0b1220", border: "1px solid #1f2937", borderRadius: 12, padding: 16 }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+            <h2 style={{ fontSize: 18, fontWeight: 600 }}>Interesting Stargazers</h2>
+            <button
+              style={{ background: "#111827", border: "1px solid #1f2937", color: "#cbd5e1", padding: "4px 8px", borderRadius: 6 }}
+              onClick={async () => {
+                try {
+                  const prefix = (typeof window !== "undefined" && (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/")) ? "/analytics" : "";
+                  const res = await fetch(`${prefix}/api/github/interesting`, { cache: "no-store" }).catch(() => null);
+                  if (res && res.ok) {
+                    const data = await res.json();
+                    setInteresting(Array.isArray(data.items) ? data.items : []);
+                  } else {
+                    const snap = await fetch(`${prefix}/data/interesting_stargazers.json`, { cache: "no-store" }).catch(() => null);
+                    if (snap && snap.ok) {
+                      const items = await snap.json();
+                      setInteresting(Array.isArray(items) ? items : []);
+                    }
+                  }
+                } catch {}
+              }}
+            >
+              Refresh
+            </button>
+          </div>
+          {/* Column header to clarify score meaning */}
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+            <div style={{ color: "#94a3b8", fontSize: 12 }}>Stargazer</div>
+            <div style={{ color: "#94a3b8", fontSize: 12 }}>Score</div>
+          </div>
+          {!interesting ? (
+            <div style={{ color: "#94a3b8" }}>Loading…</div>
+          ) : interesting.length ? (
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 8, maxHeight: 360, overflowY: "auto" }}>
+              {interesting.map((s) => (
+                <li key={s.login} style={{ display: "flex", alignItems: "center", gap: 12, background: "#0f172a", padding: 10, borderRadius: 8 }}>
+                  <a href={s.html_url || `https://github.com/${s.login}`} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex" }}>
+                    {s.avatar_url ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={s.avatar_url} alt="avatar" width={28} height={28} style={{ borderRadius: 999 }} />
+                    ) : (
+                      <div style={{ width: 28, height: 28, borderRadius: 999, background: "#1f2937" }} />
+                    )}
+                  </a>
+                  <div style={{ display: "flex", justifyContent: "space-between", width: "100%", alignItems: "center" }}>
+                    <div>
+                      <a href={s.html_url || `https://github.com/${s.login}`} target="_blank" rel="noopener noreferrer" style={{ color: "#e5e7eb", textDecoration: "none", fontWeight: 600 }}>{s.login}</a>
+                      <div style={{ color: "#94a3b8", fontSize: 12 }}>
+                        {s.company ? s.company : "No company listed"}
+                        {s.company_org ? ` • @${s.company_org}` : ""}
+                        {typeof s.company_public_members === "number" ? ` • public members: ${s.company_public_members}` : ""}
+                        {s.reason ? ` • ${s.reason}` : ""}
+                      </div>
+                    </div>
+                    <div style={{ color: "#93c5fd" }}>{s.score}</div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div style={{ color: "#94a3b8" }}>No interesting prospects ranked yet.</div>
+          )}
+          <div style={{ color: "#94a3b8", fontSize: 12, marginTop: 8 }}>
+            Score is a buyer-likelihood score (0–100) based on LLM ranking of titles and company signals
+            (growth, org size). Falls back to heuristic if LLM unavailable.
+          </div>
         </div>
       </section>
       )}
