@@ -76,9 +76,9 @@ async function getExamplesForTopic(origin: string, topic: string, limit: number,
   } catch {}
   return [];
 }
-async function getAllMessages(origin: string): Promise<DiscordMessage[]> {
+async function getAllMessages(origin: string, channelId: string): Promise<DiscordMessage[]> {
   // Try local static first (fast), then GitHub raw as fallback
-  const local = `${origin}/analytics/data/discord-1288403910284935182.json`;
+  const local = `${origin}/analytics/data/discord-${channelId}.json`;
   try {
     const res = await fetch(local, { cache: "no-store" });
     if (res.ok) {
@@ -87,7 +87,7 @@ async function getAllMessages(origin: string): Promise<DiscordMessage[]> {
     }
   } catch {}
   try {
-    const raw = "https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-1288403910284935182.json";
+    const raw = `https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-${channelId}.json`;
     const res = await fetch(raw, { cache: "no-store" });
     if (res.ok) {
       const parsed = await res.json();
@@ -105,8 +105,10 @@ export async function GET(req: NextRequest) {
   const idsParam = (searchParams.get("ids") || "").trim();
   const topic = (searchParams.get("topic") || "").trim();
   const uid = getUID(req as unknown as Request);
+  const channelParam = searchParams.get("channel") || searchParams.get("channel_id") || "";
+  const channelId = (channelParam || "").trim() || "1288403910284935182";
 
-  const all = await getAllMessages(new URL(req.url).origin);
+  const all = await getAllMessages(new URL(req.url).origin.replace(/\/$/, ""), channelId);
   let items: any[] = [];
 
   // Try D1 first when available

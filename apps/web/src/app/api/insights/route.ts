@@ -38,9 +38,10 @@ type InsightsPayload = {
   seo_titles?: { page: string; title_tag: string; meta_description: string }[];
   seo_tasks?: SEOTask[];
 };
-async function readDiscordMessages(limitChars = 120000): Promise<string> {
+async function readDiscordMessages(limitChars = 120000, channelId?: string): Promise<string> {
+  const fallbackId = channelId && channelId.trim().length ? channelId.trim() : "1288403910284935182";
   const url = process.env.DISCORD_JSON_URL ||
-    "https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-1288403910284935182.json";
+    `https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-${fallbackId}.json`;
   try {
     const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) return "";
@@ -67,7 +68,10 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: "OPENAI_API_KEY missing in environment" }, { status: 400 });
     }
     const client = new OpenAI({ apiKey });
-    const transcript = await readDiscordMessages();
+    const url = new URL(req.url);
+    const channelParam = url.searchParams.get("channel") || url.searchParams.get("channel_id") || "";
+    const channelId = (channelParam || "").trim() || "1288403910284935182";
+    const transcript = await readDiscordMessages(undefined as unknown as number, channelId);
     if (!transcript) {
       return NextResponse.json({ error: "No Discord messages found" }, { status: 404 });
     }
@@ -93,12 +97,12 @@ export async function GET(req: NextRequest) {
       transcript,
     ].join("\n\n");
 
-    // Check D1 cache first (kind='seo')
+    // Check D1 cache first (kind includes channel)
     try {
       const cached = await d1All<{ data: string; generated_at: number; ttl_seconds: number }>(
         "SELECT data, generated_at, ttl_seconds FROM insights WHERE uid=? AND kind=?",
         uid,
-        "seo"
+        `seo:${channelId}`
       );
       if (cached.length) {
         const row = cached[0];
@@ -233,7 +237,7 @@ export async function GET(req: NextRequest) {
          VALUES(?,?,?,?,?)
          ON CONFLICT(uid,kind) DO UPDATE SET data=excluded.data, generated_at=excluded.generated_at, ttl_seconds=excluded.ttl_seconds`,
         uid,
-        "seo",
+        `seo:${channelId}`,
         JSON.stringify(parsed),
         Date.now(),
         ttlSec

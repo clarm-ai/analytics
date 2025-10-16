@@ -16,6 +16,9 @@ export async function POST(req: NextRequest) {
   try {
     const uid = getUID(req as unknown as Request);
     const origin = new URL(req.url).origin;
+    const url = new URL(req.url);
+    const channelParam = url.searchParams.get("channel") || url.searchParams.get("channel_id") || "";
+    const channelId = (channelParam || "").trim() || "1288403910284935182";
     const auth = req.headers.get("authorization") || "";
     const expected = (globalThis as any).process?.env?.SEED_TOKEN || process.env.SEED_TOKEN || "";
     if (!expected || auth !== `Bearer ${expected}`) {
@@ -23,7 +26,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Seed discord messages from static
-    const messagesUrl = `${origin}/analytics/data/discord-1288403910284935182.json`;
+    const messagesUrl = `${origin}/analytics/data/discord-${channelId}.json`;
     const messages = (await safeJson(await fetch(messagesUrl, { cache: "no-store" }))) as any[] | undefined;
     if (Array.isArray(messages)) {
       for (const m of messages.slice(-1200)) {
@@ -35,7 +38,7 @@ export async function POST(req: NextRequest) {
            ON CONFLICT(uid, message_id) DO UPDATE SET content=excluded.content, ts=excluded.ts`,
           uid,
           message_id,
-          m.channel_id || null,
+          m.channel_id || channelId || null,
           m.author_id || m.author || null,
           m.author_display_name || m.author || null,
           m.author_avatar_url || null,

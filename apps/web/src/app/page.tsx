@@ -182,10 +182,13 @@ export default function Home() {
           (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/"))
           ? "/analytics"
           : "";
+        // Channel ID from URL: /analytics or /analytics/[channelId]
+        const pathParts = (typeof window !== "undefined" ? window.location.pathname : "").split("/").filter(Boolean);
+        const channelId = pathParts.length >= 2 && pathParts[0] === "analytics" ? pathParts[1] : "1288403910284935182";
         // Try dynamic API first; if it fails, fall back to static JSON in /public.
         const [sRes, iRes] = await Promise.all([
-          fetch(`${prefix}/api/stats`, { cache: "no-store" }).catch(() => null),
-          fetch(`${prefix}/api/insights`, { cache: "no-store" }).catch(() => null),
+          fetch(`${prefix}/api/stats?channel=${encodeURIComponent(channelId)}`, { cache: "no-store" }).catch(() => null),
+          fetch(`${prefix}/api/insights?channel=${encodeURIComponent(channelId)}`, { cache: "no-store" }).catch(() => null),
         ]);
 
         let usedStaticStats = false;

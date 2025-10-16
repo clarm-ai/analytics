@@ -60,6 +60,9 @@ function toLocalWeekdayName(date: Date): keyof WeekdayStats {
 
 async function readDiscordMessages(req: NextRequest): Promise<DiscordMessage[]> {
   try {
+    const url = new URL(req.url);
+    const channelParam = url.searchParams.get("channel") || url.searchParams.get("channel_id") || "";
+    const channelId = (channelParam || "").trim() || "1288403910284935182";
     const directUrl = process.env.DISCORD_JSON_URL;
     if (directUrl) {
       const res = await fetch(directUrl, { cache: "no-store" });
@@ -72,7 +75,7 @@ async function readDiscordMessages(req: NextRequest): Promise<DiscordMessage[]> 
     // Fallback to repository-provided static JSON served from public under /analytics/data/...
     const origin = new URL(req.url).origin;
     const basePath = "/analytics";
-    const localUrl = `${origin}${basePath}/data/discord-1288403910284935182.json`;
+    const localUrl = `${origin}${basePath}/data/discord-${channelId}.json`;
     const res = await fetch(localUrl, { cache: "no-store" });
     if (res.ok) {
       const parsed = await res.json();
@@ -80,7 +83,7 @@ async function readDiscordMessages(req: NextRequest): Promise<DiscordMessage[]> 
     }
 
     // Final fallback: raw file from the repository
-    const rawUrl = "https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-1288403910284935182.json";
+    const rawUrl = `https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-${channelId}.json`;
     const rawRes = await fetch(rawUrl, { cache: "no-store" });
     if (!rawRes.ok) return [];
     const rawParsed = await rawRes.json();
