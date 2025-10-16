@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
+import { d1All, d1Run, getUID } from "../../_lib/ctx";
 
 export const runtime = "edge";
 
@@ -46,6 +47,7 @@ export async function GET(req: NextRequest) {
   const origin = new URL(req.url).origin;
   const url = new URL(req.url);
   const force = url.searchParams.get("force") || "";
+  const uid = getUID(req as unknown as Request);
 
   // 2) Load GitHub data from our aggregated endpoint or static snapshot
   let gh: any = undefined;
@@ -61,6 +63,34 @@ export async function GET(req: NextRequest) {
   }
   const stargazers: GitHubStargazer[] = Array.isArray(gh?.stargazers) ? gh.stargazers : [];
   if (!stargazers.length) return NextResponse.json({ items: [] }, { status: 200 });
+
+  // Try D1 cache first unless force=live
+  if (force !== "live") {
+    try {
+      const cached = await d1All<any>(
+        `SELECT g.login, i.score, i.reason, g.avatar_url, g.company, g.company_org, g.company_public_members, g.html_url
+         FROM gh_interesting i JOIN gh_stargazers g
+           ON g.uid=i.uid AND g.login=i.login
+         WHERE i.uid=?
+         ORDER BY i.score DESC
+         LIMIT 30`,
+        uid
+      );
+      if (cached.length) {
+        const items = cached.map((r) => ({
+          login: r.login,
+          score: r.score,
+          reason: r.reason,
+          avatar_url: r.avatar_url,
+          company: r.company,
+          company_org: r.company_org,
+          company_public_members: r.company_public_members,
+          html_url: r.html_url || `https://github.com/${r.login}`,
+        }));
+        return NextResponse.json({ items, source: "d1" }, { status: 200 });
+      }
+    } catch {}
+  }
 
   // Prefer live LLM ranking when API key is available, unless force=static
   const apiKey = (globalThis as any).process?.env?.OPENAI_API_KEY || process.env.OPENAI_API_KEY;
@@ -119,6 +149,25 @@ export async function GET(req: NextRequest) {
           html_url: s?.html_url || `https://github.com/${r.login}`,
         };
       });
+      // Upsert into D1 cache for subsequent requests
+      try {
+        const now = Date.now();
+        for (const it of items) {
+          await d1Run(
+            `INSERT INTO gh_stargazers(uid, login, starred_at, avatar_url, company, company_org, company_public_members, html_url)
+             VALUES(?,?,?,?,?,?,?,?)
+             ON CONFLICT(uid,login) DO UPDATE SET avatar_url=excluded.avatar_url, company=excluded.company,
+               company_org=excluded.company_org, company_public_members=excluded.company_public_members, html_url=excluded.html_url`,
+            uid, it.login, null, it.avatar_url || null, it.company || null, it.company_org || null, it.company_public_members || null, it.html_url
+          );
+          await d1Run(
+            `INSERT INTO gh_interesting(uid, login, score, reason, last_scored_at)
+             VALUES(?,?,?,?,?)
+             ON CONFLICT(uid,login) DO UPDATE SET score=excluded.score, reason=excluded.reason, last_scored_at=excluded.last_scored_at`,
+            uid, it.login, it.score, it.reason, now
+          );
+        }
+      } catch {}
       return NextResponse.json({ items, source: "llm" }, { status: 200 });
     } catch {
       // fall through to static/heuristic
@@ -153,6 +202,25 @@ export async function GET(req: NextRequest) {
       html_url: s?.html_url || `https://github.com/${r.login}`,
     };
   });
+  // Cache heuristic results too
+  try {
+    const now = Date.now();
+    for (const it of items) {
+      await d1Run(
+        `INSERT INTO gh_stargazers(uid, login, starred_at, avatar_url, company, company_org, company_public_members, html_url)
+         VALUES(?,?,?,?,?,?,?,?)
+         ON CONFLICT(uid,login) DO UPDATE SET avatar_url=excluded.avatar_url, company=excluded.company,
+           company_org=excluded.company_org, company_public_members=excluded.company_public_members, html_url=excluded.html_url`,
+        uid, it.login, null, it.avatar_url || null, it.company || null, it.company_org || null, it.company_public_members || null, it.html_url
+      );
+      await d1Run(
+        `INSERT INTO gh_interesting(uid, login, score, reason, last_scored_at)
+         VALUES(?,?,?,?,?)
+         ON CONFLICT(uid,login) DO UPDATE SET score=excluded.score, reason=excluded.reason, last_scored_at=excluded.last_scored_at`,
+        uid, it.login, it.score, it.reason, now
+      );
+    }
+  } catch {}
   return NextResponse.json({ items, source: "heuristic" }, { status: 200 });
 }
 

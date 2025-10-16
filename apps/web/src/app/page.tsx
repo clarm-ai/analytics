@@ -25,12 +25,28 @@ type StatsResponse = {
   sampleSize: number;
 };
 
+type SEOKeywordCluster = {
+  cluster: string; intent: "informational" | "commercial" | "navigational" | "transactional";
+  primary: string; secondary: string[];
+};
+type SEOBrief = {
+  slug: string; h1: string; title_tag: string; meta_description: string;
+  outline: string[]; faqs: { q: string; a: string }[];
+  internal_links: { anchor: string; url: string }[];
+};
+type SEOTask = { title: string; rationale: string; impact: 1|2|3; effort: 1|2|3; score: number };
+
 type InsightsResponse = {
   topics: { topic: string; count: number }[];
   seo_recommendations: string[];
   unanswered_questions: string[];
   action_plans: string[];
   seo_keywords?: string[];
+  seo_keyword_clusters?: SEOKeywordCluster[];
+  seo_briefs?: SEOBrief[];
+  seo_faqs?: { q: string; a: string; jsonld?: unknown }[];
+  seo_titles?: { page: string; title_tag: string; meta_description: string }[];
+  seo_tasks?: SEOTask[];
 };
 
 type GitHubContributor = {
@@ -80,6 +96,38 @@ export default function Home() {
   const [topicIndex, setTopicIndex] = useState<Record<string, string[]>>({});
   const [questionExamples, setQuestionExamples] = useState<Record<string, { text: string; author?: string; when?: string }[]>>({});
   const [interesting, setInteresting] = useState<InterestingItem[] | null>(null);
+
+  const copyToClipboard = async (value: string) => {
+    try {
+      await navigator.clipboard.writeText(value);
+    } catch {
+      try {
+        const ta = document.createElement("textarea");
+        ta.value = value;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      } catch {}
+    }
+  };
+
+  const copyWithFeedback = async (button: HTMLButtonElement, value: string, copiedLabel = "Copied") => {
+    const original = button.textContent || "Copy";
+    try {
+      button.disabled = true;
+      await copyToClipboard(value);
+      button.textContent = copiedLabel;
+    } finally {
+      setTimeout(() => {
+        button.textContent = original;
+        button.disabled = false;
+      }, 1200);
+    }
+  };
 
   // Console banner to confirm successful deploy when the page loads
   useEffect(() => {
@@ -539,6 +587,64 @@ export default function Home() {
           ) : (
             <div style={{ color: "#94a3b8" }}>No unanswered questions detected.</div>
           )}
+        </div>
+
+        {/* SEO Deep Dive */}
+        <div style={{ background: "#0b1220", border: "1px solid #1f2937", borderRadius: 12, padding: 16, gridColumn: "1 / -1" }}>
+          <h2 style={{ fontSize: 18, fontWeight: 600, marginBottom: 12 }}>SEO Deep Dive</h2>
+          {/* Keyword Clusters */}
+          {insights?.seo_keyword_clusters?.length ? (
+            <div style={{ marginBottom: 16 }}>
+              <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>Keyword Clusters</h3>
+              <div style={{ display: "grid", gap: 8, height: 150, overflowY: "auto" }}>
+                {insights.seo_keyword_clusters.map((c, i) => (
+                  <div key={i} style={{ background: "#0f172a", border: "1px solid #1f2937", borderRadius: 8, padding: 10 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}>
+                      <div><b>{c.cluster}</b> • {c.intent} • Primary: {c.primary}</div>
+                      <button onClick={(e) => copyWithFeedback(e.currentTarget, [c.primary, ...c.secondary].join(", "))} style={{ background: "#111827", border: "1px solid #1f2937", color: "#cbd5e1", padding: "2px 6px", borderRadius: 6 }}>Copy</button>
+                    </div>
+                    {c.secondary?.length ? (<div style={{ color: "#94a3b8", fontSize: 13, marginTop: 6 }}>{c.secondary.join(" • ")}</div>) : null}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
+          {/* FAQ Ideas */}
+          {insights?.seo_faqs?.length ? (
+            <div style={{ marginBottom: 16 }}>
+              <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>FAQ Ideas</h3>
+              <div style={{ display: "grid", gap: 8, height: 150, overflowY: "auto" }}>
+                {insights.seo_faqs.map((f, i) => (
+                  <div key={i} style={{ background: "#0f172a", border: "1px solid #1f2937", borderRadius: 8, padding: 10 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}>
+                      <div><b>Q:</b> {f.q}</div>
+                      <button onClick={(e) => copyWithFeedback(e.currentTarget, typeof f.jsonld === "string" ? f.jsonld : JSON.stringify(f.jsonld || {}, null, 2), "Copied JSON-LD")} style={{ background: "#111827", border: "1px solid #1f2937", color: "#cbd5e1", padding: "2px 6px", borderRadius: 6 }}>Copy JSON-LD</button>
+                    </div>
+                    <div style={{ color: "#94a3b8", fontSize: 13, marginTop: 6 }}><b>A:</b> {f.a}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
+          {/* Titles & Metas */}
+          {insights?.seo_titles?.length ? (
+            <div style={{ marginBottom: 16 }}>
+              <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>Titles & Metas</h3>
+              <div style={{ display: "grid", gap: 8, height: 150, overflowY: "auto" }}>
+                {insights.seo_titles.map((t, i) => (
+                  <div key={i} style={{ background: "#0f172a", border: "1px solid #1f2937", borderRadius: 8, padding: 10 }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}>
+                      <div><b>{t.page}</b></div>
+                      <button onClick={(e) => copyWithFeedback(e.currentTarget, JSON.stringify(t, null, 2))} style={{ background: "#111827", border: "1px solid #1f2937", color: "#cbd5e1", padding: "2px 6px", borderRadius: 6 }}>Copy</button>
+                    </div>
+                    <div style={{ color: "#94a3b8", fontSize: 13, marginTop: 6 }}>{t.title_tag} — {t.meta_description}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </div>
 
         <div style={{ background: "#0b1220", border: "1px solid #1f2937", borderRadius: 12, padding: 16 }}>

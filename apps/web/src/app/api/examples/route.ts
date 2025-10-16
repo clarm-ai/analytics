@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
+import { d1All, getUID } from "../_lib/ctx";
 
 export const runtime = "edge";
 
@@ -103,9 +104,102 @@ export async function GET(req: NextRequest) {
   const limit = Math.min(50, Math.max(1, Number(searchParams.get("limit") || 10)));
   const idsParam = (searchParams.get("ids") || "").trim();
   const topic = (searchParams.get("topic") || "").trim();
+  const uid = getUID(req as unknown as Request);
 
   const all = await getAllMessages(new URL(req.url).origin);
   let items: any[] = [];
+
+  // Try D1 first when available
+  try {
+    if (topic) {
+      // Resolve via topic mapping in D1
+      const rows = await d1All<{ message_id: string }>(
+        "SELECT message_id FROM discord_topics WHERE uid=? AND topic=? ORDER BY score DESC LIMIT ?",
+        uid,
+        topic,
+        limit
+      );
+      const ids = rows.map((r) => r.message_id);
+      if (ids.length) {
+        const placeholders = ids.map(() => "?").join(",");
+        const msgs = await d1All<any>(
+          `SELECT message_id, author_id, author_display_name, author_avatar_url, ts, content as text
+           FROM discord_messages WHERE uid=? AND message_id IN (${placeholders})`,
+          uid,
+          ...ids
+        );
+        if (msgs.length) {
+          items = msgs.map((m) => ({
+            message_id: m.message_id,
+            author_id: m.author_id,
+            author_display_name: m.author_display_name,
+            author_avatar_url: m.author_avatar_url,
+            timestamp: m.ts,
+            text: m.text,
+          }));
+          return NextResponse.json({ items }, { status: 200 });
+        }
+      }
+    }
+
+    if (idsParam && !items.length) {
+      const requested = idsParam.split(",").map((s) => s.trim()).filter(Boolean);
+      if (requested.length) {
+        const placeholders = requested.map(() => "?").join(",");
+        const msgs = await d1All<any>(
+          `SELECT message_id, author_id, author_display_name, author_avatar_url, ts, content as text
+           FROM discord_messages WHERE uid=? AND message_id IN (${placeholders})`,
+          uid,
+          ...requested
+        );
+        if (msgs.length) {
+          items = msgs.slice(0, limit).map((m) => ({
+            message_id: m.message_id,
+            author_id: m.author_id,
+            author_display_name: m.author_display_name,
+            author_avatar_url: m.author_avatar_url,
+            timestamp: m.ts,
+            text: m.text,
+          }));
+          return NextResponse.json({ items }, { status: 200 });
+        }
+      }
+    }
+
+    if (q && !items.length) {
+      // FTS search if available, fallback to LIKE
+      let rows = await d1All<any>(
+        `SELECT m.message_id, m.author_id, m.author_display_name, m.author_avatar_url, m.ts, m.content as text
+         FROM discord_messages m
+         JOIN discord_messages_fts f ON f.rowid = m.rowid
+         WHERE f.uid=? AND discord_messages_fts MATCH ?
+         LIMIT ?`,
+        uid,
+        q,
+        limit
+      );
+      if (!rows.length) {
+        rows = await d1All<any>(
+          `SELECT message_id, author_id, author_display_name, author_avatar_url, ts, content as text
+           FROM discord_messages WHERE uid=? AND lower(content) LIKE ? LIMIT ?`,
+          uid,
+          `%${q}%`,
+          limit
+        );
+      }
+      if (rows.length) {
+        items = rows.map((m) => ({
+          message_id: m.message_id,
+          author_id: m.author_id,
+          author_display_name: m.author_display_name,
+          author_avatar_url: m.author_avatar_url,
+          timestamp: m.ts,
+          text: m.text,
+        }));
+        return NextResponse.json({ items }, { status: 200 });
+      }
+    }
+  } catch {}
 
   // Fast path: if a static examples index exists and topic provided, use it
   // Prefer topic results even when ids are also provided (ids may be stale)

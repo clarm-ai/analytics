@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { d1Run, getUID } from "./../_lib/ctx";
 
 export const runtime = "edge";
 
@@ -35,8 +36,9 @@ async function ghWithHeaders(endpoint: string, token: string, accept?: string): 
   return { json, headers: res.headers };
 }
 
-export async function GET(_req: NextRequest) {
+export async function GET(req: NextRequest) {
   try {
+    const uid = getUID(req as unknown as Request);
     const owner = "better-auth";
     const repo = "better-auth";
     const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || process.env.GITHUB_PERSONAL_ACCESS_TOKEN || "";
@@ -147,7 +149,26 @@ export async function GET(_req: NextRequest) {
       stars_timeline,
       companies_summary,
     };
-
+    // Upsert enriched recent stargazers into D1 (best-effort)
+    try {
+      for (const s of enriched) {
+        await d1Run(
+          `INSERT INTO gh_stargazers(uid, login, starred_at, avatar_url, company, company_org, company_public_members, html_url)
+           VALUES(?,?,?,?,?,?,?,?)
+           ON CONFLICT(uid,login) DO UPDATE SET starred_at=excluded.starred_at, avatar_url=excluded.avatar_url, company=excluded.company,
+             company_org=excluded.company_org, company_public_members=excluded.company_public_members, html_url=excluded.html_url`,
+          uid,
+          s.login,
+          s.starred_at || null,
+          s.avatar_url || null,
+          s.company || null,
+          s.company_org || null,
+          s.company_public_members || null,
+          `https://github.com/${s.login}`
+        );
+      }
+    } catch {}
+    
     return NextResponse.json(body, { status: 200 });
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : "Failed to fetch GitHub data";

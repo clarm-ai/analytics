@@ -28,3 +28,23 @@ npm run pages:build
 
 ## Wrangler (optional)
 You can also deploy via `wrangler pages deploy` from `apps/web`.
+
+### D1 setup
+
+```bash
+# from apps/web
+npx wrangler d1 create analytics
+# copy the returned database_id into wrangler.toml under [[d1_databases]] database_id
+
+# Apply migrations locally
+npx wrangler d1 migrations apply analytics --local
+
+# Or apply in Cloudflare
+npx wrangler d1 migrations apply analytics
+
+# Seed demo data (optional)
+SEED_TOKEN=dev-secret curl -X POST -H "Authorization: Bearer dev-secret" \
+  "http://localhost:3005/api/seed?uid=demo"
+```
+
+Ensure Pages project has a D1 binding named `DB` mapped to your database.

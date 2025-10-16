@@ -36,6 +36,74 @@
     "Multi-tenancy",
     "Better Auth documentation",
     "Troubleshooting Better Auth"
+  ],
+  "seo_keyword_clusters": [
+    { "cluster": "Better Auth integration", "intent": "informational", "primary": "better auth integration", "secondary": ["how to integrate better auth", "better auth nextjs", "better auth express"] },
+    { "cluster": "OAuth troubleshooting", "intent": "informational", "primary": "fix oauth errors", "secondary": ["oauth callback error", "oauth redirect url", "oauth provider setup"] },
+    { "cluster": "Email verification", "intent": "informational", "primary": "email verification flow", "secondary": ["resend email verification", "magic link verification", "email templates"] },
+    { "cluster": "CORS", "intent": "informational", "primary": "fix cors for auth", "secondary": ["cors preflight", "cors cookies", "cors better auth"] },
+    { "cluster": "Roles & permissions", "intent": "informational", "primary": "user roles permission model", "secondary": ["rbac better auth", "organization roles", "admin access control"] },
+    { "cluster": "Stripe subscriptions", "intent": "commercial", "primary": "stripe plugin better auth", "secondary": ["stripe webhooks better auth", "stripe customer portal", "metered billing"] },
+    { "cluster": "Multi‑tenancy", "intent": "informational", "primary": "multi tenant auth", "secondary": ["multi tenant sessions", "tenant isolation", "org membership"] },
+    { "cluster": "Docs & examples", "intent": "navigational", "primary": "better auth docs", "secondary": ["better auth examples", "better auth github", "admin plugin docs"] }
+  ],
+  "seo_briefs": [
+    {
+      "slug": "better-auth-nextjs-integration-guide",
+      "h1": "Better Auth + Next.js Integration Guide",
+      "title_tag": "Better Auth × Next.js – Secure Integration Guide",
+      "meta_description": "Step‑by‑step guide to integrate Better Auth with Next.js, including sessions, providers and common pitfalls.",
+      "outline": [
+        "Prerequisites and repo setup",
+        "Installing and configuring Better Auth",
+        "Session handling and cookies",
+        "Adding OAuth providers",
+        "CORS and local dev",
+        "Testing and debugging"
+      ],
+      "faqs": [
+        { "q": "Does Better Auth work with the Next.js App Router?", "a": "Yes, configure Edge routes and session cookies; see examples." },
+        { "q": "How do I share auth between subdomains?", "a": "Enable crossSubDomain cookies and align middleware." }
+      ],
+      "internal_links": [
+        { "anchor": "OAuth providers", "url": "/docs/providers" },
+        { "anchor": "Session middleware", "url": "/docs/sessions" }
+      ]
+    },
+    {
+      "slug": "troubleshooting-oauth-errors",
+      "h1": "Troubleshooting OAuth Errors",
+      "title_tag": "Fix OAuth callback & provider errors",
+      "meta_description": "Common OAuth issues in Better Auth and how to fix them: callbacks, redirect URLs, scopes and provider config.",
+      "outline": ["Symptoms and logs", "Provider setup checklist", "Redirect URLs", "Scopes and permissions", "Local vs production"],
+      "faqs": [
+        { "q": "I get unable_to_get_user_info", "a": "Confirm provider userinfo endpoint and logging; bubble up errors." }
+      ],
+      "internal_links": [ { "anchor": "Provider guide", "url": "/docs/providers" } ]
+    },
+    {
+      "slug": "email-verification-flow",
+      "h1": "Designing a Reliable Email Verification Flow",
+      "title_tag": "Email verification patterns for Better Auth",
+      "meta_description": "Recommended email verification patterns, resend strategies and UX best practices.",
+      "outline": ["Token generation", "Magic links", "Resend logic", "Deliverability", "UX patterns"],
+      "faqs": [ { "q": "How to implement resend with rate limits?", "a": "Use server‑side counters with backoff and captcha when abused." } ],
+      "internal_links": [ { "anchor": "Emails", "url": "/docs/emails" } ]
+    }
+  ],
+  "seo_faqs": [
+    { "q": "How do I fix CORS during local auth development?", "a": "Align cookie domains, enable credentials, and mirror origins on server.", "jsonld": { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [ { "@type": "Question", "name": "How do I fix CORS during local auth development?", "acceptedAnswer": { "@type": "Answer", "text": "Align cookie domains, enable credentials, and mirror origins on server." } } ] } },
+    { "q": "Can I use Better Auth without running migrations?", "a": "Yes, operate as an auth client and delegate storage to an API backend.", "jsonld": {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I use Better Auth without running migrations?","acceptedAnswer":{"@type":"Answer","text":"Yes, operate as an auth client and delegate storage to an API backend."}}]} }
+  ],
+  "seo_titles": [
+    { "page": "Home", "title_tag": "Better Auth – Modern authentication toolkit", "meta_description": "Type‑safe, flexible auth with great DX." },
+    { "page": "Docs: Providers", "title_tag": "OAuth providers – Better Auth", "meta_description": "Configure GitHub, Google and more in minutes." },
+    { "page": "Docs: Sessions", "title_tag": "Sessions & cookies – Better Auth", "meta_description": "Secure sessions across subdomains and Edge." }
+  ],
+  "seo_tasks": [
+    { "title": "Publish Next.js integration guide", "rationale": "Highest demand in Discord threads.", "impact": 3, "effort": 2, "score": 4 },
+    { "title": "Add OAuth troubleshooting page", "rationale": "Reduces support load for callback/userinfo issues.", "impact": 3, "effort": 2, "score": 4 },
+    { "title": "Email verification UX pass", "rationale": "Improves activation and reduces churn.", "impact": 2, "effort": 1, "score": 3 }
   ]
 }
 
