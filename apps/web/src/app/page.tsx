@@ -384,17 +384,19 @@ export default function Home() {
                               return;
                             }
                             const prefix = (typeof window !== "undefined" && (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/")) ? "/analytics" : "";
+                            const pathParts = (typeof window !== "undefined" ? window.location.pathname : "").split("/").filter(Boolean);
+                            const channelId = pathParts.length >= 2 && pathParts[0] === "analytics" ? pathParts[1] : "1288403910284935182";
                             const ids = topicIndex[t.topic];
                             let res: Response | null = null;
                             if (ids && ids.length) {
-                              res = await fetch(`${prefix}/api/examples?ids=${encodeURIComponent(ids.join(','))}`, { cache: 'no-store' });
+                              res = await fetch(`${prefix}/api/examples?ids=${encodeURIComponent(ids.join(','))}&channel=${encodeURIComponent(channelId)}`, { cache: 'no-store' });
                             }
                             if (!res || !res.ok) {
                               // Try strict topic selection first
-                              res = await fetch(`${prefix}/api/examples?topic=${encodeURIComponent(t.topic)}&limit=10`, { cache: "no-store" });
+                              res = await fetch(`${prefix}/api/examples?topic=${encodeURIComponent(t.topic)}&limit=10&channel=${encodeURIComponent(channelId)}`, { cache: "no-store" });
                             }
                             if (!res.ok) {
-                              res = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(t.topic)}&limit=10`, { cache: "no-store" });
+                              res = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(t.topic)}&limit=10&channel=${encodeURIComponent(channelId)}`, { cache: "no-store" });
                             }
                             if (res && res.ok) {
                               const data = await res.json();
@@ -533,10 +535,12 @@ export default function Home() {
                               return;
                             }
                             const prefix = (typeof window !== "undefined" && (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/")) ? "/analytics" : "";
-                            let res: Response | null = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(q)}&limit=10`, { cache: "no-store" }).catch(() => null);
+                            const pathParts = (typeof window !== "undefined" ? window.location.pathname : "").split("/").filter(Boolean);
+                            const channelId = pathParts.length >= 2 && pathParts[0] === "analytics" ? pathParts[1] : "1288403910284935182";
+                            let res: Response | null = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(q)}&limit=10&channel=${encodeURIComponent(channelId)}`, { cache: "no-store" }).catch(() => null);
                             if (!res || !res.ok) {
                               // As a fallback, try topic selection using the full question text
-                              res = await fetch(`${prefix}/api/examples?topic=${encodeURIComponent(q)}&limit=10`, { cache: "no-store" }).catch(() => null);
+                              res = await fetch(`${prefix}/api/examples?topic=${encodeURIComponent(q)}&limit=10&channel=${encodeURIComponent(channelId)}`, { cache: "no-store" }).catch(() => null);
                             }
                             if (res && res.ok) {
                               const data = await res.json();

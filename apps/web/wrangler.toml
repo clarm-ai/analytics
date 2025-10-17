@@ -10,4 +10,4 @@ OPENAI_MODEL = "gpt-4o-mini"
 binding = "DB"
 database_name = "analytics"
 # NOTE: Replace with your real Cloudflare D1 database_id after `wrangler d1 create analytics`
-database_id = "d1-analytics"
+database_id = "59e8149d-41c1-4de0-85a3-1e77e61ace55"

@@ -1,0 +1,40 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages-deploy-repo-analytics
+      cancel-in-progress: true
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: apps/web/package-lock.json
+
+      - name: Install dependencies
+        working-directory: apps/web
+        run: npm ci
+
+      - name: Build (next-on-pages)
+        working-directory: apps/web
+        run: npm run pages:build
+
+      - name: Deploy to Cloudflare Pages
+        working-directory: apps/web
+        run: npx wrangler@4 pages deploy .vercel/output/static --project-name repo-analytics --branch main --commit-dirty=true
+        env:
+          CLOUDFLARE_ACCOUNT_ID: 6585599bdbf9ca5a7d1826a42ab19d06
+          CLOUDFLARE_API_TOKEN: g0oPAxpckoQXTvN2bJfY_7dPlO0kYJL5MaDPJjeC
+
+
