@@ -3,6 +3,7 @@ import OpenAI from "openai";
 import { d1All, d1Run, getUID } from "../_lib/ctx";
 
 export const runtime = "edge";
+export const dynamic = "force-dynamic";
 
 type DiscordMessage = {
   message_id?: string;
@@ -43,7 +44,7 @@ async function readDiscordMessages(limitChars = 120000, channelId?: string): Pro
   const url = process.env.DISCORD_JSON_URL ||
     `https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-${fallbackId}.json`;
   try {
-    const res = await fetch(url, { cache: "no-store" });
+    const res = await fetch(url);
     if (!res.ok) return "";
     const parsed = (await res.json()) as DiscordMessage[];
     const lines: string[] = [];

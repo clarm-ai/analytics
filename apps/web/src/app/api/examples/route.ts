@@ -3,6 +3,7 @@ import OpenAI from "openai";
 import { d1All, getUID } from "../_lib/ctx";
 
 export const runtime = "edge";
+export const dynamic = "force-dynamic";
 
 type DiscordMessage = {
   message_id?: string;
@@ -24,12 +25,12 @@ async function safeJson(res: Response | undefined) {
   }
 }
 
-async function getExamplesForTopic(origin: string, topic: string, limit: number, all: DiscordMessage[]): Promise<any[]> {
+async function getExamplesForTopic(origin: string, topic: string, limit: number, all: DiscordMessage[], channelId: string): Promise<any[]> {
   try {
-    const local = await fetch(`${origin}/analytics/data/examples_index.json`, { cache: "no-store" });
+    const local = await fetch(`${origin}/analytics/data/examples_index-${channelId}.json`);
     let idx: any = await safeJson(local);
     if (!idx) {
-      const gh = await fetch("https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/examples_index.json", { cache: "no-store" });
+      const gh = await fetch(`https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/examples_index-${channelId}.json`);
       idx = await safeJson(gh);
     }
     if (idx && typeof idx === "object") {
@@ -48,10 +49,10 @@ async function getExamplesForTopic(origin: string, topic: string, limit: number,
   } catch {}
 
   try {
-    const local = await fetch(`${origin}/analytics/data/topic_index.json`, { cache: "no-store" });
+    const local = await fetch(`${origin}/analytics/data/topic_index-${channelId}.json`);
     let idx: any = await safeJson(local);
     if (!idx) {
-      const gh = await fetch("https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/topic_index.json", { cache: "no-store" });
+      const gh = await fetch(`https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/topic_index-${channelId}.json`);
       idx = await safeJson(gh);
     }
     if (idx && Array.isArray(idx.topics)) {
@@ -80,15 +81,15 @@ async function getAllMessages(origin: string, channelId: string): Promise<Discor
   // Try local static first (fast), then GitHub raw as fallback
   const local = `${origin}/analytics/data/discord-${channelId}.json`;
   try {
-    const res = await fetch(local, { cache: "no-store" });
+    const res = await fetch(local);
     if (res.ok) {
       const parsed = await res.json();
       if (Array.isArray(parsed) && parsed.length) return parsed as DiscordMessage[];
     }
   } catch {}
   try {
-    const raw = `https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-${channelId}.json`;
-    const res = await fetch(raw, { cache: "no-store" });
+    const raw = `https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/discord-${channelId}.json`;
+    const res = await fetch(raw);
     if (res.ok) {
       const parsed = await res.json();
       if (Array.isArray(parsed)) return parsed as DiscordMessage[];
@@ -207,7 +208,7 @@ export async function GET(req: NextRequest) {
   // Prefer topic results even when ids are also provided (ids may be stale)
   if (topic) {
     const origin = new URL(req.url).origin;
-    const arr = await getExamplesForTopic(origin, topic, limit, all);
+    const arr = await getExamplesForTopic(origin, topic, limit, all, channelId);
     if (arr.length) return NextResponse.json({ items: arr }, { status: 200 });
   }
 
@@ -215,7 +216,7 @@ export async function GET(req: NextRequest) {
     // Try resolving via static examples_index first (exact mapping id->payload)
     try {
       const origin = new URL(req.url).origin;
-      const idxRes = await fetch(`${origin}/analytics/data/examples_index.json`, { cache: "no-store" });
+      const idxRes = await fetch(`${origin}/analytics/data/examples_index-${channelId}.json`, { cache: "no-store" });
       let ok = idxRes.ok;
       let idx: any = undefined;
       if (ok) {
@@ -223,7 +224,7 @@ export async function GET(req: NextRequest) {
       } else {
         // Fallback to GitHub raw if not found locally
         const gh = await fetch(
-          "https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/examples_index.json",
+          `https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/examples_index-${channelId}.json`,
           { cache: "no-store" }
         );
         if (gh.ok) {
@@ -265,7 +266,7 @@ export async function GET(req: NextRequest) {
     if (!items.length && topic) {
       try {
         const origin = new URL(req.url).origin;
-        const idxRes = await fetch(`${origin}/analytics/data/examples_index.json`, { cache: "no-store" });
+        const idxRes = await fetch(`${origin}/analytics/data/examples_index-${channelId}.json`, { cache: "no-store" });
         if (idxRes.ok) {
           const idx = await idxRes.json();
           const arr = Array.isArray(idx[topic]) ? idx[topic] : [];

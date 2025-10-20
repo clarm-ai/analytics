@@ -5,9 +5,12 @@ import path from "path";
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 const ROOT = path.resolve(__dirname, "..");
 const DATA_DIR = path.join(ROOT, "public", "data");
-const DISCORD_JSON = path.join(DATA_DIR, "discord-1288403910284935182.json");
-const TOPIC_INDEX_JSON = path.join(DATA_DIR, "topic_index.json");
-const EXAMPLES_INDEX_JSON = path.join(DATA_DIR, "examples_index.json");
+// Allow override: node generate_topic_and_examples_index.mjs <channelId>
+const argv = process.argv.slice(2);
+const CHANNEL_ID = (argv[0] || process.env.CHANNEL || "1288403910284935182").trim();
+const DISCORD_JSON = path.join(DATA_DIR, `discord-${CHANNEL_ID}.json`);
+const TOPIC_INDEX_JSON = path.join(DATA_DIR, `topic_index-${CHANNEL_ID}.json`);
+const EXAMPLES_INDEX_JSON = path.join(DATA_DIR, `examples_index-${CHANNEL_ID}.json`);
 
 function normalize(str) {
   return (str || "").toString().toLowerCase();

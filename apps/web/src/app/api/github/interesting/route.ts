@@ -3,6 +3,7 @@ import OpenAI from "openai";
 import { d1All, d1Run, getUID } from "../../_lib/ctx";
 
 export const runtime = "edge";
+export const dynamic = "force-dynamic";
 
 type GitHubStargazer = {
   login: string;
@@ -49,15 +50,25 @@ export async function GET(req: NextRequest) {
   const force = url.searchParams.get("force") || "";
   const uid = getUID(req as unknown as Request);
 
+  // Prefer static snapshot first for MVP/stability, regardless of force.
+  try {
+    const local = await fetch(`${origin}/analytics/data/interesting_stargazers.json`);
+    const json = await safeJson(local);
+    if (Array.isArray(json) && json.length) {
+      const items = json;
+      return NextResponse.json({ items, source: "static" }, { status: 200 });
+    }
+  } catch {}
+
   // 2) Load GitHub data from our aggregated endpoint or static snapshot
   let gh: any = undefined;
   try {
-    const res = await fetch(`${origin}/analytics/api/github`, { cache: "no-store" });
+    const res = await fetch(`${origin}/analytics/api/github`);
     gh = await safeJson(res);
   } catch {}
   if (!gh) {
     try {
-      const snap = await fetch(`${origin}/analytics/data/github-better-auth-better-auth.json`, { cache: "no-store" });
+      const snap = await fetch(`${origin}/analytics/data/github-better-auth-better-auth.json`);
       gh = await safeJson(snap);
     } catch {}
   }
@@ -177,7 +188,7 @@ export async function GET(req: NextRequest) {
   // If no API key or LLM failed, try static DB unless force=live
   if (force !== "live") {
     try {
-      const local = await fetch(`${origin}/analytics/data/interesting_stargazers.json`, { cache: "no-store" });
+      const local = await fetch(`${origin}/analytics/data/interesting_stargazers.json`);
       const json = await safeJson(local);
       if (Array.isArray(json) && json.length) {
         return NextResponse.json({ items: json, source: "static" }, { status: 200 });

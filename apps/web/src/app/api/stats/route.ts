@@ -74,16 +74,22 @@ async function readDiscordMessages(req: NextRequest): Promise<DiscordMessage[]> 
 
     // Fallback to repository-provided static JSON served from public under /analytics/data/...
     const origin = new URL(req.url).origin;
-    const basePath = "/analytics";
-    const localUrl = `${origin}${basePath}/data/discord-${channelId}.json`;
-    const res = await fetch(localUrl, { cache: "no-store" });
-    if (res.ok) {
-      const parsed = await res.json();
-      if (Array.isArray(parsed)) return parsed as DiscordMessage[];
+    const candidates = [
+      `${origin}/analytics/data/discord-${channelId}.json`,
+      `${origin}/data/discord-${channelId}.json`,
+    ];
+    for (const u of candidates) {
+      try {
+        const r = await fetch(u, { cache: "no-store" });
+        if (r.ok) {
+          const parsed = await r.json();
+          if (Array.isArray(parsed) && parsed.length) return parsed as DiscordMessage[];
+        }
+      } catch {}
     }
 
     // Final fallback: raw file from the repository
-    const rawUrl = `https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-${channelId}.json`;
+    const rawUrl = `https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/discord-${channelId}.json`;
     const rawRes = await fetch(rawUrl, { cache: "no-store" });
     if (!rawRes.ok) return [];
     const rawParsed = await rawRes.json();

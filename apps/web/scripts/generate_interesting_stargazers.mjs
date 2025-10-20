@@ -8,8 +8,16 @@ dotenv.config({ path: path.resolve(process.cwd(), '../../.env') });
 
 const ROOT = path.resolve(process.cwd());
 const PUBLIC_DIR = path.join(ROOT, 'public', 'data');
-const SNAPSHOT = path.join(PUBLIC_DIR, 'github-better-auth-better-auth.json');
-const OUT = path.join(PUBLIC_DIR, 'interesting_stargazers.json');
+// Allow overriding repo: node generate_interesting_stargazers.mjs owner repo
+const argv = process.argv.slice(2);
+let OWNER = 'better-auth';
+let REPO = 'better-auth';
+const fromEnv = process.env.REPO || process.env.GITHUB_REPO;
+if (fromEnv && fromEnv.includes('/')) { const [o, r] = fromEnv.split('/'); if (o && r) { OWNER = o; REPO = r; } }
+if (argv.length >= 2) { OWNER = argv[0] || OWNER; REPO = argv[1] || REPO; }
+else if (argv.length === 1 && argv[0].includes('/')) { const [o, r] = argv[0].split('/'); if (o && r) { OWNER = o; REPO = r; } }
+const SNAPSHOT = path.join(PUBLIC_DIR, `github-${OWNER}-${REPO}.json`);
+const OUT = path.join(PUBLIC_DIR, `interesting_stargazers-${OWNER}-${REPO}.json`);
 
 function heuristicScore(s) {
   const titleBoost = /cto|chief technology|vp eng|vp of engineering|head of eng|director of eng|founder|co[- ]founder|principal/i;

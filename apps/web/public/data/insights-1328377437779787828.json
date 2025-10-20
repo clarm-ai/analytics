@@ -1,0 +1,202 @@
+{
+  "topics": [
+    {
+      "topic": "first online hackathon",
+      "count": 1
+    },
+    {
+      "topic": "guys about",
+      "count": 1
+    },
+    {
+      "topic": "llmprovider oaicompat",
+      "count": 1
+    }
+  ],
+  "seo_recommendations": [
+    "Add end-to-end quickstart: local LLM (Ollama) + CUA Computer agent",
+    "Publish security guide on prompt-injection defenses for agents",
+    "Create provider compatibility matrix (OpenAI/Ollama/Llama.cpp) with examples"
+  ],
+  "unanswered_questions": [
+    "have you guys thought about how to mitigate such threats https://brave.com/blog/comet-prompt-injection/ ?",
+    "How does one do this today with the latest library?\n\nSeems this doesn't work\n\n```python\n    agent = ComputerAgent(\n        model=\"openai/minicpm-v-4-5\",\n        api_key=\"local\",\n        api_base=\"https://my.oai.server/v1\",\n        telemetry_enabled=False,\n        save_trajectory=True,\n        tools=[computer],\n    )\n```",
+    "Hi, has anyone been able to run cua with ollama?"
+  ],
+  "action_plans": [
+    "Release working examples: MiniCPM, Phi-4, and GPT-4o via OAICOMpat",
+    "Document headless vs. headed desktop runs and resource tuning on macOS/Linux",
+    "Write troubleshooting for window focus / input issues in long trajectories",
+    "Add recipe: redact sensitive data from trajectories before sharing",
+    "Add guide: migrating from pure API calls to CUA agent tools"
+  ],
+  "seo_keywords": [
+    "local",
+    "ollama",
+    "computer",
+    "trajectory",
+    "redaction",
+    "oaicompat",
+    "online",
+    "hackathon",
+    "first",
+    "agent",
+    "python",
+    "use",
+    "model",
+    "llmprovider",
+    "winners",
+    "great",
+    "recent",
+    "research",
+    "loop",
+    "optional",
+    "perceptron",
+    "how",
+    "was",
+    "work",
+    "computeragent",
+    "base",
+    "save",
+    "true",
+    "api",
+    "global",
+    "time",
+    "running",
+    "all",
+    "worked",
+    "hard",
+    "reflected",
+    "during",
+    "many",
+    "hours",
+    "days"
+  ],
+  "seo_keyword_clusters": [
+    {
+      "cluster": "first online hackathon",
+      "intent": "informational",
+      "primary": "first online hackathon",
+      "secondary": [
+        "local",
+        "ollama",
+        "computer",
+        "trajectory",
+        "redaction",
+        "oaicompat",
+        "online",
+        "hackathon",
+        "first",
+        "agent"
+      ]
+    },
+    {
+      "cluster": "guys about",
+      "intent": "informational",
+      "primary": "guys about",
+      "secondary": [
+        "local",
+        "ollama",
+        "computer",
+        "trajectory",
+        "redaction",
+        "oaicompat",
+        "online",
+        "hackathon",
+        "first",
+        "agent"
+      ]
+    },
+    {
+      "cluster": "llmprovider oaicompat",
+      "intent": "informational",
+      "primary": "llmprovider oaicompat",
+      "secondary": [
+        "local",
+        "ollama",
+        "computer",
+        "trajectory",
+        "redaction",
+        "oaicompat",
+        "online",
+        "hackathon",
+        "first",
+        "agent"
+      ]
+    }
+  ],
+  "seo_briefs": [
+    {
+      "slug": "first-online-hackathon",
+      "h1": "Understanding first online hackathon",
+      "title_tag": "first online hackathon – Best practices and fixes",
+      "meta_description": "Guide to first online hackathon: best practices, common issues, and fixes for CUA users.",
+      "outline": [
+        "Overview",
+        "Common issues",
+        "Fixes",
+        "Examples"
+      ],
+      "faqs": [
+        {
+          "q": "How do I get started with first online hackathon?",
+          "a": "Follow the quickstart and examples on this page."
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "CUA Docs",
+          "url": "https://github.com/trycua/cua"
+        }
+      ]
+    },
+    {
+      "slug": "guys-about",
+      "h1": "Understanding guys about",
+      "title_tag": "guys about – Best practices and fixes",
+      "meta_description": "Guide to guys about: best practices, common issues, and fixes for CUA users.",
+      "outline": [
+        "Overview",
+        "Common issues",
+        "Fixes",
+        "Examples"
+      ],
+      "faqs": [
+        {
+          "q": "How do I get started with guys about?",
+          "a": "Follow the quickstart and examples on this page."
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "CUA Docs",
+          "url": "https://github.com/trycua/cua"
+        }
+      ]
+    },
+    {
+      "slug": "llmprovider-oaicompat",
+      "h1": "Understanding llmprovider oaicompat",
+      "title_tag": "llmprovider oaicompat – Best practices and fixes",
+      "meta_description": "Guide to llmprovider oaicompat: best practices, common issues, and fixes for CUA users.",
+      "outline": [
+        "Overview",
+        "Common issues",
+        "Fixes",
+        "Examples"
+      ],
+      "faqs": [
+        {
+          "q": "How do I get started with llmprovider oaicompat?",
+          "a": "Follow the quickstart and examples on this page."
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "CUA Docs",
+          "url": "https://github.com/trycua/cua"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1004 @@
+[
+  {
+    "message_id": "1429366284276990023",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-19T07:11:18.513000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1429362296542597271",
+    "author": "alecoot",
+    "author_id": "157356656936615938",
+    "author_display_name": "Alec",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/157356656936615938/d4d7713caa85c6062cc3793d4b0c4d9d.png?size=80",
+    "timestamp": "2025-10-19T06:55:27.763000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1429303807967494304",
+    "author": ".___.__.__",
+    "author_id": "743809982134354031",
+    "author_display_name": "James",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/743809982134354031/4b5e11c8a2d4e4338fdabe2557a55f9a.png?size=80",
+    "timestamp": "2025-10-19T03:03:03+00:00",
+    "text": "🏆  Online Global Hackathon Winners\n\nWe had a great time running our first online hackathon. You all worked hard, and it reflected during the many hours and days we spent reviewing your submissions. I'm now happy to announce the winners:\n\n1️⃣ CoAct_1 — <@620592561974935553> \nImplemented a new agent architecture inspired by recent research, rebuilding the core loop in Python. Integrates Cua for computer use with Ollama optional for GUI grounding. Includes a polished frontend and modular design.\n\n2️⃣ Trajectory Redaction with Perceptron — <@229137745237245953> \nA clean, practical extension of Cua enabling local trajectory and screenshot redaction. Uses callbacks and a local Perceptron Isaac model for visual redaction, with Ollama as an optional LLM for text redaction.\n\n3️⃣ SarvajñaGPT — <@1085162835593674813> \nA local-first AI assistant integrating Cua automation with Ollama (Qwen) for multimodal, privacy-preserving workflows. Automates Word, VS Code, and file operations through tool-use and local Windows process control.\n\n🎉 Congratulations to everyone who participated in our first online hackathon!",
+    "attachments": [
+      "https://cdn.discordapp.com/attachments/1328377437779787828/1429303807610720327/Global_Hackathon_Winners.png?ex=68f6f7e6&is=68f5a666&hm=f415178dac81cd77ac97050ae33cc1744c63370309f512e31fdb3f6f9949972b&"
+    ]
+  },
+  {
+    "message_id": "1429089046964994189",
+    "author": "davadado",
+    "author_id": "381251956254965761",
+    "author_display_name": "DAvadado",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-18T12:49:39.987000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1428900425997746248",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-18T00:20:09.244000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1428899909112954972",
+    "author": "rainbow_unicorn7467",
+    "author_id": "381138765529481216",
+    "author_display_name": "rainbow_unicorn7467",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-18T00:18:06.009000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1428523712633765908",
+    "author": "thebrainyduck",
+    "author_id": "1289923371420614712",
+    "author_display_name": "A",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1289923371420614712/ce5a5faee4200db5ac498b7aa23a5f08.png?size=80",
+    "timestamp": "2025-10-16T23:23:13.779000+00:00",
+    "text": "I love Cua.",
+    "attachments": []
+  },
+  {
+    "message_id": "1428517966395342968",
+    "author": "mysterious_starfish_94137",
+    "author_id": "1339725391895466005",
+    "author_display_name": "D",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-16T23:00:23.769000+00:00",
+    "text": "have you guys thought about how to mitigate such threats https://brave.com/blog/comet-prompt-injection/ ?",
+    "attachments": []
+  },
+  {
+    "message_id": "1428408100456632532",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-16T15:43:49.688000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1428404359577735258",
+    "author": "sonn_78887",
+    "author_id": "1371356668771827783",
+    "author_display_name": "Son N",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-16T15:28:57.793000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1428176582761251002",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-16T00:23:51.568000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1428172394601775175",
+    "author": "simsim07187",
+    "author_id": "1424525934458962011",
+    "author_display_name": "Simsim",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1424525934458962011/157e517cdbf371a47aaead44675714a3.png?size=80",
+    "timestamp": "2025-10-16T00:07:13.033000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1428160859905200208",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-15T23:21:22.947000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1428156621997080576",
+    "author": "rewardhacker00",
+    "author_id": "1416023185438019624",
+    "author_display_name": "RewardHacker00",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1416023185438019624/e9e6379d0b6556aef455c7117237685a.png?size=80",
+    "timestamp": "2025-10-15T23:04:32.551000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1428151368136261766",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-15T22:43:39.933000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1428079075842457621",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-15T17:56:24.107000+00:00",
+    "text": "currently confirming this claim 🙂",
+    "attachments": []
+  },
+  {
+    "message_id": "1428079074663858359",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-15T17:56:23.826000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1428078421367586826",
+    "author": "dazzling_chipmunk_82967",
+    "author_id": "1362185997563068787",
+    "author_display_name": "TK",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-15T17:53:48.068000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427989603259908178",
+    "author": "kunlaoda",
+    "author_id": "872802254309191751",
+    "author_display_name": "kun887",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/872802254309191751/bb7b1472f44611e8cca373f93375fdcb.png?size=80",
+    "timestamp": "2025-10-15T12:00:52.181000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427740923894173756",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-14T19:32:42.400000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427740919188164779",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-14T19:32:41.278000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427740914172039310",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-14T19:32:40.082000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427701928883916892",
+    "author": "pavan_manikanta",
+    "author_id": "1041317454850306099",
+    "author_display_name": "Pavan",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-14T16:57:45.265000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427584846171078717",
+    "author": "elkhayyat17",
+    "author_id": "1057411139950104716",
+    "author_display_name": "Ahmed Elkhayyat",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-14T09:12:30.571000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427534683939405824",
+    "author": "megumiso",
+    "author_id": "241578268749201408",
+    "author_display_name": "Megumiso",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/241578268749201408/414fce5afd178da5c729681738615177.png?size=80",
+    "timestamp": "2025-10-14T05:53:10.963000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427414281946792057",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-13T21:54:44.891000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427386787827028092",
+    "author": "abenezer1990",
+    "author_id": "1414932499603259452",
+    "author_display_name": "Abenezer",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-13T20:05:29.782000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427384486961610767",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-13T19:56:21.213000+00:00",
+    "text": "So `provider=LLMProvider.OAICOMPAT` was",
+    "attachments": []
+  },
+  {
+    "message_id": "1427379334582243368",
+    "author": "pwnosaurusrex",
+    "author_id": "772537007812902915",
+    "author_display_name": "PwnosaurusRex",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/772537007812902915/a9f8bff08cbac9eebff404fe22839e0e.png?size=80",
+    "timestamp": "2025-10-13T19:35:52.790000+00:00",
+    "text": "Tried to add `oaicompat` but didn't work",
+    "attachments": []
+  },
+  {
+    "message_id": "1427379204370071602",
+    "author": "pwnosaurusrex",
+    "author_id": "772537007812902915",
+    "author_display_name": "PwnosaurusRex",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/772537007812902915/a9f8bff08cbac9eebff404fe22839e0e.png?size=80",
+    "timestamp": "2025-10-13T19:35:21.745000+00:00",
+    "text": "So `provider=LLMProvider.OAICOMPAT` was dropped?\n\n```python\nagent = ComputerAgent(\n      computer=macos_computer,\n      loop=AgentLoop.OMNI,\n      model=LLM(\n          provider=LLMProvider.OAICOMPAT,\n          name=\"qwen2.5-vl-7b-instruct\",\n          provider_base_url=\"http://localhost:1234/v1\",  # LM Studio local endpoint\n      ),\n      save_trajectory=True,\n      only_n_most_recent_images=3,\n      verbosity=logging.DEBUG,\n  )\n```",
+    "attachments": []
+  },
+  {
+    "message_id": "1427378833212051556",
+    "author": "fra_test",
+    "author_id": "1420045521510338582",
+    "author_display_name": "Mike",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-13T19:33:53.254000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427378710499299339",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-13T19:33:23.997000+00:00",
+    "text": "We have a migration guide here : https://docs.cua.ai/docs/agent-sdk/migration-guide",
+    "attachments": []
+  },
+  {
+    "message_id": "1427370932212858941",
+    "author": "pwnosaurusrex",
+    "author_id": "772537007812902915",
+    "author_display_name": "PwnosaurusRex",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/772537007812902915/a9f8bff08cbac9eebff404fe22839e0e.png?size=80",
+    "timestamp": "2025-10-13T19:02:29.509000+00:00",
+    "text": "How does one do this today with the latest library?\n\nSeems this doesn't work\n\n```python\n    agent = ComputerAgent(\n        model=\"openai/minicpm-v-4-5\",\n        api_key=\"local\",\n        api_base=\"https://my.oai.server/v1\",\n        telemetry_enabled=False,\n        save_trajectory=True,\n        tools=[computer],\n    )\n```",
+    "attachments": []
+  },
+  {
+    "message_id": "1427357102502056007",
+    "author": "olafsuperstar0523_2",
+    "author_id": "1423276529559015435",
+    "author_display_name": "!  DevX",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1423276529559015435/5bc94b6a786fb8836683d9563369f3da.png?size=80",
+    "timestamp": "2025-10-13T18:07:32.249000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427353686367273071",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-13T17:53:57.779000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427353468267663380",
+    "author": "richolaf0523",
+    "author_id": "1423253795982282853",
+    "author_display_name": "!     DevX",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1423253795982282853/f7dc0db750eb4b96d40c24d8088b3e89.png?size=80",
+    "timestamp": "2025-10-13T17:53:05.780000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427331141941071902",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-13T16:24:22.769000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427331133733077053",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-13T16:24:20.812000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427325545988886578",
+    "author": "CuaBot",
+    "author_id": "1374951379168137387",
+    "author_display_name": "CuaBot",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1374951379168137387/e1e7c1550a1d98d0f07337e4fef0a58b.png?size=80",
+    "timestamp": "2025-10-13T16:02:08.590000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427302933451636818",
+    "author": "eyalev_99095",
+    "author_id": "1427298385706221658",
+    "author_display_name": "eyalev",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-13T14:32:17.341000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427252767969251409",
+    "author": "fffreedom",
+    "author_id": "816605107012501535",
+    "author_display_name": "J",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/816605107012501535/a_284dad9a80a594e75a6305c0d4a0d51c.gif?size=80",
+    "timestamp": "2025-10-13T11:12:56.958000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427032493105615022",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-12T20:37:39.338000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1427029439010570362",
+    "author": "mrkfu37uek",
+    "author_id": "1160616697934381129",
+    "author_display_name": "mrKfu37UeK",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1160616697934381129/1e22fcab50dadff3d2945383dc19b8b1.png?size=80",
+    "timestamp": "2025-10-12T20:25:31.185000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426947034962853898",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-12T14:58:04.529000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426940115657298060",
+    "author": "alicekhomich1_74631",
+    "author_id": "1389596291067019274",
+    "author_display_name": "AliceKhomich",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-12T14:30:34.838000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426780794483114005",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-12T03:57:29.710000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426751804829470790",
+    "author": "gorspeed_91234",
+    "author_id": "1416515919584170104",
+    "author_display_name": "gorspeed",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-12T02:02:18.038000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426741529342513233",
+    "author": "oddsfantasy",
+    "author_id": "1022927678967390258",
+    "author_display_name": "a.developer",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1022927678967390258/fc14944f1e31375952a9b6b9145c6cf3.png?size=80",
+    "timestamp": "2025-10-12T01:21:28.171000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426704526202638476",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-11T22:54:25.935000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426664562270404649",
+    "author": "khush_58172",
+    "author_id": "1426664232862089359",
+    "author_display_name": "Khush",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-11T20:15:37.791000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426607288420139139",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-11T16:28:02.641000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426569411417997382",
+    "author": "lucas_wright012",
+    "author_id": "1311645507348860929",
+    "author_display_name": "Benson_ATH",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1311645507348860929/ddbbf517286a7d1bbe5594806239199d.png?size=80",
+    "timestamp": "2025-10-11T13:57:32.060000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426401694832525312",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-11T02:51:05.310000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426401688151134349",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-11T02:51:03.717000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426401478758629568",
+    "author": "simonisonfire",
+    "author_id": "526259950792605706",
+    "author_display_name": "simonisonfire",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/526259950792605706/1fec74af59cbc97cd94d11007943d2fe.png?size=80",
+    "timestamp": "2025-10-11T02:50:13.794000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426334988500078813",
+    "author": "oddsfantasy",
+    "author_id": "1022927678967390258",
+    "author_display_name": "a.developer",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1022927678967390258/fc14944f1e31375952a9b6b9145c6cf3.png?size=80",
+    "timestamp": "2025-10-10T22:26:01.281000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426141290877419551",
+    "author": "fullyn125",
+    "author_id": "1339793163862151188",
+    "author_display_name": "georgian",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1339793163862151188/bc3eca6a10fb8e5980378ad173ea9784.png?size=80",
+    "timestamp": "2025-10-10T09:36:20.169000+00:00",
+    "text": "I sent friend request.",
+    "attachments": []
+  },
+  {
+    "message_id": "1426141029387472976",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-10T09:35:17.825000+00:00",
+    "text": "Let’s talk in dm!",
+    "attachments": []
+  },
+  {
+    "message_id": "1426140413504520284",
+    "author": "fullyn125",
+    "author_id": "1339793163862151188",
+    "author_display_name": "georgian",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1339793163862151188/bc3eca6a10fb8e5980378ad173ea9784.png?size=80",
+    "timestamp": "2025-10-10T09:32:50.987000+00:00",
+    "text": "Hi, nice to meet you.",
+    "attachments": []
+  },
+  {
+    "message_id": "1426078764927942686",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-10T05:27:52.821000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1426072761012322437",
+    "author": "fullyn125",
+    "author_id": "1339793163862151188",
+    "author_display_name": "georgian",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1339793163862151188/bc3eca6a10fb8e5980378ad173ea9784.png?size=80",
+    "timestamp": "2025-10-10T05:04:01.376000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425980681082896605",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-09T22:58:07.810000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425979235549577236",
+    "author": "m_t3o",
+    "author_id": "691708054538027082",
+    "author_display_name": "m_t3o",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/691708054538027082/1961816fb1a6da8ec8e4d1e0b83b4352.png?size=80",
+    "timestamp": "2025-10-09T22:52:23.168000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425888262244925592",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-09T16:50:53.442000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425886432991379536",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-09T16:43:37.314000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425882632440250419",
+    "author": "yaswanth0734",
+    "author_id": "1215477895724793968",
+    "author_display_name": "Yaswanth",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1215477895724793968/059fa8e5ed91b3d547fd80dc3ebb39f4.png?size=80",
+    "timestamp": "2025-10-09T16:28:31.192000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425753825687638097",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-09T07:56:41.269000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425753801205219368",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-09T07:56:35.432000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425748409314316329",
+    "author": "chun3427",
+    "author_id": "1083174789855850577",
+    "author_display_name": "chunyuan",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1083174789855850577/c82b3fa769ed6e6ffdea579381ed5f5c.png?size=80",
+    "timestamp": "2025-10-09T07:35:09.905000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425744976389865604",
+    "author": "janeimissyou_97016",
+    "author_id": "1308213401494749265",
+    "author_display_name": "hey, jane",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1308213401494749265/805f7d256f229ca0ca75798dfd751c7e.png?size=80",
+    "timestamp": "2025-10-09T07:21:31.432000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425703096700506305",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-09T04:35:06.536000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425702441583644783",
+    "author": "gungbinn",
+    "author_id": "1037881828054413412",
+    "author_display_name": "bingung",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-09T04:32:30.344000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425645242454900786",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-09T00:45:13.009000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425642019048394793",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-09T00:32:24.489000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425641974362542275",
+    "author": "hctanmay",
+    "author_id": "1175948911890944082",
+    "author_display_name": "tracer👨🏻💻",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1175948911890944082/8c0e3f552bfb5776fb4019f36fa3e0e1.png?size=80",
+    "timestamp": "2025-10-09T00:32:13.835000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425608345997283458",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-08T22:18:36.208000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425603869173616752",
+    "author": "donuts5",
+    "author_id": "388877089136443392",
+    "author_display_name": "Sarina",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/388877089136443392/0260b6ec775a16512764fe74b0a94388.png?size=80",
+    "timestamp": "2025-10-08T22:00:48.850000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425571499422646314",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-08T19:52:11.300000+00:00",
+    "text": "we had originally - ended up that general conversations were starting there as well, so we converged to a single channel. seeing this is also what other communities like ollama do",
+    "attachments": []
+  },
+  {
+    "message_id": "1425571019304734841",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-08T19:50:16.831000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425561617013407754",
+    "author": "hektor.btc",
+    "author_id": "859387688506228748",
+    "author_display_name": "Hektor",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/859387688506228748/515fa3e481ece18b7d6d708ad350c929.png?size=80",
+    "timestamp": "2025-10-08T19:12:55.150000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425561139051237406",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-08T19:11:01.195000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425526275090546698",
+    "author": "sparkling_fawn_60318",
+    "author_id": "1328450258988175422",
+    "author_display_name": "Francesco",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1328450258988175422/2f371d018e92372ba629838979e56155.png?size=80",
+    "timestamp": "2025-10-08T16:52:28.979000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425524528800464968",
+    "author": "paul_63523",
+    "author_id": "1179324383928537111",
+    "author_display_name": "Koda",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1179324383928537111/4eaefc7bfbaf5d5411edc5ba8952e117.png?size=80",
+    "timestamp": "2025-10-08T16:45:32.631000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425496403895128094",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-08T14:53:47.131000+00:00",
+    "text": "Great keep us updated!",
+    "attachments": []
+  },
+  {
+    "message_id": "1425496218099781784",
+    "author": ".billo",
+    "author_id": "193041824485474314",
+    "author_display_name": "billo",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/193041824485474314/a2faadd75bce4fe4d56741e4dad1a33e.png?size=80",
+    "timestamp": "2025-10-08T14:53:02.834000+00:00",
+    "text": "I see you're also in the tinygrad server, sweet",
+    "attachments": []
+  },
+  {
+    "message_id": "1425496150336864267",
+    "author": ".billo",
+    "author_id": "193041824485474314",
+    "author_display_name": "billo",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/193041824485474314/a2faadd75bce4fe4d56741e4dad1a33e.png?size=80",
+    "timestamp": "2025-10-08T14:52:46.678000+00:00",
+    "text": "PhD student at the University of Florida, trying to use cua for research purposes. Yourself?",
+    "attachments": []
+  },
+  {
+    "message_id": "1425495885248204962",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-08T14:51:43.476000+00:00",
+    "text": "Where are you from billo?",
+    "attachments": []
+  },
+  {
+    "message_id": "1425495789375066114",
+    "author": ".billo",
+    "author_id": "193041824485474314",
+    "author_display_name": "billo",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/193041824485474314/a2faadd75bce4fe4d56741e4dad1a33e.png?size=80",
+    "timestamp": "2025-10-08T14:51:20.618000+00:00",
+    "text": "Howdy",
+    "attachments": []
+  },
+  {
+    "message_id": "1425495727034859553",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-08T14:51:05.755000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425495608864542891",
+    "author": ".billo",
+    "author_id": "193041824485474314",
+    "author_display_name": "billo",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/193041824485474314/a2faadd75bce4fe4d56741e4dad1a33e.png?size=80",
+    "timestamp": "2025-10-08T14:50:37.581000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425473922715091044",
+    "author": "noimnull",
+    "author_id": "328232327966883841",
+    "author_display_name": "Null",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/328232327966883841/324a4789a111522381b685a1484fc67a.png?size=80",
+    "timestamp": "2025-10-08T13:24:27.200000+00:00",
+    "text": "Hi, has anyone been able to run cua with ollama?",
+    "attachments": []
+  },
+  {
+    "message_id": "1425421487946469386",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-08T09:56:05.777000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425421406283501660",
+    "author": "aayushgid1507",
+    "author_id": "905697477993324564",
+    "author_display_name": "Aayush gid",
+    "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+    "timestamp": "2025-10-08T09:55:46.307000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425420025879072797",
+    "author": "sanjaysingh4615",
+    "author_id": "885187714197106739",
+    "author_display_name": "Sanjay Singh",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/885187714197106739/fb0c06dc6d79558bbbb01961b6f33083.png?size=80",
+    "timestamp": "2025-10-08T09:50:17.193000+00:00",
+    "text": "Heyyy",
+    "attachments": []
+  },
+  {
+    "message_id": "1425419553063702568",
+    "author": "sanjaysingh4615",
+    "author_id": "885187714197106739",
+    "author_display_name": "Sanjay Singh",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/885187714197106739/fb0c06dc6d79558bbbb01961b6f33083.png?size=80",
+    "timestamp": "2025-10-08T09:48:24.465000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425415171618373714",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-08T09:30:59.847000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425415138739097641",
+    "author": "yasyf",
+    "author_id": "950473112573599764",
+    "author_display_name": "yasyf",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/950473112573599764/8c46fc07dc73cd7772b445c1abba52e1.png?size=80",
+    "timestamp": "2025-10-08T09:30:52.008000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425403248797548605",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-08T08:43:37.225000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425403184611987527",
+    "author": "casperxo",
+    "author_id": "695374735957295256",
+    "author_display_name": "CasperXo",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/695374735957295256/2c04480203f44f649f85bf9ebd6fac8b.png?size=80",
+    "timestamp": "2025-10-08T08:43:21.922000+00:00",
+    "text": "",
+    "attachments": []
+  },
+  {
+    "message_id": "1425401128031486064",
+    "author": "dhruv0453",
+    "author_id": "1188083199180546101",
+    "author_display_name": "Dhruv",
+    "author_avatar_url": "https://cdn.discordapp.com/avatars/1188083199180546101/77556b6ebb68197672eebdb2106fdfa1.png?size=80",
+    "timestamp": "2025-10-08T08:35:11.595000+00:00",
+    "text": "",
+    "attachments": []
+  }
+]

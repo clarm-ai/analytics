@@ -68,7 +68,7 @@ type GitHubStargazer = {
 type StarsTimelinePoint = { date: string; count: number };
 
 type GitHubResponse = {
-  repo: { name: string; description?: string; stars: number; forks: number; openIssues: number; watchers: number };
+  repo: { name: string; description?: string; stars: number; forks: number; openIssues: number; watchers: number; owner_avatar_url?: string };
   contributors: GitHubContributor[];
   stargazers: GitHubStargazer[];
   stars_timeline: StarsTimelinePoint[];
@@ -92,10 +92,56 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"discord" | "github">("discord");
   const [gh, setGh] = useState<GitHubResponse | null>(null);
+  // Repo switching (owner/name)
+  const [repoOwner, setRepoOwner] = useState<string>("better-auth");
+  const [repoName, setRepoName] = useState<string>("better-auth");
+  const [showRepoMenu, setShowRepoMenu] = useState<boolean>(false);
+  // Map repos -> Discord channel IDs (for static discord data)
+  const repoToChannel: Record<string, string> = {
+    "better-auth/better-auth": "1288403910284935182",
+    "trycua/cua": "1328377437779787828",
+  };
+  // Currently selected mapping key and resolved channel id for Discord data
+  const selectedKey = `${repoOwner}/${repoName}`;
+  const selectedChannelId = repoToChannel[selectedKey] || "1288403910284935182";
   const [topicExamples, setTopicExamples] = useState<Record<string, { text: string; author?: string; when?: string }[]>>({});
   const [topicIndex, setTopicIndex] = useState<Record<string, string[]>>({});
   const [questionExamples, setQuestionExamples] = useState<Record<string, { text: string; author?: string; when?: string }[]>>({});
   const [interesting, setInteresting] = useState<InterestingItem[] | null>(null);
+
+  async function computeStatsFromDiscord(prefix: string, channelId: string): Promise<StatsResponse | null> {
+    try {
+      const res = await fetch(`${prefix}/data/discord-${encodeURIComponent(channelId)}.json`, { cache: "no-store" }).catch(() => null);
+      if (!res || !res.ok) return null;
+      const arr: any[] = await res.json();
+      if (!Array.isArray(arr) || !arr.length) return null;
+      const byId = new Map<string, Contributor>();
+      const weekdays: WeekdayStats = { Monday: 0, Tuesday: 0, Wednesday: 0, Thursday: 0, Friday: 0, Saturday: 0, Sunday: 0 };
+      const toWeekday = (d: Date): keyof WeekdayStats => {
+        const idx = d.getDay();
+        return (['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][idx] as keyof WeekdayStats) || 'Monday';
+      };
+      for (const m of arr) {
+        const id = String(m.author_id || m.author || '').trim();
+        if (id) {
+          const display = String(m.author_display_name || m.author || id);
+          const avatar = m.author_avatar_url || undefined;
+          const prev = byId.get(id);
+          if (prev) {
+            prev.count += 1; if (!prev.avatarUrl && avatar) prev.avatarUrl = avatar; if (!prev.displayName && display) prev.displayName = display;
+          } else {
+            byId.set(id, { authorId: id, displayName: display, avatarUrl: avatar, count: 1 });
+          }
+        }
+        const ts = String(m.timestamp || '').trim();
+        if (ts) {
+          const d = new Date(ts); if (!isNaN(d.getTime())) { const w = toWeekday(d); weekdays[w] += 1; }
+        }
+      }
+      const contributors = Array.from(byId.values()).sort((a, b) => b.count - a.count).slice(0, 10);
+      return { contributors, weekdays, sampleSize: arr.length };
+    } catch { return null; }
+  }
 
   const copyToClipboard = async (value: string) => {
     try {
@@ -151,28 +197,34 @@ export default function Home() {
     async function loadInteresting() {
       try {
         const prefix = (typeof window !== "undefined" && (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/")) ? "/analytics" : "";
+        // Prefer repo-specific static snapshot
+        const staticPath = `${prefix}/data/interesting_stargazers-${repoOwner}-${repoName}.json`;
+        const snap = await fetch(staticPath, { cache: "no-store" }).catch(() => null);
+        if (snap && snap.ok) {
+          const items = await snap.json();
+          setInteresting(Array.isArray(items) ? items : []);
+          return;
+        }
+        // Fallback to generic file (legacy)
+        const legacy = await fetch(`${prefix}/data/interesting_stargazers.json`, { cache: "no-store" }).catch(() => null);
+        if (legacy && legacy.ok) {
+          const items = await legacy.json();
+          setInteresting(Array.isArray(items) ? items : []);
+          return;
+        }
+        // Final fallback to API
         const res = await fetch(`${prefix}/api/github/interesting`, { cache: "no-store" }).catch(() => null);
         if (res && res.ok) {
           const data = await res.json();
           const items = Array.isArray(data.items) ? data.items : [];
-          if (items.length) {
-            setInteresting(items);
-            return;
-          }
-        }
-        {
-          const snap = await fetch(`${prefix}/data/interesting_stargazers.json`, { cache: "no-store" }).catch(() => null);
-          if (snap && snap.ok) {
-            const items = await snap.json();
-            setInteresting(Array.isArray(items) ? items : []);
-          }
+          setInteresting(items);
         }
       } catch {}
     }
     if (activeTab === "github" && interesting === null) {
       loadInteresting();
     }
-  }, [activeTab, interesting]);
+  }, [activeTab, interesting, repoOwner, repoName]);
 
   useEffect(() => {
     async function load() {
@@ -182,13 +234,12 @@ export default function Home() {
           (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/"))
           ? "/analytics"
           : "";
-        // Channel ID from URL: /analytics or /analytics/[channelId]
-        const pathParts = (typeof window !== "undefined" ? window.location.pathname : "").split("/").filter(Boolean);
-        const channelId = pathParts.length >= 2 && pathParts[0] === "analytics" ? pathParts[1] : "1288403910284935182";
-        // Try dynamic API first; if it fails, fall back to static JSON in /public.
+        // Resolve selected channel based on repo selection
+        const selectedKey = `${repoOwner}/${repoName}`;
+        const selectedChannelId = repoToChannel[selectedKey] || "1288403910284935182";
         const [sRes, iRes] = await Promise.all([
-          fetch(`${prefix}/api/stats?channel=${encodeURIComponent(channelId)}`, { cache: "no-store" }).catch(() => null),
-          fetch(`${prefix}/api/insights?channel=${encodeURIComponent(channelId)}`, { cache: "no-store" }).catch(() => null),
+          fetch(`${prefix}/api/stats?channel=${encodeURIComponent(selectedChannelId)}`, { cache: "no-store" }).catch(() => null),
+          fetch(`${prefix}/api/insights?channel=${encodeURIComponent(selectedChannelId)}`, { cache: "no-store" }).catch(() => null),
         ]);
 
         let usedStaticStats = false;
@@ -196,26 +247,39 @@ export default function Home() {
           const s: StatsResponse = await sRes.json();
           const totalWeekday = Object.values(s.weekdays || {}).reduce((a, b) => a + (b || 0), 0);
           if ((s.contributors?.length ?? 0) === 0 || totalWeekday === 0 || (s.sampleSize ?? 0) === 0) {
-            // Fall back to static if API returned empty data
-            const staticStats = await fetch(`${prefix}/stats.json`, { cache: "no-store" }).catch(() => null);
-            if (staticStats && staticStats.ok) {
-              const ss: StatsResponse = await staticStats.json();
-              setStats(ss);
+            // Try computing from per-channel static Discord dump
+            const computed = await computeStatsFromDiscord(prefix, selectedChannelId);
+            if (computed) {
+              setStats(computed);
               usedStaticStats = true;
             } else {
-              setStats(s);
+              // Final fallback to legacy static
+              const staticStats = await fetch(`${prefix}/stats.json`, { cache: "no-store" }).catch(() => null);
+              if (staticStats && staticStats.ok) {
+                const ss: StatsResponse = await staticStats.json();
+                setStats(ss);
+                usedStaticStats = true;
+              } else {
+                setStats(s);
+              }
             }
           } else {
             setStats(s);
           }
         } else {
-          const staticStats = await fetch(`${prefix}/stats.json`, { cache: "no-store" }).catch(() => null);
-          if (staticStats && staticStats.ok) {
-            const s: StatsResponse = await staticStats.json();
-            setStats(s);
+          const computed = await computeStatsFromDiscord(prefix, selectedChannelId);
+          if (computed) {
+            setStats(computed);
             usedStaticStats = true;
           } else {
-            throw new Error("Failed to load stats");
+            const staticStats = await fetch(`${prefix}/stats.json`, { cache: "no-store" }).catch(() => null);
+            if (staticStats && staticStats.ok) {
+              const s: StatsResponse = await staticStats.json();
+              setStats(s);
+              usedStaticStats = true;
+            } else {
+              throw new Error("Failed to load stats");
+            }
           }
         }
 
@@ -223,17 +287,24 @@ export default function Home() {
           const i: InsightsResponse = await iRes.json();
           setInsights(i);
         } else {
-          const staticInsights = await fetch(`${prefix}/insights.json`, { cache: "no-store" }).catch(() => null);
+          // Prefer per-channel static insights file
+          const staticInsights = await fetch(`${prefix}/data/insights-${selectedChannelId}.json`, { cache: "no-store" }).catch(() => null);
           if (staticInsights && staticInsights.ok) {
             const i: InsightsResponse = await staticInsights.json();
             setInsights(i);
           } else {
-            setInsights({ topics: [], seo_recommendations: [], unanswered_questions: [], action_plans: [], seo_keywords: [] });
+            const legacy = await fetch(`${prefix}/insights.json`, { cache: "no-store" }).catch(() => null);
+            if (legacy && legacy.ok) {
+              const i: InsightsResponse = await legacy.json();
+              setInsights(i);
+            } else {
+              setInsights({ topics: [], seo_recommendations: [], unanswered_questions: [], action_plans: [], seo_keywords: [] });
+            }
           }
         }
 
         // Load precomputed topic index with example_ids if present
-        const idxRes = await fetch(`${prefix}/data/topic_index.json`, { cache: "no-store" }).catch(() => null);
+        const idxRes = await fetch(`${prefix}/data/topic_index-${selectedChannelId}.json`, { cache: "no-store" }).catch(() => null);
         if (idxRes && idxRes.ok) {
           const idx = await idxRes.json();
           const map: Record<string, string[]> = {};
@@ -248,7 +319,7 @@ export default function Home() {
       }
     }
     load();
-  }, []);
+  }, [repoOwner, repoName]);
 
   const weekdayBars = useMemo(() => {
     if (!stats) return null;
@@ -313,15 +384,16 @@ export default function Home() {
                     (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/"))
                     ? "/analytics"
                     : "";
-                  const res = await fetch(`${prefix}/api/github`, { cache: "no-store" }).catch(() => null);
-                  if (res && res.ok) {
-                    const data: GitHubResponse = await res.json();
+                  // Prefer repo-specific static snapshot first
+                  const snap = await fetch(`${prefix}/data/github-${repoOwner}-${repoName}.json`, { cache: "no-store" }).catch(() => null);
+                  if (snap && snap.ok) {
+                    const data: GitHubResponse = await snap.json();
                     setGh(data);
                   } else {
-                    // Prefer the repository-provided snapshot under /public/data first
-                    const snap = await fetch(`${prefix}/data/github-better-auth-better-auth.json`, { cache: "no-store" }).catch(() => null);
-                    if (snap && snap.ok) {
-                      const data: GitHubResponse = await snap.json();
+                    // Fallback to API (works for default repo)
+                    const res = await fetch(`${prefix}/api/github`, { cache: "no-store" }).catch(() => null);
+                    if (res && res.ok) {
+                      const data: GitHubResponse = await res.json();
                       setGh(data);
                     } else {
                       const fallback = await fetch(`${prefix}/github.json`, { cache: "no-store" }).catch(() => null);
@@ -346,6 +418,55 @@ export default function Home() {
           >
             GitHub
           </button>
+          {/* Repo switcher */}
+          <div style={{ position: "relative" }}>
+            <button
+              onClick={() => setShowRepoMenu((v) => !v)}
+              style={{
+                background: "#0b1220",
+                border: "1px solid #1f2937",
+                borderRadius: 999,
+                padding: 2,
+                width: 34,
+                height: 34,
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+              title={`${repoOwner}/${repoName}`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={(gh?.repo as any)?.owner_avatar_url || `https://github.com/${repoOwner}.png`} alt="repo avatar" width={28} height={28} style={{ borderRadius: 999 }} />
+            </button>
+            {showRepoMenu ? (
+              <div style={{ position: "absolute", right: 0, top: 40, background: "#0b1220", border: "1px solid #1f2937", borderRadius: 8, minWidth: 220, zIndex: 10 }}>
+                <div style={{ padding: 8, color: "#94a3b8", fontSize: 12 }}>Switch repository</div>
+                <button
+                  onClick={() => {
+                    setRepoOwner("better-auth");
+                    setRepoName("better-auth");
+                    setGh(null); setInteresting(null); setShowRepoMenu(false);
+                  }}
+                  style={{ width: "100%", textAlign: "left", padding: 10, background: "transparent", border: 0, color: "#e5e7eb", cursor: "pointer" }}
+                >
+                  better-auth/better-auth
+                </button>
+                <a href={`https://github.com/trycua/cua`} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                  <button
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setRepoOwner("trycua");
+                      setRepoName("cua");
+                      setGh(null); setInteresting(null); setShowRepoMenu(false);
+                    }}
+                    style={{ width: "100%", textAlign: "left", padding: 10, background: "transparent", border: 0, color: "#e5e7eb", cursor: "pointer" }}
+                  >
+                    trycua/cua
+                  </button>
+                </a>
+              </div>
+            ) : null}
+          </div>
         </nav>
       </header>
 
@@ -384,8 +505,8 @@ export default function Home() {
                               return;
                             }
                             const prefix = (typeof window !== "undefined" && (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/")) ? "/analytics" : "";
-                            const pathParts = (typeof window !== "undefined" ? window.location.pathname : "").split("/").filter(Boolean);
-                            const channelId = pathParts.length >= 2 && pathParts[0] === "analytics" ? pathParts[1] : "1288403910284935182";
+                            const selectedKeyInner = `${repoOwner}/${repoName}`;
+                            const channelId = repoToChannel[selectedKeyInner] || "1288403910284935182";
                             const ids = topicIndex[t.topic];
                             let res: Response | null = null;
                             if (ids && ids.length) {
@@ -403,14 +524,16 @@ export default function Home() {
                               let items = Array.isArray(data.items) ? data.items : [];
                               if (!items.length) {
                                 // Frontend static fallback for production edge quirks
-                                const idxRes = await fetch(`${prefix}/data/examples_index.json`, { cache: 'no-store' }).catch(() => null);
+                                const idxRes = await fetch(`${prefix}/data/examples_index-${selectedChannelId}.json`, { cache: 'no-store' }).catch(() => null);
                                 if (idxRes && idxRes.ok) {
                                   const idx = await idxRes.json();
                                   const arr = Array.isArray(idx[t.topic]) ? idx[t.topic] : [];
                                   if (arr.length) items = arr.slice(0, 10);
                                 }
                               }
-                              const mapped = (items || []).map((m: any) => ({ text: m.text as string, author: m.author_display_name || m.author_id, when: m.timestamp }));
+                              const mapped = (items || [])
+                                .filter((m: any) => typeof m.text === 'string' && m.text.trim().length > 0)
+                                .map((m: any) => ({ text: m.text as string, author: m.author_display_name || m.author_id, when: m.timestamp }));
                               setTopicExamples((prev) => ({ ...prev, [t.topic]: mapped }));
                             }
                           } catch {}
@@ -535,8 +658,8 @@ export default function Home() {
                               return;
                             }
                             const prefix = (typeof window !== "undefined" && (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/")) ? "/analytics" : "";
-                            const pathParts = (typeof window !== "undefined" ? window.location.pathname : "").split("/").filter(Boolean);
-                            const channelId = pathParts.length >= 2 && pathParts[0] === "analytics" ? pathParts[1] : "1288403910284935182";
+                            const selectedKeyInner = `${repoOwner}/${repoName}`;
+                            const channelId = repoToChannel[selectedKeyInner] || "1288403910284935182";
                             let res: Response | null = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(q)}&limit=10&channel=${encodeURIComponent(channelId)}`, { cache: "no-store" }).catch(() => null);
                             if (!res || !res.ok) {
                               // As a fallback, try topic selection using the full question text
@@ -547,7 +670,7 @@ export default function Home() {
                               let items = Array.isArray(data.items) ? data.items : [];
                               if (!items.length) {
                                 // Fallback to static examples index: pick messages with highest token overlap
-                                const idxRes = await fetch(`${prefix}/data/examples_index.json`, { cache: 'no-store' }).catch(() => null);
+                                const idxRes = await fetch(`${prefix}/data/examples_index-${selectedChannelId}.json`, { cache: 'no-store' }).catch(() => null);
                                 if (idxRes && idxRes.ok) {
                                   const idx = await idxRes.json();
                                   const allItems: any[] = [];
@@ -569,7 +692,9 @@ export default function Home() {
                                     .map((r: any) => r.m);
                                 }
                               }
-                              const mapped = (items || []).map((m: any) => ({ text: m.text as string, author: m.author_display_name || m.author_id, when: m.timestamp }));
+                              const mapped = (items || [])
+                                .filter((m: any) => typeof m.text === 'string' && m.text.trim().length > 0)
+                                .map((m: any) => ({ text: m.text as string, author: m.author_display_name || m.author_id, when: m.timestamp }));
                               setQuestionExamples((prev) => ({ ...prev, [q]: mapped }));
                             }
                           } catch {}
@@ -821,7 +946,7 @@ export default function Home() {
                     }
                   }
                   {
-                    const snap = await fetch(`${prefix}/data/interesting_stargazers.json`, { cache: "no-store" }).catch(() => null);
+                    const snap = await fetch(`${prefix}/data/interesting_stargazers-${repoOwner}-${repoName}.json`, { cache: "no-store" }).catch(() => null);
                     if (snap && snap.ok) {
                       const items = await snap.json();
                       setInteresting(Array.isArray(items) ? items : []);

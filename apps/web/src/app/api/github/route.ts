@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { d1Run, getUID } from "./../_lib/ctx";
 
 export const runtime = "edge";
+// Remove Next.js dynamic flag to avoid implicit fetch({ cache: 'no-store' })
 
 // Minimal fetch wrapper to GitHub REST API
 async function gh<T>(endpoint: string, token: string, accept?: string): Promise<T> {
@@ -10,8 +11,7 @@ async function gh<T>(endpoint: string, token: string, accept?: string): Promise<
       Authorization: `Bearer ${token}`,
       "User-Agent": "analytics-dashboard",
       Accept: accept || "application/vnd.github+json",
-    },
-    cache: "no-store",
+    }
   });
   if (!res.ok) {
     throw new Error(`GitHub API error ${res.status} ${endpoint}`);
@@ -26,8 +26,7 @@ async function ghWithHeaders(endpoint: string, token: string, accept?: string): 
       Authorization: `Bearer ${token}`,
       "User-Agent": "analytics-dashboard",
       Accept: accept || "application/vnd.github+json",
-    },
-    cache: "no-store",
+    }
   });
   if (!res.ok) {
     throw new Error(`GitHub API error ${res.status} ${endpoint}`);
@@ -55,7 +54,7 @@ export async function GET(req: NextRequest) {
 
     // Recent stargazers with timestamps requires custom Accept header
     // Paginate to build a more complete timeline (cap pages to avoid rate limits)
-    async function fetchRecentStargazers(maxPages = 50, perPage = 100): Promise<any[]> {
+    async function fetchRecentStargazers(maxPages = 10, perPage = 100): Promise<any[]> {
       // Discover last page via Link header
       const first = await ghWithHeaders(`/repos/${owner}/${repo}/stargazers?per_page=${perPage}&page=1`, token, "application/vnd.github.star+json");
       let lastPage = 1;
@@ -94,34 +93,13 @@ export async function GET(req: NextRequest) {
 
     // For recent stargazers list and companies summary, only enrich the most recent ~50
     const recent = stargazersAll.slice(0, 50);
-    const enriched = await Promise.all(
-      recent.map(async (s) => {
-        const login = s.user?.login || s.login;
-        let company: string | undefined = undefined;
-        let avatar_url: string | undefined = s.user?.avatar_url || s.avatar_url;
-        let starred_at: string | undefined = s.starred_at;
-        let company_org: string | undefined = undefined;
-        let company_public_members: number | undefined = undefined;
-        try {
-          const u = await gh<any>(`/users/${login}`, token);
-          company = u.company || undefined;
-          avatar_url = u.avatar_url || avatar_url;
-          if (company && company.startsWith("@")) {
-            const org = company.replace(/^@/, "").trim();
-            company_org = org;
-            try {
-              const members = await gh<any[]>(`/orgs/${org}/public_members?per_page=1`, token);
-              company_public_members = Array.isArray(members) ? members.length : undefined;
-            } catch {
-              // ignore org lookup errors
-            }
-          }
-        } catch {
-          // ignore user fetch errors
-        }
-        return { login, starred_at, avatar_url, company, company_org, company_public_members };
-      })
-    );
+    // Avoid per-user API calls to stay under Cloudflare subrequest limits.
+    const enriched = recent.map((s) => {
+      const login = s.user?.login || s.login;
+      const avatar_url = s.user?.avatar_url || s.avatar_url;
+      const starred_at = s.starred_at as string | undefined;
+      return { login, starred_at, avatar_url, company: undefined as string | undefined, company_org: undefined as string | undefined, company_public_members: undefined as number | undefined };
+    });
 
     // Companies summary by org handle when present
     const companyCount = new Map<string, { company_org: string; stargazer_count: number; public_members?: number }>();
@@ -171,6 +149,23 @@ export async function GET(req: NextRequest) {
     
     return NextResponse.json(body, { status: 200 });
   } catch (err: unknown) {
+    // Fallback to static snapshot in /public when live fetch exceeds limits or fails
+    try {
+      const origin = new URL(req.url).origin;
+      const snap = await fetch(`${origin}/analytics/data/github-better-auth-better-auth.json`).catch(() => null);
+      if (snap && snap.ok) {
+        const json = await snap.json();
+        return NextResponse.json(json, { status: 200 });
+      }
+      // Remote fallback from repository
+      const remote = await fetch(
+        "https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/github-better-auth-better-auth.json"
+      ).catch(() => null);
+      if (remote && remote.ok) {
+        const json = await remote.json();
+        return NextResponse.json(json, { status: 200 });
+      }
+    } catch {}
     const message = err instanceof Error ? err.message : "Failed to fetch GitHub data";
     return NextResponse.json({ error: message }, { status: 500 });
   }

@@ -1,0 +1,20 @@
+name: Refresh GitHub data (daily)
+
+on:
+  schedule:
+    # 12:00 UTC every day
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hit live GitHub refresh endpoint (repo summary, stargazers)
+        run: |
+          curl -fsS https://clarm-repo-analytics.pages.dev/analytics/api/github?force=live || true
+      - name: Rank interesting stargazers (LLM/heuristic) and cache
+        run: |
+          curl -fsS https://clarm-repo-analytics.pages.dev/analytics/api/github/interesting?force=live || true
+
+

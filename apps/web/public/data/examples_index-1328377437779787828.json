@@ -1,0 +1,32 @@
+{
+  "first online hackathon": [
+    {
+      "message_id": "1428517966395342968",
+      "author_id": "1339725391895466005",
+      "author_display_name": "D",
+      "author_avatar_url": "https://cdn.discordapp.com/embed/avatars/0.png",
+      "timestamp": "2025-10-16T23:00:23.769000+00:00",
+      "text": "have you guys thought about how to mitigate such threats https://brave.com/blog/comet-prompt-injection/ ?"
+    }
+  ],
+  "guys about": [
+    {
+      "message_id": "1429362296542597271",
+      "author_id": "157356656936615938",
+      "author_display_name": "Alec",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/157356656936615938/d4d7713caa85c6062cc3793d4b0c4d9d.png?size=80",
+      "timestamp": "2025-10-19T06:55:27.763000+00:00",
+      "text": ""
+    }
+  ],
+  "llmprovider oaicompat": [
+    {
+      "message_id": "1429303807967494304",
+      "author_id": "743809982134354031",
+      "author_display_name": "James",
+      "author_avatar_url": "https://cdn.discordapp.com/avatars/743809982134354031/4b5e11c8a2d4e4338fdabe2557a55f9a.png?size=80",
+      "timestamp": "2025-10-19T03:03:03+00:00",
+      "text": "🏆  Online Global Hackathon Winners\n\nWe had a great time running our first online hackathon. You all worked hard, and it reflected during the many hours and days we spent reviewing your submissions. I'm now happy to announce the winners:\n\n1️⃣ CoAct_1 — <@620592561974935553> \nImplemented a new agent architecture inspired by recent research, rebuilding the core loop in Python. Integrates Cua for computer use with Ollama optional for GUI grounding. Includes a polished frontend and modular design.\n\n2️⃣ Trajectory Redaction with Perceptron — <@229137745237245953> \nA clean, practical extension of Cua enabling local trajectory and screenshot redaction. Uses callbacks and a local Perceptron Isaac model for visual redaction, with Ollama as an optional LLM for text redaction.\n\n3️⃣ SarvajñaGPT — <@1085162835593674813> \nA local-first AI assistant integrating Cua automation with Ollama (Qwen) for multimodal, privacy-preserving workflows. Automates Word, VS Code, and file operations through tool-use and local Windows process control.\n\n🎉 Congratulations to everyone who participated in our first online hackathon!"
+    }
+  ]
+}

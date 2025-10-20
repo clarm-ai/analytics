@@ -1,0 +1,334 @@
+{
+  "topics": [
+    {
+      "topic": "followkeys all",
+      "count": 12
+    },
+    {
+      "topic": "npx @better",
+      "count": 12
+    },
+    {
+      "topic": "better auth",
+      "count": 12
+    },
+    {
+      "topic": "quick question",
+      "count": 12
+    },
+    {
+      "topic": "phone number",
+      "count": 12
+    },
+    {
+      "topic": "not sure",
+      "count": 12
+    },
+    {
+      "topic": "console log",
+      "count": 12
+    },
+    {
+      "topic": "admin plugin",
+      "count": 12
+    }
+  ],
+  "seo_recommendations": [
+    "Create a getting-started guide for most frequent clusters",
+    "Add troubleshooting docs for the top error terms",
+    "Publish integration examples for frequently mentioned tools"
+  ],
+  "unanswered_questions": [
+    "Hey Max when can I expect my merge requests that are accepted to be in the new version? Should I use the github repo instead npm package for now to get the most recent updates Ive added?",
+    "Control Z?",
+    "Wdym? Are images not working or did you remove them from schema",
+    "? 🙁",
+    "do u have a reproduceable repo?",
+    "wdym? like users login via email password and then sign up?",
+    "Do you get what I am saying by Discord-style SSO?",
+    "in addition to that. as soon as i click sign in with google, the better auth api is flooeded with get session. i get around 12 useless api calls. can someone from the better auth team explain this behaviours ?????"
+  ],
+  "action_plans": [
+    "Ship tutorial series targeting the top 3 clusters",
+    "Expand FAQ with recurring questions found in clusters",
+    "Improve search/internal links among related topics"
+  ],
+  "seo_keywords": [
+    "auth",
+    "better",
+    "user",
+    "but",
+    "not",
+    "use",
+    "session",
+    "when",
+    "using",
+    "how",
+    "email",
+    "plugin",
+    "const",
+    "what",
+    "error",
+    "api",
+    "get",
+    "all",
+    "data",
+    "need",
+    "server",
+    "anyone",
+    "client",
+    "was",
+    "hey",
+    "make",
+    "want",
+    "help",
+    "sign",
+    "create",
+    "account",
+    "admin",
+    "issue",
+    "password",
+    "users",
+    "way",
+    "new",
+    "only",
+    "login",
+    "they"
+  ],
+  "seo_keyword_clusters": [
+    {
+      "cluster": "followkeys all",
+      "intent": "informational",
+      "primary": "followkeys all",
+      "secondary": [
+        "auth",
+        "better",
+        "user",
+        "but",
+        "not",
+        "use",
+        "session",
+        "when",
+        "using",
+        "how"
+      ]
+    },
+    {
+      "cluster": "npx @better",
+      "intent": "informational",
+      "primary": "npx @better",
+      "secondary": [
+        "auth",
+        "better",
+        "user",
+        "but",
+        "not",
+        "use",
+        "session",
+        "when",
+        "using",
+        "how"
+      ]
+    },
+    {
+      "cluster": "better auth",
+      "intent": "informational",
+      "primary": "better auth",
+      "secondary": [
+        "auth",
+        "better",
+        "user",
+        "but",
+        "not",
+        "use",
+        "session",
+        "when",
+        "using",
+        "how"
+      ]
+    },
+    {
+      "cluster": "quick question",
+      "intent": "informational",
+      "primary": "quick question",
+      "secondary": [
+        "auth",
+        "better",
+        "user",
+        "but",
+        "not",
+        "use",
+        "session",
+        "when",
+        "using",
+        "how"
+      ]
+    },
+    {
+      "cluster": "phone number",
+      "intent": "informational",
+      "primary": "phone number",
+      "secondary": [
+        "auth",
+        "better",
+        "user",
+        "but",
+        "not",
+        "use",
+        "session",
+        "when",
+        "using",
+        "how"
+      ]
+    },
+    {
+      "cluster": "not sure",
+      "intent": "informational",
+      "primary": "not sure",
+      "secondary": [
+        "auth",
+        "better",
+        "user",
+        "but",
+        "not",
+        "use",
+        "session",
+        "when",
+        "using",
+        "how"
+      ]
+    },
+    {
+      "cluster": "console log",
+      "intent": "informational",
+      "primary": "console log",
+      "secondary": [
+        "auth",
+        "better",
+        "user",
+        "but",
+        "not",
+        "use",
+        "session",
+        "when",
+        "using",
+        "how"
+      ]
+    },
+    {
+      "cluster": "admin plugin",
+      "intent": "informational",
+      "primary": "admin plugin",
+      "secondary": [
+        "auth",
+        "better",
+        "user",
+        "but",
+        "not",
+        "use",
+        "session",
+        "when",
+        "using",
+        "how"
+      ]
+    }
+  ],
+  "seo_briefs": [
+    {
+      "slug": "followkeys-all",
+      "h1": "Understanding followkeys all",
+      "title_tag": "followkeys all – Best practices and fixes",
+      "meta_description": "Guide to followkeys all: best practices, common issues, and fixes for CUA users.",
+      "outline": [
+        "Overview",
+        "Common issues",
+        "Fixes",
+        "Examples"
+      ],
+      "faqs": [
+        {
+          "q": "How do I get started with followkeys all?",
+          "a": "Follow the quickstart and examples on this page."
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "CUA Docs",
+          "url": "https://github.com/trycua/cua"
+        }
+      ]
+    },
+    {
+      "slug": "npx-better",
+      "h1": "Understanding npx @better",
+      "title_tag": "npx @better – Best practices and fixes",
+      "meta_description": "Guide to npx @better: best practices, common issues, and fixes for CUA users.",
+      "outline": [
+        "Overview",
+        "Common issues",
+        "Fixes",
+        "Examples"
+      ],
+      "faqs": [
+        {
+          "q": "How do I get started with npx @better?",
+          "a": "Follow the quickstart and examples on this page."
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "CUA Docs",
+          "url": "https://github.com/trycua/cua"
+        }
+      ]
+    },
+    {
+      "slug": "better-auth",
+      "h1": "Understanding better auth",
+      "title_tag": "better auth – Best practices and fixes",
+      "meta_description": "Guide to better auth: best practices, common issues, and fixes for CUA users.",
+      "outline": [
+        "Overview",
+        "Common issues",
+        "Fixes",
+        "Examples"
+      ],
+      "faqs": [
+        {
+          "q": "How do I get started with better auth?",
+          "a": "Follow the quickstart and examples on this page."
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "CUA Docs",
+          "url": "https://github.com/trycua/cua"
+        }
+      ]
+    },
+    {
+      "slug": "quick-question",
+      "h1": "Understanding quick question",
+      "title_tag": "quick question – Best practices and fixes",
+      "meta_description": "Guide to quick question: best practices, common issues, and fixes for CUA users.",
+      "outline": [
+        "Overview",
+        "Common issues",
+        "Fixes",
+        "Examples"
+      ],
+      "faqs": [
+        {
+          "q": "How do I get started with quick question?",
+          "a": "Follow the quickstart and examples on this page."
+        }
+      ],
+      "internal_links": [
+        {
+          "anchor": "CUA Docs",
+          "url": "https://github.com/trycua/cua"
+        }
+      ]
+    }
+  ]
+}

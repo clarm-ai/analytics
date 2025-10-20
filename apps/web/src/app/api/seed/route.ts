@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { d1Run, getUID } from "../_lib/ctx";
 
 export const runtime = "edge";
+export const dynamic = "force-dynamic";
 
 async function safeJson(res: Response | undefined) {
   try {
@@ -27,7 +28,7 @@ export async function POST(req: NextRequest) {
 
     // Seed discord messages from static
     const messagesUrl = `${origin}/analytics/data/discord-${channelId}.json`;
-    const messages = (await safeJson(await fetch(messagesUrl, { cache: "no-store" }))) as any[] | undefined;
+    const messages = (await safeJson(await fetch(messagesUrl))) as any[] | undefined;
     if (Array.isArray(messages)) {
       for (const m of messages.slice(-1200)) {
         const message_id = String(m.message_id || m.id || "");
@@ -60,7 +61,7 @@ export async function POST(req: NextRequest) {
 
     // Seed topics mapping
     const examplesUrl = `${origin}/analytics/data/examples_index.json`;
-    const examples = (await safeJson(await fetch(examplesUrl, { cache: "no-store" }))) as Record<string, any[]> | undefined;
+    const examples = (await safeJson(await fetch(examplesUrl))) as Record<string, any[]> | undefined;
     if (examples && typeof examples === "object") {
       for (const [topic, arr] of Object.entries(examples)) {
         const list = Array.isArray(arr) ? arr : [];
@@ -83,7 +84,7 @@ export async function POST(req: NextRequest) {
 
     // Seed interesting stargazers static snapshot
     const stUrl = `${origin}/analytics/data/interesting_stargazers.json`;
-    const st = (await safeJson(await fetch(stUrl, { cache: "no-store" }))) as any[] | undefined;
+    const st = (await safeJson(await fetch(stUrl))) as any[] | undefined;
     if (Array.isArray(st)) {
       const now = Date.now();
       for (const it of st.slice(0, 50)) {
