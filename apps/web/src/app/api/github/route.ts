@@ -38,8 +38,9 @@ async function ghWithHeaders(endpoint: string, token: string, accept?: string): 
 export async function GET(req: NextRequest) {
   try {
     const uid = getUID(req as unknown as Request);
-    const owner = "better-auth";
-    const repo = "better-auth";
+    const u = new URL(req.url);
+    const owner = (u.searchParams.get('owner') || 'better-auth').trim();
+    const repo = (u.searchParams.get('repo') || 'better-auth').trim();
     const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || process.env.GITHUB_PERSONAL_ACCESS_TOKEN || "";
     if (!token) {
       return NextResponse.json({ error: "GITHUB_TOKEN missing in environment" }, { status: 400 });
@@ -75,7 +76,15 @@ export async function GET(req: NextRequest) {
       }
       return all;
     }
-    const stargazersAll = await fetchRecentStargazers(50, 100); // up to ~5000 recent
+    let stargazersAll = await fetchRecentStargazers(50, 100); // up to ~5000 recent
+    // Optional from/to bounds
+    // Ignore any external date filters: always return overall recent stargazers/timeline
+    // Ensure newest first
+    stargazersAll.sort((a, b) => {
+      const ta = a.starred_at ? new Date(a.starred_at).getTime() : 0;
+      const tb = b.starred_at ? new Date(b.starred_at).getTime() : 0;
+      return tb - ta;
+    });
 
     // (moved enrichment below to only apply to the most recent items)
 

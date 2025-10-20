@@ -63,6 +63,16 @@ async function readDiscordMessages(req: NextRequest): Promise<DiscordMessage[]> 
     const url = new URL(req.url);
     const channelParam = url.searchParams.get("channel") || url.searchParams.get("channel_id") || "";
     const channelId = (channelParam || "").trim() || "1288403910284935182";
+    // Optional date bounds: from/to in ms or ISO
+    function parseBound(v: string | null): number | undefined {
+      if (!v) return undefined;
+      const ms = Number(v);
+      if (!Number.isNaN(ms) && ms > 0) return ms;
+      const d = new Date(v);
+      return isNaN(d.getTime()) ? undefined : d.getTime();
+    }
+    const fromMs = parseBound(url.searchParams.get('from'));
+    const toMs = parseBound(url.searchParams.get('to'));
     const directUrl = process.env.DISCORD_JSON_URL;
     if (directUrl) {
       const res = await fetch(directUrl, { cache: "no-store" });
@@ -83,7 +93,17 @@ async function readDiscordMessages(req: NextRequest): Promise<DiscordMessage[]> 
         const r = await fetch(u, { cache: "no-store" });
         if (r.ok) {
           const parsed = await r.json();
-          if (Array.isArray(parsed) && parsed.length) return parsed as DiscordMessage[];
+          if (Array.isArray(parsed) && parsed.length) {
+            const filtered = (fromMs || toMs) ? (parsed as DiscordMessage[]).filter((m)=>{
+              const ts = String((m as any).timestamp || '').trim();
+              const t = Date.parse(ts);
+              if (Number.isNaN(t)) return false;
+              if (fromMs && t < fromMs) return false;
+              if (toMs && t > toMs) return false;
+              return true;
+            }) : parsed;
+            if (filtered.length) return filtered as DiscordMessage[];
+          }
         }
       } catch {}
     }

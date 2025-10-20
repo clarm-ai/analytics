@@ -10,11 +10,31 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - name: Hit live GitHub refresh endpoint (repo summary, stargazers)
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install deps
+        working-directory: apps/web
+        run: npm ci
+      - name: Fetch snapshots (better-auth, cua)
+        working-directory: apps/web
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN || secrets.PERSONAL_GITHUB_TOKEN }}
         run: |
-          curl -fsS https://clarm-repo-analytics.pages.dev/analytics/api/github?force=live || true
-      - name: Rank interesting stargazers (LLM/heuristic) and cache
+          node scripts/fetch_github_snapshot.mjs better-auth better-auth
+          node scripts/fetch_github_snapshot.mjs trycua cua
+      - name: Generate interesting stargazers (better-auth, cua)
+        working-directory: apps/web
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          curl -fsS https://clarm-repo-analytics.pages.dev/analytics/api/github/interesting?force=live || true
+          node scripts/generate_interesting_stargazers.mjs better-auth better-auth
+          node scripts/generate_interesting_stargazers.mjs trycua cua
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-data
+          path: apps/web/public/data/*.json
 
 

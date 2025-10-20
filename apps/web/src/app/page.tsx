@@ -108,6 +108,72 @@ export default function Home() {
   const [topicIndex, setTopicIndex] = useState<Record<string, string[]>>({});
   const [questionExamples, setQuestionExamples] = useState<Record<string, { text: string; author?: string; when?: string }[]>>({});
   const [interesting, setInteresting] = useState<InterestingItem[] | null>(null);
+  // Date range selection
+  const [rangeMode, setRangeMode] = useState<'all'|'7'|'30'|'90'|'custom'>('all');
+  const [customFrom, setCustomFrom] = useState<string>('');
+  const [customTo, setCustomTo] = useState<string>('');
+  const [discordMsgs, setDiscordMsgs] = useState<any[] | null>(null);
+
+  function getRangeBounds(): { from?: number; to?: number } {
+    if (rangeMode === 'all') return {};
+    const now = Date.now();
+    if (rangeMode === '7' || rangeMode === '30' || rangeMode === '90') {
+      const days = Number(rangeMode);
+      return { from: now - days * 86400000, to: now };
+    }
+    let from: number | undefined;
+    let to: number | undefined;
+    if (customFrom) {
+      const d = new Date(customFrom + 'T00:00:00Z');
+      if (!isNaN(d.getTime())) from = d.getTime();
+    }
+    if (customTo) {
+      const d = new Date(customTo + 'T23:59:59Z');
+      if (!isNaN(d.getTime())) to = d.getTime();
+    }
+    return { from, to };
+  }
+
+  function getRangeQuery(): string {
+    const { from, to } = getRangeBounds();
+    const parts: string[] = [];
+    if (typeof from === 'number') parts.push(`from=${encodeURIComponent(String(from))}`);
+    if (typeof to === 'number') parts.push(`to=${encodeURIComponent(String(to))}`);
+    return parts.length ? `&${parts.join('&')}` : '';
+  }
+
+  function filterStargazersByRange(items: any[], from?: number, to?: number): any[] {
+    if (!Array.isArray(items) || (!from && !to)) return Array.isArray(items) ? items : [];
+    return items.filter((s) => {
+      const t = s.starred_at ? new Date(s.starred_at).getTime() : NaN;
+      if (Number.isNaN(t)) return false;
+      if (from && t < from) return false;
+      if (to && t > to) return false;
+      return true;
+    });
+  }
+
+  function buildTimelineFromStargazers(items: any[]): { date: string; count: number }[] {
+    const map = new Map<string, number>();
+    for (const s of items || []) {
+      const t = s.starred_at ? new Date(s.starred_at) : null;
+      if (!t || Number.isNaN(t.getTime())) continue;
+      t.setUTCHours(0, 0, 0, 0);
+      const key = t.toISOString().slice(0, 10);
+      map.set(key, (map.get(key) || 0) + 1);
+    }
+    return Array.from(map.entries()).sort((a, b) => a[0].localeCompare(b[0])).map(([date, count]) => ({ date, count }));
+  }
+
+  function applyGithubDateFilter(data: any, from?: number, to?: number): any {
+    if (!data) return data;
+    if (!from && !to) return data;
+    const filteredStargazers = filterStargazersByRange(data.stargazers || [], from, to);
+    const timeline = buildTimelineFromStargazers(filteredStargazers);
+    return { ...data, stargazers: filteredStargazers, stars_timeline: timeline };
+  }
+
+  // GitHub section intentionally ignores date filters for stargazers and timeline
 
   async function computeStatsFromDiscord(prefix: string, channelId: string): Promise<StatsResponse | null> {
     try {
@@ -115,13 +181,23 @@ export default function Home() {
       if (!res || !res.ok) return null;
       const arr: any[] = await res.json();
       if (!Array.isArray(arr) || !arr.length) return null;
+      const { from, to } = getRangeBounds();
+      const messages = arr.filter((m) => {
+        const ts = String(m.timestamp || '').trim();
+        const d = ts ? new Date(ts) : null;
+        if (!d || Number.isNaN(d.getTime())) return false;
+        const ms = d.getTime();
+        if (from && ms < from) return false;
+        if (to && ms > to) return false;
+        return true;
+      });
       const byId = new Map<string, Contributor>();
       const weekdays: WeekdayStats = { Monday: 0, Tuesday: 0, Wednesday: 0, Thursday: 0, Friday: 0, Saturday: 0, Sunday: 0 };
       const toWeekday = (d: Date): keyof WeekdayStats => {
         const idx = d.getDay();
         return (['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][idx] as keyof WeekdayStats) || 'Monday';
       };
-      for (const m of arr) {
+      for (const m of messages) {
         const id = String(m.author_id || m.author || '').trim();
         if (id) {
           const display = String(m.author_display_name || m.author || id);
@@ -134,12 +210,11 @@ export default function Home() {
           }
         }
         const ts = String(m.timestamp || '').trim();
-        if (ts) {
-          const d = new Date(ts); if (!isNaN(d.getTime())) { const w = toWeekday(d); weekdays[w] += 1; }
-        }
+        if (ts) { const d = new Date(ts); if (!isNaN(d.getTime())) { const w = toWeekday(d); weekdays[w] += 1; } }
       }
       const contributors = Array.from(byId.values()).sort((a, b) => b.count - a.count).slice(0, 10);
-      return { contributors, weekdays, sampleSize: arr.length };
+      const sampleSize = Object.values(weekdays).reduce((a,b)=>a+b,0);
+      return { contributors, weekdays, sampleSize };
     } catch { return null; }
   }
 
@@ -237,9 +312,12 @@ export default function Home() {
         // Resolve selected channel based on repo selection
         const selectedKey = `${repoOwner}/${repoName}`;
         const selectedChannelId = repoToChannel[selectedKey] || "1288403910284935182";
+        const { from, to } = getRangeBounds();
+        const fromParam = from ? `&from=${from}` : '';
+        const toParam = to ? `&to=${to}` : '';
         const [sRes, iRes] = await Promise.all([
-          fetch(`${prefix}/api/stats?channel=${encodeURIComponent(selectedChannelId)}`, { cache: "no-store" }).catch(() => null),
-          fetch(`${prefix}/api/insights?channel=${encodeURIComponent(selectedChannelId)}`, { cache: "no-store" }).catch(() => null),
+          fetch(`${prefix}/api/stats?channel=${encodeURIComponent(selectedChannelId)}${fromParam}${toParam}`, { cache: "no-store" }).catch(() => null),
+          fetch(`${prefix}/api/insights?channel=${encodeURIComponent(selectedChannelId)}${fromParam}${toParam}`, { cache: "no-store" }).catch(() => null),
         ]);
 
         let usedStaticStats = false;
@@ -308,8 +386,31 @@ export default function Home() {
         if (idxRes && idxRes.ok) {
           const idx = await idxRes.json();
           const map: Record<string, string[]> = {};
+          const { from, to } = getRangeBounds();
           for (const t of idx.topics || []) {
-            if (t.topic && Array.isArray(t.example_ids)) map[t.topic] = t.example_ids as string[];
+            if (!t || !t.topic) continue;
+            let ids: string[] = Array.isArray(t.example_ids) ? t.example_ids : [];
+            if (ids.length === 0) continue;
+            // Best-effort: intersect with examples_index filtered by date range to ensure count is accurate
+            try {
+              const exIdxRes = await fetch(`${prefix}/data/examples_index-${selectedChannelId}.json`, { cache: 'no-store' }).catch(() => null);
+              if (exIdxRes && exIdxRes.ok) {
+                const exIdx = await exIdxRes.json();
+                const arr: any[] = Array.isArray(exIdx[t.topic]) ? exIdx[t.topic] : [];
+                if (arr.length) {
+                  const filt = arr.filter((m: any) => {
+                    const ts = new Date(String(m.timestamp || '')).getTime();
+                    if (Number.isNaN(ts)) return false;
+                    if (from && ts < from) return false;
+                    if (to && ts > to) return false;
+                    return true;
+                  });
+                  const idSet = new Set(filt.map((m: any) => String(m.message_id || '')));
+                  ids = ids.filter((id) => idSet.has(String(id)));
+                }
+              }
+            } catch {}
+            map[t.topic] = ids;
           }
           setTopicIndex(map);
         }
@@ -319,7 +420,7 @@ export default function Home() {
       }
     }
     load();
-  }, [repoOwner, repoName]);
+  }, [repoOwner, repoName, rangeMode, customFrom, customTo]);
 
   const weekdayBars = useMemo(() => {
     if (!stats) return null;
@@ -362,7 +463,7 @@ export default function Home() {
     <div style={{ padding: 24, maxWidth: 1100, margin: "0 auto", color: "#e5e7eb" }}>
       <header style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 24 }}>
         <h1 style={{ fontSize: 24, fontWeight: 700, color: "#3b82f6" }}>{activeTab === "github" ? "GitHub Analytics" : "Discord Analytics"}</h1>
-        <nav style={{ display: "flex", gap: 8 }}>
+        <nav style={{ display: "flex", gap: 8, alignItems: 'center' }}>
           <button
             onClick={() => setActiveTab("discord")}
             style={{
@@ -378,7 +479,8 @@ export default function Home() {
           <button
             onClick={async () => {
               setActiveTab("github");
-              if (!gh) {
+              // Always refetch on tab switch (static snapshot, not date-filtered)
+              setGh(null);
                 try {
                   const prefix = (typeof window !== "undefined" &&
                     (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/"))
@@ -391,7 +493,7 @@ export default function Home() {
                     setGh(data);
                   } else {
                     // Fallback to API (works for default repo)
-                    const res = await fetch(`${prefix}/api/github`, { cache: "no-store" }).catch(() => null);
+                    const res = await fetch(`${prefix}/api/github?owner=${encodeURIComponent(repoOwner)}&repo=${encodeURIComponent(repoName)}`, { cache: "no-store" }).catch(() => null);
                     if (res && res.ok) {
                       const data: GitHubResponse = await res.json();
                       setGh(data);
@@ -406,7 +508,6 @@ export default function Home() {
                 } catch {
                   // ignore
                 }
-              }
             }}
             style={{
               background: activeTab === "github" ? "#2563eb" : "#0b1220",
@@ -418,6 +519,22 @@ export default function Home() {
           >
             GitHub
           </button>
+          {/* Date range moved after GitHub */}
+          <div style={{ display: 'inline-flex', gap: 6, alignItems: 'center' }}>
+            <select value={rangeMode} onChange={(e)=> setRangeMode(e.target.value as any)} style={{ background: '#0b1220', color: '#e5e7eb', border: '1px solid #1f2937', borderRadius: 6, padding: '6px 8px' }}>
+              <option value="all">All time</option>
+              <option value="7">Last 7d</option>
+              <option value="30">Last 30d</option>
+              <option value="90">Last 90d</option>
+              <option value="custom">Custom</option>
+            </select>
+            {rangeMode === 'custom' ? (
+              <>
+                <input type="date" value={customFrom} onChange={(e)=> setCustomFrom(e.target.value)} style={{ background: '#0b1220', color: '#e5e7eb', border: '1px solid #1f2937', borderRadius: 6, padding: '6px 8px' }} />
+                <input type="date" value={customTo} onChange={(e)=> setCustomTo(e.target.value)} style={{ background: '#0b1220', color: '#e5e7eb', border: '1px solid #1f2937', borderRadius: 6, padding: '6px 8px' }} />
+              </>
+            ) : null}
+          </div>
           {/* Repo switcher */}
           <div style={{ position: "relative" }}>
             <button
@@ -510,14 +627,23 @@ export default function Home() {
                             const ids = topicIndex[t.topic];
                             let res: Response | null = null;
                             if (ids && ids.length) {
-                              res = await fetch(`${prefix}/api/examples?ids=${encodeURIComponent(ids.join(','))}&channel=${encodeURIComponent(channelId)}`, { cache: 'no-store' });
+                              const { from, to } = getRangeBounds();
+                              const fromParam = from ? `&from=${from}` : '';
+                              const toParam = to ? `&to=${to}` : '';
+                              res = await fetch(`${prefix}/api/examples?ids=${encodeURIComponent(ids.join(','))}&channel=${encodeURIComponent(channelId)}${fromParam}${toParam}`, { cache: 'no-store' });
                             }
                             if (!res || !res.ok) {
                               // Try strict topic selection first
-                              res = await fetch(`${prefix}/api/examples?topic=${encodeURIComponent(t.topic)}&limit=10&channel=${encodeURIComponent(channelId)}`, { cache: "no-store" });
+                              const { from, to } = getRangeBounds();
+                              const fromParam = from ? `&from=${from}` : '';
+                              const toParam = to ? `&to=${to}` : '';
+                              res = await fetch(`${prefix}/api/examples?topic=${encodeURIComponent(t.topic)}&limit=10&channel=${encodeURIComponent(channelId)}${fromParam}${toParam}`, { cache: "no-store" });
                             }
                             if (!res.ok) {
-                              res = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(t.topic)}&limit=10&channel=${encodeURIComponent(channelId)}`, { cache: "no-store" });
+                              const { from, to } = getRangeBounds();
+                              const fromParam = from ? `&from=${from}` : '';
+                              const toParam = to ? `&to=${to}` : '';
+                              res = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(t.topic)}&limit=10&channel=${encodeURIComponent(channelId)}${fromParam}${toParam}`, { cache: "no-store" });
                             }
                             if (res && res.ok) {
                               const data = await res.json();
@@ -660,10 +786,13 @@ export default function Home() {
                             const prefix = (typeof window !== "undefined" && (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/")) ? "/analytics" : "";
                             const selectedKeyInner = `${repoOwner}/${repoName}`;
                             const channelId = repoToChannel[selectedKeyInner] || "1288403910284935182";
-                            let res: Response | null = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(q)}&limit=10&channel=${encodeURIComponent(channelId)}`, { cache: "no-store" }).catch(() => null);
+                            const { from, to } = getRangeBounds();
+                            const fromParam = from ? `&from=${from}` : '';
+                            const toParam = to ? `&to=${to}` : '';
+                            let res: Response | null = await fetch(`${prefix}/api/examples?q=${encodeURIComponent(q)}&limit=10&channel=${encodeURIComponent(channelId)}${fromParam}${toParam}`, { cache: "no-store" }).catch(() => null);
                             if (!res || !res.ok) {
                               // As a fallback, try topic selection using the full question text
-                              res = await fetch(`${prefix}/api/examples?topic=${encodeURIComponent(q)}&limit=10&channel=${encodeURIComponent(channelId)}`, { cache: "no-store" }).catch(() => null);
+                              res = await fetch(`${prefix}/api/examples?topic=${encodeURIComponent(q)}&limit=10&channel=${encodeURIComponent(channelId)}${fromParam}${toParam}`, { cache: "no-store" }).catch(() => null);
                             }
                             if (res && res.ok) {
                               const data = await res.json();
@@ -807,7 +936,8 @@ export default function Home() {
               <div style={{ fontWeight: 600 }}>{gh.repo.name}</div>
               {gh.repo.description ? <div style={{ color: "#94a3b8" }}>{gh.repo.description}</div> : null}
               <div style={{ display: "flex", gap: 12, color: "#cbd5e1" }}>
-                <span>Stars: {gh.repo.stars}</span>
+                <span>Stars (in range): {gh.stargazers?.length ?? 0}</span>
+                <span>Total Stars: {gh.repo.stars}</span>
                 <span>Forks: {gh.repo.forks}</span>
                 <span>Issues: {gh.repo.openIssues}</span>
                 <span>Watchers: {gh.repo.watchers}</span>

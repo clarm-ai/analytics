@@ -189,6 +189,12 @@ async function main() {
     fetchOwnerAvatar(headers),
   ]);
 
+  // Ensure newest-first order
+  stargazersRaw.sort((a, b) => {
+    const ta = a?.starred_at ? new Date(a.starred_at).getTime() : 0;
+    const tb = b?.starred_at ? new Date(b.starred_at).getTime() : 0;
+    return tb - ta;
+  });
   const stars_timeline = buildStarsTimeline(stargazersRaw);
   const stargazers = await slimRecentStargazers(stargazersRaw, headers, 50);
 

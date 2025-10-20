@@ -39,7 +39,7 @@ type InsightsPayload = {
   seo_titles?: { page: string; title_tag: string; meta_description: string }[];
   seo_tasks?: SEOTask[];
 };
-async function readDiscordMessages(limitChars = 120000, channelId?: string): Promise<string> {
+async function readDiscordMessages(limitChars = 120000, channelId?: string, fromMs?: number, toMs?: number): Promise<string> {
   const fallbackId = channelId && channelId.trim().length ? channelId.trim() : "1288403910284935182";
   const url = process.env.DISCORD_JSON_URL ||
     `https://raw.githubusercontent.com/dialin-ai/analytics/main/data/discord-${fallbackId}.json`;
@@ -49,6 +49,13 @@ async function readDiscordMessages(limitChars = 120000, channelId?: string): Pro
     const parsed = (await res.json()) as DiscordMessage[];
     const lines: string[] = [];
     for (const m of parsed) {
+      if (fromMs || toMs) {
+        const ts = String(m.timestamp || '').trim();
+        const t = Date.parse(ts);
+        if (Number.isNaN(t)) continue;
+        if (typeof fromMs === 'number' && t < fromMs) continue;
+        if (typeof toMs === 'number' && t > toMs) continue;
+      }
       const who = (m.author_display_name || m.author || m.author_id || "user").replace(/\s+/g, " ");
       const text = (m.text || "").replace(/\s+/g, " ").trim();
       if (!text) continue;
@@ -72,7 +79,16 @@ export async function GET(req: NextRequest) {
     const url = new URL(req.url);
     const channelParam = url.searchParams.get("channel") || url.searchParams.get("channel_id") || "";
     const channelId = (channelParam || "").trim() || "1288403910284935182";
-    const transcript = await readDiscordMessages(undefined as unknown as number, channelId);
+    const parseBound = (v: string | null): number | undefined => {
+      if (!v) return undefined;
+      const ms = Number(v);
+      if (!Number.isNaN(ms) && ms > 0) return ms;
+      const d = new Date(v);
+      return isNaN(d.getTime()) ? undefined : d.getTime();
+    };
+    const fromMs = parseBound(url.searchParams.get('from'));
+    const toMs = parseBound(url.searchParams.get('to'));
+    const transcript = await readDiscordMessages(undefined as unknown as number, channelId, fromMs, toMs);
     if (!transcript) {
       return NextResponse.json({ error: "No Discord messages found" }, { status: 404 });
     }
@@ -98,12 +114,14 @@ export async function GET(req: NextRequest) {
       transcript,
     ].join("\n\n");
 
-    // Check D1 cache first (kind includes channel)
+    // Check D1 cache first (kind includes channel and date window)
     try {
+      const windowKey = `${fromMs ?? 0}:${toMs ?? 0}`;
+      const kindKey = `seo:${channelId}:${windowKey}`;
       const cached = await d1All<{ data: string; generated_at: number; ttl_seconds: number }>(
         "SELECT data, generated_at, ttl_seconds FROM insights WHERE uid=? AND kind=?",
         uid,
-        `seo:${channelId}`
+        kindKey
       );
       if (cached.length) {
         const row = cached[0];
@@ -230,15 +248,17 @@ export async function GET(req: NextRequest) {
     }
 
     const parsed = coerceInsights(content);
-    // Cache in D1 with TTL (e.g., 6 hours)
+    // Cache in D1 with TTL (e.g., 2 hours) and include date window in key
     try {
-      const ttlSec = 6 * 3600;
+      const ttlSec = 2 * 3600;
+      const windowKey = `${fromMs ?? 0}:${toMs ?? 0}`;
+      const kindKey = `seo:${channelId}:${windowKey}`;
       await d1Run(
         `INSERT INTO insights(uid, kind, data, generated_at, ttl_seconds)
          VALUES(?,?,?,?,?)
          ON CONFLICT(uid,kind) DO UPDATE SET data=excluded.data, generated_at=excluded.generated_at, ttl_seconds=excluded.ttl_seconds`,
         uid,
-        `seo:${channelId}`,
+        kindKey,
         JSON.stringify(parsed),
         Date.now(),
         ttlSec

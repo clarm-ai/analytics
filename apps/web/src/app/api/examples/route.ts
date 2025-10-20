@@ -108,8 +108,29 @@ export async function GET(req: NextRequest) {
   const uid = getUID(req as unknown as Request);
   const channelParam = searchParams.get("channel") || searchParams.get("channel_id") || "";
   const channelId = (channelParam || "").trim() || "1288403910284935182";
+  // Date bounds (ms) - accept ms or YYYY-MM-DD
+  function parseBound(v: string | null): number | undefined {
+    if (!v) return undefined;
+    const ms = Number(v);
+    if (!Number.isNaN(ms) && ms > 0) return ms;
+    const d = new Date(v);
+    return isNaN(d.getTime()) ? undefined : d.getTime();
+  }
+  const fromMs = parseBound(searchParams.get('from'));
+  const toMs = parseBound(searchParams.get('to'));
 
-  const all = await getAllMessages(new URL(req.url).origin.replace(/\/$/, ""), channelId);
+  let all = await getAllMessages(new URL(req.url).origin.replace(/\/$/, ""), channelId);
+  if (fromMs || toMs) {
+    all = all.filter((m) => {
+      const ts = String(m.timestamp || '').trim();
+      if (!ts) return false;
+      const t = Date.parse(ts);
+      if (Number.isNaN(t)) return false;
+      if (fromMs && t < fromMs) return false;
+      if (toMs && t > toMs) return false;
+      return true;
+    });
+  }
   let items: any[] = [];
 
   // Try D1 first when available
@@ -241,7 +262,15 @@ export async function GET(req: NextRequest) {
           }
         }
         const requested = idsParam.split(",").map((s) => s.trim()).filter(Boolean);
-        const resolved = requested.map((id) => idMap.get(String(id))).filter(Boolean).slice(0, limit);
+        const resolved = requested.map((id) => idMap.get(String(id))).filter(Boolean)
+          .filter((m: any) => {
+            const ts = String(m?.timestamp || '').trim();
+            const t = Date.parse(ts);
+            if (fromMs && !(t >= (fromMs || 0))) return false;
+            if (toMs && !(t <= (toMs || Number.MAX_SAFE_INTEGER))) return false;
+            return typeof m?.text === 'string' && m.text.trim().length > 0;
+          })
+          .slice(0, limit);
         if (resolved.length) {
           items = resolved;
           return NextResponse.json({ items }, { status: 200 });
