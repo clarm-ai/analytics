@@ -6,11 +6,16 @@ on:
     - cron: '0 12 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -20,21 +25,27 @@ jobs:
       - name: Fetch snapshots (better-auth, cua)
         working-directory: apps/web
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN || secrets.PERSONAL_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
         run: |
           node scripts/fetch_github_snapshot.mjs better-auth better-auth
           node scripts/fetch_github_snapshot.mjs trycua cua
-      - name: Generate interesting stargazers (better-auth, cua)
+      - name: Generate interesting stargazers (LLM/heuristic)
         working-directory: apps/web
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           node scripts/generate_interesting_stargazers.mjs better-auth better-auth
           node scripts/generate_interesting_stargazers.mjs trycua cua
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: public-data
-          path: apps/web/public/data/*.json
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/web/public/data/*.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore(data): daily GitHub snapshots"
+            git push
+          fi
 
 
