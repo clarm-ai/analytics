@@ -2,8 +2,8 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11024,
-    "forks": 613,
+    "stars": 11032,
+    "forks": 614,
     "openIssues": 87,
     "watchers": 50,
     "owner": "trycua",
@@ -217,6 +217,69 @@
   ],
   "stargazers": [
     {
+      "login": "renyuantime",
+      "starred_at": "2025-10-26T10:46:48Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54691647?v=4",
+      "html_url": "https://github.com/renyuantime"
+    },
+    {
+      "login": "kun-g",
+      "starred_at": "2025-10-26T08:45:42Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1042091?v=4",
+      "company": "TrinGame",
+      "html_url": "https://github.com/kun-g"
+    },
+    {
+      "login": "BellyFish99",
+      "starred_at": "2025-10-26T08:36:43Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/183577190?v=4",
+      "html_url": "https://github.com/BellyFish99"
+    },
+    {
+      "login": "Dhenenjay",
+      "starred_at": "2025-10-25T23:32:11Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109109384?v=4",
+      "html_url": "https://github.com/Dhenenjay"
+    },
+    {
+      "login": "worzlai",
+      "starred_at": "2025-10-25T22:35:21Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/210507230?v=4",
+      "company": "worzl.ai",
+      "html_url": "https://github.com/worzlai"
+    },
+    {
+      "login": "ShaadHussain",
+      "starred_at": "2025-10-25T21:38:25Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17531069?v=4",
+      "html_url": "https://github.com/ShaadHussain"
+    },
+    {
+      "login": "commit4ever",
+      "starred_at": "2025-10-25T20:02:41Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30615541?v=4",
+      "html_url": "https://github.com/commit4ever"
+    },
+    {
+      "login": "iamtensaii",
+      "starred_at": "2025-10-25T15:26:53Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70672364?v=4",
+      "html_url": "https://github.com/iamtensaii"
+    },
+    {
+      "login": "plagness",
+      "starred_at": "2025-10-25T13:36:51Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35403646?v=4",
+      "html_url": "https://github.com/plagness"
+    },
+    {
+      "login": "hugocarvalhopc",
+      "starred_at": "2025-10-25T12:42:45Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72500726?v=4",
+      "company": "Settlemate",
+      "html_url": "https://github.com/hugocarvalhopc"
+    },
+    {
       "login": "Denzel-Irizarry",
       "starred_at": "2025-10-25T10:20:02Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/216783455?v=4",
@@ -331,6 +394,9 @@
       "login": "dlynch90",
       "starred_at": "2025-10-24T16:59:10Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/45317243?v=4",
+      "company": "Empathy First Media",
+      "company_org": "Empathy-First-Media",
+      "company_public_members": 1,
       "html_url": "https://github.com/dlynch90"
     },
     {
@@ -468,72 +534,6 @@
       "starred_at": "2025-10-23T11:28:17Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/9418224?v=4",
       "html_url": "https://github.com/VIXNESS"
-    },
-    {
-      "login": "yvetteTsai22",
-      "starred_at": "2025-10-23T10:46:14Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/49856728?v=4",
-      "html_url": "https://github.com/yvetteTsai22"
-    },
-    {
-      "login": "Killbill4200",
-      "starred_at": "2025-10-23T08:42:05Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/121089395?v=4",
-      "html_url": "https://github.com/Killbill4200"
-    },
-    {
-      "login": "JoeWest9966",
-      "starred_at": "2025-10-23T05:07:45Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/154404067?v=4",
-      "html_url": "https://github.com/JoeWest9966"
-    },
-    {
-      "login": "jhonsu01",
-      "starred_at": "2025-10-23T03:51:06Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1801015?v=4",
-      "company": "Sunsam SAS",
-      "html_url": "https://github.com/jhonsu01"
-    },
-    {
-      "login": "Barretem",
-      "starred_at": "2025-10-23T02:22:38Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/47966933?v=4",
-      "html_url": "https://github.com/Barretem"
-    },
-    {
-      "login": "heh9",
-      "starred_at": "2025-10-23T01:57:37Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/13141557?v=4",
-      "company": "@aisbergai",
-      "company_org": "jshacks",
-      "company_public_members": 8,
-      "html_url": "https://github.com/heh9"
-    },
-    {
-      "login": "hellof20",
-      "starred_at": "2025-10-23T01:50:43Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/8756642?v=4",
-      "company": "Google Cloud",
-      "html_url": "https://github.com/hellof20"
-    },
-    {
-      "login": "sarinali",
-      "starred_at": "2025-10-23T01:45:58Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/74844953?v=4",
-      "html_url": "https://github.com/sarinali"
-    },
-    {
-      "login": "sccvn",
-      "starred_at": "2025-10-22T23:16:39Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/82246680?v=4",
-      "company": "freelancer",
-      "html_url": "https://github.com/sccvn"
-    },
-    {
-      "login": "binartisan",
-      "starred_at": "2025-10-22T20:58:39Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/227225999?v=4",
-      "html_url": "https://github.com/binartisan"
     }
   ],
   "stars_timeline": [
@@ -731,7 +731,7 @@
     },
     {
       "date": "2025-09-22",
-      "count": 12
+      "count": 11
     },
     {
       "date": "2025-09-23",
@@ -823,7 +823,7 @@
     },
     {
       "date": "2025-10-15",
-      "count": 22
+      "count": 21
     },
     {
       "date": "2025-10-16",
@@ -863,7 +863,11 @@
     },
     {
       "date": "2025-10-25",
-      "count": 9
+      "count": 16
+    },
+    {
+      "date": "2025-10-26",
+      "count": 3
     }
   ],
   "companies_summary": []
