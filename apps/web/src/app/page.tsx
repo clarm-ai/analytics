@@ -564,36 +564,36 @@ export default function Home() {
           <button
             onClick={async () => {
               setActiveTab("github");
-              // Always refetch on tab switch (static snapshot, not date-filtered)
-              setGh(null);
-							try {
-								const prefix = (typeof window !== "undefined" &&
-									(window.location.pathname.startsWith("/analytics") || window.location.pathname === "/"))
-									? "/analytics"
-									: "";
-								// Prefer live API first for freshness
-								const res = await fetch(`${prefix}/api/github?owner=${encodeURIComponent(repoOwner)}&repo=${encodeURIComponent(repoName)}`, { cache: "no-store" }).catch(() => null);
-								if (res && res.ok) {
-									const data: GitHubResponse = await res.json();
-									setGh(data);
-									return;
-								}
-								// Fallback to repo-specific static snapshot
-								const snap = await fetch(`${prefix}/data/github-${repoOwner}-${repoName}.json`, { cache: "no-store" }).catch(() => null);
-								if (snap && snap.ok) {
-									const data: GitHubResponse = await snap.json();
-									setGh(data);
-									return;
-								}
-								// Final fallback to legacy static
-								const fallback = await fetch(`${prefix}/github.json`, { cache: "no-store" }).catch(() => null);
-								if (fallback && fallback.ok) {
-									const data: GitHubResponse = await fallback.json();
-									setGh(data);
-								}
-							} catch {
-								// ignore
-							}
+              // Show static snapshot instantly, refresh in background
+              try {
+                const prefix = (typeof window !== "undefined" &&
+                  (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/"))
+                  ? "/analytics"
+                  : "";
+                // 1) Static-first for instant paint
+                const snap = await fetch(`${prefix}/data/github-${repoOwner}-${repoName}.json`, { cache: "no-store" }).catch(() => null);
+                if (snap && snap.ok) {
+                  const data: GitHubResponse = await snap.json();
+                  setGh(data);
+                } else {
+                  // legacy fallback
+                  const legacy = await fetch(`${prefix}/github.json`, { cache: "no-store" }).catch(() => null);
+                  if (legacy && legacy.ok) setGh(await legacy.json());
+                }
+                // 2) Try to refresh from API with a short timeout (fire-and-forget)
+                const ctrl = new AbortController();
+                const t = setTimeout(() => ctrl.abort(), 3500);
+                fetch(`${prefix}/api/github?owner=${encodeURIComponent(repoOwner)}&repo=${encodeURIComponent(repoName)}`, {
+                  cache: "no-store",
+                  signal: ctrl.signal,
+                }).then(async (r) => {
+                  clearTimeout(t);
+                  if (r && r.ok) {
+                    const fresh: GitHubResponse = await r.json();
+                    setGh(fresh);
+                  }
+                }).catch(() => {});
+              } catch {}
             }}
             style={{
               background: activeTab === "github" ? "#2563eb" : "#0b1220",
