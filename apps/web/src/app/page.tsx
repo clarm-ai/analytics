@@ -106,6 +106,41 @@ export default function Home() {
   const selectedChannelId = repoToChannel[selectedKey] || "1288403910284935182";
   const [topicExamples, setTopicExamples] = useState<Record<string, { text: string; author?: string; when?: string }[]>>({});
   const [topicIndex, setTopicIndex] = useState<Record<string, string[]>>({});
+
+  function getExampleIdsForTopic(topicName: string): string[] {
+    if (!topicName) return [];
+    const key = topicName.toLowerCase();
+    const direct = topicIndex[key];
+    if (Array.isArray(direct)) return direct;
+    // Fallback: exact match ignoring case over existing keys
+    for (const k of Object.keys(topicIndex)) {
+      if (k.toLowerCase() === key) return topicIndex[k];
+    }
+    return [];
+  }
+
+  function countTopicExamples(topicName: string): number {
+    if (!topicName) return 0;
+    const msgs = discordMsgs || [];
+    if (!Array.isArray(msgs) || msgs.length === 0) return 0;
+    const t = topicName.toLowerCase();
+    const tokens = Array.from(new Set(t.split(/[^a-z0-9]+/g).filter((w) => w && w.length >= 4)));
+    let count = 0;
+    for (const m of msgs) {
+      const text = String(m?.text || '').toLowerCase();
+      if (!text) continue;
+      // Prefer ids mapping if available
+      const ids = getExampleIdsForTopic(topicName);
+      if (ids.length && m?.message_id && ids.includes(String(m.message_id))) { count += 1; continue; }
+      if (text.includes(t)) { count += 1; continue; }
+      if (tokens.length) {
+        let matched = 0;
+        for (const tok of tokens) if (text.includes(tok)) matched += 1;
+        if (matched >= Math.max(1, Math.ceil(tokens.length * 0.6))) count += 1;
+      }
+    }
+    return count;
+  }
   const [questionExamples, setQuestionExamples] = useState<Record<string, { text: string; author?: string; when?: string }[]>>({});
   const [interesting, setInteresting] = useState<InterestingItem[] | null>(null);
   // Date range selection
@@ -315,6 +350,23 @@ export default function Home() {
         const { from, to } = getRangeBounds();
         const fromParam = from ? `&from=${from}` : '';
         const toParam = to ? `&to=${to}` : '';
+        // Load and cache filtered Discord messages for accurate per-topic counts
+        try {
+          const dmRes = await fetch(`${prefix}/data/discord-${encodeURIComponent(selectedChannelId)}.json`, { cache: 'no-store' }).catch(() => null);
+          if (dmRes && dmRes.ok) {
+            const arr: any[] = await dmRes.json();
+            const filtered = Array.isArray(arr) ? arr.filter((m: any) => {
+              const ts = new Date(String(m?.timestamp || '')).getTime();
+              if (Number.isNaN(ts)) return false;
+              if (from && ts < from) return false;
+              if (to && ts > to) return false;
+              return true;
+            }) : [];
+            setDiscordMsgs(filtered);
+          } else {
+            setDiscordMsgs([]);
+          }
+        } catch { setDiscordMsgs([]); }
         const [sRes, iRes] = await Promise.all([
           fetch(`${prefix}/api/stats?channel=${encodeURIComponent(selectedChannelId)}${fromParam}${toParam}`, { cache: "no-store" }).catch(() => null),
           fetch(`${prefix}/api/insights?channel=${encodeURIComponent(selectedChannelId)}${fromParam}${toParam}`, { cache: "no-store" }).catch(() => null),
@@ -387,30 +439,63 @@ export default function Home() {
           const idx = await idxRes.json();
           const map: Record<string, string[]> = {};
           const { from, to } = getRangeBounds();
+          let examplesIndex: Record<string, any[]> | null = null;
+          let exampleIdToTimestamp: Map<string, number> | null = null;
+          try {
+            const exIdxRes = await fetch(`${prefix}/data/examples_index-${selectedChannelId}.json`, { cache: 'no-store' }).catch(() => null);
+            if (exIdxRes && exIdxRes.ok) {
+              examplesIndex = await exIdxRes.json();
+              // Build global id->timestamp index to decouple from topic key exact match
+              exampleIdToTimestamp = new Map<string, number>();
+              try {
+                for (const [k, arr] of Object.entries(examplesIndex as Record<string, any[]>)) {
+                  const list = Array.isArray(arr) ? arr : [];
+                  for (const m of list) {
+                    const id = String(m?.message_id || '').trim();
+                    if (!id || exampleIdToTimestamp.has(id)) continue;
+                    const ts = new Date(String(m?.timestamp || '')).getTime();
+                    if (!Number.isNaN(ts)) exampleIdToTimestamp.set(id, ts);
+                  }
+                }
+              } catch {}
+            }
+          } catch {}
           for (const t of idx.topics || []) {
             if (!t || !t.topic) continue;
+            const key = String(t.topic).toLowerCase();
             let ids: string[] = Array.isArray(t.example_ids) ? t.example_ids : [];
             if (ids.length === 0) continue;
-            // Best-effort: intersect with examples_index filtered by date range to ensure count is accurate
-            try {
-              const exIdxRes = await fetch(`${prefix}/data/examples_index-${selectedChannelId}.json`, { cache: 'no-store' }).catch(() => null);
-              if (exIdxRes && exIdxRes.ok) {
-                const exIdx = await exIdxRes.json();
-                const arr: any[] = Array.isArray(exIdx[t.topic]) ? exIdx[t.topic] : [];
-                if (arr.length) {
-                  const filt = arr.filter((m: any) => {
+            // Intersect with examples filtered by date range, using global id->timestamp map (robust to key mismatches)
+            if (exampleIdToTimestamp && (from || to)) {
+              ids = ids.filter((id) => {
+                const ts = exampleIdToTimestamp!.get(String(id)) ?? NaN;
+                if (Number.isNaN(ts)) return false;
+                if (from && ts < from) return false;
+                if (to && ts > to) return false;
+                return true;
+              });
+            } else if (examplesIndex) {
+              // Fallback: try case-insensitive topic key to filter by range when map missing
+              const topicArr = (() => {
+                const direct = (examplesIndex as any)[t.topic];
+                if (Array.isArray(direct)) return direct as any[];
+                const foundKey = Object.keys(examplesIndex as Record<string, any[]>).find((k) => k.toLowerCase() === String(t.topic).toLowerCase());
+                return foundKey ? ((examplesIndex as any)[foundKey] as any[]) : [];
+              })();
+              if (topicArr && topicArr.length && (from || to)) {
+                const idSet = new Set(topicArr
+                  .filter((m: any) => {
                     const ts = new Date(String(m.timestamp || '')).getTime();
                     if (Number.isNaN(ts)) return false;
                     if (from && ts < from) return false;
                     if (to && ts > to) return false;
                     return true;
-                  });
-                  const idSet = new Set(filt.map((m: any) => String(m.message_id || '')));
-                  ids = ids.filter((id) => idSet.has(String(id)));
-                }
+                  })
+                  .map((m: any) => String(m.message_id || '')));
+                ids = ids.filter((id) => idSet.has(String(id)));
               }
-            } catch {}
-            map[t.topic] = ids;
+            }
+            map[key] = ids;
           }
           setTopicIndex(map);
         }
@@ -481,33 +566,34 @@ export default function Home() {
               setActiveTab("github");
               // Always refetch on tab switch (static snapshot, not date-filtered)
               setGh(null);
-                try {
-                  const prefix = (typeof window !== "undefined" &&
-                    (window.location.pathname.startsWith("/analytics") || window.location.pathname === "/"))
-                    ? "/analytics"
-                    : "";
-                  // Prefer repo-specific static snapshot first
-                  const snap = await fetch(`${prefix}/data/github-${repoOwner}-${repoName}.json`, { cache: "no-store" }).catch(() => null);
-                  if (snap && snap.ok) {
-                    const data: GitHubResponse = await snap.json();
-                    setGh(data);
-                  } else {
-                    // Fallback to API (works for default repo)
-                    const res = await fetch(`${prefix}/api/github?owner=${encodeURIComponent(repoOwner)}&repo=${encodeURIComponent(repoName)}`, { cache: "no-store" }).catch(() => null);
-                    if (res && res.ok) {
-                      const data: GitHubResponse = await res.json();
-                      setGh(data);
-                    } else {
-                      const fallback = await fetch(`${prefix}/github.json`, { cache: "no-store" }).catch(() => null);
-                      if (fallback && fallback.ok) {
-                        const data: GitHubResponse = await fallback.json();
-                        setGh(data);
-                      }
-                    }
-                  }
-                } catch {
-                  // ignore
-                }
+							try {
+								const prefix = (typeof window !== "undefined" &&
+									(window.location.pathname.startsWith("/analytics") || window.location.pathname === "/"))
+									? "/analytics"
+									: "";
+								// Prefer live API first for freshness
+								const res = await fetch(`${prefix}/api/github?owner=${encodeURIComponent(repoOwner)}&repo=${encodeURIComponent(repoName)}`, { cache: "no-store" }).catch(() => null);
+								if (res && res.ok) {
+									const data: GitHubResponse = await res.json();
+									setGh(data);
+									return;
+								}
+								// Fallback to repo-specific static snapshot
+								const snap = await fetch(`${prefix}/data/github-${repoOwner}-${repoName}.json`, { cache: "no-store" }).catch(() => null);
+								if (snap && snap.ok) {
+									const data: GitHubResponse = await snap.json();
+									setGh(data);
+									return;
+								}
+								// Final fallback to legacy static
+								const fallback = await fetch(`${prefix}/github.json`, { cache: "no-store" }).catch(() => null);
+								if (fallback && fallback.ok) {
+									const data: GitHubResponse = await fallback.json();
+									setGh(data);
+								}
+							} catch {
+								// ignore
+							}
             }}
             style={{
               background: activeTab === "github" ? "#2563eb" : "#0b1220",
@@ -678,7 +764,7 @@ export default function Home() {
                       </ul>
                     ) : null}
                   </div>
-                  <span style={{ color: "#94a3b8", textAlign: "right" }}>{t.count}</span>
+                  <span style={{ color: "#94a3b8", textAlign: "right" }}>{Math.max(getExampleIdsForTopic(t.topic).length, countTopicExamples(t.topic))}</span>
                 </li>
               ))}
             </ul>
