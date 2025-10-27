@@ -1,0 +1,107 @@
+name: Refresh GitHub snapshots
+
+on:
+  schedule:
+    - cron: "0 3 * * *"  # daily at 03:00 UTC
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # allow pushing updated JSON
+    strategy:
+      matrix:
+        include:
+          - owner: better-auth
+            repo: better-auth
+            out: apps/web/public/data/github-better-auth-better-auth.json
+          - owner: trycua
+            repo: cua
+            out: apps/web/public/data/github-trycua-cua.json
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install deps
+        working-directory: apps/web
+        run: npm ci
+
+      - name: Regenerate snapshot
+        working-directory: apps/web
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node ./scripts/update_github_snapshot.mjs "${{ matrix.owner }}" "${{ matrix.repo }}" "./public/data/github-${{ matrix.owner }}-${{ matrix.repo }}.json"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "apps/web/public/data/github-${{ matrix.owner }}-${{ matrix.repo }}.json"
+          git commit -m "chore: refresh GitHub snapshot for ${{ matrix.owner }}/${{ matrix.repo }}" || exit 0
+          git push
+
+name: Refresh GitHub Stars Snapshots
+
+on:
+  schedule:
+    # Twice daily at 00:00 and 12:00 UTC
+    - cron: "0 0 * * *"
+    - cron: "0 12 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps (apps/web)
+        working-directory: apps/web
+        run: |
+          npm ci
+
+      - name: Refresh better-auth/better-auth snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: apps/web
+        run: |
+          node ./scripts/fetch_github_snapshot.mjs better-auth better-auth
+          node ./scripts/generate_interesting_stargazers.mjs better-auth better-auth || true
+
+      - name: Refresh trycua/cua snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: apps/web
+        run: |
+          node ./scripts/fetch_github_snapshot.mjs trycua cua
+          node ./scripts/generate_interesting_stargazers.mjs trycua cua || true
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/web/public/data/*.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh GitHub snapshots"
+            git push origin ${{ github.ref }}
+          else
+            echo "No changes to commit"
+          fi
+
+
