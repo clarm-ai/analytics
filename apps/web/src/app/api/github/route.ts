@@ -42,7 +42,23 @@ export async function GET(req: NextRequest) {
     const owner = (u.searchParams.get('owner') || 'better-auth').trim();
     const repo = (u.searchParams.get('repo') || 'better-auth').trim();
     const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || process.env.GITHUB_PERSONAL_ACCESS_TOKEN || "";
+    const origin = new URL(req.url).origin;
     if (!token) {
+      // Fallback to static snapshot when token is missing (Pages production)
+      try {
+        const local = await fetch(`${origin}/analytics/data/github-${owner}-${repo}.json`).catch(() => null);
+        if (local && local.ok) {
+          const json = await local.json();
+          return NextResponse.json(json, { status: 200 });
+        }
+        const remote = await fetch(
+          `https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/github-${owner}-${repo}.json`
+        ).catch(() => null);
+        if (remote && remote.ok) {
+          const json = await remote.json();
+          return NextResponse.json(json, { status: 200 });
+        }
+      } catch {}
       return NextResponse.json({ error: "GITHUB_TOKEN missing in environment" }, { status: 400 });
     }
 
@@ -160,15 +176,18 @@ export async function GET(req: NextRequest) {
   } catch (err: unknown) {
     // Fallback to static snapshot in /public when live fetch exceeds limits or fails
     try {
-      const origin = new URL(req.url).origin;
-      const snap = await fetch(`${origin}/analytics/data/github-better-auth-better-auth.json`).catch(() => null);
+      const u = new URL(req.url);
+      const origin = u.origin;
+      const owner = (u.searchParams.get('owner') || 'better-auth').trim();
+      const repo = (u.searchParams.get('repo') || 'better-auth').trim();
+      const snap = await fetch(`${origin}/analytics/data/github-${owner}-${repo}.json`).catch(() => null);
       if (snap && snap.ok) {
         const json = await snap.json();
         return NextResponse.json(json, { status: 200 });
       }
       // Remote fallback from repository
       const remote = await fetch(
-        "https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/github-better-auth-better-auth.json"
+        `https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/github-${owner}-${repo}.json`
       ).catch(() => null);
       if (remote && remote.ok) {
         const json = await remote.json();
