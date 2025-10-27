@@ -46,13 +46,15 @@ export async function GET(req: NextRequest) {
     if (!token) {
       // Fallback to static snapshot when token is missing (Pages production)
       try {
-        const local = await fetch(`${origin}/analytics/data/github-${owner}-${repo}.json`).catch(() => null);
+        const bust = `?ts=${Date.now()}`; // cache-bust CDN
+        const local = await fetch(`${origin}/analytics/data/github-${owner}-${repo}.json${bust}`, { cache: "no-store" }).catch(() => null);
         if (local && local.ok) {
           const json = await local.json();
           return NextResponse.json(json, { status: 200 });
         }
         const remote = await fetch(
-          `https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/github-${owner}-${repo}.json`
+          `https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/github-${owner}-${repo}.json${bust}`,
+          { cache: "no-store" }
         ).catch(() => null);
         if (remote && remote.ok) {
           const json = await remote.json();
@@ -180,14 +182,16 @@ export async function GET(req: NextRequest) {
       const origin = u.origin;
       const owner = (u.searchParams.get('owner') || 'better-auth').trim();
       const repo = (u.searchParams.get('repo') || 'better-auth').trim();
-      const snap = await fetch(`${origin}/analytics/data/github-${owner}-${repo}.json`).catch(() => null);
+      const bust = `?ts=${Date.now()}`;
+      const snap = await fetch(`${origin}/analytics/data/github-${owner}-${repo}.json${bust}`, { cache: "no-store" }).catch(() => null);
       if (snap && snap.ok) {
         const json = await snap.json();
         return NextResponse.json(json, { status: 200 });
       }
       // Remote fallback from repository
       const remote = await fetch(
-        `https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/github-${owner}-${repo}.json`
+        `https://raw.githubusercontent.com/dialin-ai/analytics/main/apps/web/public/data/github-${owner}-${repo}.json${bust}`,
+        { cache: "no-store" }
       ).catch(() => null);
       if (remote && remote.ok) {
         const json = await remote.json();
