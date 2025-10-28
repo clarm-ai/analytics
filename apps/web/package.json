@@ -9,7 +9,8 @@
     "lint": "eslint",
     "pages:build": "next-on-pages",
     "gen:topics": "node ./scripts/generate_topic_and_examples_index.mjs",
-    "gen:interesting": "node ./scripts/generate_interesting_stargazers.mjs"
+    "gen:interesting": "node ./scripts/generate_interesting_stargazers.mjs",
+    "gen:github": "node ./scripts/update_github_snapshot.mjs better-auth better-auth"
   },
   "dependencies": {
     "dotenv": "^17.2.3",
@@ -19,13 +20,14 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@cloudflare/next-on-pages": "^1.13.0",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.45.0"
   }
 }
