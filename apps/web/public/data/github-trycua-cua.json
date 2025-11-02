@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11102,
+    "stars": 11109,
     "forks": 625,
-    "openIssues": 74,
+    "openIssues": 75,
     "watchers": 49,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -12,7 +12,7 @@
   "contributors": [
     {
       "login": "ddupont808",
-      "contributions": 518,
+      "contributions": 519,
       "avatar_url": "https://avatars.githubusercontent.com/u/3820588?v=4",
       "html_url": "https://github.com/ddupont808"
     },
@@ -228,6 +228,57 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "jodonnell24",
+      "starred_at": "2025-11-02T07:24:26Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/155654007?v=4",
+      "html_url": "https://github.com/jodonnell24"
+    },
+    {
+      "login": "wyattowalsh",
+      "starred_at": "2025-11-02T06:45:09Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10056003?v=4",
+      "company_org": "FullMoonAI",
+      "company_public_members": 1,
+      "html_url": "https://github.com/wyattowalsh"
+    },
+    {
+      "login": "Evan20110216",
+      "starred_at": "2025-11-02T03:44:07Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/135343053?v=4",
+      "html_url": "https://github.com/Evan20110216"
+    },
+    {
+      "login": "CharlesCreativeContent",
+      "starred_at": "2025-11-02T02:35:59Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62077627?v=4",
+      "company": "ex-Amazon",
+      "html_url": "https://github.com/CharlesCreativeContent"
+    },
+    {
+      "login": "robingie",
+      "starred_at": "2025-11-01T22:25:06Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76411323?v=4",
+      "html_url": "https://github.com/robingie"
+    },
+    {
+      "login": "najafi-saeed",
+      "starred_at": "2025-11-01T20:31:22Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4303127?v=4",
+      "html_url": "https://github.com/najafi-saeed"
+    },
+    {
+      "login": "hopper911",
+      "starred_at": "2025-11-01T17:56:24Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78944056?v=4",
+      "html_url": "https://github.com/hopper911"
+    },
+    {
+      "login": "mizulike",
+      "starred_at": "2025-11-01T12:07:22Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68711133?v=4",
+      "html_url": "https://github.com/mizulike"
+    },
     {
       "login": "2111518",
       "starred_at": "2025-11-01T04:23:23Z",
@@ -493,55 +544,6 @@
       "company_org": "Kolpingtheater-Ramsen",
       "company_public_members": 1,
       "html_url": "https://github.com/LoggeL"
-    },
-    {
-      "login": "hiend",
-      "starred_at": "2025-10-28T11:46:44Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/129044?v=4",
-      "html_url": "https://github.com/hiend"
-    },
-    {
-      "login": "a-schulz",
-      "starred_at": "2025-10-28T11:31:40Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/85605296?v=4",
-      "html_url": "https://github.com/a-schulz"
-    },
-    {
-      "login": "thinhlpg",
-      "starred_at": "2025-10-28T11:18:13Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/90838458?v=4",
-      "html_url": "https://github.com/thinhlpg"
-    },
-    {
-      "login": "kinhtkblbp",
-      "starred_at": "2025-10-28T07:41:01Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2235784?v=4",
-      "html_url": "https://github.com/kinhtkblbp"
-    },
-    {
-      "login": "javashop",
-      "starred_at": "2025-10-28T07:31:52Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17567001?v=4",
-      "company": "易族智汇（北京）科技有限公司",
-      "html_url": "https://github.com/javashop"
-    },
-    {
-      "login": "GrimNihilist",
-      "starred_at": "2025-10-28T07:03:31Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/43033145?v=4",
-      "html_url": "https://github.com/GrimNihilist"
-    },
-    {
-      "login": "sagarey",
-      "starred_at": "2025-10-28T06:30:45Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5120456?v=4",
-      "html_url": "https://github.com/sagarey"
-    },
-    {
-      "login": "shfc",
-      "starred_at": "2025-10-28T04:16:55Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/24779889?v=4",
-      "html_url": "https://github.com/shfc"
     }
   ],
   "stars_timeline": [
@@ -559,7 +561,7 @@
     },
     {
       "date": "2025-08-13",
-      "count": 11
+      "count": 10
     },
     {
       "date": "2025-08-14",
@@ -879,7 +881,11 @@
     },
     {
       "date": "2025-11-01",
-      "count": 2
+      "count": 6
+    },
+    {
+      "date": "2025-11-02",
+      "count": 4
     }
   ],
   "companies_summary": []
