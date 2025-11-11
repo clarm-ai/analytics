@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11227,
-    "forks": 644,
-    "openIssues": 79,
+    "stars": 11229,
+    "forks": 646,
+    "openIssues": 81,
     "watchers": 50,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -36,7 +36,7 @@
     },
     {
       "login": "sarinali",
-      "contributions": 49,
+      "contributions": 51,
       "avatar_url": "https://avatars.githubusercontent.com/u/74844953?v=4",
       "html_url": "https://github.com/sarinali"
     },
@@ -48,7 +48,7 @@
     },
     {
       "login": "YeIIcw",
-      "contributions": 30,
+      "contributions": 32,
       "avatar_url": "https://avatars.githubusercontent.com/u/62897873?v=4",
       "html_url": "https://github.com/YeIIcw"
     },
@@ -240,6 +240,37 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "liujin163",
+      "starred_at": "2025-11-11T07:49:19Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26644251?v=4",
+      "html_url": "https://github.com/liujin163"
+    },
+    {
+      "login": "liu-zhy",
+      "starred_at": "2025-11-11T05:21:35Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13723743?v=4",
+      "html_url": "https://github.com/liu-zhy"
+    },
+    {
+      "login": "ae12345678910",
+      "starred_at": "2025-11-11T03:58:54Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/223899868?v=4",
+      "html_url": "https://github.com/ae12345678910"
+    },
+    {
+      "login": "tomarturo",
+      "starred_at": "2025-11-10T20:40:31Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34081816?v=4",
+      "company": "HeyTK",
+      "html_url": "https://github.com/tomarturo"
+    },
+    {
+      "login": "dhruvshah116",
+      "starred_at": "2025-11-10T13:18:51Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71009946?v=4",
+      "html_url": "https://github.com/dhruvshah116"
+    },
     {
       "login": "kstln20",
       "starred_at": "2025-11-10T10:17:46Z",
@@ -526,38 +557,6 @@
       "starred_at": "2025-11-06T20:26:01Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/184735608?v=4",
       "html_url": "https://github.com/mohi-devhub"
-    },
-    {
-      "login": "patino-marco21",
-      "starred_at": "2025-11-06T19:07:26Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/198278430?v=4",
-      "company": "OU",
-      "html_url": "https://github.com/patino-marco21"
-    },
-    {
-      "login": "SyncShadow7",
-      "starred_at": "2025-11-06T18:27:18Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/219487253?v=4",
-      "html_url": "https://github.com/SyncShadow7"
-    },
-    {
-      "login": "chelex-tech",
-      "starred_at": "2025-11-06T18:12:39Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/240857283?v=4",
-      "html_url": "https://github.com/chelex-tech"
-    },
-    {
-      "login": "ryandury",
-      "starred_at": "2025-11-06T17:56:17Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/411931?v=4",
-      "company": "Matador Network",
-      "html_url": "https://github.com/ryandury"
-    },
-    {
-      "login": "john-m24",
-      "starred_at": "2025-11-06T17:32:55Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/79864195?v=4",
-      "html_url": "https://github.com/john-m24"
     }
   ],
   "stars_timeline": [
@@ -575,7 +574,7 @@
     },
     {
       "date": "2025-08-22",
-      "count": 4
+      "count": 2
     },
     {
       "date": "2025-08-23",
@@ -895,7 +894,11 @@
     },
     {
       "date": "2025-11-10",
-      "count": 6
+      "count": 8
+    },
+    {
+      "date": "2025-11-11",
+      "count": 3
     }
   ],
   "companies_summary": []
