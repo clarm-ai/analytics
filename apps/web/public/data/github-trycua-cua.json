@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11255,
-    "forks": 649,
-    "openIssues": 77,
+    "stars": 11256,
+    "forks": 650,
+    "openIssues": 76,
     "watchers": 52,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -12,7 +12,7 @@
   "contributors": [
     {
       "login": "ddupont808",
-      "contributions": 573,
+      "contributions": 577,
       "avatar_url": "https://avatars.githubusercontent.com/u/3820588?v=4",
       "html_url": "https://github.com/ddupont808"
     },
@@ -240,6 +240,24 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "theriskofcollision",
+      "starred_at": "2025-11-15T20:31:44Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47719422?v=4",
+      "html_url": "https://github.com/theriskofcollision"
+    },
+    {
+      "login": "PeanutZhao",
+      "starred_at": "2025-11-15T15:31:46Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96811871?v=4",
+      "html_url": "https://github.com/PeanutZhao"
+    },
+    {
+      "login": "jamiemills",
+      "starred_at": "2025-11-15T14:40:23Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/643427?v=4",
+      "html_url": "https://github.com/jamiemills"
+    },
     {
       "login": "k3s4",
       "starred_at": "2025-11-15T08:38:24Z",
@@ -537,26 +555,6 @@
       "starred_at": "2025-11-09T17:37:42Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/87630632?v=4",
       "html_url": "https://github.com/saitejar110507"
-    },
-    {
-      "login": "cyteena",
-      "starred_at": "2025-11-09T16:03:31Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/142132200?v=4",
-      "company": "University of Science and Technology of China",
-      "html_url": "https://github.com/cyteena"
-    },
-    {
-      "login": "WynnYvaine",
-      "starred_at": "2025-11-09T14:11:50Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/213627367?v=4",
-      "html_url": "https://github.com/WynnYvaine"
-    },
-    {
-      "login": "heval",
-      "starred_at": "2025-11-09T12:07:07Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6687081?v=4",
-      "company": "n11",
-      "html_url": "https://github.com/heval"
     }
   ],
   "stars_timeline": [
@@ -574,7 +572,7 @@
     },
     {
       "date": "2025-08-23",
-      "count": 6
+      "count": 5
     },
     {
       "date": "2025-08-24",
@@ -802,7 +800,7 @@
     },
     {
       "date": "2025-10-19",
-      "count": 55
+      "count": 54
     },
     {
       "date": "2025-10-20",
@@ -910,7 +908,7 @@
     },
     {
       "date": "2025-11-15",
-      "count": 2
+      "count": 5
     }
   ],
   "companies_summary": []
