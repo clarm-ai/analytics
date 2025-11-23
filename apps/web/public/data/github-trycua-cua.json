@@ -2,8 +2,8 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11322,
-    "forks": 657,
+    "stars": 11327,
+    "forks": 658,
     "openIssues": 76,
     "watchers": 53,
     "owner": "trycua",
@@ -36,7 +36,7 @@
     },
     {
       "login": "sarinali",
-      "contributions": 81,
+      "contributions": 83,
       "avatar_url": "https://avatars.githubusercontent.com/u/74844953?v=4",
       "html_url": "https://github.com/sarinali"
     },
@@ -246,6 +246,54 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "mpvasilis",
+      "starred_at": "2025-11-23T11:30:24Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10900897?v=4",
+      "html_url": "https://github.com/mpvasilis"
+    },
+    {
+      "login": "dario24git",
+      "starred_at": "2025-11-23T11:18:29Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89135258?v=4",
+      "html_url": "https://github.com/dario24git"
+    },
+    {
+      "login": "CoderReloaded",
+      "starred_at": "2025-11-23T07:46:28Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/116454966?v=4",
+      "html_url": "https://github.com/CoderReloaded"
+    },
+    {
+      "login": "laurencecwj",
+      "starred_at": "2025-11-23T06:06:32Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99599123?v=4",
+      "html_url": "https://github.com/laurencecwj"
+    },
+    {
+      "login": "VAIBHAVSING",
+      "starred_at": "2025-11-22T18:26:59Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/154789507?v=4",
+      "html_url": "https://github.com/VAIBHAVSING"
+    },
+    {
+      "login": "chernistry",
+      "starred_at": "2025-11-22T16:44:50Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73943355?v=4",
+      "html_url": "https://github.com/chernistry"
+    },
+    {
+      "login": "nagakiran",
+      "starred_at": "2025-11-22T15:06:00Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3187857?v=4",
+      "html_url": "https://github.com/nagakiran"
+    },
+    {
+      "login": "we1l1n",
+      "starred_at": "2025-11-22T12:06:59Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13299466?v=4",
+      "html_url": "https://github.com/we1l1n"
+    },
     {
       "login": "FrankChen-CLC",
       "starred_at": "2025-11-22T11:16:08Z",
@@ -514,57 +562,6 @@
       "starred_at": "2025-11-18T15:48:09Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/9963093?v=4",
       "html_url": "https://github.com/thehedhly"
-    },
-    {
-      "login": "fastrom",
-      "starred_at": "2025-11-18T11:07:32Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/810885?v=4",
-      "html_url": "https://github.com/fastrom"
-    },
-    {
-      "login": "blackcat1402",
-      "starred_at": "2025-11-18T08:51:29Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/68807587?v=4",
-      "html_url": "https://github.com/blackcat1402"
-    },
-    {
-      "login": "jims-code",
-      "starred_at": "2025-11-18T07:06:24Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/43495226?v=4",
-      "html_url": "https://github.com/jims-code"
-    },
-    {
-      "login": "nrbnlulu",
-      "starred_at": "2025-11-18T06:21:43Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/88795475?v=4",
-      "company_org": "strawberry-graphql",
-      "company_public_members": 50,
-      "html_url": "https://github.com/nrbnlulu"
-    },
-    {
-      "login": "spartan-hungphan",
-      "starred_at": "2025-11-18T03:52:34Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/152275520?v=4",
-      "html_url": "https://github.com/spartan-hungphan"
-    },
-    {
-      "login": "TianpengBu",
-      "starred_at": "2025-11-18T03:41:40Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/37365950?v=4",
-      "html_url": "https://github.com/TianpengBu"
-    },
-    {
-      "login": "sdpkjc",
-      "starred_at": "2025-11-18T02:21:35Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/39199723?v=4",
-      "company": "University of Chinese Academy of Sciences",
-      "html_url": "https://github.com/sdpkjc"
-    },
-    {
-      "login": "sportsandfragrance",
-      "starred_at": "2025-11-18T00:12:04Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/186139067?v=4",
-      "html_url": "https://github.com/sportsandfragrance"
     }
   ],
   "stars_timeline": [
@@ -582,7 +579,7 @@
     },
     {
       "date": "2025-08-31",
-      "count": 8
+      "count": 5
     },
     {
       "date": "2025-09-01",
@@ -914,6 +911,10 @@
     },
     {
       "date": "2025-11-22",
+      "count": 8
+    },
+    {
+      "date": "2025-11-23",
       "count": 4
     }
   ],
