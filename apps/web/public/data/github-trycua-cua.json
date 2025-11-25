@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11337,
+    "stars": 11352,
     "forks": 659,
-    "openIssues": 77,
+    "openIssues": 76,
     "watchers": 53,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -12,7 +12,7 @@
   "contributors": [
     {
       "login": "ddupont808",
-      "contributions": 602,
+      "contributions": 603,
       "avatar_url": "https://avatars.githubusercontent.com/u/3820588?v=4",
       "html_url": "https://github.com/ddupont808"
     },
@@ -36,7 +36,7 @@
     },
     {
       "login": "sarinali",
-      "contributions": 83,
+      "contributions": 86,
       "avatar_url": "https://avatars.githubusercontent.com/u/74844953?v=4",
       "html_url": "https://github.com/sarinali"
     },
@@ -246,6 +246,101 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "chitoan1992",
+      "starred_at": "2025-11-25T10:06:07Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6171686?v=4",
+      "company": "Paradox",
+      "html_url": "https://github.com/chitoan1992"
+    },
+    {
+      "login": "devbrother2024",
+      "starred_at": "2025-11-25T07:32:54Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/179206522?v=4",
+      "html_url": "https://github.com/devbrother2024"
+    },
+    {
+      "login": "kharish89",
+      "starred_at": "2025-11-25T05:53:36Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1575036?v=4",
+      "html_url": "https://github.com/kharish89"
+    },
+    {
+      "login": "aosodosoa",
+      "starred_at": "2025-11-25T05:38:39Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97393037?v=4",
+      "html_url": "https://github.com/aosodosoa"
+    },
+    {
+      "login": "shenyao97",
+      "starred_at": "2025-11-25T04:22:56Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24311192?v=4",
+      "html_url": "https://github.com/shenyao97"
+    },
+    {
+      "login": "clementyu",
+      "starred_at": "2025-11-25T02:12:56Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/709147?v=4",
+      "html_url": "https://github.com/clementyu"
+    },
+    {
+      "login": "MANIH13",
+      "starred_at": "2025-11-25T01:49:12Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/201084596?v=4",
+      "html_url": "https://github.com/MANIH13"
+    },
+    {
+      "login": "Dan-Chin",
+      "starred_at": "2025-11-24T23:38:12Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/166327346?v=4",
+      "html_url": "https://github.com/Dan-Chin"
+    },
+    {
+      "login": "NithichoteC",
+      "starred_at": "2025-11-24T19:15:45Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160388567?v=4",
+      "html_url": "https://github.com/NithichoteC"
+    },
+    {
+      "login": "Badavis95",
+      "starred_at": "2025-11-24T17:51:41Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13966264?v=4",
+      "html_url": "https://github.com/Badavis95"
+    },
+    {
+      "login": "mystijk",
+      "starred_at": "2025-11-24T17:22:52Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12797325?v=4",
+      "html_url": "https://github.com/mystijk"
+    },
+    {
+      "login": "taesiri",
+      "starred_at": "2025-11-24T17:16:18Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/588431?v=4",
+      "html_url": "https://github.com/taesiri"
+    },
+    {
+      "login": "supertask",
+      "starred_at": "2025-11-24T17:12:10Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5733604?v=4",
+      "company": "teamLab",
+      "company_org": "FARMTORY-LAB",
+      "company_public_members": 3,
+      "html_url": "https://github.com/supertask"
+    },
+    {
+      "login": "jalr4ever",
+      "starred_at": "2025-11-24T13:09:39Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23929139?v=4",
+      "company": "@bytedance",
+      "html_url": "https://github.com/jalr4ever"
+    },
+    {
+      "login": "chw2054",
+      "starred_at": "2025-11-24T12:57:27Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29627?v=4",
+      "html_url": "https://github.com/chw2054"
+    },
     {
       "login": "ruipengliu",
       "starred_at": "2025-11-24T11:07:00Z",
@@ -465,102 +560,6 @@
       "starred_at": "2025-11-21T07:12:17Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/58020625?v=4",
       "html_url": "https://github.com/Sasank-cyber"
-    },
-    {
-      "login": "sokunmin",
-      "starred_at": "2025-11-21T06:53:25Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1607176?v=4",
-      "company_org": "AISaturdaysTaipei",
-      "company_public_members": 3,
-      "html_url": "https://github.com/sokunmin"
-    },
-    {
-      "login": "mprestonsparks",
-      "starred_at": "2025-11-20T23:51:04Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/15852270?v=4",
-      "html_url": "https://github.com/mprestonsparks"
-    },
-    {
-      "login": "al3xxx",
-      "starred_at": "2025-11-20T21:25:13Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2903428?v=4",
-      "html_url": "https://github.com/al3xxx"
-    },
-    {
-      "login": "jfishB",
-      "starred_at": "2025-11-20T18:48:27Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/132294287?v=4",
-      "html_url": "https://github.com/jfishB"
-    },
-    {
-      "login": "Hrdtr",
-      "starred_at": "2025-11-20T17:07:31Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/35950229?v=4",
-      "html_url": "https://github.com/Hrdtr"
-    },
-    {
-      "login": "ruloqs",
-      "starred_at": "2025-11-20T15:55:42Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/210715643?v=4",
-      "html_url": "https://github.com/ruloqs"
-    },
-    {
-      "login": "lightningroood",
-      "starred_at": "2025-11-20T13:22:00Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/3224519?v=4",
-      "html_url": "https://github.com/lightningroood"
-    },
-    {
-      "login": "banr1",
-      "starred_at": "2025-11-20T11:34:24Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/33741829?v=4",
-      "company": "@NyxFoundation",
-      "company_org": "Manbow-NFT",
-      "company_public_members": 1,
-      "html_url": "https://github.com/banr1"
-    },
-    {
-      "login": "brain-zhang",
-      "starred_at": "2025-11-20T08:14:50Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1989073?v=4",
-      "html_url": "https://github.com/brain-zhang"
-    },
-    {
-      "login": "evanmarshall",
-      "starred_at": "2025-11-20T05:40:59Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1102811?v=4",
-      "html_url": "https://github.com/evanmarshall"
-    },
-    {
-      "login": "gilbrotheraway",
-      "starred_at": "2025-11-20T03:50:51Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/70985680?v=4",
-      "html_url": "https://github.com/gilbrotheraway"
-    },
-    {
-      "login": "seacrest",
-      "starred_at": "2025-11-20T02:35:41Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5263275?v=4",
-      "html_url": "https://github.com/seacrest"
-    },
-    {
-      "login": "JonaZzz0815",
-      "starred_at": "2025-11-19T22:25:15Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/57139608?v=4",
-      "html_url": "https://github.com/JonaZzz0815"
-    },
-    {
-      "login": "alexandertu",
-      "starred_at": "2025-11-19T20:42:17Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/13170846?v=4",
-      "html_url": "https://github.com/alexandertu"
-    },
-    {
-      "login": "MitchellMarkGeorge",
-      "starred_at": "2025-11-19T19:31:14Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/49462407?v=4",
-      "company": "@fellowapp",
-      "html_url": "https://github.com/MitchellMarkGeorge"
     }
   ],
   "stars_timeline": [
@@ -918,7 +917,11 @@
     },
     {
       "date": "2025-11-24",
-      "count": 9
+      "count": 17
+    },
+    {
+      "date": "2025-11-25",
+      "count": 7
     }
   ],
   "companies_summary": []
