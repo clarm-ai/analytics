@@ -2,8 +2,8 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11352,
-    "forks": 659,
+    "stars": 11364,
+    "forks": 662,
     "openIssues": 76,
     "watchers": 53,
     "owner": "trycua",
@@ -36,7 +36,7 @@
     },
     {
       "login": "sarinali",
-      "contributions": 86,
+      "contributions": 88,
       "avatar_url": "https://avatars.githubusercontent.com/u/74844953?v=4",
       "html_url": "https://github.com/sarinali"
     },
@@ -246,6 +246,88 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "oni823",
+      "starred_at": "2025-11-26T09:33:36Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13375454?v=4",
+      "html_url": "https://github.com/oni823"
+    },
+    {
+      "login": "jolehuit",
+      "starred_at": "2025-11-26T08:00:36Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/130084799?v=4",
+      "html_url": "https://github.com/jolehuit"
+    },
+    {
+      "login": "wingmob",
+      "starred_at": "2025-11-26T07:56:53Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/201229310?v=4",
+      "html_url": "https://github.com/wingmob"
+    },
+    {
+      "login": "Edwinl777",
+      "starred_at": "2025-11-26T07:51:09Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67658118?v=4",
+      "html_url": "https://github.com/Edwinl777"
+    },
+    {
+      "login": "xqdd",
+      "starred_at": "2025-11-26T06:22:39Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20871761?v=4",
+      "html_url": "https://github.com/xqdd"
+    },
+    {
+      "login": "vinhtrue",
+      "starred_at": "2025-11-26T04:29:17Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/173453254?v=4",
+      "company": "True Digital VN",
+      "html_url": "https://github.com/vinhtrue"
+    },
+    {
+      "login": "servhiday",
+      "starred_at": "2025-11-26T02:48:41Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/179285763?v=4",
+      "html_url": "https://github.com/servhiday"
+    },
+    {
+      "login": "Kreatell",
+      "starred_at": "2025-11-25T23:56:41Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/186760271?v=4",
+      "company": "@Kreatell-Interactive ",
+      "html_url": "https://github.com/Kreatell"
+    },
+    {
+      "login": "anzebr",
+      "starred_at": "2025-11-25T20:15:55Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30675393?v=4",
+      "html_url": "https://github.com/anzebr"
+    },
+    {
+      "login": "TakuyaSugitani",
+      "starred_at": "2025-11-25T17:45:27Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/146812593?v=4",
+      "company": "Sony Honda Mobility Inc.",
+      "html_url": "https://github.com/TakuyaSugitani"
+    },
+    {
+      "login": "SkinnnyJay",
+      "starred_at": "2025-11-25T17:00:18Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1471599?v=4",
+      "company": "X-Block.xyz",
+      "html_url": "https://github.com/SkinnnyJay"
+    },
+    {
+      "login": "abdo308",
+      "starred_at": "2025-11-25T14:48:54Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62190007?v=4",
+      "html_url": "https://github.com/abdo308"
+    },
+    {
+      "login": "benjee-inc",
+      "starred_at": "2025-11-25T13:48:39Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/166219323?v=4",
+      "html_url": "https://github.com/benjee-inc"
+    },
     {
       "login": "chitoan1992",
       "starred_at": "2025-11-25T10:06:07Z",
@@ -476,90 +558,6 @@
       "starred_at": "2025-11-22T07:45:18Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/99281697?v=4",
       "html_url": "https://github.com/fatihcomez"
-    },
-    {
-      "login": "brentkaplan",
-      "starred_at": "2025-11-22T01:40:34Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/14001955?v=4",
-      "company": "Advocates for Human Potential, Inc.",
-      "html_url": "https://github.com/brentkaplan"
-    },
-    {
-      "login": "luli-g",
-      "starred_at": "2025-11-22T01:31:53Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/98498594?v=4",
-      "html_url": "https://github.com/luli-g"
-    },
-    {
-      "login": "Viivveekk",
-      "starred_at": "2025-11-21T19:37:19Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/139428564?v=4",
-      "html_url": "https://github.com/Viivveekk"
-    },
-    {
-      "login": "nq",
-      "starred_at": "2025-11-21T17:24:35Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/60569350?v=4",
-      "html_url": "https://github.com/nq"
-    },
-    {
-      "login": "jrbing",
-      "starred_at": "2025-11-21T15:21:18Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/90814?v=4",
-      "company_org": "ps-admin",
-      "company_public_members": 1,
-      "html_url": "https://github.com/jrbing"
-    },
-    {
-      "login": "Anna-Peng",
-      "starred_at": "2025-11-21T14:28:35Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7892946?v=4",
-      "company": "@ITV ",
-      "html_url": "https://github.com/Anna-Peng"
-    },
-    {
-      "login": "ns-bcr",
-      "starred_at": "2025-11-21T13:53:39Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/134287870?v=4",
-      "html_url": "https://github.com/ns-bcr"
-    },
-    {
-      "login": "crazy-source",
-      "starred_at": "2025-11-21T13:10:41Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/197887181?v=4",
-      "html_url": "https://github.com/crazy-source"
-    },
-    {
-      "login": "karlo-kasi",
-      "starred_at": "2025-11-21T10:03:19Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/189114824?v=4",
-      "html_url": "https://github.com/karlo-kasi"
-    },
-    {
-      "login": "entykey",
-      "starred_at": "2025-11-21T09:58:08Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/89012668?v=4",
-      "company": "Ho Chi Minh University of Education",
-      "html_url": "https://github.com/entykey"
-    },
-    {
-      "login": "RayYiHang",
-      "starred_at": "2025-11-21T08:54:58Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/57169358?v=4",
-      "company": "University of Sydney",
-      "html_url": "https://github.com/RayYiHang"
-    },
-    {
-      "login": "bigzmc-jpg",
-      "starred_at": "2025-11-21T07:25:42Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/234640374?v=4",
-      "html_url": "https://github.com/bigzmc-jpg"
-    },
-    {
-      "login": "Sasank-cyber",
-      "starred_at": "2025-11-21T07:12:17Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/58020625?v=4",
-      "html_url": "https://github.com/Sasank-cyber"
     }
   ],
   "stars_timeline": [
@@ -577,7 +575,7 @@
     },
     {
       "date": "2025-08-31",
-      "count": 4
+      "count": 3
     },
     {
       "date": "2025-09-01",
@@ -921,6 +919,10 @@
     },
     {
       "date": "2025-11-25",
+      "count": 13
+    },
+    {
+      "date": "2025-11-26",
       "count": 7
     }
   ],
