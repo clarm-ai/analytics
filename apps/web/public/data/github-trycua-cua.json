@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11364,
-    "forks": 662,
-    "openIssues": 76,
+    "stars": 11371,
+    "forks": 665,
+    "openIssues": 77,
     "watchers": 53,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -12,7 +12,7 @@
   "contributors": [
     {
       "login": "ddupont808",
-      "contributions": 603,
+      "contributions": 604,
       "avatar_url": "https://avatars.githubusercontent.com/u/3820588?v=4",
       "html_url": "https://github.com/ddupont808"
     },
@@ -36,7 +36,7 @@
     },
     {
       "login": "sarinali",
-      "contributions": 88,
+      "contributions": 92,
       "avatar_url": "https://avatars.githubusercontent.com/u/74844953?v=4",
       "html_url": "https://github.com/sarinali"
     },
@@ -54,7 +54,7 @@
     },
     {
       "login": "github-actions[bot]",
-      "contributions": 29,
+      "contributions": 30,
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
       "html_url": "https://github.com/apps/github-actions"
     },
@@ -246,6 +246,71 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "vanlocvo",
+      "starred_at": "2025-11-27T11:43:13Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34765693?v=4",
+      "html_url": "https://github.com/vanlocvo"
+    },
+    {
+      "login": "Kastrcn",
+      "starred_at": "2025-11-27T11:17:45Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19508899?v=4",
+      "html_url": "https://github.com/Kastrcn"
+    },
+    {
+      "login": "tiago-campos-rlabs",
+      "starred_at": "2025-11-27T00:24:44Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/198139663?v=4",
+      "company": "@randylabs",
+      "html_url": "https://github.com/tiago-campos-rlabs"
+    },
+    {
+      "login": "mobytradin",
+      "starred_at": "2025-11-26T23:27:12Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/237098286?v=4",
+      "html_url": "https://github.com/mobytradin"
+    },
+    {
+      "login": "frankwiersma",
+      "starred_at": "2025-11-26T23:19:12Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15095308?v=4",
+      "company": "@TenneT Netherlands",
+      "html_url": "https://github.com/frankwiersma"
+    },
+    {
+      "login": "eimkasp",
+      "starred_at": "2025-11-26T22:41:33Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1290547?v=4",
+      "company": "BusinessPress",
+      "company_org": "eim-solutions",
+      "company_public_members": 2,
+      "html_url": "https://github.com/eimkasp"
+    },
+    {
+      "login": "francescotsl",
+      "starred_at": "2025-11-26T20:36:06Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62511010?v=4",
+      "html_url": "https://github.com/francescotsl"
+    },
+    {
+      "login": "JamesMowery",
+      "starred_at": "2025-11-26T18:13:42Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/868178?v=4",
+      "html_url": "https://github.com/JamesMowery"
+    },
+    {
+      "login": "anomixer",
+      "starred_at": "2025-11-26T16:51:47Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21309360?v=4",
+      "html_url": "https://github.com/anomixer"
+    },
+    {
+      "login": "giphoo",
+      "starred_at": "2025-11-26T14:32:32Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2979324?v=4",
+      "html_url": "https://github.com/giphoo"
+    },
     {
       "login": "oni823",
       "starred_at": "2025-11-26T09:33:36Z",
@@ -498,66 +563,6 @@
       "starred_at": "2025-11-23T16:28:54Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/175496710?v=4",
       "html_url": "https://github.com/Mike-37"
-    },
-    {
-      "login": "mpvasilis",
-      "starred_at": "2025-11-23T11:30:24Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/10900897?v=4",
-      "html_url": "https://github.com/mpvasilis"
-    },
-    {
-      "login": "dario24git",
-      "starred_at": "2025-11-23T11:18:29Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/89135258?v=4",
-      "html_url": "https://github.com/dario24git"
-    },
-    {
-      "login": "CoderReloaded",
-      "starred_at": "2025-11-23T07:46:28Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/116454966?v=4",
-      "html_url": "https://github.com/CoderReloaded"
-    },
-    {
-      "login": "laurencecwj",
-      "starred_at": "2025-11-23T06:06:32Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/99599123?v=4",
-      "html_url": "https://github.com/laurencecwj"
-    },
-    {
-      "login": "VAIBHAVSING",
-      "starred_at": "2025-11-22T18:26:59Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/154789507?v=4",
-      "html_url": "https://github.com/VAIBHAVSING"
-    },
-    {
-      "login": "chernistry",
-      "starred_at": "2025-11-22T16:44:50Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/73943355?v=4",
-      "html_url": "https://github.com/chernistry"
-    },
-    {
-      "login": "nagakiran",
-      "starred_at": "2025-11-22T15:06:00Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/3187857?v=4",
-      "html_url": "https://github.com/nagakiran"
-    },
-    {
-      "login": "we1l1n",
-      "starred_at": "2025-11-22T12:06:59Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/13299466?v=4",
-      "html_url": "https://github.com/we1l1n"
-    },
-    {
-      "login": "FrankChen-CLC",
-      "starred_at": "2025-11-22T11:16:08Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/170185726?v=4",
-      "html_url": "https://github.com/FrankChen-CLC"
-    },
-    {
-      "login": "fatihcomez",
-      "starred_at": "2025-11-22T07:45:18Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/99281697?v=4",
-      "html_url": "https://github.com/fatihcomez"
     }
   ],
   "stars_timeline": [
@@ -575,7 +580,7 @@
     },
     {
       "date": "2025-08-31",
-      "count": 3
+      "count": 1
     },
     {
       "date": "2025-09-01",
@@ -751,7 +756,7 @@
     },
     {
       "date": "2025-10-14",
-      "count": 32
+      "count": 31
     },
     {
       "date": "2025-10-15",
@@ -923,7 +928,11 @@
     },
     {
       "date": "2025-11-26",
-      "count": 7
+      "count": 14
+    },
+    {
+      "date": "2025-11-27",
+      "count": 3
     }
   ],
   "companies_summary": []
