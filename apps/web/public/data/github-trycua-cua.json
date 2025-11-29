@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11378,
-    "forks": 664,
-    "openIssues": 78,
+    "stars": 11385,
+    "forks": 665,
+    "openIssues": 79,
     "watchers": 53,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -18,7 +18,7 @@
     },
     {
       "login": "f-trycua",
-      "contributions": 482,
+      "contributions": 485,
       "avatar_url": "https://avatars.githubusercontent.com/u/195596869?v=4",
       "html_url": "https://github.com/f-trycua"
     },
@@ -246,6 +246,49 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "bearworks",
+      "starred_at": "2025-11-29T09:02:25Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7309937?v=4",
+      "html_url": "https://github.com/bearworks"
+    },
+    {
+      "login": "shr00mie",
+      "starred_at": "2025-11-29T07:42:33Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7096317?v=4",
+      "html_url": "https://github.com/shr00mie"
+    },
+    {
+      "login": "ilyasubkhankulov",
+      "starred_at": "2025-11-29T06:12:32Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6537686?v=4",
+      "html_url": "https://github.com/ilyasubkhankulov"
+    },
+    {
+      "login": "forever1910",
+      "starred_at": "2025-11-29T05:40:38Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1361396?v=4",
+      "html_url": "https://github.com/forever1910"
+    },
+    {
+      "login": "3rd",
+      "starred_at": "2025-11-28T21:10:48Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59587503?v=4",
+      "html_url": "https://github.com/3rd"
+    },
+    {
+      "login": "mvaljento",
+      "starred_at": "2025-11-28T17:10:22Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/376610?v=4",
+      "company": "Solinet",
+      "html_url": "https://github.com/mvaljento"
+    },
+    {
+      "login": "johndelapena168",
+      "starred_at": "2025-11-28T14:17:09Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/223722661?v=4",
+      "html_url": "https://github.com/johndelapena168"
+    },
     {
       "login": "everevolving365",
       "starred_at": "2025-11-28T08:06:17Z",
@@ -516,53 +559,6 @@
       "starred_at": "2025-11-24T17:51:41Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/13966264?v=4",
       "html_url": "https://github.com/Badavis95"
-    },
-    {
-      "login": "mystijk",
-      "starred_at": "2025-11-24T17:22:52Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12797325?v=4",
-      "html_url": "https://github.com/mystijk"
-    },
-    {
-      "login": "taesiri",
-      "starred_at": "2025-11-24T17:16:18Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/588431?v=4",
-      "html_url": "https://github.com/taesiri"
-    },
-    {
-      "login": "supertask",
-      "starred_at": "2025-11-24T17:12:10Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5733604?v=4",
-      "company": "teamLab",
-      "company_org": "FARMTORY-LAB",
-      "company_public_members": 3,
-      "html_url": "https://github.com/supertask"
-    },
-    {
-      "login": "jalr4ever",
-      "starred_at": "2025-11-24T13:09:39Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23929139?v=4",
-      "company": "@bytedance",
-      "html_url": "https://github.com/jalr4ever"
-    },
-    {
-      "login": "chw2054",
-      "starred_at": "2025-11-24T12:57:27Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/29627?v=4",
-      "html_url": "https://github.com/chw2054"
-    },
-    {
-      "login": "ruipengliu",
-      "starred_at": "2025-11-24T11:07:00Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/348362?v=4",
-      "html_url": "https://github.com/ruipengliu"
-    },
-    {
-      "login": "teletubby1",
-      "starred_at": "2025-11-24T09:22:25Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/105589157?v=4",
-      "company": "JiangNan University",
-      "html_url": "https://github.com/teletubby1"
     }
   ],
   "stars_timeline": [
@@ -932,6 +928,10 @@
     },
     {
       "date": "2025-11-28",
+      "count": 7
+    },
+    {
+      "date": "2025-11-29",
       "count": 4
     }
   ],
