@@ -2,9 +2,9 @@
   "repo": {
     "name": "better-auth/better-auth",
     "description": "The most comprehensive authentication framework for TypeScript",
-    "stars": 23507,
-    "forks": 1981,
-    "openIssues": 782,
+    "stars": 23541,
+    "forks": 1985,
+    "openIssues": 747,
     "watchers": 32,
     "owner": "better-auth",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/163827765?v=4"
@@ -12,7 +12,7 @@
   "contributors": [
     {
       "login": "Bekacru",
-      "contributions": 2964,
+      "contributions": 2971,
       "avatar_url": "https://avatars.githubusercontent.com/u/86073083?v=4",
       "html_url": "https://github.com/Bekacru"
     },
@@ -24,7 +24,7 @@
     },
     {
       "login": "Kinfe123",
-      "contributions": 311,
+      "contributions": 312,
       "avatar_url": "https://avatars.githubusercontent.com/u/65047246?v=4",
       "html_url": "https://github.com/Kinfe123"
     },
@@ -36,7 +36,7 @@
     },
     {
       "login": "bytaesu",
-      "contributions": 72,
+      "contributions": 73,
       "avatar_url": "https://avatars.githubusercontent.com/u/166604494?v=4",
       "html_url": "https://github.com/bytaesu"
     },
@@ -48,21 +48,21 @@
     },
     {
       "login": "jslno",
-      "contributions": 24,
+      "contributions": 27,
       "avatar_url": "https://avatars.githubusercontent.com/u/24737269?v=4",
       "html_url": "https://github.com/jslno"
+    },
+    {
+      "login": "renovate[bot]",
+      "contributions": 22,
+      "avatar_url": "https://avatars.githubusercontent.com/in/2740?v=4",
+      "html_url": "https://github.com/apps/renovate"
     },
     {
       "login": "BlankParticle",
       "contributions": 21,
       "avatar_url": "https://avatars.githubusercontent.com/u/130567419?v=4",
       "html_url": "https://github.com/BlankParticle"
-    },
-    {
-      "login": "renovate[bot]",
-      "contributions": 21,
-      "avatar_url": "https://avatars.githubusercontent.com/in/2740?v=4",
-      "html_url": "https://github.com/apps/renovate"
     },
     {
       "login": "dependabot[bot]",
@@ -89,16 +89,16 @@
       "html_url": "https://github.com/DePasqualeOrg"
     },
     {
+      "login": "GautamBytes",
+      "contributions": 15,
+      "avatar_url": "https://avatars.githubusercontent.com/u/161146829?v=4",
+      "html_url": "https://github.com/GautamBytes"
+    },
+    {
       "login": "hyoban",
       "contributions": 15,
       "avatar_url": "https://avatars.githubusercontent.com/u/38493346?v=4",
       "html_url": "https://github.com/hyoban"
-    },
-    {
-      "login": "GautamBytes",
-      "contributions": 14,
-      "avatar_url": "https://avatars.githubusercontent.com/u/161146829?v=4",
-      "html_url": "https://github.com/GautamBytes"
     },
     {
       "login": "reslear",
@@ -613,6 +613,234 @@
   ],
   "stargazers": [
     {
+      "login": "xiaoxijin",
+      "starred_at": "2025-11-30T10:21:12Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9377275?v=4",
+      "html_url": "https://github.com/xiaoxijin"
+    },
+    {
+      "login": "LennyPK",
+      "starred_at": "2025-11-30T09:07:14Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111238403?v=4",
+      "html_url": "https://github.com/LennyPK"
+    },
+    {
+      "login": "Dawaman43",
+      "starred_at": "2025-11-30T08:41:04Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144016968?v=4",
+      "company": "dawit's solution",
+      "html_url": "https://github.com/Dawaman43"
+    },
+    {
+      "login": "mosayyebnezhad",
+      "starred_at": "2025-11-30T08:35:02Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59848315?v=4",
+      "company": "@lahij-ir ",
+      "company_org": "lahij-ir",
+      "company_public_members": 2,
+      "html_url": "https://github.com/mosayyebnezhad"
+    },
+    {
+      "login": "tukasz",
+      "starred_at": "2025-11-30T07:20:58Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4078539?v=4",
+      "html_url": "https://github.com/tukasz"
+    },
+    {
+      "login": "kkirkfield",
+      "starred_at": "2025-11-30T06:28:29Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1903771?v=4",
+      "company": "@PremierDataServices",
+      "html_url": "https://github.com/kkirkfield"
+    },
+    {
+      "login": "fu-jw",
+      "starred_at": "2025-11-30T06:19:31Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40262591?v=4",
+      "html_url": "https://github.com/fu-jw"
+    },
+    {
+      "login": "firatyll",
+      "starred_at": "2025-11-30T06:08:27Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139689654?v=4",
+      "html_url": "https://github.com/firatyll"
+    },
+    {
+      "login": "masfaiz-code",
+      "starred_at": "2025-11-30T06:08:02Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/223054453?v=4",
+      "html_url": "https://github.com/masfaiz-code"
+    },
+    {
+      "login": "DavidGunasekaran",
+      "starred_at": "2025-11-30T06:06:42Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112919922?v=4",
+      "html_url": "https://github.com/DavidGunasekaran"
+    },
+    {
+      "login": "eugeniudedin",
+      "starred_at": "2025-11-30T05:24:22Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32163946?v=4",
+      "company": "Digital Eye",
+      "html_url": "https://github.com/eugeniudedin"
+    },
+    {
+      "login": "YumNumm",
+      "starred_at": "2025-11-30T05:11:38Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73390859?v=4",
+      "company": "YUMEMI Inc.",
+      "html_url": "https://github.com/YumNumm"
+    },
+    {
+      "login": "rizal8x",
+      "starred_at": "2025-11-30T04:30:48Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/246025520?v=4",
+      "html_url": "https://github.com/rizal8x"
+    },
+    {
+      "login": "QingyunYang",
+      "starred_at": "2025-11-30T04:17:48Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23309987?v=4",
+      "html_url": "https://github.com/QingyunYang"
+    },
+    {
+      "login": "mvargas33",
+      "starred_at": "2025-11-30T01:43:09Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43217761?v=4",
+      "company": "@Toku-IA ",
+      "html_url": "https://github.com/mvargas33"
+    },
+    {
+      "login": "tpansino",
+      "starred_at": "2025-11-30T01:30:00Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2768420?v=4",
+      "html_url": "https://github.com/tpansino"
+    },
+    {
+      "login": "haitch-dev",
+      "starred_at": "2025-11-30T00:26:37Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/243775815?v=4",
+      "html_url": "https://github.com/haitch-dev"
+    },
+    {
+      "login": "Lutherwaves",
+      "starred_at": "2025-11-30T00:00:07Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23098926?v=4",
+      "company": "Broadcom",
+      "html_url": "https://github.com/Lutherwaves"
+    },
+    {
+      "login": "elazar",
+      "starred_at": "2025-11-29T22:20:32Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15487?v=4",
+      "company": "@FollowUpBoss",
+      "company_org": "phergie",
+      "company_public_members": 3,
+      "html_url": "https://github.com/elazar"
+    },
+    {
+      "login": "francoisauclair911",
+      "starred_at": "2025-11-29T20:27:16Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14027026?v=4",
+      "html_url": "https://github.com/francoisauclair911"
+    },
+    {
+      "login": "D357R0Y3R",
+      "starred_at": "2025-11-29T19:53:45Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/109698175?v=4",
+      "company": "@archlinux",
+      "html_url": "https://github.com/D357R0Y3R"
+    },
+    {
+      "login": "dr460nf1r3",
+      "starred_at": "2025-11-29T19:51:33Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12834713?v=4",
+      "company": "PART Business Solution",
+      "company_org": "NixOS",
+      "company_public_members": 1327,
+      "html_url": "https://github.com/dr460nf1r3"
+    },
+    {
+      "login": "jordanopos",
+      "starred_at": "2025-11-29T18:47:41Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66879794?v=4",
+      "html_url": "https://github.com/jordanopos"
+    },
+    {
+      "login": "imsanghaar",
+      "starred_at": "2025-11-29T17:27:54Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/208341906?v=4",
+      "html_url": "https://github.com/imsanghaar"
+    },
+    {
+      "login": "rbbydotdev",
+      "starred_at": "2025-11-29T17:23:55Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101137670?v=4",
+      "html_url": "https://github.com/rbbydotdev"
+    },
+    {
+      "login": "LoveKhatri",
+      "starred_at": "2025-11-29T15:34:26Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/83165022?v=4",
+      "company_org": "Discortics",
+      "company_public_members": 5,
+      "html_url": "https://github.com/LoveKhatri"
+    },
+    {
+      "login": "ligj1706",
+      "starred_at": "2025-11-29T15:27:03Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44646119?v=4",
+      "html_url": "https://github.com/ligj1706"
+    },
+    {
+      "login": "mhzrerfani",
+      "starred_at": "2025-11-29T15:19:47Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51866154?v=4",
+      "company": "@ainurdev ",
+      "company_org": "ainurdev",
+      "company_public_members": 2,
+      "html_url": "https://github.com/mhzrerfani"
+    },
+    {
+      "login": "guibirow",
+      "starred_at": "2025-11-29T15:03:10Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/943026?v=4",
+      "html_url": "https://github.com/guibirow"
+    },
+    {
+      "login": "dailypixie",
+      "starred_at": "2025-11-29T14:48:51Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7454105?v=4",
+      "html_url": "https://github.com/dailypixie"
+    },
+    {
+      "login": "estif0",
+      "starred_at": "2025-11-29T14:42:40Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/112593883?v=4",
+      "html_url": "https://github.com/estif0"
+    },
+    {
+      "login": "andrey-mitko",
+      "starred_at": "2025-11-29T14:05:42Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77544144?v=4",
+      "html_url": "https://github.com/andrey-mitko"
+    },
+    {
+      "login": "stephdgenius",
+      "starred_at": "2025-11-29T13:22:34Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6643239?v=4",
+      "html_url": "https://github.com/stephdgenius"
+    },
+    {
+      "login": "ImShyMike",
+      "starred_at": "2025-11-29T12:23:03Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122023566?v=4",
+      "company": "member of @hackclub",
+      "company_org": "hackclub",
+      "company_public_members": 927,
+      "html_url": "https://github.com/ImShyMike"
+    },
+    {
       "login": "PaulLeCam",
       "starred_at": "2025-11-29T12:01:00Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/790995?v=4",
@@ -723,232 +951,6 @@
       "starred_at": "2025-11-29T08:00:50Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/43211000?v=4",
       "html_url": "https://github.com/35bytes"
-    },
-    {
-      "login": "stamtos",
-      "starred_at": "2025-11-29T06:35:22Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/187317140?v=4",
-      "html_url": "https://github.com/stamtos"
-    },
-    {
-      "login": "mustafaIhssan",
-      "starred_at": "2025-11-29T06:21:17Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/3441273?v=4",
-      "html_url": "https://github.com/mustafaIhssan"
-    },
-    {
-      "login": "EnvoyX",
-      "starred_at": "2025-11-29T05:31:01Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/147917088?v=4",
-      "company": "Bandung Institute of Technology",
-      "company_org": "gim-itb",
-      "company_public_members": 2,
-      "html_url": "https://github.com/EnvoyX"
-    },
-    {
-      "login": "samxkim",
-      "starred_at": "2025-11-29T04:16:21Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/36899727?v=4",
-      "html_url": "https://github.com/samxkim"
-    },
-    {
-      "login": "evnydd0sf",
-      "starred_at": "2025-11-29T03:53:37Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/16290402?v=4",
-      "html_url": "https://github.com/evnydd0sf"
-    },
-    {
-      "login": "joeychrys",
-      "starred_at": "2025-11-29T03:02:57Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/85133004?v=4",
-      "html_url": "https://github.com/joeychrys"
-    },
-    {
-      "login": "AaronNGray",
-      "starred_at": "2025-11-29T01:50:25Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/85523?v=4",
-      "html_url": "https://github.com/AaronNGray"
-    },
-    {
-      "login": "BlackyWolf",
-      "starred_at": "2025-11-29T00:30:18Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/16546603?v=4",
-      "company": "Blacky Wolf",
-      "html_url": "https://github.com/BlackyWolf"
-    },
-    {
-      "login": "ThibaultJRD",
-      "starred_at": "2025-11-29T00:06:47Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/9118423?v=4",
-      "company": "@orbit-codes",
-      "html_url": "https://github.com/ThibaultJRD"
-    },
-    {
-      "login": "berkeaslan",
-      "starred_at": "2025-11-28T23:36:16Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/15250733?v=4",
-      "html_url": "https://github.com/berkeaslan"
-    },
-    {
-      "login": "abdul712",
-      "starred_at": "2025-11-28T23:27:55Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/11503886?v=4",
-      "html_url": "https://github.com/abdul712"
-    },
-    {
-      "login": "yurigarrido",
-      "starred_at": "2025-11-28T23:11:18Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/81384601?v=4",
-      "html_url": "https://github.com/yurigarrido"
-    },
-    {
-      "login": "louden3",
-      "starred_at": "2025-11-28T22:56:57Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/167799899?v=4",
-      "html_url": "https://github.com/louden3"
-    },
-    {
-      "login": "22trendfuturesetterstars",
-      "starred_at": "2025-11-28T22:51:47Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117739769?v=4",
-      "html_url": "https://github.com/22trendfuturesetterstars"
-    },
-    {
-      "login": "Marcoru97",
-      "starred_at": "2025-11-28T21:55:34Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7284201?v=4",
-      "company": "Bitburst GmbH",
-      "html_url": "https://github.com/Marcoru97"
-    },
-    {
-      "login": "omar-inkeep",
-      "starred_at": "2025-11-28T21:44:18Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/173210385?v=4",
-      "html_url": "https://github.com/omar-inkeep"
-    },
-    {
-      "login": "robertgr991",
-      "starred_at": "2025-11-28T21:30:27Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/36689800?v=4",
-      "html_url": "https://github.com/robertgr991"
-    },
-    {
-      "login": "IceCreamYou",
-      "starred_at": "2025-11-28T21:16:13Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/203177?v=4",
-      "html_url": "https://github.com/IceCreamYou"
-    },
-    {
-      "login": "Matthiasc",
-      "starred_at": "2025-11-28T20:53:14Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/969111?v=4",
-      "html_url": "https://github.com/Matthiasc"
-    },
-    {
-      "login": "konradrvl",
-      "starred_at": "2025-11-28T18:38:27Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26788107?v=4",
-      "company": "Rival",
-      "company_org": "rival-xr",
-      "company_public_members": 1,
-      "html_url": "https://github.com/konradrvl"
-    },
-    {
-      "login": "babak-karimi-asl",
-      "starred_at": "2025-11-28T18:11:31Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/31150843?v=4",
-      "html_url": "https://github.com/babak-karimi-asl"
-    },
-    {
-      "login": "vinsonchuong",
-      "starred_at": "2025-11-28T18:05:39Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/382608?v=4",
-      "company_org": "ucberkeley",
-      "company_public_members": 4,
-      "html_url": "https://github.com/vinsonchuong"
-    },
-    {
-      "login": "ssmirr",
-      "starred_at": "2025-11-28T17:48:06Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/9158546?v=4",
-      "company_org": "StartupBot",
-      "company_public_members": 1,
-      "html_url": "https://github.com/ssmirr"
-    },
-    {
-      "login": "srinitude",
-      "starred_at": "2025-11-28T17:24:18Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/4596037?v=4",
-      "company": "@fantasymetals",
-      "company_org": "objcio",
-      "company_public_members": 130,
-      "html_url": "https://github.com/srinitude"
-    },
-    {
-      "login": "hakusai22",
-      "starred_at": "2025-11-28T16:16:08Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/58761705?v=4",
-      "html_url": "https://github.com/hakusai22"
-    },
-    {
-      "login": "xlcreat3",
-      "starred_at": "2025-11-28T15:23:27Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17703552?v=4",
-      "html_url": "https://github.com/xlcreat3"
-    },
-    {
-      "login": "unvoodoo",
-      "starred_at": "2025-11-28T15:21:58Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/670539?v=4",
-      "html_url": "https://github.com/unvoodoo"
-    },
-    {
-      "login": "nahyeongjin1",
-      "starred_at": "2025-11-28T14:55:28Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/71560837?v=4",
-      "company": "Konkuk University",
-      "company_org": "gdgoc-konkuk",
-      "company_public_members": 21,
-      "html_url": "https://github.com/nahyeongjin1"
-    },
-    {
-      "login": "ThePig005",
-      "starred_at": "2025-11-28T14:36:15Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/213171850?v=4",
-      "html_url": "https://github.com/ThePig005"
-    },
-    {
-      "login": "xevrion",
-      "starred_at": "2025-11-28T14:25:40Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/77008538?v=4",
-      "html_url": "https://github.com/xevrion"
-    },
-    {
-      "login": "ppxb",
-      "starred_at": "2025-11-28T13:58:19Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/17081240?v=4",
-      "html_url": "https://github.com/ppxb"
-    },
-    {
-      "login": "jackyangus",
-      "starred_at": "2025-11-28T13:35:02Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/155587940?v=4",
-      "html_url": "https://github.com/jackyangus"
-    },
-    {
-      "login": "adamamyl",
-      "starred_at": "2025-11-28T13:00:15Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/169181?v=4",
-      "company": "TooManyHats",
-      "company_org": "no2id",
-      "company_public_members": 2,
-      "html_url": "https://github.com/adamamyl"
-    },
-    {
-      "login": "allohamora",
-      "starred_at": "2025-11-28T12:20:55Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/54174661?v=4",
-      "html_url": "https://github.com/allohamora"
     }
   ],
   "stars_timeline": [
@@ -1170,7 +1172,11 @@
     },
     {
       "date": "2025-11-29",
-      "count": 25
+      "count": 41
+    },
+    {
+      "date": "2025-11-30",
+      "count": 18
     }
   ],
   "companies_summary": []
