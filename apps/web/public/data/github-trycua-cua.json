@@ -2,7 +2,7 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11394,
+    "stars": 11400,
     "forks": 666,
     "openIssues": 79,
     "watchers": 53,
@@ -246,6 +246,42 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "ghbook",
+      "starred_at": "2025-12-01T08:41:27Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85883100?v=4",
+      "html_url": "https://github.com/ghbook"
+    },
+    {
+      "login": "zppro",
+      "starred_at": "2025-12-01T07:57:02Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/706344?v=4",
+      "html_url": "https://github.com/zppro"
+    },
+    {
+      "login": "maks-us",
+      "starred_at": "2025-12-01T02:56:22Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8204705?v=4",
+      "html_url": "https://github.com/maks-us"
+    },
+    {
+      "login": "yodaiken",
+      "starred_at": "2025-11-30T17:29:43Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/692487?v=4",
+      "html_url": "https://github.com/yodaiken"
+    },
+    {
+      "login": "bigph00t",
+      "starred_at": "2025-11-30T17:27:24Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/166455923?v=4",
+      "html_url": "https://github.com/bigph00t"
+    },
+    {
+      "login": "absahoo7",
+      "starred_at": "2025-11-30T15:49:01Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34826912?v=4",
+      "html_url": "https://github.com/absahoo7"
+    },
     {
       "login": "r4k5O",
       "starred_at": "2025-11-30T10:11:43Z",
@@ -523,45 +559,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/186760271?v=4",
       "company": "@Kreatell-Interactive ",
       "html_url": "https://github.com/Kreatell"
-    },
-    {
-      "login": "anzebr",
-      "starred_at": "2025-11-25T20:15:55Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/30675393?v=4",
-      "html_url": "https://github.com/anzebr"
-    },
-    {
-      "login": "TakuyaSugitani",
-      "starred_at": "2025-11-25T17:45:27Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/146812593?v=4",
-      "company": "Sony Honda Mobility Inc.",
-      "html_url": "https://github.com/TakuyaSugitani"
-    },
-    {
-      "login": "SkinnnyJay",
-      "starred_at": "2025-11-25T17:00:18Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1471599?v=4",
-      "company": "X-Block.xyz",
-      "html_url": "https://github.com/SkinnnyJay"
-    },
-    {
-      "login": "abdo308",
-      "starred_at": "2025-11-25T14:48:54Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/62190007?v=4",
-      "html_url": "https://github.com/abdo308"
-    },
-    {
-      "login": "benjee-inc",
-      "starred_at": "2025-11-25T13:48:39Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/166219323?v=4",
-      "html_url": "https://github.com/benjee-inc"
-    },
-    {
-      "login": "chitoan1992",
-      "starred_at": "2025-11-25T10:06:07Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6171686?v=4",
-      "company": "Paradox",
-      "html_url": "https://github.com/chitoan1992"
     }
   ],
   "stars_timeline": [
@@ -939,7 +936,11 @@
     },
     {
       "date": "2025-11-30",
-      "count": 5
+      "count": 8
+    },
+    {
+      "date": "2025-12-01",
+      "count": 3
     }
   ],
   "companies_summary": []
