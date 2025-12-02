@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11400,
-    "forks": 666,
-    "openIssues": 79,
+    "stars": 11407,
+    "forks": 667,
+    "openIssues": 78,
     "watchers": 53,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -12,7 +12,7 @@
   "contributors": [
     {
       "login": "ddupont808",
-      "contributions": 604,
+      "contributions": 608,
       "avatar_url": "https://avatars.githubusercontent.com/u/3820588?v=4",
       "html_url": "https://github.com/ddupont808"
     },
@@ -30,7 +30,7 @@
     },
     {
       "login": "mdean808",
-      "contributions": 128,
+      "contributions": 134,
       "avatar_url": "https://avatars.githubusercontent.com/u/31518969?v=4",
       "html_url": "https://github.com/mdean808"
     },
@@ -42,7 +42,7 @@
     },
     {
       "login": "YeIIcw",
-      "contributions": 64,
+      "contributions": 66,
       "avatar_url": "https://avatars.githubusercontent.com/u/62897873?v=4",
       "html_url": "https://github.com/YeIIcw"
     },
@@ -84,7 +84,7 @@
     },
     {
       "login": "r33drichards",
-      "contributions": 7,
+      "contributions": 8,
       "avatar_url": "https://avatars.githubusercontent.com/u/57335981?v=4",
       "html_url": "https://github.com/r33drichards"
     },
@@ -246,6 +246,55 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "2462954048",
+      "starred_at": "2025-12-02T08:53:59Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45593319?v=4",
+      "html_url": "https://github.com/2462954048"
+    },
+    {
+      "login": "iamGavinZhou",
+      "starred_at": "2025-12-02T07:54:39Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9864293?v=4",
+      "company": "Tencent",
+      "html_url": "https://github.com/iamGavinZhou"
+    },
+    {
+      "login": "mcastriani",
+      "starred_at": "2025-12-02T02:28:17Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80438152?v=4",
+      "html_url": "https://github.com/mcastriani"
+    },
+    {
+      "login": "rohith50",
+      "starred_at": "2025-12-01T18:04:05Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1107827?v=4",
+      "html_url": "https://github.com/rohith50"
+    },
+    {
+      "login": "TWBfly",
+      "starred_at": "2025-12-01T17:38:14Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21956119?v=4",
+      "html_url": "https://github.com/TWBfly"
+    },
+    {
+      "login": "david-strejc",
+      "starred_at": "2025-12-01T16:06:07Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6084451?v=4",
+      "html_url": "https://github.com/david-strejc"
+    },
+    {
+      "login": "bauerem",
+      "starred_at": "2025-12-01T14:00:49Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91543966?v=4",
+      "html_url": "https://github.com/bauerem"
+    },
+    {
+      "login": "lovewln",
+      "starred_at": "2025-12-01T13:33:34Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77733713?v=4",
+      "html_url": "https://github.com/lovewln"
+    },
     {
       "login": "ghbook",
       "starred_at": "2025-12-01T08:41:27Z",
@@ -509,56 +558,6 @@
       "starred_at": "2025-11-26T14:32:32Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/2979324?v=4",
       "html_url": "https://github.com/giphoo"
-    },
-    {
-      "login": "oni823",
-      "starred_at": "2025-11-26T09:33:36Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/13375454?v=4",
-      "html_url": "https://github.com/oni823"
-    },
-    {
-      "login": "jolehuit",
-      "starred_at": "2025-11-26T08:00:36Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/130084799?v=4",
-      "html_url": "https://github.com/jolehuit"
-    },
-    {
-      "login": "wingmob",
-      "starred_at": "2025-11-26T07:56:53Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/201229310?v=4",
-      "html_url": "https://github.com/wingmob"
-    },
-    {
-      "login": "Edwinl777",
-      "starred_at": "2025-11-26T07:51:09Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/67658118?v=4",
-      "html_url": "https://github.com/Edwinl777"
-    },
-    {
-      "login": "xqdd",
-      "starred_at": "2025-11-26T06:22:39Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/20871761?v=4",
-      "html_url": "https://github.com/xqdd"
-    },
-    {
-      "login": "vinhtrue",
-      "starred_at": "2025-11-26T04:29:17Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/173453254?v=4",
-      "company": "True Digital VN",
-      "html_url": "https://github.com/vinhtrue"
-    },
-    {
-      "login": "servhiday",
-      "starred_at": "2025-11-26T02:48:41Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/179285763?v=4",
-      "html_url": "https://github.com/servhiday"
-    },
-    {
-      "login": "Kreatell",
-      "starred_at": "2025-11-25T23:56:41Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/186760271?v=4",
-      "company": "@Kreatell-Interactive ",
-      "html_url": "https://github.com/Kreatell"
     }
   ],
   "stars_timeline": [
@@ -575,44 +574,8 @@
       "count": 98
     },
     {
-      "date": "2025-09-01",
-      "count": 10
-    },
-    {
-      "date": "2025-09-02",
-      "count": 19
-    },
-    {
-      "date": "2025-09-03",
-      "count": 17
-    },
-    {
-      "date": "2025-09-04",
-      "count": 10
-    },
-    {
-      "date": "2025-09-05",
-      "count": 2
-    },
-    {
-      "date": "2025-09-06",
-      "count": 15
-    },
-    {
-      "date": "2025-09-07",
-      "count": 13
-    },
-    {
-      "date": "2025-09-08",
-      "count": 7
-    },
-    {
-      "date": "2025-09-09",
-      "count": 5
-    },
-    {
       "date": "2025-09-10",
-      "count": 7
+      "count": 5
     },
     {
       "date": "2025-09-11",
@@ -744,7 +707,7 @@
     },
     {
       "date": "2025-10-13",
-      "count": 66
+      "count": 65
     },
     {
       "date": "2025-10-14",
@@ -940,6 +903,10 @@
     },
     {
       "date": "2025-12-01",
+      "count": 8
+    },
+    {
+      "date": "2025-12-02",
       "count": 3
     }
   ],
