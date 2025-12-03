@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11407,
-    "forks": 667,
-    "openIssues": 78,
+    "stars": 11413,
+    "forks": 668,
+    "openIssues": 80,
     "watchers": 53,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -246,6 +246,50 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "whoiscjq",
+      "starred_at": "2025-12-03T07:30:20Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/88355756?v=4",
+      "html_url": "https://github.com/whoiscjq"
+    },
+    {
+      "login": "Zhidan-Wang",
+      "starred_at": "2025-12-03T05:34:39Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31196524?v=4",
+      "html_url": "https://github.com/Zhidan-Wang"
+    },
+    {
+      "login": "sinashei",
+      "starred_at": "2025-12-03T03:20:10Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126630586?v=4",
+      "html_url": "https://github.com/sinashei"
+    },
+    {
+      "login": "fanlw0816",
+      "starred_at": "2025-12-03T03:17:45Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22781995?v=4",
+      "html_url": "https://github.com/fanlw0816"
+    },
+    {
+      "login": "nifleisch",
+      "starred_at": "2025-12-02T23:38:09Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62500421?v=4",
+      "company": "@PrunaAI ",
+      "html_url": "https://github.com/nifleisch"
+    },
+    {
+      "login": "JacobFV",
+      "starred_at": "2025-12-02T18:47:34Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/40343913?v=4",
+      "company": "@agi-inc",
+      "html_url": "https://github.com/JacobFV"
+    },
+    {
+      "login": "hunterwan",
+      "starred_at": "2025-12-02T18:03:19Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2807631?v=4",
+      "html_url": "https://github.com/hunterwan"
+    },
     {
       "login": "2462954048",
       "starred_at": "2025-12-02T08:53:59Z",
@@ -512,52 +556,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/198139663?v=4",
       "company": "@randylabs",
       "html_url": "https://github.com/tiago-campos-rlabs"
-    },
-    {
-      "login": "mobytradin",
-      "starred_at": "2025-11-26T23:27:12Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/237098286?v=4",
-      "html_url": "https://github.com/mobytradin"
-    },
-    {
-      "login": "frankwiersma",
-      "starred_at": "2025-11-26T23:19:12Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/15095308?v=4",
-      "company": "@TenneT Netherlands",
-      "html_url": "https://github.com/frankwiersma"
-    },
-    {
-      "login": "eimkasp",
-      "starred_at": "2025-11-26T22:41:33Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1290547?v=4",
-      "company": "BusinessPress",
-      "company_org": "eim-solutions",
-      "company_public_members": 2,
-      "html_url": "https://github.com/eimkasp"
-    },
-    {
-      "login": "francescotsl",
-      "starred_at": "2025-11-26T20:36:06Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/62511010?v=4",
-      "html_url": "https://github.com/francescotsl"
-    },
-    {
-      "login": "JamesMowery",
-      "starred_at": "2025-11-26T18:13:42Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/868178?v=4",
-      "html_url": "https://github.com/JamesMowery"
-    },
-    {
-      "login": "anomixer",
-      "starred_at": "2025-11-26T16:51:47Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/21309360?v=4",
-      "html_url": "https://github.com/anomixer"
-    },
-    {
-      "login": "giphoo",
-      "starred_at": "2025-11-26T14:32:32Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2979324?v=4",
-      "html_url": "https://github.com/giphoo"
     }
   ],
   "stars_timeline": [
@@ -575,7 +573,7 @@
     },
     {
       "date": "2025-09-10",
-      "count": 5
+      "count": 3
     },
     {
       "date": "2025-09-11",
@@ -907,7 +905,11 @@
     },
     {
       "date": "2025-12-02",
-      "count": 3
+      "count": 6
+    },
+    {
+      "date": "2025-12-03",
+      "count": 4
     }
   ],
   "companies_summary": []
