@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11413,
-    "forks": 668,
-    "openIssues": 80,
+    "stars": 11414,
+    "forks": 667,
+    "openIssues": 81,
     "watchers": 53,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -12,7 +12,7 @@
   "contributors": [
     {
       "login": "ddupont808",
-      "contributions": 608,
+      "contributions": 619,
       "avatar_url": "https://avatars.githubusercontent.com/u/3820588?v=4",
       "html_url": "https://github.com/ddupont808"
     },
@@ -30,7 +30,7 @@
     },
     {
       "login": "mdean808",
-      "contributions": 134,
+      "contributions": 138,
       "avatar_url": "https://avatars.githubusercontent.com/u/31518969?v=4",
       "html_url": "https://github.com/mdean808"
     },
@@ -42,7 +42,7 @@
     },
     {
       "login": "YeIIcw",
-      "contributions": 66,
+      "contributions": 67,
       "avatar_url": "https://avatars.githubusercontent.com/u/62897873?v=4",
       "html_url": "https://github.com/YeIIcw"
     },
@@ -54,7 +54,7 @@
     },
     {
       "login": "github-actions[bot]",
-      "contributions": 31,
+      "contributions": 32,
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
       "html_url": "https://github.com/apps/github-actions"
     },
@@ -246,6 +246,27 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "corn1ng",
+      "starred_at": "2025-12-04T03:54:14Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11656787?v=4",
+      "company": "Sun Yat-sen University",
+      "html_url": "https://github.com/corn1ng"
+    },
+    {
+      "login": "ImRonAI",
+      "starred_at": "2025-12-04T01:31:50Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/226430972?v=4",
+      "company_org": "catoailabs",
+      "company_public_members": 1,
+      "html_url": "https://github.com/ImRonAI"
+    },
+    {
+      "login": "jjl9895",
+      "starred_at": "2025-12-03T14:16:25Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/114444093?v=4",
+      "html_url": "https://github.com/jjl9895"
+    },
     {
       "login": "whoiscjq",
       "starred_at": "2025-12-03T07:30:20Z",
@@ -537,25 +558,6 @@
       "starred_at": "2025-11-27T16:30:43Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/205611165?v=4",
       "html_url": "https://github.com/mcucci-recrowd"
-    },
-    {
-      "login": "vanlocvo",
-      "starred_at": "2025-11-27T11:43:13Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/34765693?v=4",
-      "html_url": "https://github.com/vanlocvo"
-    },
-    {
-      "login": "Kastrcn",
-      "starred_at": "2025-11-27T11:17:45Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/19508899?v=4",
-      "html_url": "https://github.com/Kastrcn"
-    },
-    {
-      "login": "tiago-campos-rlabs",
-      "starred_at": "2025-11-27T00:24:44Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/198139663?v=4",
-      "company": "@randylabs",
-      "html_url": "https://github.com/tiago-campos-rlabs"
     }
   ],
   "stars_timeline": [
@@ -573,7 +575,7 @@
     },
     {
       "date": "2025-09-10",
-      "count": 3
+      "count": 2
     },
     {
       "date": "2025-09-11",
@@ -909,7 +911,11 @@
     },
     {
       "date": "2025-12-03",
-      "count": 4
+      "count": 5
+    },
+    {
+      "date": "2025-12-04",
+      "count": 2
     }
   ],
   "companies_summary": []
