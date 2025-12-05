@@ -2,7 +2,7 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11414,
+    "stars": 11425,
     "forks": 667,
     "openIssues": 81,
     "watchers": 53,
@@ -12,7 +12,7 @@
   "contributors": [
     {
       "login": "ddupont808",
-      "contributions": 619,
+      "contributions": 622,
       "avatar_url": "https://avatars.githubusercontent.com/u/3820588?v=4",
       "html_url": "https://github.com/ddupont808"
     },
@@ -246,6 +246,71 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "dukecat0",
+      "starred_at": "2025-12-05T11:03:37Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68463158?v=4",
+      "company_org": "pypa",
+      "company_public_members": 59,
+      "html_url": "https://github.com/dukecat0"
+    },
+    {
+      "login": "xen0nym",
+      "starred_at": "2025-12-05T09:43:05Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57177732?v=4",
+      "html_url": "https://github.com/xen0nym"
+    },
+    {
+      "login": "ainatechnology",
+      "starred_at": "2025-12-05T08:19:49Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/227165736?v=4",
+      "company": "Aina Technology GmbH",
+      "html_url": "https://github.com/ainatechnology"
+    },
+    {
+      "login": "YXB-NKU",
+      "starred_at": "2025-12-05T07:49:26Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69071430?v=4",
+      "company": "MCG-NKU",
+      "html_url": "https://github.com/YXB-NKU"
+    },
+    {
+      "login": "drake-dot-o",
+      "starred_at": "2025-12-05T07:42:32Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26919772?v=4",
+      "html_url": "https://github.com/drake-dot-o"
+    },
+    {
+      "login": "g-Keerthiii",
+      "starred_at": "2025-12-05T05:16:54Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/143065159?v=4",
+      "html_url": "https://github.com/g-Keerthiii"
+    },
+    {
+      "login": "Mjago365",
+      "starred_at": "2025-12-04T23:22:23Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/221451775?v=4",
+      "html_url": "https://github.com/Mjago365"
+    },
+    {
+      "login": "phasehumans",
+      "starred_at": "2025-12-04T19:56:43Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193857698?v=4",
+      "html_url": "https://github.com/phasehumans"
+    },
+    {
+      "login": "Osilly",
+      "starred_at": "2025-12-04T19:05:28Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55748410?v=4",
+      "company": "East China Normal University",
+      "html_url": "https://github.com/Osilly"
+    },
+    {
+      "login": "Horldsence",
+      "starred_at": "2025-12-04T15:20:12Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92992976?v=4",
+      "html_url": "https://github.com/Horldsence"
+    },
     {
       "login": "corn1ng",
       "starred_at": "2025-12-04T03:54:14Z",
@@ -495,69 +560,6 @@
       "starred_at": "2025-11-28T14:17:09Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/223722661?v=4",
       "html_url": "https://github.com/johndelapena168"
-    },
-    {
-      "login": "everevolving365",
-      "starred_at": "2025-11-28T08:06:17Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/178332734?v=4",
-      "html_url": "https://github.com/everevolving365"
-    },
-    {
-      "login": "tomoharu-hayashi",
-      "starred_at": "2025-11-28T07:26:24Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/146327155?v=4",
-      "html_url": "https://github.com/tomoharu-hayashi"
-    },
-    {
-      "login": "mgprogm",
-      "starred_at": "2025-11-28T03:10:41Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2464499?v=4",
-      "html_url": "https://github.com/mgprogm"
-    },
-    {
-      "login": "nothinghereboii",
-      "starred_at": "2025-11-28T00:52:31Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/148618926?v=4",
-      "html_url": "https://github.com/nothinghereboii"
-    },
-    {
-      "login": "zichenzhang04",
-      "starred_at": "2025-11-27T23:27:36Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/113275319?v=4",
-      "company_org": "michiganhackers",
-      "company_public_members": 35,
-      "html_url": "https://github.com/zichenzhang04"
-    },
-    {
-      "login": "jingjia-peng",
-      "starred_at": "2025-11-27T22:23:12Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/145411378?v=4",
-      "company": "University of Pennsylvania",
-      "html_url": "https://github.com/jingjia-peng"
-    },
-    {
-      "login": "allie-welderson-AI",
-      "starred_at": "2025-11-27T21:55:45Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/208526805?v=4",
-      "html_url": "https://github.com/allie-welderson-AI"
-    },
-    {
-      "login": "dhabibi",
-      "starred_at": "2025-11-27T20:00:22Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/9087935?v=4",
-      "html_url": "https://github.com/dhabibi"
-    },
-    {
-      "login": "abobov",
-      "starred_at": "2025-11-27T18:02:45Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/162897?v=4",
-      "html_url": "https://github.com/abobov"
-    },
-    {
-      "login": "mcucci-recrowd",
-      "starred_at": "2025-11-27T16:30:43Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/205611165?v=4",
-      "html_url": "https://github.com/mcucci-recrowd"
     }
   ],
   "stars_timeline": [
@@ -575,7 +577,7 @@
     },
     {
       "date": "2025-09-10",
-      "count": 2
+      "count": 3
     },
     {
       "date": "2025-09-11",
@@ -915,7 +917,11 @@
     },
     {
       "date": "2025-12-04",
-      "count": 2
+      "count": 6
+    },
+    {
+      "date": "2025-12-05",
+      "count": 6
     }
   ],
   "companies_summary": []
