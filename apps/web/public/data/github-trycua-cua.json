@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11425,
-    "forks": 667,
-    "openIssues": 81,
+    "stars": 11435,
+    "forks": 670,
+    "openIssues": 83,
     "watchers": 53,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -246,6 +246,71 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "Emce95",
+      "starred_at": "2025-12-06T08:55:09Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32647908?v=4",
+      "html_url": "https://github.com/Emce95"
+    },
+    {
+      "login": "Ashutsoh1729",
+      "starred_at": "2025-12-06T06:10:17Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99027378?v=4",
+      "html_url": "https://github.com/Ashutsoh1729"
+    },
+    {
+      "login": "Mani-kanta-007",
+      "starred_at": "2025-12-06T05:15:38Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/129884750?v=4",
+      "html_url": "https://github.com/Mani-kanta-007"
+    },
+    {
+      "login": "travispchen",
+      "starred_at": "2025-12-06T03:12:26Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10150110?v=4",
+      "html_url": "https://github.com/travispchen"
+    },
+    {
+      "login": "tsurantino",
+      "starred_at": "2025-12-06T02:41:33Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1760749?v=4",
+      "html_url": "https://github.com/tsurantino"
+    },
+    {
+      "login": "justsml",
+      "starred_at": "2025-12-06T02:29:55Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/397632?v=4",
+      "company": "@MagicSchoolAi ",
+      "company_org": "hillside-software",
+      "company_public_members": 3,
+      "html_url": "https://github.com/justsml"
+    },
+    {
+      "login": "charfeng1",
+      "starred_at": "2025-12-05T15:43:15Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/175529697?v=4",
+      "html_url": "https://github.com/charfeng1"
+    },
+    {
+      "login": "alex-treebeard",
+      "starred_at": "2025-12-05T15:20:44Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57841277?v=4",
+      "company_org": "Human-Lambdas",
+      "company_public_members": 2,
+      "html_url": "https://github.com/alex-treebeard"
+    },
+    {
+      "login": "amo33",
+      "starred_at": "2025-12-05T14:24:32Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99354933?v=4",
+      "html_url": "https://github.com/amo33"
+    },
+    {
+      "login": "ioir123ju",
+      "starred_at": "2025-12-05T13:35:52Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14951957?v=4",
+      "html_url": "https://github.com/ioir123ju"
+    },
     {
       "login": "dukecat0",
       "starred_at": "2025-12-05T11:03:37Z",
@@ -498,68 +563,6 @@
       "company_org": "BoilerMake",
       "company_public_members": 19,
       "html_url": "https://github.com/viraatdas"
-    },
-    {
-      "login": "Fynn7",
-      "starred_at": "2025-11-29T18:42:35Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/82013676?v=4",
-      "company": "Universität Duisburg-Essen",
-      "html_url": "https://github.com/Fynn7"
-    },
-    {
-      "login": "slieenk",
-      "starred_at": "2025-11-29T16:35:51Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/210219568?v=4",
-      "html_url": "https://github.com/slieenk"
-    },
-    {
-      "login": "MilKLoNG1",
-      "starred_at": "2025-11-29T14:24:28Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/121134505?v=4",
-      "html_url": "https://github.com/MilKLoNG1"
-    },
-    {
-      "login": "bearworks",
-      "starred_at": "2025-11-29T09:02:25Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7309937?v=4",
-      "html_url": "https://github.com/bearworks"
-    },
-    {
-      "login": "shr00mie",
-      "starred_at": "2025-11-29T07:42:33Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7096317?v=4",
-      "html_url": "https://github.com/shr00mie"
-    },
-    {
-      "login": "ilyasubkhankulov",
-      "starred_at": "2025-11-29T06:12:32Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6537686?v=4",
-      "html_url": "https://github.com/ilyasubkhankulov"
-    },
-    {
-      "login": "forever1910",
-      "starred_at": "2025-11-29T05:40:38Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1361396?v=4",
-      "html_url": "https://github.com/forever1910"
-    },
-    {
-      "login": "3rd",
-      "starred_at": "2025-11-28T21:10:48Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/59587503?v=4",
-      "html_url": "https://github.com/3rd"
-    },
-    {
-      "login": "mvaljento",
-      "starred_at": "2025-11-28T17:10:22Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/376610?v=4",
-      "company": "Solinet",
-      "html_url": "https://github.com/mvaljento"
-    },
-    {
-      "login": "johndelapena168",
-      "starred_at": "2025-11-28T14:17:09Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/223722661?v=4",
-      "html_url": "https://github.com/johndelapena168"
     }
   ],
   "stars_timeline": [
@@ -921,6 +924,10 @@
     },
     {
       "date": "2025-12-05",
+      "count": 10
+    },
+    {
+      "date": "2025-12-06",
       "count": 6
     }
   ],
