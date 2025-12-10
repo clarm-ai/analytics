@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11460,
+    "stars": 11465,
     "forks": 670,
-    "openIssues": 80,
+    "openIssues": 79,
     "watchers": 53,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -12,13 +12,13 @@
   "contributors": [
     {
       "login": "ddupont808",
-      "contributions": 622,
+      "contributions": 649,
       "avatar_url": "https://avatars.githubusercontent.com/u/3820588?v=4",
       "html_url": "https://github.com/ddupont808"
     },
     {
       "login": "f-trycua",
-      "contributions": 510,
+      "contributions": 513,
       "avatar_url": "https://avatars.githubusercontent.com/u/195596869?v=4",
       "html_url": "https://github.com/f-trycua"
     },
@@ -54,7 +54,7 @@
     },
     {
       "login": "github-actions[bot]",
-      "contributions": 32,
+      "contributions": 34,
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
       "html_url": "https://github.com/apps/github-actions"
     },
@@ -252,6 +252,40 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "YuriIgorevich",
+      "starred_at": "2025-12-10T09:06:22Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20415274?v=4",
+      "html_url": "https://github.com/YuriIgorevich"
+    },
+    {
+      "login": "Locke0",
+      "starred_at": "2025-12-10T01:20:59Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47510557?v=4",
+      "company_org": "ManifoldRG",
+      "company_public_members": 18,
+      "html_url": "https://github.com/Locke0"
+    },
+    {
+      "login": "bob1231",
+      "starred_at": "2025-12-09T21:54:51Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28025272?v=4",
+      "company": "MIne",
+      "html_url": "https://github.com/bob1231"
+    },
+    {
+      "login": "Amitav-Krishna",
+      "starred_at": "2025-12-09T16:54:57Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75227207?v=4",
+      "company": "8090",
+      "html_url": "https://github.com/Amitav-Krishna"
+    },
+    {
+      "login": "ownicc",
+      "starred_at": "2025-12-09T14:55:50Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37160163?v=4",
+      "html_url": "https://github.com/ownicc"
+    },
     {
       "login": "NominalTrajectory",
       "starred_at": "2025-12-09T09:53:30Z",
@@ -540,37 +574,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/227165736?v=4",
       "company": "Aina Technology GmbH",
       "html_url": "https://github.com/ainatechnology"
-    },
-    {
-      "login": "YXB-NKU",
-      "starred_at": "2025-12-05T07:49:26Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/69071430?v=4",
-      "company": "MCG-NKU",
-      "html_url": "https://github.com/YXB-NKU"
-    },
-    {
-      "login": "drake-dot-o",
-      "starred_at": "2025-12-05T07:42:32Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26919772?v=4",
-      "html_url": "https://github.com/drake-dot-o"
-    },
-    {
-      "login": "g-Keerthiii",
-      "starred_at": "2025-12-05T05:16:54Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/143065159?v=4",
-      "html_url": "https://github.com/g-Keerthiii"
-    },
-    {
-      "login": "Mjago365",
-      "starred_at": "2025-12-04T23:22:23Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/221451775?v=4",
-      "html_url": "https://github.com/Mjago365"
-    },
-    {
-      "login": "phasehumans",
-      "starred_at": "2025-12-04T19:56:43Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/193857698?v=4",
-      "html_url": "https://github.com/phasehumans"
     }
   ],
   "stars_timeline": [
@@ -944,7 +947,11 @@
     },
     {
       "date": "2025-12-09",
-      "count": 6
+      "count": 9
+    },
+    {
+      "date": "2025-12-10",
+      "count": 2
     }
   ],
   "companies_summary": []

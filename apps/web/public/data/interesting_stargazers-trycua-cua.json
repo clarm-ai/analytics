@@ -17,6 +17,15 @@
     "html_url": "https://github.com/CharlieDixon"
   },
   {
+    "login": "Locke0",
+    "score": 14,
+    "reason": "org @ManifoldRG, medium public member count",
+    "avatar_url": "https://avatars.githubusercontent.com/u/47510557?v=4",
+    "company_org": "ManifoldRG",
+    "company_public_members": 18,
+    "html_url": "https://github.com/Locke0"
+  },
+  {
     "login": "iFurySt",
     "score": 6,
     "reason": "org @aide-family",
@@ -53,6 +62,36 @@
     "company_org": "Human-Lambdas",
     "company_public_members": 2,
     "html_url": "https://github.com/alex-treebeard"
+  },
+  {
+    "login": "YuriIgorevich",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/20415274?v=4",
+    "html_url": "https://github.com/YuriIgorevich"
+  },
+  {
+    "login": "bob1231",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/28025272?v=4",
+    "company": "MIne",
+    "html_url": "https://github.com/bob1231"
+  },
+  {
+    "login": "Amitav-Krishna",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/75227207?v=4",
+    "company": "8090",
+    "html_url": "https://github.com/Amitav-Krishna"
+  },
+  {
+    "login": "ownicc",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/37160163?v=4",
+    "html_url": "https://github.com/ownicc"
   },
   {
     "login": "NominalTrajectory",
@@ -332,41 +371,5 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/227165736?v=4",
     "company": "Aina Technology GmbH",
     "html_url": "https://github.com/ainatechnology"
-  },
-  {
-    "login": "YXB-NKU",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/69071430?v=4",
-    "company": "MCG-NKU",
-    "html_url": "https://github.com/YXB-NKU"
-  },
-  {
-    "login": "drake-dot-o",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/26919772?v=4",
-    "html_url": "https://github.com/drake-dot-o"
-  },
-  {
-    "login": "g-Keerthiii",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/143065159?v=4",
-    "html_url": "https://github.com/g-Keerthiii"
-  },
-  {
-    "login": "Mjago365",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/221451775?v=4",
-    "html_url": "https://github.com/Mjago365"
-  },
-  {
-    "login": "phasehumans",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/193857698?v=4",
-    "html_url": "https://github.com/phasehumans"
   }
 ]
