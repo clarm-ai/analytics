@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11465,
-    "forks": 670,
-    "openIssues": 79,
+    "stars": 11476,
+    "forks": 671,
+    "openIssues": 80,
     "watchers": 53,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -253,6 +253,82 @@
   ],
   "stargazers": [
     {
+      "login": "eR3R3",
+      "starred_at": "2025-12-11T10:18:18Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/178560249?v=4",
+      "company": "Shanghai Pinghe School",
+      "html_url": "https://github.com/eR3R3"
+    },
+    {
+      "login": "pcgeek86",
+      "starred_at": "2025-12-11T10:07:06Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/466713?v=4",
+      "company_org": "artofshell",
+      "company_public_members": 1,
+      "html_url": "https://github.com/pcgeek86"
+    },
+    {
+      "login": "fchengjin",
+      "starred_at": "2025-12-11T09:46:30Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/28423685?v=4",
+      "html_url": "https://github.com/fchengjin"
+    },
+    {
+      "login": "abcde55555",
+      "starred_at": "2025-12-11T06:54:47Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65110989?v=4",
+      "html_url": "https://github.com/abcde55555"
+    },
+    {
+      "login": "Aoki-311",
+      "starred_at": "2025-12-11T06:31:27Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/219852394?v=4",
+      "html_url": "https://github.com/Aoki-311"
+    },
+    {
+      "login": "robertpelloni",
+      "starred_at": "2025-12-11T06:26:47Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/673434?v=4",
+      "html_url": "https://github.com/robertpelloni"
+    },
+    {
+      "login": "licaibinbin",
+      "starred_at": "2025-12-11T03:44:49Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24726493?v=4",
+      "html_url": "https://github.com/licaibinbin"
+    },
+    {
+      "login": "MrGhabi",
+      "starred_at": "2025-12-11T03:21:12Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71220965?v=4",
+      "company": "SUSTech",
+      "html_url": "https://github.com/MrGhabi"
+    },
+    {
+      "login": "MartinQue",
+      "starred_at": "2025-12-11T01:27:49Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14249070?v=4",
+      "html_url": "https://github.com/MartinQue"
+    },
+    {
+      "login": "sparkyigniter95",
+      "starred_at": "2025-12-10T23:12:44Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/213269101?v=4",
+      "html_url": "https://github.com/sparkyigniter95"
+    },
+    {
+      "login": "stephen94125",
+      "starred_at": "2025-12-10T15:36:57Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68841104?v=4",
+      "html_url": "https://github.com/stephen94125"
+    },
+    {
+      "login": "iamvince",
+      "starred_at": "2025-12-10T13:09:55Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9721785?v=4",
+      "html_url": "https://github.com/iamvince"
+    },
+    {
       "login": "YuriIgorevich",
       "starred_at": "2025-12-10T09:06:22Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/20415274?v=4",
@@ -494,86 +570,6 @@
       "starred_at": "2025-12-06T08:55:09Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/32647908?v=4",
       "html_url": "https://github.com/Emce95"
-    },
-    {
-      "login": "Ashutsoh1729",
-      "starred_at": "2025-12-06T06:10:17Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/99027378?v=4",
-      "html_url": "https://github.com/Ashutsoh1729"
-    },
-    {
-      "login": "Mani-kanta-007",
-      "starred_at": "2025-12-06T05:15:38Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/129884750?v=4",
-      "html_url": "https://github.com/Mani-kanta-007"
-    },
-    {
-      "login": "travispchen",
-      "starred_at": "2025-12-06T03:12:26Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/10150110?v=4",
-      "html_url": "https://github.com/travispchen"
-    },
-    {
-      "login": "tsurantino",
-      "starred_at": "2025-12-06T02:41:33Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1760749?v=4",
-      "html_url": "https://github.com/tsurantino"
-    },
-    {
-      "login": "justsml",
-      "starred_at": "2025-12-06T02:29:55Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/397632?v=4",
-      "company": "@MagicSchoolAi ",
-      "company_org": "hillside-software",
-      "company_public_members": 3,
-      "html_url": "https://github.com/justsml"
-    },
-    {
-      "login": "charfeng1",
-      "starred_at": "2025-12-05T15:43:15Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/175529697?v=4",
-      "html_url": "https://github.com/charfeng1"
-    },
-    {
-      "login": "alex-treebeard",
-      "starred_at": "2025-12-05T15:20:44Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/57841277?v=4",
-      "company_org": "Human-Lambdas",
-      "company_public_members": 2,
-      "html_url": "https://github.com/alex-treebeard"
-    },
-    {
-      "login": "amo33",
-      "starred_at": "2025-12-05T14:24:32Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/99354933?v=4",
-      "html_url": "https://github.com/amo33"
-    },
-    {
-      "login": "ioir123ju",
-      "starred_at": "2025-12-05T13:35:52Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/14951957?v=4",
-      "html_url": "https://github.com/ioir123ju"
-    },
-    {
-      "login": "dukecat0",
-      "starred_at": "2025-12-05T11:03:37Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/68463158?v=4",
-      "company_org": "pypa",
-      "company_public_members": 59,
-      "html_url": "https://github.com/dukecat0"
-    },
-    {
-      "login": "xen0nym",
-      "starred_at": "2025-12-05T09:43:05Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/57177732?v=4",
-      "html_url": "https://github.com/xen0nym"
-    },
-    {
-      "login": "ainatechnology",
-      "starred_at": "2025-12-05T08:19:49Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/227165736?v=4",
-      "company": "Aina Technology GmbH",
-      "html_url": "https://github.com/ainatechnology"
     }
   ],
   "stars_timeline": [
@@ -927,7 +923,7 @@
     },
     {
       "date": "2025-12-04",
-      "count": 6
+      "count": 5
     },
     {
       "date": "2025-12-05",
@@ -951,7 +947,11 @@
     },
     {
       "date": "2025-12-10",
-      "count": 2
+      "count": 5
+    },
+    {
+      "date": "2025-12-11",
+      "count": 9
     }
   ],
   "companies_summary": []
