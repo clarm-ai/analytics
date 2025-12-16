@@ -1,12 +1,13 @@
 [
   {
-    "login": "Locke0",
-    "score": 14,
-    "reason": "org @ManifoldRG, medium public member count",
-    "avatar_url": "https://avatars.githubusercontent.com/u/47510557?v=4",
-    "company_org": "ManifoldRG",
-    "company_public_members": 18,
-    "html_url": "https://github.com/Locke0"
+    "login": "BirkhoffLee",
+    "score": 6,
+    "reason": "org @NamelessMC",
+    "avatar_url": "https://avatars.githubusercontent.com/u/8148095?v=4",
+    "company": "Politecnico di Milano",
+    "company_org": "NamelessMC",
+    "company_public_members": 8,
+    "html_url": "https://github.com/BirkhoffLee"
   },
   {
     "login": "skihyeon",
@@ -44,6 +45,65 @@
     "company_org": "artofshell",
     "company_public_members": 1,
     "html_url": "https://github.com/pcgeek86"
+  },
+  {
+    "login": "YuekuiBai",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/217445449?v=4",
+    "html_url": "https://github.com/YuekuiBai"
+  },
+  {
+    "login": "qychen2001",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/72334646?v=4",
+    "company": "Zhejiang University",
+    "html_url": "https://github.com/qychen2001"
+  },
+  {
+    "login": "soovittt",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/98675540?v=4",
+    "html_url": "https://github.com/soovittt"
+  },
+  {
+    "login": "MichaelYONGHENG",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/46621406?v=4",
+    "company": "Nanjing University of Posts and Telecommunications",
+    "html_url": "https://github.com/MichaelYONGHENG"
+  },
+  {
+    "login": "skylinezum",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/3753009?v=4",
+    "company": "@stark-tech-space",
+    "html_url": "https://github.com/skylinezum"
+  },
+  {
+    "login": "an7tang",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/75532214?v=4",
+    "html_url": "https://github.com/an7tang"
+  },
+  {
+    "login": "tulong66",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/13995023?v=4",
+    "html_url": "https://github.com/tulong66"
+  },
+  {
+    "login": "A5LAN",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/8560891?v=4",
+    "html_url": "https://github.com/A5LAN"
   },
   {
     "login": "Mrhuang09",
@@ -310,62 +370,5 @@
     "reason": "baseline",
     "avatar_url": "https://avatars.githubusercontent.com/u/219852394?v=4",
     "html_url": "https://github.com/Aoki-311"
-  },
-  {
-    "login": "robertpelloni",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/673434?v=4",
-    "html_url": "https://github.com/robertpelloni"
-  },
-  {
-    "login": "licaibinbin",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/24726493?v=4",
-    "html_url": "https://github.com/licaibinbin"
-  },
-  {
-    "login": "MrGhabi",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/71220965?v=4",
-    "company": "SUSTech",
-    "html_url": "https://github.com/MrGhabi"
-  },
-  {
-    "login": "MartinQue",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/14249070?v=4",
-    "html_url": "https://github.com/MartinQue"
-  },
-  {
-    "login": "sparkyigniter95",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/213269101?v=4",
-    "html_url": "https://github.com/sparkyigniter95"
-  },
-  {
-    "login": "stephen94125",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/68841104?v=4",
-    "html_url": "https://github.com/stephen94125"
-  },
-  {
-    "login": "iamvince",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/9721785?v=4",
-    "html_url": "https://github.com/iamvince"
-  },
-  {
-    "login": "YuriIgorevich",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/20415274?v=4",
-    "html_url": "https://github.com/YuriIgorevich"
   }
 ]
