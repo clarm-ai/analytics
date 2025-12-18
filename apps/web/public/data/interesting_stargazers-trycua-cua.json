@@ -1,5 +1,13 @@
 [
   {
+    "login": "shwanton",
+    "score": 12,
+    "reason": "known tech company",
+    "avatar_url": "https://avatars.githubusercontent.com/u/96719?v=4",
+    "company": "@facebook ",
+    "html_url": "https://github.com/shwanton"
+  },
+  {
     "login": "Jasonqi146",
     "score": 6,
     "reason": "org @sotopia-lab",
@@ -38,13 +46,26 @@
     "html_url": "https://github.com/zysuper"
   },
   {
-    "login": "enginespot",
-    "score": 6,
-    "reason": "org @trendmicro-frontend",
-    "avatar_url": "https://avatars.githubusercontent.com/u/1422439?v=4",
-    "company_org": "trendmicro-frontend",
-    "company_public_members": 4,
-    "html_url": "https://github.com/enginespot"
+    "login": "dc-acronym",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/132290749?v=4",
+    "html_url": "https://github.com/dc-acronym"
+  },
+  {
+    "login": "13027195363",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/28896653?v=4",
+    "html_url": "https://github.com/13027195363"
+  },
+  {
+    "login": "runamu",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/95284774?v=4",
+    "company": "University of Michigan",
+    "html_url": "https://github.com/runamu"
   },
   {
     "login": "saikosis",
@@ -351,27 +372,5 @@
     "reason": "baseline",
     "avatar_url": "https://avatars.githubusercontent.com/u/38657002?v=4",
     "html_url": "https://github.com/sonnhfit"
-  },
-  {
-    "login": "dahoos",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/57218059?v=4",
-    "html_url": "https://github.com/dahoos"
-  },
-  {
-    "login": "bonniss",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/36831801?v=4",
-    "company": "DT-Corp",
-    "html_url": "https://github.com/bonniss"
-  },
-  {
-    "login": "yecllsl",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/1829240?v=4",
-    "html_url": "https://github.com/yecllsl"
   }
 ]
