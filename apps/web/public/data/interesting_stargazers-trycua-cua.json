@@ -1,11 +1,28 @@
 [
   {
+    "login": "VimalKumarS",
+    "score": 12,
+    "reason": "known tech company",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5615148?v=4",
+    "company": "facebook",
+    "html_url": "https://github.com/VimalKumarS"
+  },
+  {
     "login": "shwanton",
     "score": 12,
     "reason": "known tech company",
     "avatar_url": "https://avatars.githubusercontent.com/u/96719?v=4",
     "company": "@facebook ",
     "html_url": "https://github.com/shwanton"
+  },
+  {
+    "login": "espetro",
+    "score": 6,
+    "reason": "org @GDGMalaga",
+    "avatar_url": "https://avatars.githubusercontent.com/u/26749475?v=4",
+    "company_org": "GDGMalaga",
+    "company_public_members": 4,
+    "html_url": "https://github.com/espetro"
   },
   {
     "login": "Jasonqi146",
@@ -17,24 +34,40 @@
     "html_url": "https://github.com/Jasonqi146"
   },
   {
-    "login": "BirkhoffLee",
-    "score": 6,
-    "reason": "org @NamelessMC",
-    "avatar_url": "https://avatars.githubusercontent.com/u/8148095?v=4",
-    "company": "Politecnico di Milano",
-    "company_org": "NamelessMC",
-    "company_public_members": 8,
-    "html_url": "https://github.com/BirkhoffLee"
+    "login": "laonger",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/46211?v=4",
+    "html_url": "https://github.com/laonger"
   },
   {
-    "login": "skihyeon",
-    "score": 6,
-    "reason": "org @google-pirates",
-    "avatar_url": "https://avatars.githubusercontent.com/u/75467378?v=4",
-    "company": "Konkuk Univ.",
-    "company_org": "google-pirates",
-    "company_public_members": 1,
-    "html_url": "https://github.com/skihyeon"
+    "login": "OSOSerious",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/167031594?v=4",
+    "html_url": "https://github.com/OSOSerious"
+  },
+  {
+    "login": "alexgrankinukr-hash",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/249477966?v=4",
+    "html_url": "https://github.com/alexgrankinukr-hash"
+  },
+  {
+    "login": "Ltnsd",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2130202?v=4",
+    "html_url": "https://github.com/Ltnsd"
+  },
+  {
+    "login": "chuchuroth",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/62182062?v=4",
+    "company": "KIT",
+    "html_url": "https://github.com/chuchuroth"
   },
   {
     "login": "MarkLo127",
@@ -335,41 +368,5 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/3753009?v=4",
     "company": "@stark-tech-space",
     "html_url": "https://github.com/skylinezum"
-  },
-  {
-    "login": "an7tang",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/75532214?v=4",
-    "html_url": "https://github.com/an7tang"
-  },
-  {
-    "login": "tulong66",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/13995023?v=4",
-    "html_url": "https://github.com/tulong66"
-  },
-  {
-    "login": "A5LAN",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/8560891?v=4",
-    "html_url": "https://github.com/A5LAN"
-  },
-  {
-    "login": "Mrhuang09",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/137679815?v=4",
-    "company": "华人区",
-    "html_url": "https://github.com/Mrhuang09"
-  },
-  {
-    "login": "kinpoo",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/803667?v=4",
-    "html_url": "https://github.com/kinpoo"
   }
 ]
