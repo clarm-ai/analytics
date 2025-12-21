@@ -16,6 +16,15 @@
     "html_url": "https://github.com/shwanton"
   },
   {
+    "login": "avonian",
+    "score": 6,
+    "reason": "org @NForce-ai",
+    "avatar_url": "https://avatars.githubusercontent.com/u/5542980?v=4",
+    "company_org": "NForce-ai",
+    "company_public_members": 1,
+    "html_url": "https://github.com/avonian"
+  },
+  {
     "login": "espetro",
     "score": 6,
     "reason": "org @GDGMalaga",
@@ -32,6 +41,49 @@
     "company_org": "sotopia-lab",
     "company_public_members": 4,
     "html_url": "https://github.com/Jasonqi146"
+  },
+  {
+    "login": "MaFi77",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/159696048?v=4",
+    "html_url": "https://github.com/MaFi77"
+  },
+  {
+    "login": "wilsonlee2356",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/116363416?v=4",
+    "html_url": "https://github.com/wilsonlee2356"
+  },
+  {
+    "login": "Rajdeep7",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/13986440?v=4",
+    "company": "Docme Technologies Ltd",
+    "html_url": "https://github.com/Rajdeep7"
+  },
+  {
+    "login": "ramezio",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/79846963?v=4",
+    "html_url": "https://github.com/ramezio"
+  },
+  {
+    "login": "Tobe2d",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/4099839?v=4",
+    "html_url": "https://github.com/Tobe2d"
+  },
+  {
+    "login": "vdm",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/150002?v=4",
+    "html_url": "https://github.com/vdm"
   },
   {
     "login": "laonger",
@@ -315,58 +367,5 @@
     "reason": "baseline",
     "avatar_url": "https://avatars.githubusercontent.com/u/136272022?v=4",
     "html_url": "https://github.com/bevowoved"
-  },
-  {
-    "login": "charlie-cao",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/226793?v=4",
-    "company": "ALTA Labs",
-    "html_url": "https://github.com/charlie-cao"
-  },
-  {
-    "login": "Phil-Fan",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/56161071?v=4",
-    "html_url": "https://github.com/Phil-Fan"
-  },
-  {
-    "login": "YuekuiBai",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/217445449?v=4",
-    "html_url": "https://github.com/YuekuiBai"
-  },
-  {
-    "login": "qychen2001",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/72334646?v=4",
-    "company": "Zhejiang University",
-    "html_url": "https://github.com/qychen2001"
-  },
-  {
-    "login": "soovittt",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/98675540?v=4",
-    "html_url": "https://github.com/soovittt"
-  },
-  {
-    "login": "MichaelYONGHENG",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/46621406?v=4",
-    "company": "Nanjing University of Posts and Telecommunications",
-    "html_url": "https://github.com/MichaelYONGHENG"
-  },
-  {
-    "login": "skylinezum",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/3753009?v=4",
-    "company": "@stark-tech-space",
-    "html_url": "https://github.com/skylinezum"
   }
 ]

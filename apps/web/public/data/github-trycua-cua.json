@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11562,
-    "forks": 672,
-    "openIssues": 83,
+    "stars": 11569,
+    "forks": 673,
+    "openIssues": 84,
     "watchers": 53,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -18,7 +18,7 @@
     },
     {
       "login": "f-trycua",
-      "contributions": 519,
+      "contributions": 520,
       "avatar_url": "https://avatars.githubusercontent.com/u/195596869?v=4",
       "html_url": "https://github.com/f-trycua"
     },
@@ -47,22 +47,22 @@
       "html_url": "https://github.com/YeIIcw"
     },
     {
-      "login": "allcontributors[bot]",
-      "contributions": 42,
-      "avatar_url": "https://avatars.githubusercontent.com/in/23186?v=4",
-      "html_url": "https://github.com/apps/allcontributors"
+      "login": "synacktraa",
+      "contributions": 52,
+      "avatar_url": "https://avatars.githubusercontent.com/u/91981716?v=4",
+      "html_url": "https://github.com/synacktraa"
     },
     {
       "login": "github-actions[bot]",
-      "contributions": 39,
+      "contributions": 43,
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
       "html_url": "https://github.com/apps/github-actions"
     },
     {
-      "login": "synacktraa",
-      "contributions": 34,
-      "avatar_url": "https://avatars.githubusercontent.com/u/91981716?v=4",
-      "html_url": "https://github.com/synacktraa"
+      "login": "allcontributors[bot]",
+      "contributions": 42,
+      "avatar_url": "https://avatars.githubusercontent.com/in/23186?v=4",
+      "html_url": "https://github.com/apps/allcontributors"
     },
     {
       "login": "aktech",
@@ -252,6 +252,51 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "MaFi77",
+      "starred_at": "2025-12-21T11:22:30Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/159696048?v=4",
+      "html_url": "https://github.com/MaFi77"
+    },
+    {
+      "login": "wilsonlee2356",
+      "starred_at": "2025-12-21T10:19:59Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/116363416?v=4",
+      "html_url": "https://github.com/wilsonlee2356"
+    },
+    {
+      "login": "Rajdeep7",
+      "starred_at": "2025-12-21T00:55:19Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13986440?v=4",
+      "company": "Docme Technologies Ltd",
+      "html_url": "https://github.com/Rajdeep7"
+    },
+    {
+      "login": "ramezio",
+      "starred_at": "2025-12-20T23:58:54Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79846963?v=4",
+      "html_url": "https://github.com/ramezio"
+    },
+    {
+      "login": "Tobe2d",
+      "starred_at": "2025-12-20T19:48:23Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4099839?v=4",
+      "html_url": "https://github.com/Tobe2d"
+    },
+    {
+      "login": "vdm",
+      "starred_at": "2025-12-20T16:44:59Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150002?v=4",
+      "html_url": "https://github.com/vdm"
+    },
+    {
+      "login": "avonian",
+      "starred_at": "2025-12-20T15:47:15Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5542980?v=4",
+      "company_org": "NForce-ai",
+      "company_public_members": 1,
+      "html_url": "https://github.com/avonian"
+    },
     {
       "login": "espetro",
       "starred_at": "2025-12-20T10:12:43Z",
@@ -525,52 +570,6 @@
       "starred_at": "2025-12-16T15:43:14Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/136272022?v=4",
       "html_url": "https://github.com/bevowoved"
-    },
-    {
-      "login": "charlie-cao",
-      "starred_at": "2025-12-16T15:15:43Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/226793?v=4",
-      "company": "ALTA Labs",
-      "html_url": "https://github.com/charlie-cao"
-    },
-    {
-      "login": "Phil-Fan",
-      "starred_at": "2025-12-16T15:09:12Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/56161071?v=4",
-      "html_url": "https://github.com/Phil-Fan"
-    },
-    {
-      "login": "YuekuiBai",
-      "starred_at": "2025-12-16T12:02:30Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/217445449?v=4",
-      "html_url": "https://github.com/YuekuiBai"
-    },
-    {
-      "login": "qychen2001",
-      "starred_at": "2025-12-16T09:54:33Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/72334646?v=4",
-      "company": "Zhejiang University",
-      "html_url": "https://github.com/qychen2001"
-    },
-    {
-      "login": "soovittt",
-      "starred_at": "2025-12-16T09:11:49Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/98675540?v=4",
-      "html_url": "https://github.com/soovittt"
-    },
-    {
-      "login": "MichaelYONGHENG",
-      "starred_at": "2025-12-16T08:40:45Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/46621406?v=4",
-      "company": "Nanjing University of Posts and Telecommunications",
-      "html_url": "https://github.com/MichaelYONGHENG"
-    },
-    {
-      "login": "skylinezum",
-      "starred_at": "2025-12-16T08:23:19Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/3753009?v=4",
-      "company": "@stark-tech-space",
-      "html_url": "https://github.com/skylinezum"
     }
   ],
   "stars_timeline": [
@@ -956,7 +955,11 @@
     },
     {
       "date": "2025-12-20",
-      "count": 2
+      "count": 6
+    },
+    {
+      "date": "2025-12-21",
+      "count": 3
     }
   ],
   "companies_summary": []
