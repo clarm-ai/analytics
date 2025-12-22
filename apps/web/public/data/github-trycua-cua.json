@@ -3,7 +3,7 @@
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
     "stars": 11569,
-    "forks": 673,
+    "forks": 675,
     "openIssues": 84,
     "watchers": 53,
     "owner": "trycua",
@@ -18,7 +18,7 @@
     },
     {
       "login": "f-trycua",
-      "contributions": 520,
+      "contributions": 530,
       "avatar_url": "https://avatars.githubusercontent.com/u/195596869?v=4",
       "html_url": "https://github.com/f-trycua"
     },
@@ -252,6 +252,19 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "entykey",
+      "starred_at": "2025-12-22T07:59:19Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89012668?v=4",
+      "company": "Ho Chi Minh University of Education",
+      "html_url": "https://github.com/entykey"
+    },
+    {
+      "login": "alvin-up",
+      "starred_at": "2025-12-22T03:09:31Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7939005?v=4",
+      "html_url": "https://github.com/alvin-up"
+    },
     {
       "login": "MaFi77",
       "starred_at": "2025-12-21T11:22:30Z",
@@ -558,18 +571,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/72913784?v=4",
       "company": "Otto Group one.O",
       "html_url": "https://github.com/klemenstraeger"
-    },
-    {
-      "login": "AumOzaa",
-      "starred_at": "2025-12-16T18:01:17Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/177334006?v=4",
-      "html_url": "https://github.com/AumOzaa"
-    },
-    {
-      "login": "bevowoved",
-      "starred_at": "2025-12-16T15:43:14Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/136272022?v=4",
-      "html_url": "https://github.com/bevowoved"
     }
   ],
   "stars_timeline": [
@@ -587,7 +588,7 @@
     },
     {
       "date": "2025-09-19",
-      "count": 9
+      "count": 8
     },
     {
       "date": "2025-09-20",
@@ -839,7 +840,7 @@
     },
     {
       "date": "2025-11-21",
-      "count": 12
+      "count": 11
     },
     {
       "date": "2025-11-22",
@@ -960,6 +961,10 @@
     {
       "date": "2025-12-21",
       "count": 3
+    },
+    {
+      "date": "2025-12-22",
+      "count": 2
     }
   ],
   "companies_summary": []
