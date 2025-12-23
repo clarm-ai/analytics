@@ -2,7 +2,7 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11569,
+    "stars": 11578,
     "forks": 675,
     "openIssues": 84,
     "watchers": 53,
@@ -48,13 +48,13 @@
     },
     {
       "login": "synacktraa",
-      "contributions": 52,
+      "contributions": 68,
       "avatar_url": "https://avatars.githubusercontent.com/u/91981716?v=4",
       "html_url": "https://github.com/synacktraa"
     },
     {
       "login": "github-actions[bot]",
-      "contributions": 43,
+      "contributions": 45,
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
       "html_url": "https://github.com/apps/github-actions"
     },
@@ -252,6 +252,67 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "linhaojia13",
+      "starred_at": "2025-12-23T08:48:59Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38275612?v=4",
+      "company": "Xiamen University",
+      "html_url": "https://github.com/linhaojia13"
+    },
+    {
+      "login": "rungao",
+      "starred_at": "2025-12-23T07:29:56Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3785120?v=4",
+      "html_url": "https://github.com/rungao"
+    },
+    {
+      "login": "hongling2511",
+      "starred_at": "2025-12-23T06:35:30Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134196080?v=4",
+      "html_url": "https://github.com/hongling2511"
+    },
+    {
+      "login": "tcitry",
+      "starred_at": "2025-12-23T05:31:34Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5220740?v=4",
+      "company_org": "luojilab",
+      "company_public_members": 3,
+      "html_url": "https://github.com/tcitry"
+    },
+    {
+      "login": "JecyG",
+      "starred_at": "2025-12-23T01:58:45Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38713815?v=4",
+      "html_url": "https://github.com/JecyG"
+    },
+    {
+      "login": "EEEREEE-ereer",
+      "starred_at": "2025-12-23T01:22:07Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/122385320?v=4",
+      "company": "无",
+      "html_url": "https://github.com/EEEREEE-ereer"
+    },
+    {
+      "login": "naoyayamamoto",
+      "starred_at": "2025-12-22T22:13:49Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21324532?v=4",
+      "html_url": "https://github.com/naoyayamamoto"
+    },
+    {
+      "login": "lizzzcai",
+      "starred_at": "2025-12-22T18:03:46Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22748546?v=4",
+      "company": "@SAP",
+      "company_org": "SAP",
+      "company_public_members": 631,
+      "html_url": "https://github.com/lizzzcai"
+    },
+    {
+      "login": "nevereverquits",
+      "starred_at": "2025-12-22T17:16:51Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/111147662?v=4",
+      "html_url": "https://github.com/nevereverquits"
+    },
     {
       "login": "entykey",
       "starred_at": "2025-12-22T07:59:19Z",
@@ -511,66 +572,6 @@
       "starred_at": "2025-12-17T09:42:39Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/6669808?v=4",
       "html_url": "https://github.com/dan-dr"
-    },
-    {
-      "login": "AKEXZ",
-      "starred_at": "2025-12-17T07:29:30Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/21047590?v=4",
-      "html_url": "https://github.com/AKEXZ"
-    },
-    {
-      "login": "jakbb",
-      "starred_at": "2025-12-17T07:17:04Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2070306?v=4",
-      "html_url": "https://github.com/jakbb"
-    },
-    {
-      "login": "nazeco",
-      "starred_at": "2025-12-17T02:02:41Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26828430?v=4",
-      "company": "Guilin University of Electronic Technology",
-      "html_url": "https://github.com/nazeco"
-    },
-    {
-      "login": "Yaohui-Zhang",
-      "starred_at": "2025-12-17T00:23:57Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/71767251?v=4",
-      "company": "Stanford University",
-      "html_url": "https://github.com/Yaohui-Zhang"
-    },
-    {
-      "login": "aniketmishr",
-      "starred_at": "2025-12-17T00:14:19Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/151903859?v=4",
-      "html_url": "https://github.com/aniketmishr"
-    },
-    {
-      "login": "aditya2592",
-      "starred_at": "2025-12-16T20:47:21Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2186078?v=4",
-      "company": "Medra AI",
-      "html_url": "https://github.com/aditya2592"
-    },
-    {
-      "login": "wangzhan",
-      "starred_at": "2025-12-16T20:19:07Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1255392?v=4",
-      "html_url": "https://github.com/wangzhan"
-    },
-    {
-      "login": "Jasonqi146",
-      "starred_at": "2025-12-16T20:08:34Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/50866817?v=4",
-      "company_org": "sotopia-lab",
-      "company_public_members": 4,
-      "html_url": "https://github.com/Jasonqi146"
-    },
-    {
-      "login": "klemenstraeger",
-      "starred_at": "2025-12-16T19:09:00Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/72913784?v=4",
-      "company": "Otto Group one.O",
-      "html_url": "https://github.com/klemenstraeger"
     }
   ],
   "stars_timeline": [
@@ -964,7 +965,11 @@
     },
     {
       "date": "2025-12-22",
-      "count": 2
+      "count": 5
+    },
+    {
+      "date": "2025-12-23",
+      "count": 6
     }
   ],
   "companies_summary": []
