@@ -10,12 +10,30 @@
     "html_url": "https://github.com/lizzzcai"
   },
   {
+    "login": "eladcandroid",
+    "score": 16,
+    "reason": "senior title",
+    "avatar_url": "https://avatars.githubusercontent.com/u/13297000?v=4",
+    "company": "LLM + MCP = ❤️ | GoCode Founder",
+    "html_url": "https://github.com/eladcandroid"
+  },
+  {
     "login": "VimalKumarS",
     "score": 12,
     "reason": "known tech company",
     "avatar_url": "https://avatars.githubusercontent.com/u/5615148?v=4",
     "company": "facebook",
     "html_url": "https://github.com/VimalKumarS"
+  },
+  {
+    "login": "hwclass",
+    "score": 6,
+    "reason": "org @paranoiaproject",
+    "avatar_url": "https://avatars.githubusercontent.com/u/3750931?v=4",
+    "company": "@wurth",
+    "company_org": "paranoiaproject",
+    "company_public_members": 2,
+    "html_url": "https://github.com/hwclass"
   },
   {
     "login": "lizhizhou",
@@ -53,6 +71,21 @@
     "company_org": "GDGMalaga",
     "company_public_members": 4,
     "html_url": "https://github.com/espetro"
+  },
+  {
+    "login": "krishnaS137",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/127772632?v=4",
+    "html_url": "https://github.com/krishnaS137"
+  },
+  {
+    "login": "ZhiQ57",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/113429832?v=4",
+    "company": "Guangdong Polytechnic Normal University",
+    "html_url": "https://github.com/ZhiQ57"
   },
   {
     "login": "FlowerWrong",
@@ -343,35 +376,5 @@
     "avatar_url": "https://avatars.githubusercontent.com/u/1174386?v=4",
     "company": "Essential AI",
     "html_url": "https://github.com/ashishtanwer"
-  },
-  {
-    "login": "somdipto",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/62615151?v=4",
-    "html_url": "https://github.com/somdipto"
-  },
-  {
-    "login": "0xymor0n",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/19578744?v=4",
-    "html_url": "https://github.com/0xymor0n"
-  },
-  {
-    "login": "Educg550",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/47800334?v=4",
-    "company": "Ciência da Computação - USP",
-    "html_url": "https://github.com/Educg550"
-  },
-  {
-    "login": "matheusfrainer",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/204448919?v=4",
-    "company": "Liberta Investimentos",
-    "html_url": "https://github.com/matheusfrainer"
   }
 ]

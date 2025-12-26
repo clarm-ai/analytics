@@ -2,8 +2,8 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11584,
-    "forks": 673,
+    "stars": 11588,
+    "forks": 675,
     "openIssues": 82,
     "watchers": 53,
     "owner": "trycua",
@@ -252,6 +252,35 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "krishnaS137",
+      "starred_at": "2025-12-26T05:11:52Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127772632?v=4",
+      "html_url": "https://github.com/krishnaS137"
+    },
+    {
+      "login": "ZhiQ57",
+      "starred_at": "2025-12-26T02:26:38Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/113429832?v=4",
+      "company": "Guangdong Polytechnic Normal University",
+      "html_url": "https://github.com/ZhiQ57"
+    },
+    {
+      "login": "hwclass",
+      "starred_at": "2025-12-25T18:12:16Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3750931?v=4",
+      "company": "@wurth",
+      "company_org": "paranoiaproject",
+      "company_public_members": 2,
+      "html_url": "https://github.com/hwclass"
+    },
+    {
+      "login": "eladcandroid",
+      "starred_at": "2025-12-25T12:15:50Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13297000?v=4",
+      "company": "LLM + MCP = ❤️ | GoCode Founder",
+      "html_url": "https://github.com/eladcandroid"
+    },
     {
       "login": "FlowerWrong",
       "starred_at": "2025-12-25T07:36:01Z",
@@ -550,32 +579,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/1174386?v=4",
       "company": "Essential AI",
       "html_url": "https://github.com/ashishtanwer"
-    },
-    {
-      "login": "somdipto",
-      "starred_at": "2025-12-18T22:48:06Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/62615151?v=4",
-      "html_url": "https://github.com/somdipto"
-    },
-    {
-      "login": "0xymor0n",
-      "starred_at": "2025-12-18T22:46:34Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/19578744?v=4",
-      "html_url": "https://github.com/0xymor0n"
-    },
-    {
-      "login": "Educg550",
-      "starred_at": "2025-12-18T18:00:11Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/47800334?v=4",
-      "company": "Ciência da Computação - USP",
-      "html_url": "https://github.com/Educg550"
-    },
-    {
-      "login": "matheusfrainer",
-      "starred_at": "2025-12-18T17:54:06Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/204448919?v=4",
-      "company": "Liberta Investimentos",
-      "html_url": "https://github.com/matheusfrainer"
     }
   ],
   "stars_timeline": [
@@ -981,6 +984,10 @@
     },
     {
       "date": "2025-12-25",
+      "count": 4
+    },
+    {
+      "date": "2025-12-26",
       "count": 2
     }
   ],
