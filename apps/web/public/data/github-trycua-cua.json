@@ -2,7 +2,7 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11588,
+    "stars": 11592,
     "forks": 675,
     "openIssues": 82,
     "watchers": 53,
@@ -252,6 +252,36 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "yokiguan",
+      "starred_at": "2025-12-27T09:22:41Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44263718?v=4",
+      "html_url": "https://github.com/yokiguan"
+    },
+    {
+      "login": "marcelocruzrpa",
+      "starred_at": "2025-12-27T06:47:00Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/170408845?v=4",
+      "html_url": "https://github.com/marcelocruzrpa"
+    },
+    {
+      "login": "CtfChan",
+      "starred_at": "2025-12-26T23:58:26Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23730526?v=4",
+      "html_url": "https://github.com/CtfChan"
+    },
+    {
+      "login": "Woodhousetranas",
+      "starred_at": "2025-12-26T23:36:51Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/191524393?v=4",
+      "html_url": "https://github.com/Woodhousetranas"
+    },
+    {
+      "login": "srsergiolazaro",
+      "starred_at": "2025-12-26T17:22:38Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21991308?v=4",
+      "html_url": "https://github.com/srsergiolazaro"
+    },
     {
       "login": "krishnaS137",
       "starred_at": "2025-12-26T05:11:52Z",
@@ -548,37 +578,6 @@
       "starred_at": "2025-12-19T05:49:56Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/213059524?v=4",
       "html_url": "https://github.com/FayaaDev"
-    },
-    {
-      "login": "contextisall",
-      "starred_at": "2025-12-19T03:41:58Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/131839827?v=4",
-      "html_url": "https://github.com/contextisall"
-    },
-    {
-      "login": "owenconjol-a11y",
-      "starred_at": "2025-12-19T03:23:09Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/249371459?v=4",
-      "html_url": "https://github.com/owenconjol-a11y"
-    },
-    {
-      "login": "gaursomya777-dev",
-      "starred_at": "2025-12-19T01:11:59Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/224866862?v=4",
-      "html_url": "https://github.com/gaursomya777-dev"
-    },
-    {
-      "login": "Muhammad282w",
-      "starred_at": "2025-12-18T23:55:48Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/203566185?v=4",
-      "html_url": "https://github.com/Muhammad282w"
-    },
-    {
-      "login": "ashishtanwer",
-      "starred_at": "2025-12-18T23:24:27Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1174386?v=4",
-      "company": "Essential AI",
-      "html_url": "https://github.com/ashishtanwer"
     }
   ],
   "stars_timeline": [
@@ -596,7 +595,7 @@
     },
     {
       "date": "2025-09-19",
-      "count": 3
+      "count": 2
     },
     {
       "date": "2025-09-20",
@@ -988,6 +987,10 @@
     },
     {
       "date": "2025-12-26",
+      "count": 5
+    },
+    {
+      "date": "2025-12-27",
       "count": 2
     }
   ],
