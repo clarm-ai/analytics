@@ -18,6 +18,16 @@
     "html_url": "https://github.com/eladcandroid"
   },
   {
+    "login": "hoverlover",
+    "score": 6,
+    "reason": "org @genuitytech",
+    "avatar_url": "https://avatars.githubusercontent.com/u/169285?v=4",
+    "company": "Overland Addict",
+    "company_org": "genuitytech",
+    "company_public_members": 1,
+    "html_url": "https://github.com/hoverlover"
+  },
+  {
     "login": "hwclass",
     "score": 6,
     "reason": "org @paranoiaproject",
@@ -47,22 +57,33 @@
     "html_url": "https://github.com/tcitry"
   },
   {
-    "login": "avonian",
-    "score": 6,
-    "reason": "org @NForce-ai",
-    "avatar_url": "https://avatars.githubusercontent.com/u/5542980?v=4",
-    "company_org": "NForce-ai",
-    "company_public_members": 1,
-    "html_url": "https://github.com/avonian"
+    "login": "dreamcodez",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/42952?v=4",
+    "html_url": "https://github.com/dreamcodez"
   },
   {
-    "login": "espetro",
-    "score": 6,
-    "reason": "org @GDGMalaga",
-    "avatar_url": "https://avatars.githubusercontent.com/u/26749475?v=4",
-    "company_org": "GDGMalaga",
-    "company_public_members": 4,
-    "html_url": "https://github.com/espetro"
+    "login": "khushmeeet",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/8711912?v=4",
+    "html_url": "https://github.com/khushmeeet"
+  },
+  {
+    "login": "kalisam",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/37503662?v=4",
+    "company": "T.A.G.S.",
+    "html_url": "https://github.com/kalisam"
+  },
+  {
+    "login": "maxaragon",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/39450418?v=4",
+    "html_url": "https://github.com/maxaragon"
   },
   {
     "login": "ignitabull18",
@@ -351,26 +372,5 @@
     "reason": "baseline",
     "avatar_url": "https://avatars.githubusercontent.com/u/4099839?v=4",
     "html_url": "https://github.com/Tobe2d"
-  },
-  {
-    "login": "vdm",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/150002?v=4",
-    "html_url": "https://github.com/vdm"
-  },
-  {
-    "login": "laonger",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/46211?v=4",
-    "html_url": "https://github.com/laonger"
-  },
-  {
-    "login": "OSOSerious",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/167031594?v=4",
-    "html_url": "https://github.com/OSOSerious"
   }
 ]
