@@ -2,23 +2,23 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11603,
-    "forks": 676,
-    "openIssues": 83,
-    "watchers": 53,
+    "stars": 11609,
+    "forks": 678,
+    "openIssues": 85,
+    "watchers": 52,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
   },
   "contributors": [
     {
       "login": "ddupont808",
-      "contributions": 657,
+      "contributions": 660,
       "avatar_url": "https://avatars.githubusercontent.com/u/3820588?v=4",
       "html_url": "https://github.com/ddupont808"
     },
     {
       "login": "f-trycua",
-      "contributions": 530,
+      "contributions": 532,
       "avatar_url": "https://avatars.githubusercontent.com/u/195596869?v=4",
       "html_url": "https://github.com/f-trycua"
     },
@@ -36,19 +36,19 @@
     },
     {
       "login": "sarinali",
-      "contributions": 123,
+      "contributions": 129,
       "avatar_url": "https://avatars.githubusercontent.com/u/74844953?v=4",
       "html_url": "https://github.com/sarinali"
     },
     {
       "login": "YeIIcw",
-      "contributions": 75,
+      "contributions": 80,
       "avatar_url": "https://avatars.githubusercontent.com/u/62897873?v=4",
       "html_url": "https://github.com/YeIIcw"
     },
     {
       "login": "synacktraa",
-      "contributions": 68,
+      "contributions": 69,
       "avatar_url": "https://avatars.githubusercontent.com/u/91981716?v=4",
       "html_url": "https://github.com/synacktraa"
     },
@@ -252,6 +252,56 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "p2er1n",
+      "starred_at": "2025-12-30T11:29:04Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87810059?v=4",
+      "html_url": "https://github.com/p2er1n"
+    },
+    {
+      "login": "jiffy",
+      "starred_at": "2025-12-30T08:57:44Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1505614?v=4",
+      "html_url": "https://github.com/jiffy"
+    },
+    {
+      "login": "su92-bsdsm-f24-006-jpg",
+      "starred_at": "2025-12-30T08:34:59Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/228238806?v=4",
+      "html_url": "https://github.com/su92-bsdsm-f24-006-jpg"
+    },
+    {
+      "login": "Tony363",
+      "starred_at": "2025-12-30T08:30:21Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48950649?v=4",
+      "company": "EFS Networks",
+      "html_url": "https://github.com/Tony363"
+    },
+    {
+      "login": "sjpark5800",
+      "starred_at": "2025-12-30T07:39:40Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/193215178?v=4",
+      "company": "KAIST AI",
+      "html_url": "https://github.com/sjpark5800"
+    },
+    {
+      "login": "XTurnV007",
+      "starred_at": "2025-12-30T03:44:42Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63525832?v=4",
+      "html_url": "https://github.com/XTurnV007"
+    },
+    {
+      "login": "risnake",
+      "starred_at": "2025-12-29T22:15:00Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75455875?v=4",
+      "html_url": "https://github.com/risnake"
+    },
+    {
+      "login": "akshaywakhare",
+      "starred_at": "2025-12-29T16:25:38Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65349910?v=4",
+      "html_url": "https://github.com/akshaywakhare"
+    },
     {
       "login": "hoverlover",
       "starred_at": "2025-12-29T01:54:41Z",
@@ -525,56 +575,6 @@
       "company_org": "SAP",
       "company_public_members": 630,
       "html_url": "https://github.com/lizzzcai"
-    },
-    {
-      "login": "nevereverquits",
-      "starred_at": "2025-12-22T17:16:51Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/111147662?v=4",
-      "html_url": "https://github.com/nevereverquits"
-    },
-    {
-      "login": "entykey",
-      "starred_at": "2025-12-22T07:59:19Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/89012668?v=4",
-      "company": "Ho Chi Minh University of Education",
-      "html_url": "https://github.com/entykey"
-    },
-    {
-      "login": "alvin-up",
-      "starred_at": "2025-12-22T03:09:31Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7939005?v=4",
-      "html_url": "https://github.com/alvin-up"
-    },
-    {
-      "login": "MaFi77",
-      "starred_at": "2025-12-21T11:22:30Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/159696048?v=4",
-      "html_url": "https://github.com/MaFi77"
-    },
-    {
-      "login": "wilsonlee2356",
-      "starred_at": "2025-12-21T10:19:59Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/116363416?v=4",
-      "html_url": "https://github.com/wilsonlee2356"
-    },
-    {
-      "login": "Rajdeep7",
-      "starred_at": "2025-12-21T00:55:19Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/13986440?v=4",
-      "company": "Docme Technologies Ltd",
-      "html_url": "https://github.com/Rajdeep7"
-    },
-    {
-      "login": "ramezio",
-      "starred_at": "2025-12-20T23:58:54Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/79846963?v=4",
-      "html_url": "https://github.com/ramezio"
-    },
-    {
-      "login": "Tobe2d",
-      "starred_at": "2025-12-20T19:48:23Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/4099839?v=4",
-      "html_url": "https://github.com/Tobe2d"
     }
   ],
   "stars_timeline": [
@@ -592,7 +592,7 @@
     },
     {
       "date": "2025-09-29",
-      "count": 4
+      "count": 1
     },
     {
       "date": "2025-09-30",
@@ -956,7 +956,11 @@
     },
     {
       "date": "2025-12-29",
-      "count": 1
+      "count": 3
+    },
+    {
+      "date": "2025-12-30",
+      "count": 6
     }
   ],
   "companies_summary": []
