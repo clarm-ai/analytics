@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11619,
-    "forks": 681,
-    "openIssues": 85,
+    "stars": 11622,
+    "forks": 682,
+    "openIssues": 80,
     "watchers": 52,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -41,20 +41,20 @@
       "html_url": "https://github.com/sarinali"
     },
     {
+      "login": "synacktraa",
+      "contributions": 101,
+      "avatar_url": "https://avatars.githubusercontent.com/u/91981716?v=4",
+      "html_url": "https://github.com/synacktraa"
+    },
+    {
       "login": "YeIIcw",
       "contributions": 80,
       "avatar_url": "https://avatars.githubusercontent.com/u/62897873?v=4",
       "html_url": "https://github.com/YeIIcw"
     },
     {
-      "login": "synacktraa",
-      "contributions": 69,
-      "avatar_url": "https://avatars.githubusercontent.com/u/91981716?v=4",
-      "html_url": "https://github.com/synacktraa"
-    },
-    {
       "login": "github-actions[bot]",
-      "contributions": 45,
+      "contributions": 47,
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
       "html_url": "https://github.com/apps/github-actions"
     },
@@ -252,6 +252,31 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "coding-and-trading",
+      "starred_at": "2026-01-01T11:17:03Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22818477?v=4",
+      "html_url": "https://github.com/coding-and-trading"
+    },
+    {
+      "login": "MarkCodering",
+      "starred_at": "2026-01-01T04:46:11Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58692435?v=4",
+      "company": "@mindify-ai",
+      "html_url": "https://github.com/MarkCodering"
+    },
+    {
+      "login": "theaeomanation",
+      "starred_at": "2025-12-31T14:39:19Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/231493860?v=4",
+      "html_url": "https://github.com/theaeomanation"
+    },
+    {
+      "login": "linyunfeng",
+      "starred_at": "2025-12-31T12:09:07Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2609797?v=4",
+      "html_url": "https://github.com/linyunfeng"
+    },
     {
       "login": "ZeaoZhang",
       "starred_at": "2025-12-31T06:47:02Z",
@@ -544,30 +569,6 @@
       "company_org": "Meteroi",
       "company_public_members": 1,
       "html_url": "https://github.com/lizhizhou"
-    },
-    {
-      "login": "thev1ndu",
-      "starred_at": "2025-12-24T08:12:04Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/120010745?v=4",
-      "html_url": "https://github.com/thev1ndu"
-    },
-    {
-      "login": "kannan-ravi",
-      "starred_at": "2025-12-24T03:05:15Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/29636557?v=4",
-      "html_url": "https://github.com/kannan-ravi"
-    },
-    {
-      "login": "mantalope1995",
-      "starred_at": "2025-12-23T17:18:05Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/197881619?v=4",
-      "html_url": "https://github.com/mantalope1995"
-    },
-    {
-      "login": "Crumbgrabber",
-      "starred_at": "2025-12-23T17:03:01Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/154699092?v=4",
-      "html_url": "https://github.com/Crumbgrabber"
     }
   ],
   "stars_timeline": [
@@ -582,10 +583,6 @@
     {
       "date": "2025-02-02",
       "count": 98
-    },
-    {
-      "date": "2025-09-29",
-      "count": 1
     },
     {
       "date": "2025-09-30",
@@ -909,7 +906,7 @@
     },
     {
       "date": "2025-12-19",
-      "count": 11
+      "count": 10
     },
     {
       "date": "2025-12-20",
@@ -957,7 +954,11 @@
     },
     {
       "date": "2025-12-31",
-      "count": 3
+      "count": 5
+    },
+    {
+      "date": "2026-01-01",
+      "count": 2
     }
   ],
   "companies_summary": []
