@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11622,
-    "forks": 682,
-    "openIssues": 80,
+    "stars": 11626,
+    "forks": 683,
+    "openIssues": 81,
     "watchers": 52,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -252,6 +252,31 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "sir-ab",
+      "starred_at": "2026-01-02T09:58:23Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/180554806?v=4",
+      "html_url": "https://github.com/sir-ab"
+    },
+    {
+      "login": "Clownmato",
+      "starred_at": "2026-01-02T06:06:07Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/162146280?v=4",
+      "html_url": "https://github.com/Clownmato"
+    },
+    {
+      "login": "xxPowderedToastManxx",
+      "starred_at": "2026-01-02T01:14:06Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/118485520?v=4",
+      "html_url": "https://github.com/xxPowderedToastManxx"
+    },
+    {
+      "login": "Luthiraa",
+      "starred_at": "2026-01-02T01:02:49Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79228258?v=4",
+      "company": "UofT",
+      "html_url": "https://github.com/Luthiraa"
+    },
     {
       "login": "coding-and-trading",
       "starred_at": "2026-01-01T11:17:03Z",
@@ -540,35 +565,6 @@
       "starred_at": "2025-12-25T01:55:15Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/36188583?v=4",
       "html_url": "https://github.com/thor9king"
-    },
-    {
-      "login": "bob1231",
-      "starred_at": "2025-12-24T21:21:55Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/28025272?v=4",
-      "company": "MIne",
-      "html_url": "https://github.com/bob1231"
-    },
-    {
-      "login": "MusaSoruklu",
-      "starred_at": "2025-12-24T15:27:25Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/16396525?v=4",
-      "html_url": "https://github.com/MusaSoruklu"
-    },
-    {
-      "login": "skalingclouds",
-      "starred_at": "2025-12-24T10:07:53Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/20118335?v=4",
-      "company": "@NAITIVEAI ",
-      "html_url": "https://github.com/skalingclouds"
-    },
-    {
-      "login": "lizhizhou",
-      "starred_at": "2025-12-24T08:39:06Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1780018?v=4",
-      "company": "Morgan Stanley",
-      "company_org": "Meteroi",
-      "company_public_members": 1,
-      "html_url": "https://github.com/lizhizhou"
     }
   ],
   "stars_timeline": [
@@ -959,6 +955,10 @@
     {
       "date": "2026-01-01",
       "count": 2
+    },
+    {
+      "date": "2026-01-02",
+      "count": 4
     }
   ],
   "companies_summary": []
