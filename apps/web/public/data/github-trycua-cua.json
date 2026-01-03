@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11626,
+    "stars": 11629,
     "forks": 683,
-    "openIssues": 81,
+    "openIssues": 83,
     "watchers": 52,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -252,6 +252,38 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "shi510",
+      "starred_at": "2026-01-03T11:44:48Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15066301?v=4",
+      "html_url": "https://github.com/shi510"
+    },
+    {
+      "login": "fieryprophet",
+      "starred_at": "2026-01-03T05:26:31Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/533700?v=4",
+      "company": "Corveda, LLC",
+      "html_url": "https://github.com/fieryprophet"
+    },
+    {
+      "login": "Norlick",
+      "starred_at": "2026-01-02T20:59:44Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10288903?v=4",
+      "html_url": "https://github.com/Norlick"
+    },
+    {
+      "login": "doctor-moo",
+      "starred_at": "2026-01-02T17:13:27Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52764274?v=4",
+      "html_url": "https://github.com/doctor-moo"
+    },
+    {
+      "login": "fwensen",
+      "starred_at": "2026-01-02T15:12:56Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4490412?v=4",
+      "company": "None",
+      "html_url": "https://github.com/fwensen"
+    },
     {
       "login": "sir-ab",
       "starred_at": "2026-01-02T09:58:23Z",
@@ -529,42 +561,6 @@
       "starred_at": "2025-12-26T05:11:52Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/127772632?v=4",
       "html_url": "https://github.com/krishnaS137"
-    },
-    {
-      "login": "ZhiQ57",
-      "starred_at": "2025-12-26T02:26:38Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/113429832?v=4",
-      "company": "Guangdong Polytechnic Normal University",
-      "html_url": "https://github.com/ZhiQ57"
-    },
-    {
-      "login": "hwclass",
-      "starred_at": "2025-12-25T18:12:16Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/3750931?v=4",
-      "company": "@wurth",
-      "company_org": "paranoiaproject",
-      "company_public_members": 2,
-      "html_url": "https://github.com/hwclass"
-    },
-    {
-      "login": "eladcandroid",
-      "starred_at": "2025-12-25T12:15:50Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/13297000?v=4",
-      "company": "LLM + MCP = ❤️ | GoCode Founder",
-      "html_url": "https://github.com/eladcandroid"
-    },
-    {
-      "login": "FlowerWrong",
-      "starred_at": "2025-12-25T07:36:01Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5362640?v=4",
-      "company": "charthub",
-      "html_url": "https://github.com/FlowerWrong"
-    },
-    {
-      "login": "thor9king",
-      "starred_at": "2025-12-25T01:55:15Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/36188583?v=4",
-      "html_url": "https://github.com/thor9king"
     }
   ],
   "stars_timeline": [
@@ -582,7 +578,7 @@
     },
     {
       "date": "2025-09-30",
-      "count": 12
+      "count": 11
     },
     {
       "date": "2025-10-01",
@@ -594,7 +590,7 @@
     },
     {
       "date": "2025-10-03",
-      "count": 13
+      "count": 12
     },
     {
       "date": "2025-10-04",
@@ -958,7 +954,11 @@
     },
     {
       "date": "2026-01-02",
-      "count": 4
+      "count": 7
+    },
+    {
+      "date": "2026-01-03",
+      "count": 2
     }
   ],
   "companies_summary": []
