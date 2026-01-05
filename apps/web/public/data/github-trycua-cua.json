@@ -2,10 +2,10 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11642,
-    "forks": 686,
-    "openIssues": 83,
-    "watchers": 52,
+    "stars": 11650,
+    "forks": 685,
+    "openIssues": 84,
+    "watchers": 51,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
   },
@@ -36,7 +36,7 @@
     },
     {
       "login": "sarinali",
-      "contributions": 131,
+      "contributions": 133,
       "avatar_url": "https://avatars.githubusercontent.com/u/74844953?v=4",
       "html_url": "https://github.com/sarinali"
     },
@@ -129,6 +129,12 @@
       "contributions": 4,
       "avatar_url": "https://avatars.githubusercontent.com/u/81363696?v=4",
       "html_url": "https://github.com/trospix"
+    },
+    {
+      "login": "Samuvigano",
+      "contributions": 3,
+      "avatar_url": "https://avatars.githubusercontent.com/u/98058925?v=4",
+      "html_url": "https://github.com/Samuvigano"
     },
     {
       "login": "dylanbowman314",
@@ -252,6 +258,66 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "laixintao",
+      "starred_at": "2026-01-05T10:31:22Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9675939?v=4",
+      "company": "Shopee",
+      "company_org": "dbcli",
+      "company_public_members": 18,
+      "html_url": "https://github.com/laixintao"
+    },
+    {
+      "login": "Zafeeruddin",
+      "starred_at": "2026-01-05T10:30:27Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/121102547?v=4",
+      "company": "Masterworks",
+      "html_url": "https://github.com/Zafeeruddin"
+    },
+    {
+      "login": "Fizza-Mukhtar",
+      "starred_at": "2026-01-05T08:27:23Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/202162977?v=4",
+      "html_url": "https://github.com/Fizza-Mukhtar"
+    },
+    {
+      "login": "sundyloveme",
+      "starred_at": "2026-01-05T07:39:06Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15084685?v=4",
+      "html_url": "https://github.com/sundyloveme"
+    },
+    {
+      "login": "nealsun",
+      "starred_at": "2026-01-05T05:43:03Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1240819?v=4",
+      "html_url": "https://github.com/nealsun"
+    },
+    {
+      "login": "xiaomc",
+      "starred_at": "2026-01-05T03:56:32Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37901693?v=4",
+      "html_url": "https://github.com/xiaomc"
+    },
+    {
+      "login": "PowerWeb5",
+      "starred_at": "2026-01-04T23:51:54Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4053734?v=4",
+      "company": "Power Web5 | Free Only Web5 No-Code/Low-Code Apps, DB, Smart Spreadsheets Platform",
+      "html_url": "https://github.com/PowerWeb5"
+    },
+    {
+      "login": "fastzch",
+      "starred_at": "2026-01-04T21:02:51Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4646065?v=4",
+      "html_url": "https://github.com/fastzch"
+    },
+    {
+      "login": "cwschroeder",
+      "starred_at": "2026-01-04T19:51:32Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1188270?v=4",
+      "company": "IB SCHROEDER",
+      "html_url": "https://github.com/cwschroeder"
+    },
     {
       "login": "ariesfish",
       "starred_at": "2026-01-04T10:36:14Z",
@@ -504,64 +570,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/193215178?v=4",
       "company": "KAIST AI",
       "html_url": "https://github.com/sjpark5800"
-    },
-    {
-      "login": "XTurnV007",
-      "starred_at": "2025-12-30T03:44:42Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/63525832?v=4",
-      "html_url": "https://github.com/XTurnV007"
-    },
-    {
-      "login": "risnake",
-      "starred_at": "2025-12-29T22:15:00Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/75455875?v=4",
-      "html_url": "https://github.com/risnake"
-    },
-    {
-      "login": "akshaywakhare",
-      "starred_at": "2025-12-29T16:25:38Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/65349910?v=4",
-      "html_url": "https://github.com/akshaywakhare"
-    },
-    {
-      "login": "hoverlover",
-      "starred_at": "2025-12-29T01:54:41Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/169285?v=4",
-      "company": "Overland Addict",
-      "company_org": "genuitytech",
-      "company_public_members": 1,
-      "html_url": "https://github.com/hoverlover"
-    },
-    {
-      "login": "dreamcodez",
-      "starred_at": "2025-12-28T22:18:14Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/42952?v=4",
-      "html_url": "https://github.com/dreamcodez"
-    },
-    {
-      "login": "khushmeeet",
-      "starred_at": "2025-12-28T19:40:47Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/8711912?v=4",
-      "html_url": "https://github.com/khushmeeet"
-    },
-    {
-      "login": "kalisam",
-      "starred_at": "2025-12-28T17:47:48Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/37503662?v=4",
-      "company": "T.A.G.S.",
-      "html_url": "https://github.com/kalisam"
-    },
-    {
-      "login": "maxaragon",
-      "starred_at": "2025-12-28T13:41:48Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/39450418?v=4",
-      "html_url": "https://github.com/maxaragon"
-    },
-    {
-      "login": "ignitabull18",
-      "starred_at": "2025-12-28T04:36:55Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/126190741?v=4",
-      "html_url": "https://github.com/ignitabull18"
     }
   ],
   "stars_timeline": [
@@ -579,7 +587,7 @@
     },
     {
       "date": "2025-09-30",
-      "count": 11
+      "count": 10
     },
     {
       "date": "2025-10-01",
@@ -963,7 +971,11 @@
     },
     {
       "date": "2026-01-04",
-      "count": 8
+      "count": 11
+    },
+    {
+      "date": "2026-01-05",
+      "count": 6
     }
   ],
   "companies_summary": []
