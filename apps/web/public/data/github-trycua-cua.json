@@ -2,8 +2,8 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11650,
-    "forks": 685,
+    "stars": 11655,
+    "forks": 686,
     "openIssues": 84,
     "watchers": 51,
     "owner": "trycua",
@@ -18,7 +18,7 @@
     },
     {
       "login": "f-trycua",
-      "contributions": 532,
+      "contributions": 558,
       "avatar_url": "https://avatars.githubusercontent.com/u/195596869?v=4",
       "html_url": "https://github.com/f-trycua"
     },
@@ -258,6 +258,46 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "TheMapleseed",
+      "starred_at": "2026-01-06T08:45:33Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/189957210?v=4",
+      "company": "The Mapleseed Inc.",
+      "html_url": "https://github.com/TheMapleseed"
+    },
+    {
+      "login": "nischalj10",
+      "starred_at": "2026-01-06T08:19:14Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55933460?v=4",
+      "company": "Outlier Humans",
+      "company_org": "sentient-engineering",
+      "company_public_members": 2,
+      "html_url": "https://github.com/nischalj10"
+    },
+    {
+      "login": "liqiugao",
+      "starred_at": "2026-01-06T02:06:41Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23091104?v=4",
+      "html_url": "https://github.com/liqiugao"
+    },
+    {
+      "login": "xiangyangkan",
+      "starred_at": "2026-01-06T01:10:43Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21076402?v=4",
+      "html_url": "https://github.com/xiangyangkan"
+    },
+    {
+      "login": "kang2000",
+      "starred_at": "2026-01-05T15:00:31Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53001283?v=4",
+      "html_url": "https://github.com/kang2000"
+    },
+    {
+      "login": "zuoc1993",
+      "starred_at": "2026-01-05T14:04:37Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/161013919?v=4",
+      "html_url": "https://github.com/zuoc1993"
+    },
     {
       "login": "laixintao",
       "starred_at": "2026-01-05T10:31:22Z",
@@ -532,44 +572,6 @@
       "starred_at": "2025-12-30T13:57:18Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/66695888?v=4",
       "html_url": "https://github.com/austineaero"
-    },
-    {
-      "login": "nolanmak",
-      "starred_at": "2025-12-30T13:18:53Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/119541177?v=4",
-      "html_url": "https://github.com/nolanmak"
-    },
-    {
-      "login": "p2er1n",
-      "starred_at": "2025-12-30T11:29:04Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/87810059?v=4",
-      "html_url": "https://github.com/p2er1n"
-    },
-    {
-      "login": "jiffy",
-      "starred_at": "2025-12-30T08:57:44Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1505614?v=4",
-      "html_url": "https://github.com/jiffy"
-    },
-    {
-      "login": "su92-bsdsm-f24-006-jpg",
-      "starred_at": "2025-12-30T08:34:59Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/228238806?v=4",
-      "html_url": "https://github.com/su92-bsdsm-f24-006-jpg"
-    },
-    {
-      "login": "Tony363",
-      "starred_at": "2025-12-30T08:30:21Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/48950649?v=4",
-      "company": "EFS Networks",
-      "html_url": "https://github.com/Tony363"
-    },
-    {
-      "login": "sjpark5800",
-      "starred_at": "2025-12-30T07:39:40Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/193215178?v=4",
-      "company": "KAIST AI",
-      "html_url": "https://github.com/sjpark5800"
     }
   ],
   "stars_timeline": [
@@ -587,7 +589,7 @@
     },
     {
       "date": "2025-09-30",
-      "count": 10
+      "count": 11
     },
     {
       "date": "2025-10-01",
@@ -975,7 +977,11 @@
     },
     {
       "date": "2026-01-05",
-      "count": 6
+      "count": 8
+    },
+    {
+      "date": "2026-01-06",
+      "count": 4
     }
   ],
   "companies_summary": []
