@@ -3,8 +3,8 @@
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
     "stars": 11681,
-    "forks": 690,
-    "openIssues": 84,
+    "forks": 692,
+    "openIssues": 91,
     "watchers": 50,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -258,6 +258,50 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "sonanchenko",
+      "starred_at": "2026-01-09T11:09:17Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4506681?v=4",
+      "html_url": "https://github.com/sonanchenko"
+    },
+    {
+      "login": "asyard",
+      "starred_at": "2026-01-09T06:43:13Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/500393?v=4",
+      "html_url": "https://github.com/asyard"
+    },
+    {
+      "login": "zhaoxu98",
+      "starred_at": "2026-01-08T20:51:01Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/119485244?v=4",
+      "company": "CS@UCLA",
+      "html_url": "https://github.com/zhaoxu98"
+    },
+    {
+      "login": "deftliang",
+      "starred_at": "2026-01-08T15:40:11Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62738469?v=4",
+      "html_url": "https://github.com/deftliang"
+    },
+    {
+      "login": "ebauger",
+      "starred_at": "2026-01-08T14:21:31Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/850669?v=4",
+      "company": "zbranch",
+      "html_url": "https://github.com/ebauger"
+    },
+    {
+      "login": "naicud",
+      "starred_at": "2026-01-08T14:13:17Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55764723?v=4",
+      "html_url": "https://github.com/naicud"
+    },
+    {
+      "login": "MyCaptain-Niu",
+      "starred_at": "2026-01-08T12:54:59Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70278388?v=4",
+      "html_url": "https://github.com/MyCaptain-Niu"
+    },
     {
       "login": "AI-student2024",
       "starred_at": "2026-01-08T10:40:09Z",
@@ -546,50 +590,6 @@
       "starred_at": "2026-01-04T10:15:21Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/271124?v=4",
       "html_url": "https://github.com/iceleaf916"
-    },
-    {
-      "login": "femto",
-      "starred_at": "2026-01-04T09:38:15Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6938?v=4",
-      "html_url": "https://github.com/femto"
-    },
-    {
-      "login": "stars1324",
-      "starred_at": "2026-01-04T07:09:11Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26533131?v=4",
-      "html_url": "https://github.com/stars1324"
-    },
-    {
-      "login": "CleyChen",
-      "starred_at": "2026-01-04T06:17:04Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/239959301?v=4",
-      "company": "Renmin University of China",
-      "html_url": "https://github.com/CleyChen"
-    },
-    {
-      "login": "softwarebyze",
-      "starred_at": "2026-01-04T06:11:10Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/77241170?v=4",
-      "company": "Ebenfeld Tech Solutions",
-      "html_url": "https://github.com/softwarebyze"
-    },
-    {
-      "login": "superstrings",
-      "starred_at": "2026-01-04T04:36:52Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1191333?v=4",
-      "html_url": "https://github.com/superstrings"
-    },
-    {
-      "login": "booleamu",
-      "starred_at": "2026-01-04T01:26:30Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/115538232?v=4",
-      "html_url": "https://github.com/booleamu"
-    },
-    {
-      "login": "SteveMJones",
-      "starred_at": "2026-01-03T22:39:50Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6716855?v=4",
-      "html_url": "https://github.com/SteveMJones"
     }
   ],
   "stars_timeline": [
@@ -607,7 +607,7 @@
     },
     {
       "date": "2025-09-30",
-      "count": 11
+      "count": 4
     },
     {
       "date": "2025-10-01",
@@ -1007,7 +1007,11 @@
     },
     {
       "date": "2026-01-08",
-      "count": 10
+      "count": 15
+    },
+    {
+      "date": "2026-01-09",
+      "count": 2
     }
   ],
   "companies_summary": []
