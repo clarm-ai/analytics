@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11681,
-    "forks": 692,
-    "openIssues": 91,
+    "stars": 11687,
+    "forks": 693,
+    "openIssues": 90,
     "watchers": 50,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -12,7 +12,7 @@
   "contributors": [
     {
       "login": "ddupont808",
-      "contributions": 691,
+      "contributions": 692,
       "avatar_url": "https://avatars.githubusercontent.com/u/3820588?v=4",
       "html_url": "https://github.com/ddupont808"
     },
@@ -36,13 +36,13 @@
     },
     {
       "login": "sarinali",
-      "contributions": 135,
+      "contributions": 136,
       "avatar_url": "https://avatars.githubusercontent.com/u/74844953?v=4",
       "html_url": "https://github.com/sarinali"
     },
     {
       "login": "synacktraa",
-      "contributions": 107,
+      "contributions": 108,
       "avatar_url": "https://avatars.githubusercontent.com/u/91981716?v=4",
       "html_url": "https://github.com/synacktraa"
     },
@@ -90,7 +90,7 @@
     },
     {
       "login": "r33drichards",
-      "contributions": 8,
+      "contributions": 10,
       "avatar_url": "https://avatars.githubusercontent.com/u/57335981?v=4",
       "html_url": "https://github.com/r33drichards"
     },
@@ -245,6 +245,12 @@
       "html_url": "https://github.com/Leland-Takamine"
     },
     {
+      "login": "Fizza-Mukhtar",
+      "contributions": 1,
+      "avatar_url": "https://avatars.githubusercontent.com/u/202162977?v=4",
+      "html_url": "https://github.com/Fizza-Mukhtar"
+    },
+    {
       "login": "Lizzard1123",
       "contributions": 1,
       "avatar_url": "https://avatars.githubusercontent.com/u/46036335?v=4",
@@ -258,6 +264,46 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "amoghmanral",
+      "starred_at": "2026-01-10T06:34:33Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70843557?v=4",
+      "html_url": "https://github.com/amoghmanral"
+    },
+    {
+      "login": "leycec",
+      "starred_at": "2026-01-10T06:17:23Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/217028?v=4",
+      "company_org": "betsee",
+      "company_public_members": 1,
+      "html_url": "https://github.com/leycec"
+    },
+    {
+      "login": "McHubbleo001",
+      "starred_at": "2026-01-10T05:40:45Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/216032837?v=4",
+      "html_url": "https://github.com/McHubbleo001"
+    },
+    {
+      "login": "libesto",
+      "starred_at": "2026-01-09T21:52:49Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52183048?v=4",
+      "html_url": "https://github.com/libesto"
+    },
+    {
+      "login": "gelez",
+      "starred_at": "2026-01-09T17:56:05Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15865042?v=4",
+      "company": "company",
+      "html_url": "https://github.com/gelez"
+    },
+    {
+      "login": "srjaykikani",
+      "starred_at": "2026-01-09T13:16:54Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78264191?v=4",
+      "company": "Challenge Rate",
+      "html_url": "https://github.com/srjaykikani"
+    },
     {
       "login": "sonanchenko",
       "starred_at": "2026-01-09T11:09:17Z",
@@ -552,44 +598,6 @@
       "starred_at": "2026-01-05T05:43:03Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/1240819?v=4",
       "html_url": "https://github.com/nealsun"
-    },
-    {
-      "login": "xiaomc",
-      "starred_at": "2026-01-05T03:56:32Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/37901693?v=4",
-      "html_url": "https://github.com/xiaomc"
-    },
-    {
-      "login": "PowerWeb5",
-      "starred_at": "2026-01-04T23:51:54Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/4053734?v=4",
-      "company": "Power Web5 | Free Only Web5 No-Code/Low-Code Apps, DB, Smart Spreadsheets Platform",
-      "html_url": "https://github.com/PowerWeb5"
-    },
-    {
-      "login": "fastzch",
-      "starred_at": "2026-01-04T21:02:51Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/4646065?v=4",
-      "html_url": "https://github.com/fastzch"
-    },
-    {
-      "login": "cwschroeder",
-      "starred_at": "2026-01-04T19:51:32Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1188270?v=4",
-      "company": "IB SCHROEDER",
-      "html_url": "https://github.com/cwschroeder"
-    },
-    {
-      "login": "ariesfish",
-      "starred_at": "2026-01-04T10:36:14Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1179943?v=4",
-      "html_url": "https://github.com/ariesfish"
-    },
-    {
-      "login": "iceleaf916",
-      "starred_at": "2026-01-04T10:15:21Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/271124?v=4",
-      "html_url": "https://github.com/iceleaf916"
     }
   ],
   "stars_timeline": [
@@ -607,7 +615,7 @@
     },
     {
       "date": "2025-09-30",
-      "count": 4
+      "count": 3
     },
     {
       "date": "2025-10-01",
@@ -967,7 +975,7 @@
     },
     {
       "date": "2025-12-29",
-      "count": 3
+      "count": 4
     },
     {
       "date": "2025-12-30",
@@ -1011,7 +1019,11 @@
     },
     {
       "date": "2026-01-09",
-      "count": 2
+      "count": 5
+    },
+    {
+      "date": "2026-01-10",
+      "count": 3
     }
   ],
   "companies_summary": []
