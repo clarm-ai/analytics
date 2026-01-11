@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11687,
-    "forks": 693,
-    "openIssues": 90,
+    "stars": 11697,
+    "forks": 692,
+    "openIssues": 87,
     "watchers": 50,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -18,7 +18,7 @@
     },
     {
       "login": "f-trycua",
-      "contributions": 558,
+      "contributions": 563,
       "avatar_url": "https://avatars.githubusercontent.com/u/195596869?v=4",
       "html_url": "https://github.com/f-trycua"
     },
@@ -36,7 +36,7 @@
     },
     {
       "login": "sarinali",
-      "contributions": 136,
+      "contributions": 137,
       "avatar_url": "https://avatars.githubusercontent.com/u/74844953?v=4",
       "html_url": "https://github.com/sarinali"
     },
@@ -265,6 +265,70 @@
   ],
   "stargazers": [
     {
+      "login": "Hephorus",
+      "starred_at": "2026-01-11T10:48:23Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98927759?v=4",
+      "html_url": "https://github.com/Hephorus"
+    },
+    {
+      "login": "pHequals7",
+      "starred_at": "2026-01-11T10:40:18Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39328505?v=4",
+      "company": "Indian Institute of Technology Madras",
+      "html_url": "https://github.com/pHequals7"
+    },
+    {
+      "login": "paulose610",
+      "starred_at": "2026-01-11T06:44:59Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/134071277?v=4",
+      "html_url": "https://github.com/paulose610"
+    },
+    {
+      "login": "AyushAgrawal-A2",
+      "starred_at": "2026-01-11T05:26:33Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54364088?v=4",
+      "html_url": "https://github.com/AyushAgrawal-A2"
+    },
+    {
+      "login": "joaojhgs",
+      "starred_at": "2026-01-11T03:20:02Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/74212278?v=4",
+      "company": "Perch Insights",
+      "html_url": "https://github.com/joaojhgs"
+    },
+    {
+      "login": "Lewin671",
+      "starred_at": "2026-01-11T03:07:28Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37481138?v=4",
+      "company": "Alibaba Group",
+      "html_url": "https://github.com/Lewin671"
+    },
+    {
+      "login": "YusufAkin27",
+      "starred_at": "2026-01-10T19:01:18Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/136736997?v=4",
+      "html_url": "https://github.com/YusufAkin27"
+    },
+    {
+      "login": "EwanTauran",
+      "starred_at": "2026-01-10T15:42:31Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32881017?v=4",
+      "company": "Airweave",
+      "html_url": "https://github.com/EwanTauran"
+    },
+    {
+      "login": "brandoncarl",
+      "starred_at": "2026-01-10T14:05:00Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5427971?v=4",
+      "html_url": "https://github.com/brandoncarl"
+    },
+    {
+      "login": "DivineAvi",
+      "starred_at": "2026-01-10T14:04:21Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/217769393?v=4",
+      "html_url": "https://github.com/DivineAvi"
+    },
+    {
       "login": "amoghmanral",
       "starred_at": "2026-01-10T06:34:33Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/70843557?v=4",
@@ -423,13 +487,6 @@
       "html_url": "https://github.com/crowdshifter"
     },
     {
-      "login": "zeaphoo",
-      "starred_at": "2026-01-07T12:25:18Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1452486?v=4",
-      "company": "highorder.xyz",
-      "html_url": "https://github.com/zeaphoo"
-    },
-    {
       "login": "cauah1",
       "starred_at": "2026-01-07T12:18:44Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/148493545?v=4",
@@ -540,64 +597,6 @@
       "company_org": "sentient-engineering",
       "company_public_members": 2,
       "html_url": "https://github.com/nischalj10"
-    },
-    {
-      "login": "liqiugao",
-      "starred_at": "2026-01-06T02:06:41Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/23091104?v=4",
-      "html_url": "https://github.com/liqiugao"
-    },
-    {
-      "login": "xiangyangkan",
-      "starred_at": "2026-01-06T01:10:43Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/21076402?v=4",
-      "html_url": "https://github.com/xiangyangkan"
-    },
-    {
-      "login": "kang2000",
-      "starred_at": "2026-01-05T15:00:31Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/53001283?v=4",
-      "html_url": "https://github.com/kang2000"
-    },
-    {
-      "login": "zuoc1993",
-      "starred_at": "2026-01-05T14:04:37Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/161013919?v=4",
-      "html_url": "https://github.com/zuoc1993"
-    },
-    {
-      "login": "laixintao",
-      "starred_at": "2026-01-05T10:31:22Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/9675939?v=4",
-      "company": "Shopee",
-      "company_org": "dbcli",
-      "company_public_members": 18,
-      "html_url": "https://github.com/laixintao"
-    },
-    {
-      "login": "Zafeeruddin",
-      "starred_at": "2026-01-05T10:30:27Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/121102547?v=4",
-      "company": "Masterworks",
-      "html_url": "https://github.com/Zafeeruddin"
-    },
-    {
-      "login": "Fizza-Mukhtar",
-      "starred_at": "2026-01-05T08:27:23Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/202162977?v=4",
-      "html_url": "https://github.com/Fizza-Mukhtar"
-    },
-    {
-      "login": "sundyloveme",
-      "starred_at": "2026-01-05T07:39:06Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/15084685?v=4",
-      "html_url": "https://github.com/sundyloveme"
-    },
-    {
-      "login": "nealsun",
-      "starred_at": "2026-01-05T05:43:03Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1240819?v=4",
-      "html_url": "https://github.com/nealsun"
     }
   ],
   "stars_timeline": [
@@ -1011,7 +1010,7 @@
     },
     {
       "date": "2026-01-07",
-      "count": 11
+      "count": 10
     },
     {
       "date": "2026-01-08",
@@ -1023,7 +1022,11 @@
     },
     {
       "date": "2026-01-10",
-      "count": 3
+      "count": 7
+    },
+    {
+      "date": "2026-01-11",
+      "count": 6
     }
   ],
   "companies_summary": []
