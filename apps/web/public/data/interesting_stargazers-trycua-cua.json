@@ -1,5 +1,13 @@
 [
   {
+    "login": "jongwooko",
+    "score": 12,
+    "reason": "known tech company",
+    "avatar_url": "https://avatars.githubusercontent.com/u/59277369?v=4",
+    "company": "Senior Researcher at Microsoft & Ph.D at KAIST AI | Ex-Intern at Amazon AGI, Microsoft",
+    "html_url": "https://github.com/jongwooko"
+  },
+  {
     "login": "kaloprominat",
     "score": 6,
     "reason": "org @ya-appleinfra",
@@ -38,14 +46,46 @@
     "html_url": "https://github.com/leycec"
   },
   {
-    "login": "tuanio",
-    "score": 6,
-    "reason": "org @AI-CLUB-IUH",
-    "avatar_url": "https://avatars.githubusercontent.com/u/30165828?v=4",
-    "company": "I2R, A*Star Group",
-    "company_org": "AI-CLUB-IUH",
-    "company_public_members": 2,
-    "html_url": "https://github.com/tuanio"
+    "login": "desflynn",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/6025761?v=4",
+    "html_url": "https://github.com/desflynn"
+  },
+  {
+    "login": "GiridharSalana",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/37552476?v=4",
+    "html_url": "https://github.com/GiridharSalana"
+  },
+  {
+    "login": "KyrieHui",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/42603547?v=4",
+    "html_url": "https://github.com/KyrieHui"
+  },
+  {
+    "login": "ChrisXHL",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/104919783?v=4",
+    "html_url": "https://github.com/ChrisXHL"
+  },
+  {
+    "login": "hyperlyz",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/20871123?v=4",
+    "html_url": "https://github.com/hyperlyz"
+  },
+  {
+    "login": "elandb",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/106638008?v=4",
+    "html_url": "https://github.com/elandb"
   },
   {
     "login": "neonpush",
@@ -331,47 +371,5 @@
     "reason": "baseline",
     "avatar_url": "https://avatars.githubusercontent.com/u/55764723?v=4",
     "html_url": "https://github.com/naicud"
-  },
-  {
-    "login": "MyCaptain-Niu",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/70278388?v=4",
-    "html_url": "https://github.com/MyCaptain-Niu"
-  },
-  {
-    "login": "AI-student2024",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/154218392?v=4",
-    "html_url": "https://github.com/AI-student2024"
-  },
-  {
-    "login": "kurefm",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/9800019?v=4",
-    "html_url": "https://github.com/kurefm"
-  },
-  {
-    "login": "khewdev",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/85968137?v=4",
-    "html_url": "https://github.com/khewdev"
-  },
-  {
-    "login": "athronix",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/65088664?v=4",
-    "html_url": "https://github.com/athronix"
-  },
-  {
-    "login": "yuhuating",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/8306067?v=4",
-    "html_url": "https://github.com/yuhuating"
   }
 ]
