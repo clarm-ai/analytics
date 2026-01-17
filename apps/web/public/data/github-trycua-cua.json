@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11753,
-    "forks": 697,
-    "openIssues": 80,
+    "stars": 11755,
+    "forks": 698,
+    "openIssues": 82,
     "watchers": 49,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -42,7 +42,7 @@
     },
     {
       "login": "synacktraa",
-      "contributions": 111,
+      "contributions": 113,
       "avatar_url": "https://avatars.githubusercontent.com/u/91981716?v=4",
       "html_url": "https://github.com/synacktraa"
     },
@@ -239,6 +239,12 @@
       "html_url": "https://github.com/ShrootBuck"
     },
     {
+      "login": "rowingchenn",
+      "contributions": 1,
+      "avatar_url": "https://avatars.githubusercontent.com/u/132875964?v=4",
+      "html_url": "https://github.com/rowingchenn"
+    },
+    {
       "login": "rahulkarajgikar",
       "contributions": 1,
       "avatar_url": "https://avatars.githubusercontent.com/u/50844303?v=4",
@@ -270,6 +276,25 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "michaelwaves",
+      "starred_at": "2026-01-16T21:03:17Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68243408?v=4",
+      "html_url": "https://github.com/michaelwaves"
+    },
+    {
+      "login": "yellowtree2co-sudo",
+      "starred_at": "2026-01-16T20:43:01Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/252745171?v=4",
+      "html_url": "https://github.com/yellowtree2co-sudo"
+    },
+    {
+      "login": "PatrickMcGuinness",
+      "starred_at": "2026-01-16T17:30:02Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1933336?v=4",
+      "company": "FreestarAI",
+      "html_url": "https://github.com/PatrickMcGuinness"
+    },
     {
       "login": "omarbenhamid",
       "starred_at": "2026-01-16T12:04:05Z",
@@ -574,30 +599,6 @@
       "starred_at": "2026-01-12T10:46:20Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/88632494?v=4",
       "html_url": "https://github.com/Shanepigram"
-    },
-    {
-      "login": "jaroslavbenes",
-      "starred_at": "2026-01-12T10:23:31Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/101019037?v=4",
-      "html_url": "https://github.com/jaroslavbenes"
-    },
-    {
-      "login": "kaloprominat",
-      "starred_at": "2026-01-12T09:50:04Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2452080?v=4",
-      "company": "Yandex LLC",
-      "company_org": "ya-appleinfra",
-      "company_public_members": 1,
-      "html_url": "https://github.com/kaloprominat"
-    },
-    {
-      "login": "Shr1ftyy",
-      "starred_at": "2026-01-12T09:28:19Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/49330057?v=4",
-      "company": "threetau",
-      "company_org": "Leap-Exchange",
-      "company_public_members": 1,
-      "html_url": "https://github.com/Shr1ftyy"
     }
   ],
   "stars_timeline": [
@@ -615,7 +616,7 @@
     },
     {
       "date": "2025-10-07",
-      "count": 161
+      "count": 160
     },
     {
       "date": "2025-10-08",
@@ -1019,7 +1020,7 @@
     },
     {
       "date": "2026-01-16",
-      "count": 9
+      "count": 12
     }
   ],
   "companies_summary": []
