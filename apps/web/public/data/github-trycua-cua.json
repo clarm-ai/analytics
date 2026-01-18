@@ -2,8 +2,8 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 11755,
-    "forks": 698,
+    "stars": 11760,
+    "forks": 699,
     "openIssues": 82,
     "watchers": 49,
     "owner": "trycua",
@@ -18,7 +18,7 @@
     },
     {
       "login": "f-trycua",
-      "contributions": 591,
+      "contributions": 612,
       "avatar_url": "https://avatars.githubusercontent.com/u/195596869?v=4",
       "html_url": "https://github.com/f-trycua"
     },
@@ -48,7 +48,7 @@
     },
     {
       "login": "github-actions[bot]",
-      "contributions": 83,
+      "contributions": 106,
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
       "html_url": "https://github.com/apps/github-actions"
     },
@@ -66,7 +66,7 @@
     },
     {
       "login": "r33drichards",
-      "contributions": 20,
+      "contributions": 21,
       "avatar_url": "https://avatars.githubusercontent.com/u/57335981?v=4",
       "html_url": "https://github.com/r33drichards"
     },
@@ -95,6 +95,12 @@
       "html_url": "https://github.com/onel"
     },
     {
+      "login": "Fizza-Mukhtar",
+      "contributions": 5,
+      "avatar_url": "https://avatars.githubusercontent.com/u/202162977?v=4",
+      "html_url": "https://github.com/Fizza-Mukhtar"
+    },
+    {
       "login": "mjspeck",
       "contributions": 5,
       "avatar_url": "https://avatars.githubusercontent.com/u/20689127?v=4",
@@ -105,12 +111,6 @@
       "contributions": 5,
       "avatar_url": "https://avatars.githubusercontent.com/u/663605?v=4",
       "html_url": "https://github.com/pepicrft"
-    },
-    {
-      "login": "Fizza-Mukhtar",
-      "contributions": 4,
-      "avatar_url": "https://avatars.githubusercontent.com/u/202162977?v=4",
-      "html_url": "https://github.com/Fizza-Mukhtar"
     },
     {
       "login": "francedot",
@@ -227,6 +227,12 @@
       "html_url": "https://github.com/dp221125"
     },
     {
+      "login": "shixi-li",
+      "contributions": 1,
+      "avatar_url": "https://avatars.githubusercontent.com/u/40780706?v=4",
+      "html_url": "https://github.com/shixi-li"
+    },
+    {
       "login": "buiilding",
       "contributions": 1,
       "avatar_url": "https://avatars.githubusercontent.com/u/119946984?v=4",
@@ -276,6 +282,38 @@
     }
   ],
   "stargazers": [
+    {
+      "login": "EsYoon7",
+      "starred_at": "2026-01-18T11:03:24Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/98627154?v=4",
+      "html_url": "https://github.com/EsYoon7"
+    },
+    {
+      "login": "argbeknwn",
+      "starred_at": "2026-01-18T08:25:07Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22587210?v=4",
+      "company": "ARGBE.TECH - B2B Digital Services",
+      "html_url": "https://github.com/argbeknwn"
+    },
+    {
+      "login": "Serantek97",
+      "starred_at": "2026-01-17T20:17:54Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/139655076?v=4",
+      "html_url": "https://github.com/Serantek97"
+    },
+    {
+      "login": "mentria-ai",
+      "starred_at": "2026-01-17T15:32:27Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/185534376?v=4",
+      "company": "mentria AI",
+      "html_url": "https://github.com/mentria-ai"
+    },
+    {
+      "login": "krvivek5",
+      "starred_at": "2026-01-17T14:51:06Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64006853?v=4",
+      "html_url": "https://github.com/krvivek5"
+    },
     {
       "login": "michaelwaves",
       "starred_at": "2026-01-16T21:03:17Z",
@@ -418,7 +456,7 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/4727971?v=4",
       "company": "@SignalHealthInc ",
       "company_org": "dracula",
-      "company_public_members": 107,
+      "company_public_members": 108,
       "html_url": "https://github.com/aftaylor2"
     },
     {
@@ -568,37 +606,6 @@
       "starred_at": "2026-01-13T06:54:44Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/20871123?v=4",
       "html_url": "https://github.com/hyperlyz"
-    },
-    {
-      "login": "jongwooko",
-      "starred_at": "2026-01-13T04:32:16Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/59277369?v=4",
-      "company": "Senior Researcher at Microsoft & Ph.D at KAIST AI | Ex-Intern at Amazon AGI, Microsoft",
-      "html_url": "https://github.com/jongwooko"
-    },
-    {
-      "login": "elandb",
-      "starred_at": "2026-01-12T12:17:13Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/106638008?v=4",
-      "html_url": "https://github.com/elandb"
-    },
-    {
-      "login": "neonpush",
-      "starred_at": "2026-01-12T11:45:57Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/65612607?v=4",
-      "html_url": "https://github.com/neonpush"
-    },
-    {
-      "login": "Junmnly",
-      "starred_at": "2026-01-12T11:35:57Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/121325475?v=4",
-      "html_url": "https://github.com/Junmnly"
-    },
-    {
-      "login": "Shanepigram",
-      "starred_at": "2026-01-12T10:46:20Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/88632494?v=4",
-      "html_url": "https://github.com/Shanepigram"
     }
   ],
   "stars_timeline": [
@@ -1021,6 +1028,14 @@
     {
       "date": "2026-01-16",
       "count": 12
+    },
+    {
+      "date": "2026-01-17",
+      "count": 3
+    },
+    {
+      "date": "2026-01-18",
+      "count": 2
     }
   ],
   "companies_summary": []
