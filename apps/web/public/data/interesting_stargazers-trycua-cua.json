@@ -9,14 +9,43 @@
     "html_url": "https://github.com/kamathhrishi"
   },
   {
-    "login": "samujjal",
+    "login": "oguzhane",
     "score": 18,
-    "reason": "known tech company, org @cellabus",
-    "avatar_url": "https://avatars.githubusercontent.com/u/776534?v=4",
-    "company": "@facebookresearch",
-    "company_org": "cellabus",
+    "reason": "known tech company, org @sealtlabs",
+    "avatar_url": "https://avatars.githubusercontent.com/u/4419532?v=4",
+    "company": "@microsoft",
+    "company_org": "sealtlabs",
+    "company_public_members": 1,
+    "html_url": "https://github.com/oguzhane"
+  },
+  {
+    "login": "brucx",
+    "score": 6,
+    "reason": "org @NodeJS-Live-China",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1300652?v=4",
+    "company_org": "NodeJS-Live-China",
     "company_public_members": 2,
-    "html_url": "https://github.com/samujjal"
+    "html_url": "https://github.com/brucx"
+  },
+  {
+    "login": "QuadDarv1ne",
+    "score": 6,
+    "reason": "org @quaddarv1ne7",
+    "avatar_url": "https://avatars.githubusercontent.com/u/51045274?v=4",
+    "company": "QuadD4rv1n7",
+    "company_org": "quaddarv1ne7",
+    "company_public_members": 1,
+    "html_url": "https://github.com/QuadDarv1ne"
+  },
+  {
+    "login": "Timothyxxx",
+    "score": 6,
+    "reason": "org @HKUNLP",
+    "avatar_url": "https://avatars.githubusercontent.com/u/47296835?v=4",
+    "company": "The University of Hong Kong",
+    "company_org": "HKUNLP",
+    "company_public_members": 2,
+    "html_url": "https://github.com/Timothyxxx"
   },
   {
     "login": "0xdevalias",
@@ -78,31 +107,172 @@
     "html_url": "https://github.com/moritz-gross"
   },
   {
-    "login": "taurus-i",
-    "score": 6,
-    "reason": "org @recursive-bloom",
-    "avatar_url": "https://avatars.githubusercontent.com/u/32976079?v=4",
-    "company_org": "recursive-bloom",
-    "company_public_members": 1,
-    "html_url": "https://github.com/taurus-i"
+    "login": "OmkarBansod02",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/171124769?v=4",
+    "html_url": "https://github.com/OmkarBansod02"
   },
   {
-    "login": "abenmrad",
-    "score": 6,
-    "reason": "org @Mowje",
-    "avatar_url": "https://avatars.githubusercontent.com/u/3635680?v=4",
-    "company_org": "Mowje",
-    "company_public_members": 1,
-    "html_url": "https://github.com/abenmrad"
+    "login": "trohitg",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/17909791?v=4",
+    "html_url": "https://github.com/trohitg"
   },
   {
-    "login": "Broyojo",
-    "score": 6,
-    "reason": "org @GLHS-Highlander-Robotics",
-    "avatar_url": "https://avatars.githubusercontent.com/u/20409082?v=4",
-    "company_org": "GLHS-Highlander-Robotics",
-    "company_public_members": 1,
-    "html_url": "https://github.com/Broyojo"
+    "login": "ainergiz",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/151769873?v=4",
+    "html_url": "https://github.com/ainergiz"
+  },
+  {
+    "login": "SinclairCoder",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/46218454?v=4",
+    "html_url": "https://github.com/SinclairCoder"
+  },
+  {
+    "login": "dus4w",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/76688647?v=4",
+    "html_url": "https://github.com/dus4w"
+  },
+  {
+    "login": "astarforbae",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/133563986?v=4",
+    "company": "East China Normal University",
+    "html_url": "https://github.com/astarforbae"
+  },
+  {
+    "login": "SudaemonD",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/53205402?v=4",
+    "html_url": "https://github.com/SudaemonD"
+  },
+  {
+    "login": "ABCblock",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/124365659?v=4",
+    "html_url": "https://github.com/ABCblock"
+  },
+  {
+    "login": "FedericoDiTosto",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/39743601?v=4",
+    "html_url": "https://github.com/FedericoDiTosto"
+  },
+  {
+    "login": "tmaneri",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1005102?v=4",
+    "html_url": "https://github.com/tmaneri"
+  },
+  {
+    "login": "sicn4rf",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/104622394?v=4",
+    "html_url": "https://github.com/sicn4rf"
+  },
+  {
+    "login": "hoghweed",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/127878?v=4",
+    "company": "@ducktors",
+    "html_url": "https://github.com/hoghweed"
+  },
+  {
+    "login": "oraekene",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/149783797?v=4",
+    "html_url": "https://github.com/oraekene"
+  },
+  {
+    "login": "RajT393",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/155871324?v=4",
+    "html_url": "https://github.com/RajT393"
+  },
+  {
+    "login": "HenrykSoto99",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/216987184?v=4",
+    "company": "Kike Scuba Connection (Cozumel Quintana Roo - Mexico)",
+    "html_url": "https://github.com/HenrykSoto99"
+  },
+  {
+    "login": "wagjie",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/721427?v=4",
+    "company": "desicode",
+    "html_url": "https://github.com/wagjie"
+  },
+  {
+    "login": "pbadeer",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/467756?v=4",
+    "html_url": "https://github.com/pbadeer"
+  },
+  {
+    "login": "QXQL",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/22340209?v=4",
+    "html_url": "https://github.com/QXQL"
+  },
+  {
+    "login": "stsibel",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/1758206?v=4",
+    "company": "Seto Lab",
+    "html_url": "https://github.com/stsibel"
+  },
+  {
+    "login": "Niujunbo2002",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/135944569?v=4",
+    "company": "Peking University",
+    "html_url": "https://github.com/Niujunbo2002"
+  },
+  {
+    "login": "maurocasas",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2125644?v=4",
+    "html_url": "https://github.com/maurocasas"
+  },
+  {
+    "login": "nowherekai",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/2285483?v=4",
+    "html_url": "https://github.com/nowherekai"
+  },
+  {
+    "login": "QiushiSun",
+    "score": 0,
+    "reason": "baseline",
+    "avatar_url": "https://avatars.githubusercontent.com/u/54871790?v=4",
+    "company": "The University of Hong Kong",
+    "html_url": "https://github.com/QiushiSun"
   },
   {
     "login": "flachesis",
@@ -220,173 +390,5 @@
     "reason": "baseline",
     "avatar_url": "https://avatars.githubusercontent.com/u/78068806?v=4",
     "html_url": "https://github.com/HYP3R00T"
-  },
-  {
-    "login": "riturajFi",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/187955859?v=4",
-    "html_url": "https://github.com/riturajFi"
-  },
-  {
-    "login": "truyet",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/710057?v=4",
-    "html_url": "https://github.com/truyet"
-  },
-  {
-    "login": "valdirmendesdev",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/1057524?v=4",
-    "html_url": "https://github.com/valdirmendesdev"
-  },
-  {
-    "login": "1elasmarjad",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/42979241?v=4",
-    "html_url": "https://github.com/1elasmarjad"
-  },
-  {
-    "login": "Ahmik-rgb",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/178967692?v=4",
-    "html_url": "https://github.com/Ahmik-rgb"
-  },
-  {
-    "login": "mrother",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/10717418?v=4",
-    "company": "@coderedbr ",
-    "html_url": "https://github.com/mrother"
-  },
-  {
-    "login": "shimonenator",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/144507?v=4",
-    "html_url": "https://github.com/shimonenator"
-  },
-  {
-    "login": "sohailhusn",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/17100452?v=4",
-    "html_url": "https://github.com/sohailhusn"
-  },
-  {
-    "login": "office-exsitu",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/224191496?v=4",
-    "html_url": "https://github.com/office-exsitu"
-  },
-  {
-    "login": "tianyi0920",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/12790519?v=4",
-    "html_url": "https://github.com/tianyi0920"
-  },
-  {
-    "login": "noncesyndicate-signer",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/255626379?v=4",
-    "html_url": "https://github.com/noncesyndicate-signer"
-  },
-  {
-    "login": "adammmanka",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/15839687?v=4",
-    "html_url": "https://github.com/adammmanka"
-  },
-  {
-    "login": "kkeybbs",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/3032421?v=4",
-    "html_url": "https://github.com/kkeybbs"
-  },
-  {
-    "login": "monsieurpablo",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/40904745?v=4",
-    "company": "Hoare Lea",
-    "html_url": "https://github.com/monsieurpablo"
-  },
-  {
-    "login": "alienzhou",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/9822789?v=4",
-    "company": "Kwai Inc.",
-    "html_url": "https://github.com/alienzhou"
-  },
-  {
-    "login": "Essoz",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/31838999?v=4",
-    "html_url": "https://github.com/Essoz"
-  },
-  {
-    "login": "layeratwork",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/84627?v=4",
-    "company": "Franz Inc.",
-    "html_url": "https://github.com/layeratwork"
-  },
-  {
-    "login": "kamilm",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/6887025?v=4",
-    "company": "N/A",
-    "html_url": "https://github.com/kamilm"
-  },
-  {
-    "login": "issmirnov",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/5771615?v=4",
-    "company": "@Smirnov-Labs ",
-    "html_url": "https://github.com/issmirnov"
-  },
-  {
-    "login": "kbsonlong",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/23339284?v=4",
-    "company": "joyy",
-    "html_url": "https://github.com/kbsonlong"
-  },
-  {
-    "login": "zh",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/468?v=4",
-    "html_url": "https://github.com/zh"
-  },
-  {
-    "login": "sinnet3000",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/1513390?v=4",
-    "html_url": "https://github.com/sinnet3000"
-  },
-  {
-    "login": "hwk114",
-    "score": 0,
-    "reason": "baseline",
-    "avatar_url": "https://avatars.githubusercontent.com/u/218875303?v=4",
-    "html_url": "https://github.com/hwk114"
   }
 ]
