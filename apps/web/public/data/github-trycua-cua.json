@@ -2,9 +2,9 @@
   "repo": {
     "name": "trycua/cua",
     "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
-    "stars": 12762,
-    "forks": 781,
-    "openIssues": 125,
+    "stars": 12774,
+    "forks": 784,
+    "openIssues": 126,
     "watchers": 51,
     "owner": "trycua",
     "owner_avatar_url": "https://avatars.githubusercontent.com/u/191107687?v=4"
@@ -30,7 +30,7 @@
     },
     {
       "login": "github-actions[bot]",
-      "contributions": 244,
+      "contributions": 245,
       "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
       "html_url": "https://github.com/apps/github-actions"
     },
@@ -331,6 +331,93 @@
   ],
   "stargazers": [
     {
+      "login": "ersingencturk",
+      "starred_at": "2026-03-01T12:03:05Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/280623?v=4",
+      "html_url": "https://github.com/ersingencturk"
+    },
+    {
+      "login": "abdussamad17",
+      "starred_at": "2026-03-01T10:27:20Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22129730?v=4",
+      "html_url": "https://github.com/abdussamad17"
+    },
+    {
+      "login": "billthornton",
+      "starred_at": "2026-03-01T10:01:02Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/585237?v=4",
+      "html_url": "https://github.com/billthornton"
+    },
+    {
+      "login": "khanhicetea",
+      "starred_at": "2026-03-01T08:32:20Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4528223?v=4",
+      "company": "I work for no one but human",
+      "html_url": "https://github.com/khanhicetea"
+    },
+    {
+      "login": "peteroneilljr",
+      "starred_at": "2026-03-01T08:13:35Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33669114?v=4",
+      "company": "Teleport",
+      "company_org": "open-policy-agent",
+      "company_public_members": 21,
+      "html_url": "https://github.com/peteroneilljr"
+    },
+    {
+      "login": "yiyang-wang",
+      "starred_at": "2026-03-01T06:38:02Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22174317?v=4",
+      "company": "Xi'an Jiaotong University",
+      "html_url": "https://github.com/yiyang-wang"
+    },
+    {
+      "login": "zaxlofful",
+      "starred_at": "2026-03-01T00:48:56Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33877007?v=4",
+      "html_url": "https://github.com/zaxlofful"
+    },
+    {
+      "login": "sorinmircea",
+      "starred_at": "2026-02-28T21:56:50Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4971463?v=4",
+      "company_org": "so-organisation",
+      "company_public_members": 1,
+      "html_url": "https://github.com/sorinmircea"
+    },
+    {
+      "login": "CNZSMJ",
+      "starred_at": "2026-02-28T18:26:57Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/201122201?v=4",
+      "html_url": "https://github.com/CNZSMJ"
+    },
+    {
+      "login": "antonme",
+      "starred_at": "2026-02-28T16:43:37Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1531009?v=4",
+      "html_url": "https://github.com/antonme"
+    },
+    {
+      "login": "stong1994",
+      "starred_at": "2026-02-28T16:28:33Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23580595?v=4",
+      "html_url": "https://github.com/stong1994"
+    },
+    {
+      "login": "alaasumrain",
+      "starred_at": "2026-02-28T14:51:50Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25619785?v=4",
+      "html_url": "https://github.com/alaasumrain"
+    },
+    {
+      "login": "AlejandroAkbal",
+      "starred_at": "2026-02-28T13:57:47Z",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37181533?v=4",
+      "company_org": "Rule-34",
+      "company_public_members": 1,
+      "html_url": "https://github.com/AlejandroAkbal"
+    },
+    {
       "login": "cyberairgpt-crypto",
       "starred_at": "2026-02-28T10:05:06Z",
       "avatar_url": "https://avatars.githubusercontent.com/u/264368021?v=4",
@@ -567,93 +654,6 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/13294789?v=4",
       "company": "China",
       "html_url": "https://github.com/chenzihaojie"
-    },
-    {
-      "login": "tonnyone",
-      "starred_at": "2026-02-27T02:57:55Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6793701?v=4",
-      "company": "保密",
-      "html_url": "https://github.com/tonnyone"
-    },
-    {
-      "login": "bcheung",
-      "starred_at": "2026-02-27T02:55:54Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/31520502?v=4",
-      "company": "@googlers ",
-      "html_url": "https://github.com/bcheung"
-    },
-    {
-      "login": "belier-cn",
-      "starred_at": "2026-02-27T02:47:59Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/41943291?v=4",
-      "html_url": "https://github.com/belier-cn"
-    },
-    {
-      "login": "lixindb",
-      "starred_at": "2026-02-27T02:37:53Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/129717007?v=4",
-      "html_url": "https://github.com/lixindb"
-    },
-    {
-      "login": "wen2go",
-      "starred_at": "2026-02-27T02:27:39Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/52733748?v=4",
-      "html_url": "https://github.com/wen2go"
-    },
-    {
-      "login": "0xMoat",
-      "starred_at": "2026-02-27T02:19:00Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/203652247?v=4",
-      "html_url": "https://github.com/0xMoat"
-    },
-    {
-      "login": "devilkun",
-      "starred_at": "2026-02-27T02:05:20Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/20056743?v=4",
-      "html_url": "https://github.com/devilkun"
-    },
-    {
-      "login": "jakubboguski",
-      "starred_at": "2026-02-26T22:53:31Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/7031715?v=4",
-      "company": "@TheWidlarzGroup",
-      "company_org": "pitca",
-      "company_public_members": 1,
-      "html_url": "https://github.com/jakubboguski"
-    },
-    {
-      "login": "Sheridan-Tech",
-      "starred_at": "2026-02-26T22:35:23Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/8138168?v=4",
-      "company": "Sheridan Technologies",
-      "html_url": "https://github.com/Sheridan-Tech"
-    },
-    {
-      "login": "tomaadland",
-      "starred_at": "2026-02-26T22:05:54Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5816?v=4",
-      "company": "EG AS",
-      "company_org": "EG-A-S",
-      "company_public_members": 3,
-      "html_url": "https://github.com/tomaadland"
-    },
-    {
-      "login": "airpfei",
-      "starred_at": "2026-02-26T21:44:34Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/995285?v=4",
-      "html_url": "https://github.com/airpfei"
-    },
-    {
-      "login": "objectiveous",
-      "starred_at": "2026-02-26T18:17:23Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/31235?v=4",
-      "html_url": "https://github.com/objectiveous"
-    },
-    {
-      "login": "tayyubA",
-      "starred_at": "2026-02-26T17:53:51Z",
-      "avatar_url": "https://avatars.githubusercontent.com/u/101477111?v=4",
-      "html_url": "https://github.com/tayyubA"
     }
   ],
   "stars_timeline": [
@@ -671,7 +671,7 @@
     },
     {
       "date": "2025-10-20",
-      "count": 15
+      "count": 14
     },
     {
       "date": "2025-10-21",
@@ -1195,7 +1195,11 @@
     },
     {
       "date": "2026-02-28",
-      "count": 13
+      "count": 19
+    },
+    {
+      "date": "2026-03-01",
+      "count": 7
     }
   ],
   "companies_summary": []
